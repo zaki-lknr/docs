@@ -1,0 +1,5 @@
+site_name: 戯術memo
+theme:
+  name: material
+  features:
+    - navigation.tabs
