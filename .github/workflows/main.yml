@@ -29,6 +29,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: zaki-lknr/pages
+          external_repository: zaki-lknr/zaki-lknr.github.io
           publish_branch: main
           publish_dir: ./site
