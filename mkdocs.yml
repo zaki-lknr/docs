@@ -1,6 +1,10 @@
 site_name: 戯術memo
 site_author: zaki
 copyright: Copyright 2021 zaki
+
+# repo_name: zaki-lknr/docs   # default: GitHub
+repo_url: https://github.com/zaki-lknr/docs
+
 theme:
   name: material
   features:
