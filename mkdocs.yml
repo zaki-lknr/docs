@@ -1,4 +1,6 @@
 site_name: 戯術memo
+site_author: zaki
+copyright: Copyright 2021 zaki
 theme:
   name: material
   features:
