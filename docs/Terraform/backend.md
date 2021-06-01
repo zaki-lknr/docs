@@ -1,0 +1,41 @@
+# backend設定
+
+## S3
+
+backendの定義を追加
+
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
+
+  backend "s3" {
+    bucket = "bucket-name"
+    key    = "terraform.tfstate"
+    region = "ap-northeast-1"
+  }
+}
+
+provider "aws" {
+  region  = "ap-northeast-1"
+}
+```
+
+もともとローカルでtfstate作っていた状態からS3へ移行する場合は、
+
+1. S3バケット作成
+2. tfstateをS3アップロード
+3. ソースに`backend`定義追加 (バケット名・キー(ファイル)名・リージョン指定)
+
+ここまではセットで。  
+で、
+
+4. ローカルのtfstateを退避
+5. `terraform init`実行 (S3設定が反映される)
+6. `terraform plan`で差分がないことを確認
+
+でいける。
