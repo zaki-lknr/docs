@@ -9,3 +9,10 @@ theme:
   name: material
   features:
     - navigation.tabs
+
+markdown_extensions:
+    # コードハイライトの設定
+    - codehilite:
+        noclasses: true
+        pygments_style: emacs
+        linenums: false

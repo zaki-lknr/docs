@@ -6,7 +6,7 @@
 
 systemdのユニットファイルの設定に変数設定する。
 
-```
+```console
 $ sudo mkdir -p /etc/systemd/system/docker.service.d
 $ cat /etc/systemd/system/docker.service.d/http-proxy.conf
 [Service]
