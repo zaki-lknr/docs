@@ -19,3 +19,10 @@
       group: "{{ item.group | default(omit, true) }}"
     loop: "{{ res_input.list }}"
 ```
+
+### role_path
+
+現在実行中のロールのディレクトリパス。  
+例えば `/path/to/ansible/roles/sample/tasks/main.yml`というディレクトリ構造のロールの中で `"{{ role_path }}"` を参照すると、`/path/to/ansible/roles/sample` を得られる。
+
+ロールの中で参照できる変数なので、playbookで参照しても undefined エラーになる。
