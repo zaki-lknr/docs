@@ -7,8 +7,14 @@ repo_url: https://github.com/zaki-lknr/docs
 
 theme:
   name: material
+  language: 'ja'
   features:
     - navigation.tabs
+
+extra:
+  search:
+    language: 'jp'
+    # 日本語検索設定
 
 markdown_extensions:
     # コードハイライトの設定
