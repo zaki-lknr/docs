@@ -33,9 +33,11 @@
       # if-elsif-else っぽく見せるインデント難しい
 ```
 
-## dict2items
+## 辞書を`{ key=辞書のキー名, value=辞書のvalueデータ }`のリストに変換
 
-辞書型データを、`{ key=辞書のキー名, value=辞書のvalueデータ }` 形式のリスト型に変換する。
+`dict2items`を使う。
+
+[Transforming dictionaries into lists](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html#transforming-dictionaries-into-lists)
 
 ```yaml
 ---
