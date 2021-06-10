@@ -26,3 +26,6 @@
 例えば `/path/to/ansible/roles/sample/tasks/main.yml`というディレクトリ構造のロールの中で `"{{ role_path }}"` を参照すると、`/path/to/ansible/roles/sample` を得られる。
 
 ロールの中で参照できる変数なので、playbookで参照しても undefined エラーになる。
+
+ロール内のtaskから`import_tasks`で読んだ先のファイルのtaskで参照する`role_path`であれば参照可能。  
+(あくまで呼び出し元ロール基準のパスになる)
