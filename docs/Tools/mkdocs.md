@@ -54,3 +54,13 @@ https://zaki-lknr.github.io/pages/
 materialテーマの場合
 
 [Material for MkDocs を日本語対応した話＆初めてのOSSコントリビュート - miyalog](https://miyalog.hatenablog.jp/entry/2017-11-07_MkDocs_Material_Japanese_support)
+
+### Google Analytics設定
+
+[Setting up site analytics - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/)
+
+```yaml
+google_analytics:
+  - UA-XXXXXXXX-X
+  - auto
+```

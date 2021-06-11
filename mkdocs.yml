@@ -22,3 +22,8 @@ markdown_extensions:
         noclasses: true
         pygments_style: emacs
         linenums: false
+
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
+google_analytics:
+  - UA-199279483-2
+  - 'auto'
