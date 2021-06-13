@@ -40,6 +40,11 @@ https://zaki-lknr.github.io/pages/
 
 ## コンテンツ設定
 
+### 色設定
+
+- [Changing the colors - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/)
+- [MKDocs – 基本のドキュメント配色設定方法 | DevelopersIO](https://dev.classmethod.jp/articles/mkdocs-color-palette/)
+
 ### コードハイライト
 
 [MKDocs – 拡張プラグイン集(1) | DevelopersIO](https://dev.classmethod.jp/articles/mkdocs-plugins-1/#toc-9)
