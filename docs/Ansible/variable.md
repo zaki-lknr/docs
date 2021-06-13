@@ -1,5 +1,27 @@
 # 変数
 
+## 接続設定
+
+### becomeパスワード
+
+[Become connection variables](https://docs.ansible.com/ansible/latest/user_guide/become.html#become-connection-variables)
+
+`become: true`を使う場合にパスワードが必要な場合、`-K (--ask-become-pass)`でパスワードプロンプトを表示するか、`ansible_become_password`で昇格用のパスワードを指定する。
+
+```yaml
+---
+- hosts: linux
+  gather_facts: true
+  become: true
+  vars:
+    ansible_become_password: this_is_become_password!
+
+  tasks:
+    - name: enable sudo with no password (on RHEL)
+      ansible.builtin.copy:
+        ...
+```
+
 ## マジック変数
 
 [Special Variables — Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
