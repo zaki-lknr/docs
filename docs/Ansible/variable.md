@@ -2,6 +2,19 @@
 
 ## 接続設定
 
+### ログインパスワード
+
+[Connecting to hosts: behavioral inventory parameters](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#connecting-to-hosts-behavioral-inventory-parameters)
+
+ネットワーク機器や公開鍵設定されてないサーバーOSへSSH接続の際のパスワードは`ansible_password`を使う。
+
+```yaml
+[dev-server]
+192.168.0.211  ansible_user=developer ansible_password=deve1op!
+```
+
+※ ↑はplaintextで書いてるので、vaultで暗号化しましょう
+
 ### becomeパスワード
 
 [Become connection variables](https://docs.ansible.com/ansible/latest/user_guide/become.html#become-connection-variables)
