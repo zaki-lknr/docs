@@ -8,6 +8,48 @@
 - [Modelines - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=chrislajoie.vscode-modelines)
     - ソースの先頭部分に `# -*- mode: hogehoeg -*-` って書いた内容が有効になる
 
+## 設定
+
+自動同期設定してるから個別に設定することなくなった…けど、クローズドなPCの設定用に。
+
+|item|value|description|
+|---|---|---|
+|files.autoSave|afterDelay|自動保存|
+|files.autoGuessEncoding|true|ファイルを開くときのエンコードを自動判別|
+|editor.mouseWheelZoom|true|Ctrl+wheelでフォントサイズ変更|
+|editor.renderWhitespace|all|スペースやtabの可視化|
+|files.insertFinalNewline|true|ファイル末尾に改行を付ける|
+
+```json
+    "files.insertFinalNewline": true,
+    "files.autoGuessEncoding": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "files.autoSave": "afterDelay",
+
+    "editor.suggestSelection": "first",
+
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。　「」『』【】（）",
+
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": 0,
+    "editor.mouseWheelZoom": true,
+
+    "terminal.integrated.scrollback": 100000,
+
+    "markdownlint.config": {
+        "MD025": false,              // 見出しlevel1は文書中に一つ:off
+        "MD007": { "indent": 4 },    // リストのインデント量
+        "MD040": false,              // コードブロックの言語指定
+    },
+
+    "files.watcherExclude": {
+        "**/venv*/**": true,
+        "**/env*/**": true,
+    },
+
+```
+
 ## ショートカット
 
 ※ windows前提
