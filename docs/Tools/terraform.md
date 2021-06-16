@@ -1,6 +1,8 @@
-# backend設定
+# Terraform
 
-## S3
+## backend設定
+
+### S3
 
 backendの定義を追加
 
