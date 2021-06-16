@@ -16,3 +16,11 @@
 {% endfor %}
 #}
 ```
+
+## lookupプラグイン実行
+
+playbook等で書くときと同じ要領で記述可能
+
+```j2
+{{ lookup('pipe', 'date +%s') }}
+```
