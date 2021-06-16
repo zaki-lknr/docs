@@ -2,11 +2,15 @@
 
 ## 拡張
 
-- [Markdown PDF - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)
-- [markdownlint - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-- [Text Tables - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=RomanPeshkov.vscode-text-tables)
-- [Modelines - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=chrislajoie.vscode-modelines)
-    - ソースの先頭部分に `# -*- mode: hogehoeg -*-` って書いた内容が有効になる
+- Markdown系
+    - [Markdown PDF - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)
+    - [markdownlint - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+    - [Text Tables - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=RomanPeshkov.vscode-text-tables)
+    - [Paste Image - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image)
+        - Markdownファイルを開いている状態でクリップボードの画像とかを`Ctrl-Alt-V`でペーストすることでサブディレクトリ以下にファイル生成 & 画像表示のタグが挿入される
+- 設定系
+    - [Modelines - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=chrislajoie.vscode-modelines)
+        - ソースの先頭部分に `# -*- mode: hogehoeg -*-` って書いた内容が有効になる
 
 ## 設定
 
