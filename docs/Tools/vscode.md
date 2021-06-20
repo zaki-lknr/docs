@@ -11,6 +11,13 @@
 - 設定系
     - [Modelines - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=chrislajoie.vscode-modelines)
         - ソースの先頭部分に `# -*- mode: hogehoeg -*-` って書いた内容が有効になる
+- 補助
+    - [Bracket Pair Colorizer 2 - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+        - 括弧の開始終了間の補助線表示
+    - [indent-rainbow - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+        - インデントレベル毎にスペース部分をハイライト
+    - [TODO Highlight - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+        - ファイル中テキストの`TODO:`とか`FIXME:`をハイライトしてくれる
 
 ## 設定
 
