@@ -1,5 +1,10 @@
 # 変数
 
+## 定義の優先順位
+
+- [Understanding variable precedence](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#understanding-variable-precedence)
+- [Ansible 変数の優先順位と書き方をまとめてみた - Qiita](https://qiita.com/answer_d/items/b8a87aff8762527fb319)
+
 ## 接続設定
 
 ### ログインパスワード
