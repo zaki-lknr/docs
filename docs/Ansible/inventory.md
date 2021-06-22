@@ -1,5 +1,69 @@
 # インベントリ
 
+## localhost
+
+- [Implicit ‘localhost’ — Ansible Documentation](https://docs.ansible.com/ansible/latest/inventory/implicit_localhost.html)
+- [暗黙的な ‘localhost’ — Ansible Documentation](https://docs.ansible.com/ansible/2.9_ja/inventory/implicit_localhost.html)
+
+ターゲットホストで`localhost`を指定した場合
+
+```yaml
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: sample
+      ping:
+```
+
+このとき、インベントリファイルに`localhost`の定義が無い場合(や、インベントリファイルを指定しない場合)は、暗黙の`localhost`として
+
+```yaml
+hosts:
+  localhost:
+   vars:
+     ansible_connection: local
+     ansible_python_interpreter: "{{ansible_playbook_python}}"
+```
+
+ってのが内部で用意され、この設定で接続される。よって、`connection: local`として動く。
+
+```console
+$ ansible-playbook localhost.yml -vvv
+:
+:
+TASK [sample] *****************************************************
+task path: /home/zaki/src/ansible-sample/inventory/localhost.yml:6
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: zaki
+:
+:
+```
+
+こんな感じ。
+
+インベントリに`localhost`の設定があればそれが使われる。当然`connection: local`が無ければ、設定されたコネクションプラグインが使用される(未指定ならデフォルトの`ssh`)
+
+```ini
+[localhost]
+localhost
+```
+
+こんな`localhost.ini`というインベントリファイルを指定すると、
+
+```console
+$ ansible-playbook localhost.yml -i localhost.ini -vvv
+:
+:
+TASK [sample] *****************************************************
+task path: /home/zaki/src/ansible-sample/inventory/localhost.yml:6
+<localhost> ESTABLISH SSH CONNECTION FOR USER: None
+:
+:
+```
+
+このようにssh接続となる。
+
 ## ansible-inventoryコマンド
 
 `ansible-inventory`コマンドを使用すると、ターゲットノード一覧やそのホストに紐づく変数を確認できる。  
