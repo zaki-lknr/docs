@@ -10,6 +10,15 @@
 
 ## 接続設定
 
+### SSH関連設定
+
+同一playbookで、playによって接続用アカウントを変えたいときなど。
+
+- ansible_user
+- ansible_ssh_private_key_file
+
+たとえば、最初は管理用アカウントで接続してユーザー作成など行って、次のplayでは作成したユーザーで接続できることを確認しつつアプリのデプロイを行う、などなど。
+
 ### ログインパスワード
 
 [Connecting to hosts: behavioral inventory parameters](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#connecting-to-hosts-behavioral-inventory-parameters)
