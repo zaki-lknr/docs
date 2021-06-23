@@ -130,3 +130,24 @@ TASK [print password] **************************************************
 ok: [localhost] => 
   msg: -StMaxh9fmrGIkMYj_qJ
 ```
+
+## HTTPアクセスする
+
+```yaml
+  - name: url lookup plugin
+    vars:
+      response: "{{ lookup('url', 'https://www.jma.go.jp/bosai/forecast/data/overview_forecast/130000.json') }}"
+    debug:
+      # msg: "{{ lookup('url', 'https://www.jma.go.jp/bosai/forecast/data/overview_forecast/130000.json', wantlist=true) }}"
+      msg: "{{ response.text }}"
+```
+
+basic認証するなら
+
+```jinja2
+"{{ lookup('ansible.builtin.url', 'http://www.example.org/path/to/basicauth/file',
+            username='user',
+            password='pass') }}"
+```
+
+こんな感じ
