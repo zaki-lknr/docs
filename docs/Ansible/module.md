@@ -1,5 +1,32 @@
 # モジュール
 
+## assert
+
+```yaml
+  - name: assert sample
+    vars:
+      hoge: "zzz"
+      foo: "bar"
+      baz: False
+    ansible.builtin.assert:
+      that:
+        - "hoge is defined"
+        - foo is defined
+        - baz is defined and baz
+      fail_msg: "'hoge','bar' must be defined, 'baz' must be true"
+    register: assert_result
+```
+
+`that`で指定した各値がtrueでなければタスクが失敗する。  
+変数ではなく文字列で指定するので、`:`を含む文字はYAMLのキーとしてparseされてしまうため、ダブルクォートなどで囲む必要がある。
+
+```yaml
+  - name: assert
+    ansible.builtin.assert:
+      that:
+      - 'sample_text | regex_search("could not found: foobar")'
+```
+
 ## lineinfile
 
 ```yaml
