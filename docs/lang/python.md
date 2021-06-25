@@ -1,5 +1,35 @@
 # Python
 
+## 実装
+
+### 部分適用(partial application)
+
+- `functiontools#partial()`を使う。
+- 引数(の一部を)固定した関数を作る
+
+- [Pythonのfunctools.partial(部分適用)を解説する - Qiita](https://qiita.com/tetsuya-zama/items/146d3ee9154e15158f38)
+- [functools --- 高階関数と呼び出し可能オブジェクトの操作 — Python 3.9.4 ドキュメント](https://docs.python.org/ja/3/library/functools.html#functools.partial)
+
+こんな感じ。  
+<https://github.com/ansible/ansible/blob/stable-2.10/lib/ansible/playbook/base.py#L105-L114>
+
+```python
+                    method = "_get_attr_%s" % attr_name
+                    if method in src_dict or method in dst_dict:
+                        getter = partial(_generic_g_method, attr_name)
+                    elif ('_get_parent_attribute' in dst_dict or '_get_parent_attribute' in src_dict) and value.inherit:
+                        getter = partial(_generic_g_parent, attr_name)
+                    else:
+                        getter = partial(_generic_g, attr_name)
+
+                    setter = partial(_generic_s, attr_name)
+                    deleter = partial(_generic_d, attr_name)
+```
+
+なるほどわからん
+
+[[Ansible] そのtag設定、想定通りに動いてますか？ (継承機能とその実装を確認する) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/03/24/100317)
+
 ## 仮想環境
 
 ### venv
