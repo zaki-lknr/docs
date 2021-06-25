@@ -2,6 +2,8 @@
 
 ## assert
 
+[ansible.builtin.assert – Asserts given expressions are true — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/assert_module.html)
+
 ```yaml
   - name: assert sample
     vars:
@@ -28,6 +30,8 @@
 ```
 
 ## lineinfile
+
+[ansible.builtin.lineinfile – Manage lines in text files — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
 
 ```yaml
       lineinfile:
