@@ -30,6 +30,30 @@
 
 [[Ansible] そのtag設定、想定通りに動いてますか？ (継承機能とその実装を確認する) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/03/24/100317)
 
+### メタクラス
+
+- [pythonで考えるメタクラスとは？ - Qiita](https://qiita.com/slope-book/items/3319c357c1a092d9d841)
+- [__new__と__init__とメタクラスと - Qiita](https://qiita.com/FGtatsuro/items/49f907a809e53b874b18)
+
+クラスの定義をコードで動的に実装する感じ。
+
+<https://github.com/ansible/ansible/blob/stable-2.10/lib/ansible/playbook/base.py#L105-L114>  
+
+```python
+                    method = "_get_attr_%s" % attr_name
+                    if method in src_dict or method in dst_dict:
+                        getter = partial(_generic_g_method, attr_name)
+                    elif ('_get_parent_attribute' in dst_dict or '_get_parent_attribute' in src_dict) and value.inherit:
+                        getter = partial(_generic_g_parent, attr_name)
+                    else:
+                        getter = partial(_generic_g, attr_name)
+
+                    setter = partial(_generic_s, attr_name)
+                    deleter = partial(_generic_d, attr_name)
+```
+
+- [[Ansible] そのtag設定、想定通りに動いてますか？ (継承機能とその実装を確認する) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/03/24/100317)
+
 ## 仮想環境
 
 ### venv
