@@ -1,5 +1,16 @@
 # モジュール
 
+## setup
+
+[ansible.builtin.setup – Gathers facts about remote hosts — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/setup_module.html)
+
+facts変数を収集する。  
+ad-hocで実行する方が多いかも？
+
+```console
+$ ansible -i inventory.ini all -m setup 
+```
+
 ## assert
 
 [ansible.builtin.assert – Asserts given expressions are true — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/assert_module.html)
