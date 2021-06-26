@@ -132,3 +132,55 @@ $ ps --ppid 1961 --no-headers
  241066 ?        00:00:00 docker-proxy
  241073 ?        00:00:00 docker-proxy
 ```
+
+## NetworkManager
+
+### スタティックルート追加
+
+環境: [[VyOS] NAT設定を使ったネットワーク間のルーティング (手動 & Ansible / vyos_config) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/04/15/092340)
+
+![](https://cdn-ak.f.st-hatena.com/images/fotolife/z/zaki-hmkc/20210415/20210415085905.png)
+
+やりたいこと
+
+- デフォルトゲートウェイはens192側の192.168.0.1
+- NICは2面 (ens192: 192.168.0.44/24, ens224: 172.16.0.44/23)
+- 172.29.0.89 へ疎通を追加したい
+    - このアドレスはens224の先の172.16.1.3/23がルーティングする
+
+コマンド
+
+```console
+# nmcli c m ens224 +ipv4.routes "172.29.0.0/24 172.16.1.3"
+# nmcli c u ens224
+```
+
+[4.2. nmcli を使った静的ルートの設定 Red Hat Enterprise Linux 7 | Red Hat Customer Portal](https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/networking_guide/sec-configuring_static_routes_using_nmcli)
+
+この辺が追加される。  
+リブートしても有効
+
+```console
+[root@fedora-node ~]# ip r
+default via 192.168.0.1 dev ens192 proto static metric 100 
+:
+:
+172.29.0.0/24 via 172.16.1.3 dev ens224 proto static metric 101 
+```
+
+Fedora34だと設定ファイルは`/etc/NetworkManager/system-connections/ens224.nmconnection`で、内容はこんな感じ。
+
+```
+[ipv4]
+address1=172.16.0.44/23
+dns=172.16.2.0;
+dns-search=
+method=manual
+route1=172.29.0.0/24,172.16.1.3
+```
+
+設定解除は`-`を付けて実行。
+
+```console
+# nmcli c m ens224 -ipv4.routes "172.29.0.0/24 172.16.1.3"
+```
