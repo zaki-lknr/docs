@@ -1,5 +1,15 @@
 # Python
 
+## pip
+
+### pipのアップデート
+
+venvとか作った直後は`pip`自体のバージョンが古いので(目的にパッケージ入れるときにエラーになる前に先に)アップデートする
+
+```console
+$ pip install --upgrade pip
+```
+
 ## 実装
 
 ### 部分適用(partial application)
