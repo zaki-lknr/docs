@@ -293,3 +293,26 @@ $ ansible-inventory -i inventory.ini --graph --vars
 ```
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ansible-inventory -i inventory.ini --graph --vars の結果。<br><br>インベントリ内の変数や group_vars とかの変数定義を解釈して、結局そのホストがどういう変数の値を持つか分かる。<br><br>--list でも似たような情報はわかる（2枚目） <a href="https://t.co/Y3nW49EP2C">pic.twitter.com/Y3nW49EP2C</a></p>&mdash; よこち(yokochi) (@akira6592) <a href="https://twitter.com/akira6592/status/1402625316229578752?ref_src=twsrc%5Etfw">June 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## ダイナミックインベントリ
+
+### EC2
+
+[[Ansible / AWS] ダイナミックインベントリを使ってEC2接続先を動的に取得してAnsible実行お試し - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/06/21/091252)
+
+```yaml
+---
+plugin: amazon.aws.aws_ec2
+regions:
+  - ap-northeast-1
+```
+
+### netbox
+
+[[NetBox / Ansible] ダイナミックインベントリを使ってNetBoxに登録されたホスト情報をターゲットノードにAnsibleを実行 - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/01/29/002540)
+
+```yaml
+plugin: netbox.netbox.nb_inventory
+api_endpoint: http://192.168.0.19:28080
+token: 0123456789abcdef0123456789abcdef01234567
+```
