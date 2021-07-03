@@ -59,3 +59,42 @@ __最初に__ マッチする行を対象にする場合は`firstmatch: true`を
 ファイル内にマッチする行が見つからなかった場合は、デフォルトではファイル末尾に追記される。  
 ファイル末尾以外に追記したい場合は、`insertafter`または`insertbefore`を使うことで、指定行直下・または直前に挿入できる。
 `insertafter`と`insertbefore`は指定できるのはどちらか片方。(両方同時指定は不可)
+
+## blockinfile
+
+[ansible.builtin.blockinfile – Insert/update/remove a text block surrounded by marker lines — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/blockinfile_module.html)
+
+マーカー行が複数ある場合は、「ファイル内一番末尾の開始マーカー・終了マーカー」の間が処理対象になった。(ansible 2.10 / ansible 2.11で確認)
+
+```text
+# /share/www configure begin
+1
+# /share/www configure end
+
+# /share/www configure begin
+2
+# /share/www configure end
+
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+
+# /share/www configure begin
+3
+# /share/www configure end
+```
+
+こんな入力ファイルに対して
+
+```yaml
+    - name: blockinfile sample
+      blockinfile:
+        path: blockinfile-test.txt
+        marker_begin: begin
+        marker_end: end
+        marker: '# /share/www configure {mark}'
+        block: |
+          ...
+```
+
+を実行すると、更新されるのは `3` の部分のみ。
