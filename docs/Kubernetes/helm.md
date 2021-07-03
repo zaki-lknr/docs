@@ -38,6 +38,14 @@ $ helm repo add prometheus-community https://prometheus-community.github.io/helm
 
 とか
 
+### ローカルのリポジトリ情報を更新
+
+多分`apt-get update`的な動作。
+
+```console
+$ helm repo update
+```
+
 ### チャートの検索
 
 ```console
