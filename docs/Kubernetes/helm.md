@@ -13,7 +13,7 @@ aptはあるけど、今のとこyun/dnfはないんだよな。
 
 ### リポジトリ一覧
 
-```
+```console
 $ helm repo list
 NAME                    URL                                               
 prometheus-community    https://prometheus-community.github.io/helm-charts
@@ -24,9 +24,23 @@ elastic                 https://helm.elastic.co
 metallb                 https://metallb.github.io/metallb   
 ```
 
+### リポジトリを追加
+
+```console
+$ helm repo add stable https://charts.helm.sh/stable
+```
+
+とか
+
+```console
+$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+```
+
+とか
+
 ### チャートの検索
 
-```
+```console
 $ helm search repo prometheus
 NAME                                                    CHART VERSION   APP VERSION     DESCRIPTION                                       
 prometheus-community/kube-prometheus-stack              16.12.1         0.48.1          kube-prometheus-stack collects Kubernetes manif...
@@ -40,7 +54,7 @@ prometheus-community/prometheus-cloudwatch-expo...      0.16.0          0.10.0  
 
 ### チャートのデフォルト値
 
-```
+```console
 $ helm show values metallb/metallb
 # Default values for metallb.
 # This is a YAML-formatted file.
