@@ -97,4 +97,24 @@ __最初に__ マッチする行を対象にする場合は`firstmatch: true`を
           ...
 ```
 
-を実行すると、更新されるのは `3` の部分のみ。
+を実行すると、更新されるのは `3` の部分のみ。  
+(複数のbegin行がある場合は最後のものが使用される)
+
+入力ファイルが以下の場合は、`1`から`3`までの範囲が更新される。  
+(end行も複数ある場合は最後のものが使用される)
+
+```text
+# /share/www configure begin
+1
+# /share/www configure end
+
+2
+# /share/www configure end
+
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+
+3
+# /share/www configure end
+```
