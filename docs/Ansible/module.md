@@ -145,3 +145,46 @@ __最初に__ マッチする行を対象にする場合は`firstmatch: true`を
 5
 # /share/www configure end
 ```
+
+## replace
+
+ansible.builtin.replace – Replace all instances of a particular string in a file using a back-referenced regular expression — Ansible Documentation
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/replace_module.html
+
+`after`/`before`で「ここからここまでの間」を指定できる。
+
+```yaml
+    - name: replace sample
+      replace:
+        path: duplicate-test.txt
+        regexp: ^[0-9]+$
+        replace: zzz
+        after: '# /share/www configure begin'
+        before: '# /share/www configure end'
+```
+
+入力ファイルが↓のように複数マッチする場合は
+
+```text
+# /share/www configure begin
+1
+
+# /share/www configure begin
+2
+
+# /share/www configure begin
+3
+# /share/www configure end
+
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+
+4
+# /share/www configure end
+
+5
+# /share/www configure end
+```
+
+`1`から`3`までが対象だった。(`after`も`before`も最初にマッチした部分が対象)
