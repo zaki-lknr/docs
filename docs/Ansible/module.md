@@ -118,3 +118,30 @@ __最初に__ マッチする行を対象にする場合は`firstmatch: true`を
 3
 # /share/www configure end
 ```
+
+---
+
+これなら一度で確かめられた。  
+↓のファイルなら、blockinfileが更新するのは`3`から`5`まで。
+
+```text
+# /share/www configure begin
+1
+
+# /share/www configure begin
+2
+
+# /share/www configure begin
+3
+# /share/www configure end
+
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+
+4
+# /share/www configure end
+
+5
+# /share/www configure end
+```
