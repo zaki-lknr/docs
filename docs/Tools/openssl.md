@@ -13,7 +13,7 @@ MIIJKAIBAAKCAgEAntBW2JpzhtCgXGjKsR........
 
 こんな内容の「BEGIN RSA PRIVATE KEY」で始まってENDまでのファイルは以下で確認。
 
-```
+```console
 # openssl rsa -text -noout -in account.key 
 ```
 
@@ -30,7 +30,23 @@ MIIEkDCCAngCAQAwHDEaMB........
 
 「BEGIN CERTIFICATE REQUEST」で始まってENDで終わるファイルであれば以下で確認。
 
-```
+```console
 # openssl req -text -noout -in server.csr
 ```
 
+## 証明書ファイルの確認
+
+```
+-----BEGIN CERTIFICATE-----
+MIIGKTCCBRGg.......
+:
+:
+....
+-----END CERTIFICATE-----
+```
+
+「BEGIN CERTIFICATE」で始まってENDで終わっているファイルは、x509を指定して確認。
+
+```console
+# openssl x509 -text -noout -in server.crt
+```
