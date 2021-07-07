@@ -75,6 +75,8 @@ ok: [localhost] =>
     uid: 1000
 ```
 
+タスク単位でチェックモードを指定する`check_mode`パラメタについては[directives](/Ansible/directives/#check-mode)参照。
+
 # sample
 
 ## playbook

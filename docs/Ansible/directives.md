@@ -117,3 +117,22 @@ ok: [localhost] =>
 - [OSSはアルミニウムの翼で飛ぶ: Ansible: include の代わりに使う import_xxx, include_yyy とは](http://aikotobaha.blogspot.com/2017/12/ansible-include-importxxx-includeyyy.html)
 
 とりあえずリンク
+
+## check mode
+
+`ansible-playbook`実行時のオプションで`--check`付与でdry runになるが、`check_mode`を使うことでタスク単位で強制的にチェックモードのon/offができる。
+
+```yaml
+  - name: command sample
+    copy:
+      src: /home/zaki/tmp.yml
+      dest: /var/tmp
+      mode: '0644'
+    register: result
+    check_mode: false
+```
+
+このパラメタを`true`にすると、`--check`を付けなくてもチェックモードで動作する。  
+`false`にすると、`--check`がなくてもチェックモードで動作する。
+
+`--check`については[playbook](/Ansible/playbook/#-check)参照。
