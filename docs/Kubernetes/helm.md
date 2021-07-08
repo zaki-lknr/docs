@@ -77,3 +77,28 @@ fullnameOverride: ""
 ```
 
 これをファイル出力すればインストール用のカスタマイズYAML作れる
+
+## 環境変数
+
+Helmで使用する環境編素は`helm env`で確認できる。
+
+```console
+$ helm env
+HELM_BIN="helm"
+HELM_CACHE_HOME="/home/zaki/.cache/helm"
+HELM_CONFIG_HOME="/home/zaki/.config/helm"
+HELM_DATA_HOME="/home/zaki/.local/share/helm"
+HELM_DEBUG="false"
+HELM_KUBEAPISERVER=""
+HELM_KUBEASGROUPS=""
+HELM_KUBEASUSER=""
+HELM_KUBECAFILE=""
+HELM_KUBECONTEXT=""
+HELM_KUBETOKEN=""
+HELM_MAX_HISTORY="10"
+HELM_NAMESPACE="default"
+HELM_PLUGINS="/home/zaki/.local/share/helm/plugins"
+HELM_REGISTRY_CONFIG="/home/zaki/.config/helm/registry.json"
+HELM_REPOSITORY_CACHE="/home/zaki/.cache/helm/repository"
+HELM_REPOSITORY_CONFIG="/home/zaki/.config/helm/repositories.yaml"
+```
