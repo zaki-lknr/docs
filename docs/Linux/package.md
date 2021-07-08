@@ -5,6 +5,7 @@
 ```console
 $ dpkg -l      # debian
 $ rpm -qa      # redhat
+$ apk info     # alpine
 ```
 
 [パッケージ管理あれこれ / [cygwin][debian][redhat][Solaris][command] | 戯術者の日記](http://www.jp-z.jp/changelog/2005-11-05-1.html)
@@ -12,8 +13,9 @@ $ rpm -qa      # redhat
 ## インストール済みのパッケージ foo に含まれるファイル一覧
 
 ```
-$ dpkg -L foo     # debian
-$ rpm -ql foo     # redhat
+$ dpkg -L foo        # debian
+$ rpm -ql foo        # redhat
+$ apk manifest foo   # alpine
 ```
 
 ## ファイル /foo/bar をインストールしたパッケージ
@@ -55,3 +57,17 @@ httpd-2.4.37-39.module+el8.4.0+9658+b87b2deb.x86_64 : Apache HTTP Server
 ## dnf
 
 - [【 dnf 】コマンド（応用編その7）――リポジトリを追加する：Linux基本コマンドTips（375） - ＠IT](https://www.atmarkit.co.jp/ait/articles/2001/31/news006.html)
+
+## apk
+
+インストール
+
+```
+# apk add squid
+```
+
+アンインストール
+
+```
+# apk del squid
+```
