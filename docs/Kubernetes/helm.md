@@ -102,3 +102,12 @@ HELM_REGISTRY_CONFIG="/home/zaki/.config/helm/registry.json"
 HELM_REPOSITORY_CACHE="/home/zaki/.cache/helm/repository"
 HELM_REPOSITORY_CONFIG="/home/zaki/.config/helm/repositories.yaml"
 ```
+
+`HELM_CONFIG_HOME`を設定すれば、`HELM_REGISTRY_CONFIG`などは連動する。
+
+```
+$ HELM_CONFIG_HOME=/var/tmp helm env | grep var
+HELM_CONFIG_HOME="/var/tmp"
+HELM_REGISTRY_CONFIG="/var/tmp/registry.json"
+HELM_REPOSITORY_CONFIG="/var/tmp/repositories.yaml"
+```
