@@ -12,6 +12,19 @@ $ pip install --upgrade pip
 
 ## 実装
 
+### リスト処理
+
+#### length
+
+```python
+array = []
+array.append('2')
+array.append('3')
+array.append('4')
+
+print(len(array))
+```
+
 ### 部分適用(partial application)
 
 - `functiontools#partial()`を使う。
