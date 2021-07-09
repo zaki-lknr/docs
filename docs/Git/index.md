@@ -82,6 +82,35 @@ $ git merge features/add_worker_node --no-ff
 
 `merge`は「他ブランチの内容を取り込む」で、`rebase`は「他ブランチの内容を適用済みだったことにする」かな？
 
+リモートブランチから最新を取得
+
+```console
+$ git fetch origin 
+```
+
+rebaseで取り込み
+
+```console
+$ git rebase origin/hogehoge
+```
+
+変更がローカルに残ってる場合は
+
+```console
+$ git rebase origin/hogehoge
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+```
+
+エラーになるので、退避してrebaseする
+
+```console
+$ git stash save
+$ git rebase origin/hogehoge
+$ git stash pop
+```
+
+
 ## conflictした場合
 
 ### 修正する場合は普通に
