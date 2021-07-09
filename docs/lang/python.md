@@ -25,6 +25,35 @@ array.append('4')
 print(len(array))
 ```
 
+3になる。
+
+#### 要素のindex
+
+```python
+array = ['curry', 'beef', 'chicken', 'vegetable']
+
+beef_index = array.index('chicken')
+print(beef_index)
+```
+
+引数に指定した要素が配列中の何番目にあるかを返す。上記の出力は`2`  
+存在しない場合はValueErrorになる。
+
+```python
+array = ['curry', 'beef', 'chicken', 'vegetable']
+
+beef_index = array.index('zzz')
+print(beef_index)
+```
+
+```console
+$ python3 index.py
+Traceback (most recent call last):
+  File "index.py", line 3, in <module>
+    beef_index = array.index('zzz')
+ValueError: 'zzz' is not in list
+```
+
 ### 部分適用(partial application)
 
 - `functiontools#partial()`を使う。
