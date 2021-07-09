@@ -91,6 +91,37 @@ $ git rebase --continue
 
 編集前、直前の`git commit`完了時点に戻す (対象ファイルを間違えたとかコミットを間違えただけで編集内容は正しい場合はこれやると事故る)
 
+## resetの取り消し
+
+```
+$ git reflog
+```
+
+これでresetを含むgitの操作履歴が表示される。
+「このコミットの状態に戻したい」のHEAD番号を探して
+
+```
+$ git reset --mixed  HEAD@{8}
+```
+
+など実行する。
+`--mixed`や`--soft`については、最初にresetしたときと同じのを指定すればよいかな？ (未確認)
+
+```
+$ git reflog 
+de41fb8 (HEAD -> linux) HEAD@{0}: reset: moving to HEAD@{7}
+7379519 HEAD@{1}: reset: moving to HEAD@{5}
+de41fb8 (HEAD -> linux) HEAD@{2}: reset: moving to HEAD@{5}
+de41fb8 (HEAD -> linux) HEAD@{3}: reset: moving to HEAD@{4}
+22364c9 HEAD@{4}: reset: moving to HEAD^
+de41fb8 (HEAD -> linux) HEAD@{5}: reset: moving to HEAD^
+7379519 HEAD@{6}: reset: moving to HEAD
+7379519 HEAD@{7}: ....
+de41fb8 (HEAD -> linux) HEAD@{8}: ....
+```
+
+これで`HEAD@{8}`に`reset`すれば、`de41fb8`をコミットした状態になる。
+
 ## 取り消し
 
 ### ローカルの変更(未add、未commit)を破棄
