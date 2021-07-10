@@ -1,5 +1,7 @@
 # ディレクティブ
 
+[Playbook Keywords — Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/playbooks_keywords.html)
+
 ## ループ
 
 ### ループとregisterの併用
