@@ -1,5 +1,22 @@
 # フィルタ
 
+ドキュメントはAnsibleとJinja2両方チェックする。
+
+- [Using filters to manipulate data — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html)
+- [Template Designer Documentation — Jinja Documentation (3.1.x)](https://jinja.palletsprojects.com/en/latest/templates/#list-of-builtin-filters)
+
+コレクションによっては個別のドキュメントもある。
+
+- [community.general Filter Guide — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/community/general/docsite/filter_guide.html)
+
+実装はこのあたり
+
+- ansible.builtin
+    - [ansible/core.py at devel · ansible/ansible](https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/filter/core.py)
+    - core以外のものは同じディレクトリの別ソースにあるかも
+- jinja2
+    - [jinja/filters.py at main · pallets/jinja](https://github.com/pallets/jinja/blob/main/src/jinja2/filters.py)
+
 ## 三項演算子
 
 `ternary`を使う。
