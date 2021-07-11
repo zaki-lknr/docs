@@ -191,6 +191,8 @@ https://docs.ansible.com/ansible/latest/collections/ansible/builtin/replace_modu
 
 ## redhat_subscription
 
+[community.general.redhat_subscription – Manage registration and subscriptions to RHSM using the subscription-manager command — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/community/general/redhat_subscription_module.html)
+
 RHELのサブスクリプション割り当てを行う。
 開発者ライセンスならプールIDは1個しかないので
 
