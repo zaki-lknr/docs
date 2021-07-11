@@ -77,6 +77,50 @@ ok: [localhost] =>
 
 タスク単位でチェックモードを指定する`check_mode`パラメタについては[directives](/Ansible/directives/#check-mode)参照。
 
+## --list-tasks
+
+同時に指定する`--tags`などの実行条件を踏まえて、どのプレイとタスクが実行対象となるかをリストアップする。dry runのもう1段階手前な感じ。
+
+```console
+$ ansible-playbook setup.yml --list-tasks
+
+playbook: setup.yml
+
+  play #1 (rhel): rhel  TAGS: []
+    tasks:
+      subscription      TAGS: [subscription]
+      install packages  TAGS: [packages]
+
+  play #2 (rhel): rhel  TAGS: []
+    tasks:
+      ssh user config   TAGS: [ssh]
+      git config        TAGS: [git]
+      get git-prompt.sh TAGS: [git]
+      add prompt with git config        TAGS: [git]
+      add source gitprompt      TAGS: [git]
+      create venv       TAGS: [python]
+      clone repository (linux)  TAGS: [repository]
+      clone repository (container)      TAGS: [repository]
+```
+
+`--tags`指定ありの場合
+
+```console
+$ ansible-playbook setup.yml --list-tasks --tags git
+
+playbook: setup.yml
+
+  play #1 (rhel): rhel  TAGS: []
+    tasks:
+
+  play #2 (rhel): rhel  TAGS: []
+    tasks:
+      git config        TAGS: [git]
+      get git-prompt.sh TAGS: [git]
+      add prompt with git config        TAGS: [git]
+      add source gitprompt      TAGS: [git]
+```
+
 # sample
 
 ## playbook
