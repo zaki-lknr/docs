@@ -1,5 +1,8 @@
 # インベントリ
 
+- [How to build your inventory — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
+- [インベントリーの構築方法 — Ansible Documentation](https://docs.ansible.com/ansible/2.9_ja/user_guide/intro_inventory.html)
+
 ## インベントリファイルへのグループ変数定義
 
 ```ini
