@@ -188,3 +188,23 @@ https://docs.ansible.com/ansible/latest/collections/ansible/builtin/replace_modu
 ```
 
 `1`から`3`までが対象だった。(`after`も`before`も最初にマッチした部分が対象)
+
+## redhat_subscription
+
+RHELのサブスクリプション割り当てを行う。
+開発者ライセンスならプールIDは1個しかないので
+
+```yaml
+    - name: subscription
+      community.general.redhat_subscription:
+        state: present
+        username: "{{ rh_username }}"
+        password: "{{ rh_password }}"
+        auto_attach: true
+```
+
+ですべて完了する。
+
+[制限ネットワーク環境のRHEL7でproxy経由でサブスクリプション登録とDockerインストール - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/05/160946)
+
+これでいうと`subscription-manager register`して`subscription-manager attach --pool=****`まで終わった状態になる。
