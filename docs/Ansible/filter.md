@@ -112,3 +112,7 @@
 ```
 
 [ansible-sample/dict2items.yml at master · zaki-lknr/ansible-sample](https://github.com/zaki-lknr/ansible-sample/blob/master/filter/dict2items.yml)
+
+## 検索 (select / selectattr)
+
+[[Ansible / Jinja2] select / selectattr を使った配列と辞書のフィルタリング - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/02/18/000228)
