@@ -32,3 +32,17 @@ venvにopenshiftパッケージ入れる
 ```yaml
 ansible_python_interpreter: /root/venv/bin/python
 ```
+
+pipは最新にしつつ、バージョン指定のパッケージも入れるならこんな感じ。  
+最新だと`ansible==4.2.0`が入る場合でも、`4.1.0`がインストールされる。
+
+```yaml
+    - name: create venv
+      ansible.builtin.pip:
+        name:
+          - pip
+          - ansible==4.1.0
+        state: latest
+        virtualenv: ~/venv/ansible4.1.0
+        virtualenv_command: python3 -m venv
+```
