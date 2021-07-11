@@ -1,5 +1,19 @@
 # インベントリ
 
+## インベントリファイルへのグループ変数定義
+
+```ini
+[servers]
+host1
+host2
+
+[all:vars]
+gateway=192.168.0.1
+
+[servers:vars]
+db_host=192.168.0.121
+```
+
 ## localhost
 
 - [Implicit ‘localhost’ — Ansible Documentation](https://docs.ansible.com/ansible/latest/inventory/implicit_localhost.html)
