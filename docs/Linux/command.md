@@ -83,6 +83,38 @@ $ tar -C /tmp -xf archive.tar.gz hoge
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">まぁなんでこれ試したかってーと、-Cの説明よく読んだら「ディレクトリDIRへ移動」ってあるんで、ファイル指定より前にこれ指定したら、もしかして移動処理が先に行われてから指定ファイル取り出し処理が走るんじゃね？<br>と思ったのがたまたま当たったという</p>&mdash; z a k i 🌈 (@zaki_hmkc) <a href="https://twitter.com/zaki_hmkc/status/1306950429792583681?ref_src=twsrc%5Etfw">September 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+## zip
+
+[[コマンドメモ] Linuxでzip操作 - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/06/18/202546)
+
+### ファイル一覧
+
+```console
+$ zipinfo <zip-file>
+```
+
+### 展開
+
+`-q`付ければquietモードでファイル名が出力されない
+
+```console
+$ unzip -q <zip-file>
+```
+
+`-d`で出力先ディレクトリ指定
+
+```console
+$ unzip <zip-file> -d <dirname>
+```
+
+### 圧縮
+
+```console
+$ zip gitlab-compose.zip gitlab-compose/ -r
+```
+
+`-r`は必須
+
 ## ps
 
 ### 子プロセスツリー表示
