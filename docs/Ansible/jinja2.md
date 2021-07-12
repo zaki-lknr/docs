@@ -2,6 +2,41 @@
 
 増えたらToolsとかに移すかも
 
+## 変数
+
+### 変数宣言
+
+変数
+
+```jinja2
+{% set hogehoge = 'foobar' %}
+```
+
+配列
+
+```jinja2
+{% set array = [] %}
+```
+
+### 配列要素の追加
+
+↑の`array`に要素を追加したい場合、Ansibleでは`array.append()`は使えるように見えて使えない。  
+↓のように書く。
+
+```jinja2
+{% set _ = array.append('item') %} 
+```
+
+> これに `do` を追加して `{% do list.append(1) %}` と書けるようにする [Expression Statement](https://jinja.palletsprojects.com/en/latest/templates/#expression-statement) という拡張もあるらしいのですが Ansible では有効化されていませんので、面倒ですが `{% if list.append(1) %}{% endif %}` や `{% set _ = list.append(1) %}` のように他のステートメントの中で評価したい式を書く必要があります。
+>
+> [ほげめも: Ansible の Jinja2 を活用する](http://blog.keshi.org/hogememo/2015/12/07/exploiting-ansible-jinja2)
+
+辞書をリストの要素として追加は普通にOK
+
+```jinja2
+{% set _ = host_list.append({'host': host, 'name': hostvars[host].tags.User }) %}
+```
+
 ## 制御構文
 
 ### ループ
