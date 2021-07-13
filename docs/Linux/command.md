@@ -50,6 +50,15 @@ curl --cacert ../myca_server.crt --resolve ansible.example.org:443:192.168.0.41 
 
 `ansible.example.org`という名前で`192.168.0.41:443`へアクセスする。
 
+## sed
+
+```console
+$ sed -i -e 's/regexp/string/' file
+```
+
+`-i`でファイル更新を行う。  
+`-ie`って書くと、`-i.bak`で`file.bak`のバックアップ作成と解釈されるので分ける。
+
 ## tar
 
 ### 展開時の形式指定オプション
