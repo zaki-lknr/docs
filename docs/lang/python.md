@@ -121,3 +121,29 @@ $ python3 -m venv venv/ansible
 ```console
 $ python3 -m venv venv-sys --system-site-packages
 ```
+
+### pyvenv
+
+RHEL8に入ってるやつ。
+
+```console
+[zaki@rhel8-node ~]$ pyvenv-3 venv3
+WARNING: the pyenv script is deprecated in favour of `platform-python -m venv`
+[zaki@rhel8-node ~]$ . venv3/bin/activate
+(venv3) [zaki@rhel8-node ~]$ 
+(venv3) [zaki@rhel8-node ~]$ pip install --upgrade pip
+Cache entry deserialization failed, entry ignored
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/47/ca/f0d790b6e18b3a6f3bd5e80c2ee4edbb5807286c21cdd0862ca933f751dd/pip-21.1.3-py3-none-any.whl (1.5MB)
+    100% |████████████████████████████████| 1.6MB 641kB/s 
+Installing collected packages: pip
+  Found existing installation: pip 9.0.3
+    Uninstalling pip-9.0.3:
+      Successfully uninstalled pip-9.0.3
+Successfully installed pip-21.1.3
+(venv3) [zaki@rhel8-node ~]$ pip list
+Package    Version
+---------- -------
+pip        21.1.3
+setuptools 39.2.0
+```
