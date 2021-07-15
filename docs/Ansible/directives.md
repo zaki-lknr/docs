@@ -138,3 +138,10 @@ ok: [localhost] =>
 `false`にすると、`--check`がなくてもチェックモードで動作する。
 
 `--check`については[playbook](/Ansible/playbook/#-check)参照。
+
+ちなみに、古いバージョンの`always_run`と機能的には同じ(値は逆)  
+
+> Note  
+> Prior to version 2.2 only the equivalent of `check_mode: no` existed. The notation for that was `always_run: yes`.
+>
+> <https://docs.ansible.com/ansible/2.9/user_guide/playbooks_checkmode.html#enabling-or-disabling-check-mode-for-tasks>
