@@ -116,3 +116,41 @@
 ## 検索 (select / selectattr)
 
 [[Ansible / Jinja2] select / selectattr を使った配列と辞書のフィルタリング - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/02/18/000228)
+
+## リストの先頭・末尾要素
+
+`array[0]`, `array[-1]`でも一緒といえば一緒だけど。  
+出展はJinja2のフィルタ。
+
+- [first](https://jinja.palletsprojects.com/en/latest/templates/#jinja-filters.first)
+- [last](https://jinja.palletsprojects.com/en/latest/templates/#jinja-filters.last)
+
+```yaml
+    - name: first
+      vars:
+        list:
+          - item1
+          - item2
+          - item3
+        foobar: hogehoge
+      debug:
+        msg:
+          - "{{ list | first }}"
+          - "{{ list[0] }}"
+          - "{{ list | last }}"
+          - "{{ list[-1] }}"
+```
+
+結果
+
+```
+TASK [first] *******************************************
+ok: [localhost] => 
+  msg:
+  - item1
+  - item1
+  - item3
+  - item3
+```
+
+ちなみに、文字列型の場合でもiterableなので、一文字目・最後の文字が取れる。
