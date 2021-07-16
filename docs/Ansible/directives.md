@@ -145,3 +145,18 @@ ok: [localhost] =>
 > Prior to version 2.2 only the equivalent of `check_mode: no` existed. The notation for that was `always_run: yes`.
 >
 > <https://docs.ansible.com/ansible/2.9/user_guide/playbooks_checkmode.html#enabling-or-disabling-check-mode-for-tasks>
+
+## changed_when
+
+条件がtrueの場合はタスクの結果に関係なく`changed`判定にする。逆にfalseの場合は`ok`判定にする。  
+タスクの結果を`register`で保持し、その内容を条件式に組み込むのもOK
+
+```yaml
+    - name: command always run and no change
+      ansible.builtin.shell:
+        cmd: hogehoge
+      changed_when: exec_result.stdout != ''
+      register: exec_result
+```
+
+`hogehoge`の実行結果で標準出力が何も無い場合は`changed`になる。
