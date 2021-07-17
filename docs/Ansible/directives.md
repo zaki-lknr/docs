@@ -135,7 +135,7 @@ ok: [localhost] =>
 ```
 
 このパラメタを`true`にすると、`--check`を付けなくてもチェックモードで動作する。  
-`false`にすると、`--check`がなくてもチェックモードで動作する。
+`false`にすると、`--check`で動かしてもチェックモードでなく実処理が行われる。
 
 `--check`については[playbook](/Ansible/playbook/#-check)参照。
 
