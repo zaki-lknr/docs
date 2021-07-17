@@ -2,6 +2,8 @@
 
 ## 複数行
 
+[[YAML] 複数行テキストの行頭にインデントを設定するには (Ansible/Kubernetes) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/07/17/220311)
+
 ### インデント
 
 ```yaml
