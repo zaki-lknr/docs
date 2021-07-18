@@ -19,7 +19,7 @@ kind-control-plane
 引数無しの場合は、デフォルト設定で作成したクラスタ名`kind`のノードになる。  
 クラスタ名を指定する場合は
 
-``console
+```console
 $ kind get nodes --name cluster-name
 ```
 
