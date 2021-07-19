@@ -1,5 +1,15 @@
 # RHEL
 
+## サブスクリプション
+
+[制限ネットワーク環境のRHEL7でproxy経由でサブスクリプション登録とDockerインストール - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/05/160946)
+
+これで登録とサブスクリプション割り当てをまとめてできる。
+
+```console
+# subscription-manager register --auto-attach
+```
+
 ## package
 
 ### RHEL8にEPELリポジトリを追加
