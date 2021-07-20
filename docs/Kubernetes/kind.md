@@ -4,6 +4,22 @@ DockerやPodman上にKubernetesのノードとして動くコンテナをデプ�
 
 [kind](https://kind.sigs.k8s.io/)
 
+- [[Kubernetes / kind] kindを使ってDocker上にクラスタを高速作成し、MetalLBも併用してクラスタ横断した通信お試し - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/08/01/135922)
+
+## クラスタ作成
+
+基本 (`kind`という名前のクラスタを作成すｒ)
+
+```console
+$ kind create cluster
+```
+
+名前指定
+
+```console
+$ kind create cluster --name sample-cluster
+```
+
 ## 停止
 
 kindクラスタの停止は無い。  
