@@ -2,6 +2,17 @@
 
 分類変えるかも…
 
+## タブ補完
+
+```bash
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl kc
+```
+
+[[oc / kubectl] コマンドや引数の補完設定 【completion】 - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/03/02/205509)
+
+`kind`や`helm`も同じ要領。
+
 ## create
 
 ### secret
