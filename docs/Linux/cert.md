@@ -21,3 +21,31 @@ done.
 ```
 
 こちらは`/etc/ssl/certs/`以下に実ファイルへのsymlinkが作成される。
+
+## Root CA削除
+
+### trust
+
+RHEL系かな？
+
+```console
+[root@cloud-dev ~]# trust list | grep local -3
+
+pkcs11:id=%dd%14%05%0a%b1%7b%9b%09%41%2b%e6%90%a1%5d%6d%30%06%75%c7%3f;type=cert
+    type: certificate
+    label: local.example.org
+    trust: anchor
+    category: other-entry
+
+```
+
+```
+[root@cloud-dev ~]# trust anchor --remove "pkcs11:id=%dd%14%05%0a%b1%7b%9b%09%41%2b%e6%90%a1%5d%6d%30%06%75%c7%3f;type=cert"
+p11-kit: couldn't remove read-only certificate
+[root@cloud-dev ~]# trust anchor --remove /var/tmp/ansible-work/ca.crt 
+p11-kit: couldn't remove read-only certificate
+```
+
+これで消せるらしいんだけど、`update-ca-trust`で追加してるCAはダメなのかな。。
+
+[第6章 共通システム証明書の使用 Red Hat Enterprise Linux 8 | Red Hat Customer Portal](https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/8/html/security_hardening/using-shared-system-certificates_security-hardening)
