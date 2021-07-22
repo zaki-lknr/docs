@@ -49,3 +49,37 @@ p11-kit: couldn't remove read-only certificate
 これで消せるらしいんだけど、`update-ca-trust`で追加してるCAはダメなのかな。。
 
 [第6章 共通システム証明書の使用 Red Hat Enterprise Linux 8 | Red Hat Customer Portal](https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/8/html/security_hardening/using-shared-system-certificates_security-hardening)
+
+### trustで追加
+
+```console
+[root@rhel8-ansible-ctrl ~]# trust anchor --store /var/tmp/ansible-work/ca.crt 
+[root@rhel8-ansible-ctrl ~]# 
+```
+
+```
+[root@rhel8-ansible-ctrl ~]# trust list | grep local -3
+pkcs11:id=%8C%88%6C%FB%9A%C8%ED%0E%65%DA%59%30%99%AF%3D%FC%B6%11%86%73;type=cert
+    type: certificate
+    label: localca.example.org
+    trust: anchor
+    category: other-entry
+
+```
+
+`trust anchor --store`で追加したのであれば
+
+```console
+[root@rhel8-ansible-ctrl ~]# trust list | grep local -3
+pkcs11:id=%8C%88%6C%FB%9A%C8%ED%0E%65%DA%59%30%99%AF%3D%FC%B6%11%86%73;type=cert
+    type: certificate
+    label: localca.example.org
+    trust: anchor
+    category: other-entry
+
+[root@rhel8-ansible-ctrl ~]# trust anchor --remove /var/tmp/ansible-work/ca.crt 
+[root@rhel8-ansible-ctrl ~]# trust list | grep local -3
+[root@rhel8-ansible-ctrl ~]# 
+```
+
+消せる。
