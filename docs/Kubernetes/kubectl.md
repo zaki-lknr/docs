@@ -52,3 +52,65 @@ kubernetes!
 ```
 
 これはConfigMapと同じ
+
+## config
+
+[[kubectl / oc]コンテキストやクラスタ情報の確認 (コマンドメモ) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/04/07/080241)
+
+`~/.kube/config`(`$KUBECONFIG`)の内容から証明書のデータをマスクした情報
+
+```
+$ kubectl config view
+```
+
+現在のクラスタ情報
+
+```
+$ kubectl cluster-info 
+Kubernetes control plane is running at https://192.168.0.121:6443
+CoreDNS is running at https://192.168.0.121:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+Metrics-server is running at https://192.168.0.121:6443/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+```
+
+KUBECONFIGで持っているクラスタ一覧
+
+```
+$ kubectl config get-clusters
+NAME
+cluster-c2daobwhbsg
+kind-multi-1.15
+zks
+kind-kind
+kind-multicluster
+kubernetes
+local-k3s
+oci-k3s-le
+oci-k3s
+sample-cluster
+```
+
+コンテキスト情報
+
+```
+$ kubectl config get-contexts
+CURRENT   NAME                          CLUSTER               AUTHINFO                               NAMESPACE
+          context-c2daobwhbsg           cluster-c2daobwhbsg   user-c2daobwhbsg                       
+          kind-kind                     kind-kind             kind-kind                              
+          kind-multi-1.15               kind-multi-1.15       kind-multi-1.15                        
+          kind-multicluster             kind-multicluster     kind-multicluster                      
+          kubernetes-admin@kubernetes   kubernetes            kubernetes-admin                       
+          kubernetes-admin@zks          zks                   kubernetes-admin                       
+          local-k3s                     local-k3s             local-k3s                              
+          oci-k3s                       oci-k3s               oci-k3s                                
+*         oci-k3s-le                    oci-k3s-le            oci-k3s-le                             
+          sample-cluster                sample-cluster        clusterUser_sample-rg_sample-cluster  
+```
+
+現在のコンテキスト
+
+```
+$ kubectl config current-context
+oci-k3s-le
+```
