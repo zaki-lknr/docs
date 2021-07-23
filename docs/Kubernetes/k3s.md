@@ -2,13 +2,13 @@
 
 ## Always FreeのOCI(A1.Flex 2cpu/12gb ram)にシングルノードクラスタ作る
 
-```
+```console
 $ curl -sfL https://get.k3s.io | sh -
 ```
 
 たまたま作成できた2cpus/12GB RAMで作成
 
-```
+```console
 [opc@instance-20210704-1554 ~]$ curl -sfL https://get.k3s.io | sh -
 
 :
@@ -33,9 +33,9 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/k3s.service to 
 [INFO]  systemd: Starting k3s
 ```
 
-# kubeconfig
+### kubeconfig
 
-```
+```console
 [opc@instance-20210704-1554 ~]$ sudo cp /etc/rancher/k3s/k3s.yaml ~
 [opc@instance-20210704-1554 ~]$ ll
 合計 4
@@ -45,7 +45,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/k3s.service to 
 
 手元にコピー
 
-```
+```console
 $ scp oci-ap-n1:k3s.yaml oci-ap-n1-k3s.yaml
 ```
 
@@ -65,9 +65,9 @@ contexts:
   insecure-skip-tls-verify: true
 ```
 
-# 穴あけ
+### 穴あけ
 
-```
+```console
 [opc@instance-20210704-1554 ~]$ sudo firewall-cmd --add-port=6443/tcp --permanent
 success
 [opc@instance-20210704-1554 ~]$ sudo firewall-cmd --reload
@@ -76,9 +76,9 @@ success
 
 あとwebコンソールで、6443/TCPへのアクセス許可を追加。
 
-# deploy sample
+### deploy sample
 
-```
+```console
 [zaki@cloud-dev kubeconfig]$ KUBECONFIG=oci-ap-n1-k3s.yaml kubectl apply -n sample -f ~/src/k8s-samples/sample-web/httpd-clusterip/sample-http.yaml 
 deployment.apps/sample-http created
 service/sample-http created
@@ -88,16 +88,16 @@ sample-http-6c94f59975-65p6w   0/1     ContainerCreating   0          9s
 sample-http-6c94f59975-clzhp   0/1     ContainerCreating   0          9s
 ```
 
-```
+```console
 [zaki@cloud-dev kubeconfig]$ KUBECONFIG=oci-ap-n1-k3s.yaml kubectl get pod -n sample -o wide
 NAME                           READY   STATUS    RESTARTS   AGE   IP           NODE                     NOMINATED NODE   READINESS GATES
 sample-http-6c94f59975-65p6w   1/1     Running   0          87s   10.42.0.9    instance-20210704-1554   <none>           <none>
 sample-http-6c94f59975-clzhp   1/1     Running   0          87s   10.42.0.10   instance-20210704-1554   <none>           <none>
 ```
 
-# ノードスペック
+### ノードスペック
 
-```
+```console
 [zaki@cloud-dev kubeconfig]$ KUBECONFIG=oci-ap-n1-k3s.yaml kubectl describe node
 
 [...]
@@ -121,3 +121,5 @@ Allocatable:
 ```
 
 おぉ、CPUはともかくメモリが潤沢だ。
+
+rebootしてもOK
