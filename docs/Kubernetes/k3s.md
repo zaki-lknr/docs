@@ -2,6 +2,9 @@
 
 ## Always FreeのOCI(A1.Flex 2cpu/12gb ram)にシングルノードクラスタ作る
 
+標準のE2.1.Microの場合↓  
+[[Oracle Cloud] K3sでAlways Free枠ノードにKubernetesクラスタ作成してローカルからkubectlアクセスまで - Qiita](https://qiita.com/zaki-lknr/items/e829a3ad548e362ef89c)
+
 ```console
 $ curl -sfL https://get.k3s.io | sh -
 ```
