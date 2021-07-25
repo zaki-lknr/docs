@@ -44,3 +44,9 @@ $ kind get nodes --name cluster-name
 ```console
 $ kind get nodes --name cluster-name | xargs docker stop
 ```
+
+## クラスタバージョンの指定
+
+[Releases · kubernetes-sigs/kind](https://github.com/kubernetes-sigs/kind/releases)
+
+リリースノートに各種バージョンのコンテナIDの記載があるのでそれを指定する。
