@@ -78,6 +78,27 @@ fullnameOverride: ""
 
 これをファイル出力すればインストール用のカスタマイズYAML作れる
 
+### リリースの設定値
+
+チャートからリリースされているアプリケーションの設定値を`helm get values`で確認できる。
+
+```console
+[zaki@fedora-node ~]$ helm ls -A
+NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
+grafana         monitoring      1               2021-07-26 16:23:47.276215637 +0900 JST deployed        grafana-6.14.1          8.0.5      
+prometheus      monitoring      1               2021-07-26 14:24:12.737306448 +0900 JST deployed        prometheus-14.4.1       2.26.0     
+[zaki@fedora-node ~]$ helm get values -n monitoring grafana
+USER-SUPPLIED VALUES:
+persistence:
+  accessModes:
+  - ReadWriteOnce
+  enabled: true
+  size: 1Gi
+  type: pvc
+service:
+  type: LoadBalancer
+```
+
 ## 環境変数
 
 Helmで使用する環境編素は`helm env`で確認できる。
