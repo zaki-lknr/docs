@@ -69,4 +69,18 @@ $ kind create cluster --config kind-config.yaml
 
 [Releases · kubernetes-sigs/kind](https://github.com/kubernetes-sigs/kind/releases)
 
-リリースノートに各種バージョンのコンテナIDの記載があるのでそれを指定する。
+リリースノートに各種バージョンのコンテナIDの記載があるのでそれを指定する。  
+v1.19ならこんな感じ。
+
+```yaml
+# three node (two workers) cluster config
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  image: kindest/node:v1.19.11@sha256:07db187ae84b4b7de440a73886f008cf903fcf5764ba8106a9fd5243d6f32729
+- role: worker
+  image: kindest/node:v1.19.11@sha256:07db187ae84b4b7de440a73886f008cf903fcf5764ba8106a9fd5243d6f32729
+- role: worker
+  image: kindest/node:v1.19.11@sha256:07db187ae84b4b7de440a73886f008cf903fcf5764ba8106a9fd5243d6f32729
+```
