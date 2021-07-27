@@ -45,6 +45,26 @@ $ kind get nodes --name cluster-name
 $ kind get nodes --name cluster-name | xargs docker stop
 ```
 
+## マルチノード
+
+ノード設定用のファイル作成する。
+
+```yaml
+# three node (two workers) cluster config
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+```
+
+で、このファイルを指定してクラスタ作成する。
+
+```console
+$ kind create cluster --config kind-config.yaml
+```
+
 ## クラスタバージョンの指定
 
 [Releases · kubernetes-sigs/kind](https://github.com/kubernetes-sigs/kind/releases)
