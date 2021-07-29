@@ -166,8 +166,14 @@ ok: [localhost] =>
 password: "{{ password_plain_text | password_hash('sha512') }}"
 ```
 
-デフォルトは`sha512`で暗号化される。
-saltの指定が無い場合はランダムになるため、実行のたびに結果の値は変化する。(つまり、このパスワードを設定したりすれば毎回`changed`になる)
+デフォルトは`sha512`で暗号化される。  
+<https://github.com/ansible/ansible/blob/v2.10.5/lib/ansible/plugins/filter/core.py#L266>
+
+```python
+def get_encrypted_password(password, hashtype='sha512', salt=None, salt_size=None, rounds=None):
+```
+
+saltの指定が無い場合はランダムになるため、実行のたびに結果の値は変化する。(つまり、このパスワードを設定したりすれば毎回`changed`になる)  
 冪等にしたければ、saltに固定の値をセットする。
 
 ```yaml
