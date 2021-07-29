@@ -173,3 +173,39 @@ saltの指定が無い場合はランダムになるため、実行のたびに�
 ```yaml
 password: "{{ password_plain_text | password_hash('sha512', 'hoge') }}"
 ```
+
+## base64
+
+### エンコード
+
+```yaml
+- name: base64 enc
+  vars:
+    sample_text: zaki
+  debug:
+    msg: "{{ sample_text | b64encode }}"
+```
+
+↓
+
+```console
+ok: [localhost] => 
+  msg: emFraQ==
+```
+
+### デコード
+
+```yaml
+- name: base64 dec
+  vars:
+    b64text: emFraQ==
+  debug:
+    msg: "{{ b64text | b64decode }}"
+```
+
+↓
+
+```console
+ok: [localhost] => 
+  msg: zaki
+```
