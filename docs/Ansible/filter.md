@@ -154,3 +154,22 @@ ok: [localhost] =>
 ```
 
 ちなみに、文字列型の場合でもiterableなので、一文字目・最後の文字が取れる。
+
+## 暗号化パスワード
+
+- [How do I generate encrypted passwords for the user module?](https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
+- [Encrypting and checksumming strings and passwords](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html#encrypting-and-checksumming-strings-and-passwords)
+
+### password_hash
+
+```yaml
+password: "{{ password_plain_text | password_hash('sha512') }}"
+```
+
+デフォルトは`sha512`で暗号化される。
+saltの指定が無い場合はランダムになるため、実行のたびに結果の値は変化する。(つまり、このパスワードを設定したりすれば毎回`changed`になる)
+冪等にしたければ、saltに固定の値をセットする。
+
+```yaml
+password: "{{ password_plain_text | password_hash('sha512', 'hoge') }}"
+```
