@@ -147,3 +147,23 @@ Package    Version
 pip        21.1.3
 setuptools 39.2.0
 ```
+
+`--system-site-packages`も併用可
+
+```console
+[zaki@rhel8-node ~]$ pyvenv-3.6 venv --system-site-packages
+WARNING: the pyenv script is deprecated in favour of `platform-python -m venv`
+[zaki@rhel8-ansible-node ~]$ . venv/bin/activate
+(venv) [zaki@rhel8-node ~]$ pip list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+cffi (1.11.5)
+chardet (3.0.4)
+configobj (5.0.6)
+configshell-fb (1.1.28)
+cryptography (3.2.1)
+dbus-python (1.2.4)
+decorator (4.2.1)
+ethtool (0.14)
+:
+:
+```
