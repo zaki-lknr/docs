@@ -4,6 +4,10 @@
 
 [Releases and maintenance — Ansible Documentation](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html)
 
+## Ansible Documentation 索引
+
+[Index — Ansible Documentation](https://docs.ansible.com/ansible/latest/genindex.html)
+
 ## ディレクトリ構成
 
 [Sample Ansible setup — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/sample_setup.html)
