@@ -148,8 +148,7 @@ __最初に__ マッチする行を対象にする場合は`firstmatch: true`を
 
 ## replace
 
-ansible.builtin.replace – Replace all instances of a particular string in a file using a back-referenced regular expression — Ansible Documentation
-https://docs.ansible.com/ansible/latest/collections/ansible/builtin/replace_module.html
+[ansible.builtin.replace – Replace all instances of a particular string in a file using a back-referenced regular expression — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/replace_module.html)
 
 `after`/`before`で「ここからここまでの間」を指定できる。
 
