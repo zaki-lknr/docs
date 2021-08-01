@@ -1,18 +1,29 @@
 # 設定
 
-## 接続ユーザー名
+[Ansible Configuration Settings — Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html)
+
+## 設定ファイル優先順位
+
+1. `ANSIBLE_CONFIG` 環境変数
+2. `ansible.cfg` (カレントディレクトリ)
+3. `~/.ansible.cfg`
+4. `/etc/ansible/ansible.cfg`
+
+## 設定キー
+
+### 接続ユーザー名
 
 | 設定場所         | 設定名             |
 | ------------ | --------------- |
 | コマンドラインオプション | `-u` (`--user`) |
 
-## SSH秘密鍵
+### SSH秘密鍵
 
 | 設定場所         | 設定名             |
 | ------------ | --------------- |
 | コマンドラインオプション | `--private-key` |
 
-## Pythonインタプリタパス
+### Pythonインタプリタパス
 
 | 設定場所        | 設定キー                                 |
 | ----------- | ------------------------------------ |
@@ -20,28 +31,28 @@
 | 環境変数        | ANSIBLE_PYTHON_INTERPRETER           |
 | 変数          | ansible_python_interpreter           |
 
-## コールバックプラグイン
+### コールバックプラグイン
 
 | 設定場所        | 設定キー                                |
 | ----------- | ----------------------------------- |
 | ansible.cfg | stdout_callback ([defaults]section) |
 | 環境変数        | ANSIBLE_STDOUT_CALLBACK             |
 
-## コレクションパス(2.10～)
+### コレクションパス(2.10～)
 
 | 設定場所        | 設定キー                                 |
 | ----------- | ------------------------------------ |
 | ansible.cfg | collections_path ([defaults]section) |
 | 環境変数        | ANSIBLE_COLLECTIONS_PATH             |
 
-## コレクションパス(旧)
+### コレクションパス(旧)
 
 | 設定場所        | 設定キー                                  |
 | ----------- | ------------------------------------- |
 | ansible.cfg | collections_paths ([defaults]section) |
 | 環境変数        | ANSIBLE_COLLECTIONS_PATHS             |
 
-## 実行後にAnsiballZファイルを消さない
+### 実行後にAnsiballZファイルを消さない
 
 | 設定場所 | 設定キー                      |
 | ---- | ------------------------- |
