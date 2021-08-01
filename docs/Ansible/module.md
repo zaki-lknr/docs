@@ -210,3 +210,32 @@ RHELのサブスクリプション割り当てを行う。
 [制限ネットワーク環境のRHEL7でproxy経由でサブスクリプション登録とDockerインストール - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/05/160946)
 
 これでいうと`subscription-manager register`して`subscription-manager attach --pool=****`まで終わった状態になる。
+
+## ファイル
+
+### モード
+
+```yaml
+- name: create file
+  file:
+    path: /var/tmp/file_permission
+    mode: "0755"
+    state: directory
+```
+
+これなら
+
+```console
+$ ll -d /var/tmp/file_permission/
+drwxr-xr-x. 2 zaki zaki 6  7月 31 10:27 /var/tmp/file_permission/
+```
+
+| mode           | 実体           |
+| -------------- | ------------ |
+| `"0755"` (str) | `drwxr-xr-x`  |
+| `0755` (int)   | `drwxr-xr-x`  |
+| `"755"` (str)  | `drwxr-xr-x`  |
+| `755` (int)    | `d-wxrw--wt` |
+
+`755`にすると、10進数の755入力を8進数と解釈し`1363`としてモード設定される動作になる。
+モード設定は8進数の数値か文字列型の数値が入力なのと、先頭ゼロの数値は8進数としてYAMLが解釈するので、先頭ゼロを付けずにintの数値を指定すると想定外の動作になる。
