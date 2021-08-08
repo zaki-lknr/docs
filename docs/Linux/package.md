@@ -86,6 +86,31 @@ ansible-test.noarch              2.9.24-1.el8ae               ansible-2.9-for-rh
 sshpass.x86_64                   1.06-3.el8ae                 ansible-2.9-for-rhel-8-x86_64-rpms
 ```
 
+### 指定リポジトリを有効化/無効化
+
+```
+# dnf config-manager --enable ansible-2.9-for-rhel-8-x86_64-rpms
+```
+
+こうなる
+
+```
+[root@rhel8 ~]# dnf config-manager --enable ansible-2.9-for-rhel-8-x86_64-rpms
+Updating Subscription Management repositories.
+[root@rhel8 ~]# dnf repolist
+Updating Subscription Management repositories.
+repo id                                                            repo の名前
+ansible-2.9-for-rhel-8-x86_64-rpms                                 Red Hat Ansible Engine 2.9 for RHEL 8 x86_64 (RPMs)
+rhel-8-for-x86_64-appstream-rpms                                   Red Hat Enterprise Linux 8 for x86_64 - AppStream (RPMs)
+rhel-8-for-x86_64-baseos-rpms                                      Red Hat Enterprise Linux 8 for x86_64 - BaseOS (RPMs)
+```
+
+無効化は`--disable`で。
+
+```
+# dnf config-manager --disable ansible-2.9-for-rhel-8-x86_64-rpms
+```
+
 ## apk
 
 インストール
