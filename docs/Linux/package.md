@@ -72,6 +72,20 @@ httpd-2.4.37-39.module+el8.4.0+9658+b87b2deb.x86_64 : Apache HTTP Server
 # dnf repolist --disabled
 ```
 
+### 指定リポジトリで提供されるパッケージ一覧
+
+`dnf repository-packages <リポジトリ名> list`
+
+```
+# dnf repository-packages ansible-2.9-for-rhel-8-x86_64-rpms list
+Updating Subscription Management repositories.
+メタデータの期限切れの最終確認: 0:07:08 時間前の 2021年08月08日 12時00分34秒 に実施しました。
+利用可能なパッケージ
+ansible.noarch                   2.9.24-1.el8ae               ansible-2.9-for-rhel-8-x86_64-rpms
+ansible-test.noarch              2.9.24-1.el8ae               ansible-2.9-for-rhel-8-x86_64-rpms
+sshpass.x86_64                   1.06-3.el8ae                 ansible-2.9-for-rhel-8-x86_64-rpms
+```
+
 ## apk
 
 インストール
