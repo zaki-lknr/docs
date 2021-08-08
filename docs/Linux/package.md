@@ -58,6 +58,20 @@ httpd-2.4.37-39.module+el8.4.0+9658+b87b2deb.x86_64 : Apache HTTP Server
 
 - [【 dnf 】コマンド（応用編その7）――リポジトリを追加する：Linux基本コマンドTips（375） - ＠IT](https://www.atmarkit.co.jp/ait/articles/2001/31/news006.html)
 
+### リポジトリ一覧
+
+有効なものの一覧。`-v`付けると詳細
+
+```
+# dnf repolist
+```
+
+無効なものの一覧。
+
+```
+# dnf repolist --disabled
+```
+
 ## apk
 
 インストール
