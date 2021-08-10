@@ -1,5 +1,7 @@
 # 基本・ネタ帳
 
+[Ansible concepts — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/basic_concepts.html)
+
 ## リリースとメンテナンス情報
 
 [Releases and maintenance — Ansible Documentation](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html)
