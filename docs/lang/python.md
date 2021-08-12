@@ -167,3 +167,7 @@ ethtool (0.14)
 :
 :
 ```
+
+## RHEL / Ansible
+
+[Ansible が利用する Python 実行環境 - 赤帽エンジニアブログ](https://rheb.hatenablog.com/entry/ansible_python_environment)
