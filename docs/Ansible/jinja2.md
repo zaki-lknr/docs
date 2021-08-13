@@ -2,6 +2,8 @@
 
 増えたらToolsとかに移すかも
 
+[Templating (Jinja2) — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_templating.html)
+
 ## 変数
 
 ### 変数宣言
