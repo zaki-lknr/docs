@@ -210,6 +210,25 @@ RHELのサブスクリプション割り当てを行う。
 
 これでいうと`subscription-manager register`して`subscription-manager attach --pool=****`まで終わった状態になる。
 
+## パッケージ
+
+### dnf
+
+CentOS7(yum環境)に使える？ => NG
+
+```
+fatal: [cloud-dev]: FAILED! => changed=false 
+  msg: Could not import the dnf python module using /usr/bin/python (2.7.5 (default, Nov 16 2020, 22:23:17) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]). Please install `python3-dnf` or `python2-dnf` package or ensure you have specified the correct ansible_python_interpreter. (attempted ['/usr/libexec/platform-python', '/usr/bin/python3', '/usr/bin/python2', '/usr/bin/python'])
+  results: []
+```
+
+ただし、CentOS7で`sudo yum install python2-dnf`を入れると動く。  
+dnfモジュールでパッケージインストールし、CentOS7上で`rpm -qa`とかしても確認できる。
+
+### yum
+
+Fedora34 / RHEL8に使える？ => OK
+
 ## ファイル
 
 ### モード
