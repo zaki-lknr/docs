@@ -180,6 +180,9 @@ saltの指定が無い場合はランダムになるため、実行のたびに�
 password: "{{ password_plain_text | password_hash('sha512', 'hoge') }}"
 ```
 
+- [Linux の UNIX パスワード認証について調べた - CUBE SUGAR CONTAINER](https://blog.amedama.jp/entry/linux-shadow-passwd)
+- [【CentOS】/etc/shadowのハッシュ化パスワードについて - よくわからないエンジニア](https://www.unknownengineer.net/entry/2017/08/16/184537)
+
 ## base64
 
 ### エンコード
