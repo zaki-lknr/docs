@@ -160,3 +160,31 @@ ok: [localhost] =>
 ```
 
 `hogehoge`の実行結果で標準出力が何も無い場合は`changed`になる。
+
+## until
+
+[[Ansible] untilを使って非同期処理が完了するまで次のtaskを待つ - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/04/08/075732)
+
+使用例
+
+```yaml
+    - name: install flannel
+      shell: kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
+
+      # todo: applyの処理がunchangedの場合も、ansibleではchanged扱いになっている
+
+    - name: wait for Node-Ready
+      shell: kubectl get node --no-headers | awk '{print $2}'
+      register: node_state
+      until: node_state.stdout == "Ready"
+      retries: 10
+      delay: 5
+      changed_when: false
+      # 待つだけなので強制no changed
+```
+
+[initialize-kubeadm-ansible/deploy_cni.yaml at e48d1a86ef9f4d94853c18246708490f842b8058 · zaki-lknr/initialize-kubeadm-ansible](https://github.com/zaki-lknr/initialize-kubeadm-ansible/blob/e48d1a86ef9f4d94853c18246708490f842b8058/playbooks/deploy_cni.yaml#L13-L15)
+
+include_tasksとは併用不可？
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">手元の2.10.5ですっごく雑に確認した限りだと、import_tasksは<br>when: 有効<br>loop: 「loopしたければinclude使え」とエラー<br>register: 無視される<br>until: 無視される<br>って感じでした。<br><br>include_tasksにだとloopとregisterは使えましたが、untilはnot valid attribute errorでやっぱりダメっぽい… <a href="https://t.co/9CNihs7tvh">pic.twitter.com/9CNihs7tvh</a></p>&mdash; z a k i 🌈 (@zaki_hmkc) <a href="https://twitter.com/zaki_hmkc/status/1362424065554751490?ref_src=twsrc%5Etfw">February 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
