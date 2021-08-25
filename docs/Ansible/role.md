@@ -30,3 +30,42 @@ $ find
 ./sample_role/vars
 ./sample_role/vars/main.yml
 ```
+
+## ロールから別のロールを実行する
+
+特に何事もなく可能。
+
+- role2 (呼ばれる側)
+
+```yaml
+---
+# roles/test2/tasks/main.yml
+- name: ...省略
+```
+
+- role3 (呼ぶ側)
+
+```yaml
+---
+# roles/test3/tasks/main.yml
+- name: this is test3
+  debug:
+    msg: "this is test3"
+
+- name: exec other role
+  import_role:
+    name: test2
+```
+
+- playbook
+
+```yaml
+---
+# playbook.yml
+- hosts: localhost
+  gather_facts: false
+
+  roles:
+  - test2
+  - test3
+```
