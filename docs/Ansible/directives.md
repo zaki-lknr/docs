@@ -188,3 +188,7 @@ ok: [localhost] =>
 include_tasksとは併用不可？
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">手元の2.10.5ですっごく雑に確認した限りだと、import_tasksは<br>when: 有効<br>loop: 「loopしたければinclude使え」とエラー<br>register: 無視される<br>until: 無視される<br>って感じでした。<br><br>include_tasksにだとloopとregisterは使えましたが、untilはnot valid attribute errorでやっぱりダメっぽい… <a href="https://t.co/9CNihs7tvh">pic.twitter.com/9CNihs7tvh</a></p>&mdash; z a k i 🌈 (@zaki_hmkc) <a href="https://twitter.com/zaki_hmkc/status/1362424065554751490?ref_src=twsrc%5Etfw">February 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## async + poll
+
+[[Ansible] asyncとpollを使った非同期処理とループの並列実行 - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/04/06/214645)
