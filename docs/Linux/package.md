@@ -111,6 +111,30 @@ rhel-8-for-x86_64-baseos-rpms                                      Red Hat Enter
 # dnf config-manager --disable ansible-2.9-for-rhel-8-x86_64-rpms
 ```
 
+## yum
+
+### リポジトリ一覧
+
+有効なもの一覧
+
+```console
+# yum repolist
+```
+
+無効なもの一覧
+
+```console
+# yum repolist disabled
+```
+
+### リポジトリの有効化
+
+```
+# yum-config-manager --enable ol7_developer_EPEL
+```
+
+引数に指定するのはリポジトリIDだけど、リスト時に`/arch`が付いてる場合はそれは除く。
+
 ## apk
 
 インストール
