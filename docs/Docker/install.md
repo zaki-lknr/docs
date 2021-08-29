@@ -7,6 +7,12 @@
 Windowsもhome含めてOK  
 [Windows 10 HomeへのDocker Desktop (ver 3.0.0) インストールが何事もなく簡単にできるようになっていた (2020.12時点) - Qiita](https://qiita.com/zaki-lknr/items/db99909ba1eb27803456)
 
+## dockerグループへユーザーを追加するアレ(コピペ用)
+
+```
+$ sudo usermod -aG docker $USER
+```
+
 ## Oracle Linux
 
 ### 標準
