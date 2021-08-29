@@ -9,6 +9,8 @@ Windowsもhome含めてOK
 
 ## Oracle Linux
 
+### 標準
+
 OCIでOL7.9の場合、デフォルトのリポジトリだとこれがヒットする。
 
 ```
@@ -34,3 +36,17 @@ URL                 : https://dockerproject.org
                     : for deploying and scaling web apps, databases, and backend services without
                     : depending on a particular stack or provider.
 ```
+
+### centos版
+
+互換性が高そうなCentOS版の手順・リポジトリでもインストール・お試しにnginxコンテナデプロイはできた。
+
+[Install Docker Engine on CentOS | Docker Documentation](https://docs.docker.com/engine/install/centos/)
+
+ただし依存パッケージ(`slirp4netns`, `fuse-overlayfs`)のインストール用に、`ol7_developer`リポジトリを有効にしておく必要あり。(デフォルト無効)
+
+```
+$ sudo yum-config-manager --enable ol7_developer
+```
+
+[Oracle Linux 7 (aarch64) Development | Oracle, Software. Hardware. Complete.](https://yum.oracle.com/repo/OracleLinux/OL7/developer/aarch64/index.html)
