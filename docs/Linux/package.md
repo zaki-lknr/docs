@@ -135,6 +135,16 @@ rhel-8-for-x86_64-baseos-rpms                                      Red Hat Enter
 
 引数に指定するのはリポジトリIDだけど、リスト時に`/arch`が付いてる場合はそれは除く。
 
+## apt
+
+- option
+    - [【 apt 】コマンド（基礎編）――ソフトウェアをインストールする：Linux基本コマンドTips（139） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1708/31/news017.html)
+    - [apt - Is "upgrade --with-new-pkgs" safer than "dist-upgrade"? - Ask Ubuntu](https://askubuntu.com/questions/694403/is-upgrade-with-new-pkgs-safer-than-dist-upgrade)
+- apt line関連
+    - [APT の設定 (/etc/apt/sources.list) をちゃんと理解する - くじらにっき++](https://kujira16.hateblo.jp/entry/2019/10/14/190008)
+    - [Ubuntuのパッケージ管理のメモ - 蒼の王座・裏口](https://sqlazure.jp/r/ubuntu/857/)
+
+
 ## apk
 
 インストール
