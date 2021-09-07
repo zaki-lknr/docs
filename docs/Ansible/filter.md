@@ -117,6 +117,39 @@
 
 [[Ansible / Jinja2] select / selectattr を使った配列と辞書のフィルタリング - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/02/18/000228)
 
+## リスト要素への一律処理 (map)
+
+### 別フィルタの適用
+
+```yaml
+"{{ items | map('length') }}"
+```
+
+リスト`items`の各要素に対して`length`フィルタをかます
+
+### 要素抜き出し
+
+辞書のキーを`attribute`で指定することで、各要素(辞書型からなる)の指定キーの値のみ抜き出す。
+
+```yaml
+"{{ items | map(attribute='hostname') }}"
+```
+
+キーが無い場合は`AnsibleUndefined`になるが、オプションか更にフィルタすることで対処できる。  
+`default`を指定すればキーが無い場合はその値に置き換える。
+
+```yaml
+"{{ items | map(attribute='hostname', default='no data') }}"
+```
+
+`select`を使ったフィルタに繋げれば、undefの項目を除外もできる。
+
+```yaml
+"{{ items | map(attribute='hostname') | select('none') }}"
+```
+
+`none`は[Jinja2のTest](https://jinja.palletsprojects.com/en/latest/templates/#jinja-tests.none)の一つ。
+
 ## リストの先頭・末尾要素
 
 `array[0]`, `array[-1]`でも一緒といえば一緒だけど。  
