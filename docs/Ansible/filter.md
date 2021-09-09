@@ -17,6 +17,49 @@
 - jinja2
     - [jinja/filters.py at main · pallets/jinja](https://github.com/pallets/jinja/blob/main/src/jinja2/filters.py)
 
+## デフォルト値 (default)
+
+未定義だったらこの値に置き換える、というもの。  
+以下は`foobar_values`が未定義の場合は`value`は`zzz`となる。
+
+```yaml
+vars:
+  value: "{{ foobar_values | default('zzz') }}"
+```
+
+よく使うのは初期値が無い場合にループでリストを作るとき。
+
+```yaml
+    - name: curry
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ yasai + (niku | default([])) }}"
+```
+
+とか
+
+```yaml
+    - name: set_fact list value
+      vars:
+        list_values:
+        - item1
+        - item2
+        - item3
+      set_fact:
+        list_items: "{{ list_items|default([]) + [item] }}"
+      loop: "{{ list_values }}"
+```
+
+未定義でなくfalseだったら置き換えるのであれば、第2引数に`true`をセットする。
+
+```yaml
+{{ ''|default('the string was empty', true) }}
+```
+
+- [jinja-filters.default](https://jinja.palletsprojects.com/en/3.0.x/templates/#jinja-filters.default)
+- [[Ansible] 省略したいパラメタに変数指定せざるを得ない場合に使う変数omitとdefaultフィルタ - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/06/02/090251)
+- [[Ansible] リスト連結時にdefaultを使って未定義の場合は空リストとして処理する - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/09/224713)
+
 ## 三項演算子
 
 `ternary`を使う。
