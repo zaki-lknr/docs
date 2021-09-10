@@ -4,6 +4,26 @@
 
 ## ループ
 
+### ループとblockは併用不可
+
+```yaml
+  tasks:
+    - name: block with loop
+      loop: "{{ item_list }}"
+      block:
+        :
+```
+
+こういうのは無理
+
+```console
+ERROR! 'loop' is not a valid attribute for a Block
+```
+
+[Blocks — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_blocks.html)
+
+> Most of what you can apply to a single task (with the exception of loops) can be applied at the block level, so blocks make it much easier to set data or directives common to the tasks.
+
 ### ループとregisterの併用
 
 - [[Ansible] loopとモジュール実行の結果を保持するregisterを併用する - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/04/06/190124)
