@@ -10,6 +10,20 @@ venvとか作った直後は`pip`自体のバージョンが古いので(目的�
 $ pip install --upgrade pip
 ```
 
+## tool
+
+### httpサーバ
+
+```console
+$ python3 -m http.server 8080
+```
+
+```console
+$ python2 -m SimpleHTTPServer 8080
+```
+
+[インフラ系エンジニアが唯一覚えるべきPythonの使い方 - Qiita](https://qiita.com/zaki-lknr/items/c4b0a596890dff7ffec6)
+
 ## 実装
 
 ### リスト処理
