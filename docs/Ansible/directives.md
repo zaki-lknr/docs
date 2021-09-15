@@ -132,6 +132,30 @@ ok: [localhost] =>
 
 `{{ item }}`は使用不可となる。
 
+## when
+
+### リストで複数条件
+
+`when`にはリスト形式で条件を複数指定できる。リストの場合は「すべての条件がtrueの場合」にタスクは実行。
+
+```yaml
+---
+- hosts: localhost
+  gather_facts: false
+  vars:
+    cond1: true
+    cond2: false
+
+  tasks:
+    - debug:
+        msg: "hello"
+      when:
+        - cond1
+        - cond2
+```
+
+この場合スキップされる。
+
 ## includeとimport
 
 - [Re-using Ansible artifacts — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
