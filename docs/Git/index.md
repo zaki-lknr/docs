@@ -363,3 +363,38 @@ $ git log --oneline --graph
 ```
 $ git log --oneline --first-parent <branch-name>
 ```
+
+### コミット時の対象ファイルを表示
+
+`pull`のように変更量などを表示
+
+```
+$ git log --stat
+:
+:
+commit 8331291c45b99411ee14076cc0e73dddfeafa153 (HEAD -> main, origin/main, origin/HEAD)
+Author: zaki-lknr <zaki.hmkc+github@gmail.com>
+Date:   Wed Sep 15 16:44:39 2021 +0900
+
+    add: ansible/directives: whenでリスト
+
+ docs/Ansible/directives.md | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+```
+
+`status`のときのように変更種別の表示
+
+```
+$ git log --name-status
+:
+:
+commit 8331291c45b99411ee14076cc0e73dddfeafa153 (HEAD -> main, origin/main, origin/HEAD)
+Author: zaki-lknr <zaki.hmkc+github@gmail.com>
+Date:   Wed Sep 15 16:44:39 2021 +0900
+
+    add: ansible/directives: whenでリスト
+
+M       docs/Ansible/directives.md
+```
+
+`--oneline`との併用も可
