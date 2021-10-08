@@ -257,3 +257,18 @@ drwxr-xr-x. 2 zaki zaki 6  7月 31 10:27 /var/tmp/file_permission/
 
 `755`にすると、10進数の755入力を8進数と解釈し`1363`としてモード設定される動作になる。
 モード設定は8進数の数値か文字列型の数値が入力なのと、先頭ゼロの数値は8進数としてYAMLが解釈するので、先頭ゼロを付けずにintの数値を指定すると想定外の動作になる。
+
+## fetch
+
+ターゲットノードのファイルをコントロールノードへコピーする。  
+ディレクトリは不可。(`src`のパスがディレクトリの場合は失敗する)
+
+```console
+fatal: [fedora-node]: FAILED! => changed=false 
+  file: /home/zaki/src/docker-images/
+  msg: remote file is a directory, fetch cannot work on directories
+```
+
+[ドキュメントのsrcパラメタの項](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fetch_module.html#parameter-src)にも記載あり。
+
+> This must be a file, not a directory.
