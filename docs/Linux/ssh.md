@@ -99,3 +99,12 @@ $ ssh rhel8 -L 25080:10.88.250.10:80
 ```console
 # diff -u <(sshd -T -f /dev/null)  <(sshd -T)
 ```
+
+## 鍵
+
+### フィンガープリント確認
+
+```console
+$ ssh-keygen -l -f ~/.ssh/id_rsa.pub
+4096 SHA256:6Qt0+Nikcx/NpgM4xu/4WnDpqhj8L+OjtDEP5O2a7lw no comment (RSA)
+```
