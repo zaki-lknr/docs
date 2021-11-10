@@ -132,6 +132,47 @@ ok: [localhost] =>
 
 `{{ item }}`は使用不可となる。
 
+### ループインデックスの参照
+
+タスク内でループインデックスを参照したい場合は、`extended: true`を付加すれば参照できる。
+
+```yaml
+- name: loop index sample
+  debug:
+    msg:
+    - "{{ item }}"
+    - "{{ ansible_loop.index }}"
+    - "{{ ansible_loop.index0 }}"
+  loop:
+    - foo
+    - bar
+    - baz
+  loop_control:
+    extended: true
+```
+
+実行結果は以下の通り。
+
+```console
+ok: [localhost] => (item=foo) => 
+  msg:
+  - foo
+  - '1'
+  - '0'
+ok: [localhost] => (item=bar) => 
+  msg:
+  - bar
+  - '2'
+  - '1'
+ok: [localhost] => (item=baz) => 
+  msg:
+  - baz
+  - '3'
+  - '2'
+```
+
+使用可能な変数はこちら→ [Extended loop variables](https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html#extended-loop-variables)
+
 ## when
 
 ### リストで複数条件
