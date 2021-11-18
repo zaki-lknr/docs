@@ -398,3 +398,15 @@ M       docs/Ansible/directives.md
 ```
 
 `--oneline`との併用も可
+
+## 差分
+
+### whitespace無視
+
+```console
+$ git diff -w
+```
+
+>        -w, --ignore-all-space
+>            Ignore whitespace when comparing lines. This ignores differences
+>            even if one line has whitespace where the other line has none.
