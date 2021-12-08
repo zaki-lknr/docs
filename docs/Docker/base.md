@@ -15,3 +15,11 @@ $ docker save imagename:tag > imagename-tag.tar
 ```
 $ docker save imagename:tag -o imagename-tag.tar
 ```
+
+### pull
+
+sha256ハッシュ値指定
+
+```console
+$ docker pull httpd@sha256:f2179b693cfb49baa6e7500171deea7bef755338bf165b39aedacf2b4ae28455
+```
