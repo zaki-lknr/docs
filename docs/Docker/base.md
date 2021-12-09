@@ -23,3 +23,18 @@ sha256ハッシュ値指定
 ```console
 $ docker pull httpd@sha256:f2179b693cfb49baa6e7500171deea7bef755338bf165b39aedacf2b4ae28455
 ```
+
+### volume
+
+リストする。
+
+```console
+$ docker volume ls
+```
+
+参照されてないボリュームをリストアップする。  
+[ダングリング](https://docs.docker.jp/engine/reference/commandline/volume_ls.html#id2)
+
+```console
+$ docker volume ls -f dangling=true
+```
