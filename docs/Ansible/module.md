@@ -272,3 +272,6 @@ fatal: [fedora-node]: FAILED! => changed=false
 [ドキュメントのsrcパラメタの項](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fetch_module.html#parameter-src)にも記載あり。
 
 > This must be a file, not a directory.
+
+fetchモジュールの使い方全般ははてブに書いた。  
+[[Ansible] fetchモジュールを使ってリモートのファイルを実行ノードへ転送・集約する - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/12/13/060649)
