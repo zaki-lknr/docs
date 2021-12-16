@@ -70,3 +70,11 @@ $ ansible-doc <module-name>
 ```console
 $ ansible-doc <module-fqcn>
 ```
+
+モジュールパスを指定するには
+
+```console
+$ ansible-doc -M /path/to/collection-path/ansible_collections/namespace/collectionname/plugins/modules hogehoge
+```
+
+パスが合わない場合は、エラーメッセージに「これらのパスにそんなモジュールないんだが？」とパス一覧が表示されるので、そこから調整する。
