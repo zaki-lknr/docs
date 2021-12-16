@@ -60,3 +60,13 @@ pipは最新にしつつ、バージョン指定のパッケージも入れる�
 ## 索引
 
 [Index — Ansible Documentation](https://docs.ansible.com/ansible/latest/genindex.html)
+
+## ansible-doc
+
+```console
+$ ansible-doc <module-name>
+```
+
+```console
+$ ansible-doc <module-fqcn>
+```
