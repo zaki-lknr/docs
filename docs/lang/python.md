@@ -28,6 +28,22 @@ $ python2 -m SimpleHTTPServer 8080
 
 ### リスト処理
 
+#### リストの定義
+
+```python
+items = [
+    'foo',
+    'bar',
+    'baz',
+]
+```
+
+空リスト
+
+```python
+items = []
+```
+
 #### length
 
 ```python
