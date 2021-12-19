@@ -44,6 +44,14 @@ items = [
 items = []
 ```
 
+#### 要素の追加
+
+リストオブジェクトの`append()`メソッドを使う。
+
+```python
+items.append('qux')
+```
+
 #### length
 
 ```python
