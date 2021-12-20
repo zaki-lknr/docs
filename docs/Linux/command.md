@@ -229,3 +229,11 @@ route1=172.29.0.0/24,172.16.1.3
 ## firewall-cmd
 
 [[コマンドメモ] firewall-cmd備忘録 (firewalld) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/26/230958)
+
+## KVM
+
+### 一覧
+
+```
+$ virsh list --all
+```
