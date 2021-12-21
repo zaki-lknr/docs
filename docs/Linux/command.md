@@ -190,6 +190,8 @@ $ ps --ppid 1961 --no-headers
 # nmcli c m ens192 ipv4.gateway ""
 ```
 
+[[Ansible] ターゲットホストのIPアドレスの参照とデフォルトゲートウェイの設定についてのメモ - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/01/08/094833)
+
 ### スタティックルート追加
 
 環境: [[VyOS] NAT設定を使ったネットワーク間のルーティング (手動 & Ansible / vyos_config) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/04/15/092340)
