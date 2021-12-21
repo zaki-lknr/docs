@@ -176,6 +176,20 @@ $ ps --ppid 1961 --no-headers
 
 ## NetworkManager
 
+### デフォルトゲートウェイ変更
+
+`192.168.39.89`に設定する
+
+```console
+# nmcli c m ens192 ipv4.gateway 192.168.39.89
+```
+
+設定削除する
+
+```console
+# nmcli c m ens192 ipv4.gateway ""
+```
+
 ### スタティックルート追加
 
 環境: [[VyOS] NAT設定を使ったネットワーク間のルーティング (手動 & Ansible / vyos_config) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/04/15/092340)
