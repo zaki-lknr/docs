@@ -38,3 +38,25 @@ $ docker volume ls
 ```console
 $ docker volume ls -f dangling=true
 ```
+
+### prune
+
+不要オブジェクトを削除するには`docker prune`を使う。
+
+#### コンテナのprune
+
+```console
+$ docker container prune
+```
+
+デフォルトは停止している全コンテナが削除される。  
+10日以前に停止しているコンテナの場合は、
+
+```console
+$ docker container prune --filter "until=240h"
+```
+
+[Go duration strings](https://pkg.go.dev/time#ParseDuration)を使って期間を指定できる。  
+指定可能なのは以下、かな？
+
+> Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h"
