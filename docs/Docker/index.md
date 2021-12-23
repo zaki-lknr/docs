@@ -60,3 +60,12 @@ $ docker container prune --filter "until=240h"
 指定可能なのは以下、かな？
 
 > Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h"
+
+#### イメージのprune
+
+```console
+$ docker image prune
+```
+
+デフォルトは、タグが設定されずに`<none>`になっているイメージが削除される。  
+`<none>`のイメージをリストアップするだけであれば `docker image ls -f "dangling=true"` でリストアップできる。
