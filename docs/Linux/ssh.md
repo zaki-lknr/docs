@@ -108,3 +108,11 @@ $ ssh rhel8 -L 25080:10.88.250.10:80
 $ ssh-keygen -l -f ~/.ssh/id_rsa.pub
 4096 SHA256:6Qt0+Nikcx/NpgM4xu/4WnDpqhj8L+OjtDEP5O2a7lw no comment (RSA)
 ```
+
+### 秘密鍵から公開鍵を作成
+
+```console
+$ ssh-keygen -y -f ~/.ssh/id_rsa
+```
+
+STDOUTへ出力されるので、`> id_rsa.pub`とかファイルへ出力すればOK
