@@ -2,6 +2,21 @@
 
 ## pip
 
+### requirements.txtの利用
+
+```txt
+ansible==2.9.7
+jmespath=0.10.0
+```
+
+という内容の`requirements.txt`ファイルを作成し、これで
+
+```console
+$ pip install -r requirements.txt
+```
+
+※ ファイル名は任意
+
 ### pipのアップデート
 
 venvとか作った直後は`pip`自体のバージョンが古いので(目的にパッケージ入れるときにエラーになる前に先に)アップデートする
