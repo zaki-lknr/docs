@@ -250,6 +250,14 @@ route1=172.29.0.0/24,172.16.1.3
 
 ### 一覧
 
-```
+```console
 $ virsh list --all
 ```
+
+### 実行中VMへコンソール接続
+
+```console
+$ virsh console <domain-name>
+```
+
+VM(domain)名は`list`で確認する。
