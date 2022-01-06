@@ -261,3 +261,17 @@ $ virsh console <domain-name>
 ```
 
 VM(domain)名は`list`で確認する。
+
+### 停止
+
+シャットダウンするには`shutdown`する。
+
+```console
+$ virsh shutdown <domain-name>
+```
+
+強制停止は`destroy`する。
+
+```console
+$ virsh destroy <domain-name>
+```
