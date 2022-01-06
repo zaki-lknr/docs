@@ -254,6 +254,12 @@ route1=172.29.0.0/24,172.16.1.3
 $ virsh list --all
 ```
 
+### VMの起動
+
+```console
+$ virsh start <domain-name>
+```
+
 ### 実行中VMへコンソール接続
 
 ```console
