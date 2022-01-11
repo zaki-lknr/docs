@@ -281,3 +281,19 @@ $ virsh shutdown <domain-name>
 ```console
 $ virsh destroy <domain-name>
 ```
+
+### 自動起動
+
+有効化
+
+```console
+$ virsh autostart <domain-name>
+```
+
+無効化
+
+```console
+$ virsh autostart --disable <domain-name>
+```
+
+確認は`virsh dominfo <domain-name>`かな？
