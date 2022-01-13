@@ -150,6 +150,26 @@ terminalでCtrl-kが次コマンド待ちになってしまう場合は以下も
 }
 ```
 
+## Remote SSH
+
+### git cloneの認証
+
+通常だと認証のプロンプトが表示される操作でこのようになる場合、
+
+```console
+Missing or invalid credentials.
+Error: connect ECONNREFUSED /run/user/1000/vscode-git-fce9cdb56d.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1146:16) {
+  errno: -111,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '/run/user/1000/vscode-git-fce9cdb56d.sock'
+}
+Missing or invalid credentials.
+```
+
+アクセスしてるリモート環境へ、[GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)を入れてReload WindowすればVS Codeの画面で認証プロンプトが表示されてアカウント設定できた。
+
 ## Remote Container
 
 ### ubuntu / focal
