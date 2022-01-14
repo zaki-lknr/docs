@@ -121,6 +121,47 @@ playbook: setup.yml
       add source gitprompt      TAGS: [git]
 ```
 
+### --start-at
+
+指定タスクから処理を開始する。開発・デバッグのお供に。
+
+```yaml
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: exec 1st task
+    debug:
+      msg: "hello world"
+
+  - name: exec 2nd task
+    debug:
+      msg: "hello worlds"
+
+  - name: exec 3rd task
+    debug:
+      msg: "hello worlds!!"
+```
+
+```console
+$ ansible-playbook sample.yml --start-at "exec 2nd task"
+```
+
+実行結果
+
+```console
+PLAY [localhost] *****************************************************************************
+
+TASK [exec 2nd task] *************************************************************************
+ok: [localhost] => 
+  msg: hello worlds
+
+TASK [exec 3rd task] *************************************************************************
+ok: [localhost] => 
+  msg: hello worlds!!
+```
+
 # sample
 
 ## playbook
