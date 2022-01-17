@@ -174,6 +174,48 @@ $ ps --ppid 1961 --no-headers
  241073 ?        00:00:00 docker-proxy
 ```
 
+## top
+
+### ソート
+
+実行中に`P`でCPU使用率、`M`でメモリ使用率でソートされる。
+
+分かりづらいけど`x`押下でソート基準のカラムが太字になる。
+
+### CPUコア毎
+
+実行中に`1`押下
+
+```console
+top - 09:18:32 up 69 days, 11:39,  0 users,  load average: 0.01, 0.02, 0.05
+Tasks: 134 total,   1 running, 133 sleeping,   0 stopped,   0 zombie
+%Cpu0  :  2.0 us,  0.7 sy,  0.0 ni, 97.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+%Cpu1  :  0.3 us,  0.7 sy,  0.0 ni, 99.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+%Cpu2  :  1.3 us,  0.7 sy,  0.0 ni, 98.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+%Cpu3  :  0.3 us,  0.3 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  7990048 total,   717480 free,  1974248 used,  5298320 buff/cache
+KiB Swap:  3670012 total,  3670012 free,        0 used.  5665228 avail Mem 
+```
+
+### コマンドフルパス・引数表示
+
+実行中に`c`押下
+
+```console
+top - 09:20:43 up 69 days, 11:41,  0 users,  load average: 0.00, 0.01, 0.05
+Tasks: 134 total,   1 running, 133 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.1 us,  0.0 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  7990048 total,   715400 free,  1976168 used,  5298480 buff/cache
+KiB Swap:  3670012 total,  3670012 free,        0 used.  5663308 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                                             
+ 351149 zaki      20   0 1280996 358920   9912 S   0.0  4.5   8:37.98 /home/zaki/.vscode-server/data/User/globalStorage/hashicorp.terraform/bin/terraform-ls serve                        
+ 350657 zaki      20   0 1029428 147820  21832 S   0.3  1.9   2:04.98 /home/zaki/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/node /home/zaki/.vscode-server/bin/899d46d8+ 
+ 350535 zaki      20   0  963792 102092  18036 S   0.0  1.3   2:00.07 /home/zaki/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/node /home/zaki/.vscode-server/bin/899d46d8+ 
+ 385441 root      20   0 1130612  62204  26536 S   0.0  0.8   0:10.18 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock      
+```
+
+
 ## NetworkManager
 
 ### デフォルトゲートウェイ変更
