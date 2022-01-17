@@ -32,6 +32,13 @@ Host github.com
 
 cloneのパスが`git@github.com/...`とユーザー名が指定されているので、`User git`は不要
 
+Backlogも同様にclone用文字列コピーにユーザー名含んでいるので以下でOK
+
+```
+Host <space>.git.backlog.com
+    IdentityFile ~/.ssh/id_rsa_git
+```
+
 ## リモートリポジトリ
 
 ### 現在の設定
