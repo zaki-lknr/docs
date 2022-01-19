@@ -74,3 +74,17 @@ $ git remote set-url origin git@github.com:zaki-lknr/ansible-sample.git
 ```
 $ git remote add hoge <other repository>
 ```
+
+## git prompt
+
+```console
+curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o .git-prompt.sh
+chmod 755 .git-prompt.sh
+```
+
+.bashrcへ以下追加
+
+```sh
+[ -f ~/.git-prompt.sh ] && source ~/.git-prompt.sh
+```
+
