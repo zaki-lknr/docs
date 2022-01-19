@@ -1,5 +1,23 @@
 # プレイブック
 
+これCLIとかコマンドってタイトルの方がいいか
+
+## 共通
+
+### -e | --extra-vars
+
+スペースを含む値を与える場合
+
+```console
+$ ansible-playbook ... -e 'key="foo bar baz"'
+```
+
+あるいはJSON形式で。(JSONだと辞書もリストもいける)
+
+```console
+$ ansible-playbook ... -e '{key: "foo bar baz"}'
+```
+
 ## ansible-playbook コマンド
 
 ### --check
