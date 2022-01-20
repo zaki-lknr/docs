@@ -25,6 +25,26 @@ venvとか作った直後は`pip`自体のバージョンが古いので(目的�
 $ pip install --upgrade pip
 ```
 
+### パッケージのダウングレード
+
+基本的には古いバージョンを指定して以下でOK
+
+```console
+$ pip install hogehoge=0.0.1
+```
+
+`requirements.txt`記載の場合も、記載した指定バージョンがインストール済みのものより古ければ自動で更新される。  
+以下は`rich==11.0.0`がインストール済みの状態で`rich==9.5.1`をインストールした場合のログ。
+
+```console
+Installing collected packages: typing-extensions, rich
+  Attempting uninstall: rich
+    Found existing installation: rich 11.0.0
+    Uninstalling rich-11.0.0:
+      Successfully uninstalled rich-11.0.0
+Successfully installed rich-9.5.1 typing-extensions-3.10.0.2
+```
+
 ## tool
 
 ### httpサーバ
