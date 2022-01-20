@@ -59,6 +59,26 @@ $ sed -i -e 's/regexp/string/' file
 `-i`でファイル更新を行う。  
 `-ie`って書くと、`-i.bak`で`file.bak`のバックアップ作成と解釈されるので分ける。
 
+## awk
+
+`ps aux`の結果の3カラム目を抜き出す。
+
+```console
+$ ps aux | awk '{print $3}'
+```
+
+3カラム目と4カラム目をタブで区切って出力。
+
+```console
+$ ps aux | awk '{print $3, "\t", $4}'
+```
+
+または、OFS変数(output field separator)にタブをセットし以下。
+
+```console
+$ ps aux | awk 'BEGIN { OFS="\t" } {print $3, $4}'
+```
+
 ## tar
 
 ### 展開時の形式指定オプション
