@@ -88,7 +88,7 @@ $ git merge features/add_worker_node --no-ff
 $ git fetch origin 
 ```
 
-rebaseで取り込み
+指定ブランチの内容を`rebase`で現在のブランチへ取り込み
 
 ```console
 $ git rebase origin/hogehoge
