@@ -294,3 +294,43 @@ ok: [localhost] =>
 ok: [localhost] => 
   msg: zaki
 ```
+
+## オブジェクトの型を調べる (type_debug)
+
+任意のオブジェクトの型をチェックするには `type_debug` を使う。
+
+```yml
+- name: type debug
+  debug:
+    msg: "{{ item }}"
+  vars:
+    num_val: 1
+    str_val: zzz
+    list_val:
+      - item1
+      - item2
+      - item3
+    dict_val:
+      key1: val1
+      key2: val2
+      key3: val3
+  loop:
+    - "{{ num_val | type_debug }}"
+    - "{{ str_val | type_debug }}"
+    - "{{ list_val | type_debug }}"
+    - "{{ dict_val | type_debug }}"
+```
+
+結果
+
+```console
+TASK [type debug] ***********************************************************
+ok: [localhost] => (item=int) => 
+  msg: int
+ok: [localhost] => (item=AnsibleUnicode) => 
+  msg: AnsibleUnicode
+ok: [localhost] => (item=list) => 
+  msg: list
+ok: [localhost] => (item=dict) => 
+  msg: dict
+```
