@@ -18,6 +18,18 @@ $ ansible-playbook ... -e 'key="foo bar baz"'
 $ ansible-playbook ... -e '{key: "foo bar baz"}'
 ```
 
+### -l | --limit
+
+playbookの`hosts`で指定してあるホストグループの内、特定のホストだけに処理したい場合に使う。
+
+```console
+$ ansible-playbook ... -l host1
+```
+
+こうすると、playbookで例えば`hosts: servers`と指定されており、serversグループに `host1`, `host2`, `host3` が有ったとしても、この`ansible-playbook`実行のタスクは `host1` のみが処理対象で実行される。
+
+開発やデバッグのお供に。
+
 ## ansible-playbook コマンド
 
 ### --check
