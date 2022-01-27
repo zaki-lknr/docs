@@ -175,6 +175,40 @@ ok: [localhost] => (item=baz) =>
 
 ## when
 
+### 条件がint型
+
+```yml
+  tasks:
+    - name: len bool
+      debug:
+      loop:
+        - 1
+        - 0
+        - -1
+      when: item
+```
+
+`0`の場合はskip。  
+`1`, `-1`は処理対象。
+
+ansible-core 2.11.3で確認
+
+### 条件がstring型
+
+```yml
+    - name: str
+      debug:
+      loop:
+        - "a"
+        - ""
+      when: item
+```
+
+`""`の場合はskip。  
+`"a"`の場合は処理される。
+
+ansible-core 2.11.3で確認 / 2.9だと構文エラー(文字列のみの判定はできないっぽい？何かと比較するなど評価すればもちろんOK)
+
 ### リストで複数条件
 
 `when`にはリスト形式で条件を複数指定できる。リストの場合は「すべての条件がtrueの場合」にタスクは実行。
