@@ -127,6 +127,24 @@ Traceback (most recent call last):
 ValueError: 'zzz' is not in list
 ```
 
+#### 要素の有無
+
+`in`を使う。
+
+```python
+array = ['curry', 'beef', 'chicken', 'vegetable']
+
+print('curry' in array)
+print('pork' in array)
+```
+
+出力は以下になる。
+
+```console
+True
+False
+```
+
 ### 部分適用(partial application)
 
 - `functiontools#partial()`を使う。
