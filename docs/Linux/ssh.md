@@ -68,10 +68,23 @@ $ ssh 172.29.0.89 -J 192.168.0.19,172.16.1.0
 記述の仕方は
 
 ```text
-ssh ゴール(終着点) -J 踏み台ホストをアクセス順にカンマ区切りで羅列。
+ssh ゴール(終着点) -J 踏み台ホストをアクセス順にカンマ区切りで羅列
 ```
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ローカルから192.168.0.19→172.16.1.0→172.29.0.89という順でssh多段アクセスしたい場合は、<br>$ ssh 172.29.0.89 -J 192.168.0.19,172.16.1.0<br>でいける。 <a href="https://t.co/7xHlxvxFTr">pic.twitter.com/7xHlxvxFTr</a></p>&mdash; z a k i 🌈🌉 (@zaki_hmkc) <a href="https://twitter.com/zaki_hmkc/status/1487383030251462658?ref_src=twsrc%5Etfw">January 29, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+#### 多段アクセスとポートフォワードのコンボ
+
+`-L`で普通に指定すればOK。  
+機能自体は後述。
+
+上の多段アクセス例であれば、
+
+```console
+$ ssh 172.29.0.89 -J 192.168.0.19,172.16.1.0 -L 8899:localhost:8080
+```
+
+とすれば、「`172.29.0.89`から見た`localhost:8080`」へ対して、「ローカル(sshを実行してる出発点)の`localhost:8899`」をフォワードする。
 
 ### ポートフォワード
 
