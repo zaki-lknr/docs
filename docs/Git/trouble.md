@@ -159,3 +159,12 @@ memo
 $ git reset --hard HEAD /path/to/file
 fatal: Cannot do hard reset with paths.
 ```
+
+### mergeの取り消し(conflict)
+
+mergeしようとしたらconflictしてしまい、競合を解消するよりマージ元を改修してマージしなおしたほうが早いような場合。  
+マージを取り消すには
+
+```console
+$ git merge --abort
+```
