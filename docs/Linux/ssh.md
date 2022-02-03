@@ -130,6 +130,31 @@ $ ssh rhel8 -L 25080:10.88.250.10:80
 # diff -u <(sshd -T -f /dev/null)  <(sshd -T)
 ```
 
+### ポート番号の変更
+
+SELinuxが有効の場合はsshdの設定変更だけでは有効にならない。  
+`Port 25022`を設定したときに、、
+
+```
+# systemctl restart sshd
+Job for sshd.service failed because the control process exited with error code. See "systemctl status sshd.service" and "journalctl -xe" for details.
+# journalctl -xe
+sshd[20141]: error: Bind to port 25022 on 0.0.0.0 failed: Permission denied.
+sshd[20141]: error: Bind to port 25022 on :: failed: Permission denied.
+sshd[20141]: fatal: Cannot bind any address.
+systemd[1]: sshd.service: main process exited, code=exited, status=255/n/a
+systemd[1]: Failed to start OpenSSH server daemon.
+```
+
+こんなエラーが出る場合は、以下を実行。
+
+```console
+# semanage port -a -t ssh_port_t -p tcp 25022
+```
+
+これで`systemctl restart sshd`が有効になる。
+まぁsshd_configの`Port`のすぐ上にコメントで書かれてるんだけど。
+
 ## 鍵
 
 ### フィンガープリント確認

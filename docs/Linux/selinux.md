@@ -109,3 +109,5 @@ Content-Type: text/html; charset=UTF-8
 
 [root@fedora-node ~]# 
 ```
+
+[sshdの場合はこちら](https://zaki-lknr.github.io/Linux/ssh/#sshd)
