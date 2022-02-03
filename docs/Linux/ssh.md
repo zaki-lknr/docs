@@ -58,6 +58,8 @@ $
 
 ### 多段アクセス
 
+追記: 詳細はこちら -> [[Linux] ProxyJump設定でSSHの多段アクセスとscp/ポートフォワード - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2022/02/03/000245)
+
 `ProxyCommand`を使った情報がたくさんヒットするけど、`ProxyJump (-J)`を使うと簡単。  
 ローカルから192.168.0.19→172.16.1.0→172.29.0.89という順でssh多段アクセスしたい場合は、以下の通り。
 
