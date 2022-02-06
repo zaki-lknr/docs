@@ -69,3 +69,39 @@ $ docker image prune
 
 デフォルトは、タグが設定されずに`<none>`になっているイメージが削除される。  
 `<none>`のイメージをリストアップするだけであれば `docker image ls -f "dangling=true"` でリストアップできる。
+
+## ビルド
+
+### ヘルスチェック
+
+30秒後にhttpdが起動するようになっているコンテナイメージ。
+
+```Dockerfile
+FROM httpd:2.4
+
+COPY index.html /usr/local/apache2/htdocs/
+RUN apt-get update; apt-get install curl
+
+HEALTHCHECK --interval=5s --timeout=5s --retries=15 CMD curl -f http://127.0.0.1 || exit 1
+
+#CMD ["httpd-foreground"]
+CMD ["sh", "-c", "sleep 30; httpd-foreground"]
+```
+
+起動処理中は
+
+```console
+[zaki@node slowstart_httpd]$ docker run --rm -d -p 8080:80 --name slowstart_httpd slowstart_httpd
+e5c366cb3bbab10284ab41bd3e23fbf24720c9c371c35a8137d78a3c138844c6
+[zaki@node slowstart_httpd]$ docker container ls
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS                            PORTS                                   NAMES
+e5c366cb3bba   slowstart_httpd   "sh -c 'sleep 30; ht…"   5 seconds ago   Up 4 seconds (health: starting)   0.0.0.0:8080->80/tcp, :::8080->80/tcp   slowstart_httpd
+```
+
+起動後は
+
+```console
+[zaki@node slowstart_httpd]$ docker container ls
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS                    PORTS                                   NAMES
+e5c366cb3bba   slowstart_httpd   "sh -c 'sleep 30; ht…"   32 seconds ago   Up 31 seconds (healthy)   0.0.0.0:8080->80/tcp, :::8080->80/tcp   slowstart_httpd
+```
