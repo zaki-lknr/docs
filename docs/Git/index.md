@@ -110,6 +110,7 @@ $ git rebase origin/hogehoge
 $ git stash pop
 ```
 
+origin/mainから取り込むときに`pull`するとmergeになってしまうので、rebaseしたい場合は`fetch`する。(たぶん)
 
 ## conflictした場合
 
@@ -184,6 +185,12 @@ $ git branch features/divide_playbook
 
 ```
 $ git checkout features/divide_playbook
+```
+
+Git 2.23以降は
+
+```console
+$ git switch features/divide_playbook
 ```
 
 ### ブランチ作成＆切り替え
