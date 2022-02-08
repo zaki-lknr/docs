@@ -336,6 +336,20 @@ Git上は削除されるがファイルシステムには残る。
 
 `git rm`直後は、`git status`で削除したものが`deleted`と表示されステージング状態なので、`commit`すればリポジトリに反映される。
 
+### Untrackedファイルを削除する
+
+`-n`でファイルを確認
+
+```console
+$ git clean -n [path/to]
+```
+
+`-f`で削除する。
+
+```
+$ git clean -f [path/to]
+```
+
 ## コミットログ
 
 ### ログを見る
