@@ -145,6 +145,29 @@ True
 False
 ```
 
+#### スライス
+
+```python
+array = ['curry', 'beef', 'chicken', 'vegetable']
+
+print(array[2:])
+print(array[:3])
+print(array[1:2])
+```
+
+実行結果は以下
+
+```console
+$ python3 slice.py
+['chicken', 'vegetable']
+['curry', 'beef', 'chicken']
+['beef']
+```
+
+書式は`array[始点:終点]`。省略時は最初からor最後まで。  
+始点はindexを「含む」が、終点はindexを「含まない」ので注意。  
+(要素のindexというより、区切り位置のindexと見なすと良い)
+
 ### 文字列
 
 #### splitlines()
