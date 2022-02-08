@@ -199,6 +199,12 @@ $ git switch features/divide_playbook
 $ git checkout -b features/divide_playbook
 ```
 
+Git 2.23以降は
+
+```console
+$ git switch -c features/divide_playbook
+```
+
 ### ローカルブランチの削除
 
 ```
