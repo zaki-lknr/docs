@@ -174,6 +174,25 @@ $ python3 slice.py
 
 テキストの末尾に改行がある場合、`split('\n')`を使うと末尾の改行もデリミタと認識し、リストの最終要素は空文字になるが、`splitlines()`であれば末尾の改行分は無視される。行ごとに処理したい場合はこちらが便利。
 
+#### ゼロパディング
+
+文字列のzfill()メソッドを使う。  
+引数の数値の桁数長にゼロパディングされた文字列を返す。
+
+```python
+int_sample = '123'
+str_sample = 'foo'
+print(int_sample.zfill(8))
+print(str_sample.zfill(8))
+```
+
+実行結果は以下。
+
+```console
+00000123
+00000foo
+```
+
 ### 部分適用(partial application)
 
 - `functiontools#partial()`を使う。
