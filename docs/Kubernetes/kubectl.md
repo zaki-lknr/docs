@@ -2,7 +2,16 @@
 
 分類変えるかも…
 
-## タブ補完
+## 設定
+
+### kubeconfigのマージ
+
+```console
+$ KUBECONFIG=new-kubeconfig.yaml:$HOME/.kube/config kubectl config view --flatten > $HOME/.kube/tmp
+$ mv $HOME/.kube/tmp $HOME/.kube/config
+```
+
+### タブ補完
 
 ```bash
 source <(kubectl completion bash)
