@@ -81,3 +81,29 @@
 
 ロール内のtaskから`import_tasks`で読んだ先のファイルのtaskで参照する`role_path`であれば参照可能。  
 (あくまで呼び出し元ロール基準のパスになる)
+
+## ノードのファクト変数
+
+```yaml
+gather_facts: true
+```
+
+全部取ると重いけど、`gather_subset`を指定するとサブセットだけ取れる。
+
+```yaml
+---
+- hosts: all
+  gather_facts: true
+  gather_subset:
+    - network
+
+  tasks:
+  - debug:
+      msg: "{{ ansible_facts }}"
+```
+
+これで`wc -l`すると約375行。  
+`gather_subset`の指定が無いと926行。
+
+`ansible all -m setup | wc -l`だと916行。  
+`ansible -i inventory all -m setup -a "gather_subset=network" | wc -l`だと365行。
