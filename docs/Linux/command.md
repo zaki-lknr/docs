@@ -306,6 +306,20 @@ route1=172.29.0.0/24,172.16.1.3
 
 ## ファイアウォール
 
+### iptables
+
+ルール確認
+
+```console
+# iptables -L
+```
+
+TCPポート許可追加
+
+```console
+# iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+```
+
 ### firewall-cmd
 
 [[コマンドメモ] firewall-cmd備忘録 (firewalld) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/26/230958)
