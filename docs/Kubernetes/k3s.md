@@ -52,7 +52,8 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/k3s.service to 
 $ scp oci-ap-n1:k3s.yaml oci-ap-n1-k3s.yaml
 ```
 
-`server`のアドレスをグローバルIPに変更し、`insecure-skip-tls-verify: true`を追加。
+`server`のアドレスをグローバルIPに変更し、`insecure-skip-tls-verify: true`を追加。  
+(※うまくいかないときは`kubectl`に`--insecure-skip-tls-verify=true`オプションを追加)
 
 ```yaml
 clusters:
