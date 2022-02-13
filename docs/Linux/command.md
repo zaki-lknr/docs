@@ -304,6 +304,55 @@ route1=172.29.0.0/24,172.16.1.3
 # nmcli c m ens224 -ipv4.routes "172.29.0.0/24 172.16.1.3"
 ```
 
-## firewall-cmd
+## ファイアウォール
+
+### firewall-cmd
 
 [[コマンドメモ] firewall-cmd備忘録 (firewalld) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/26/230958)
+
+### ufw
+
+現在の状態。  
+※アクティブになっていない
+
+```console
+root@oci-g-a1-ubuntu:~# ufw status
+Status: inactive
+```
+
+有効化する。  
+ssh経由の場合警告される。(`iptables -nL`あたりで22/tcpが開いてる事を確認しておけば…良いのかな)
+
+```console
+root@oci-g-a1-ubuntu:~# ufw enable 
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+```
+
+再読み込みと状態確認。
+
+```console
+root@oci-g-a1-ubuntu:~# ufw reload 
+Firewall reloaded
+root@oci-g-a1-ubuntu:~# ufw status
+Status: active
+```
+
+TCPポートの許可
+
+```console
+root@oci-g-a1-ubuntu:~# ufw allow 6443
+Rule added
+Rule added (v6)
+root@oci-g-a1-ubuntu:~# ufw reload 
+Firewall reloaded
+root@oci-g-a1-ubuntu:~# ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+6443                       ALLOW       Anywhere                  
+6443 (v6)                  ALLOW       Anywhere (v6)             
+```
+
+※ 操作のみ。この環境はufwを使ってないらしく動作は未確認
