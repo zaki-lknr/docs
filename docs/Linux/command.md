@@ -320,6 +320,13 @@ TCPポート許可追加
 # iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
 ```
 
+リダイレクト  
+10.0.0.1からの80/tcpアクセスを8080/tcpへリダイレクトする場合。(8080/tcpも許可は必要)
+
+```console
+# iptables -t nat -A PREROUTING -p tcp -s 10.0.0.1 --dport 80 -j REDIRECT --to 8080
+```
+
 ### firewall-cmd
 
 [[コマンドメモ] firewall-cmd備忘録 (firewalld) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/26/230958)
