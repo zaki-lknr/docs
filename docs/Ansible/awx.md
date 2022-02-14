@@ -48,3 +48,57 @@ $ make docker-push IMG=zakihmkc/awx-operator:0.16.1-arm
 ```console
 $ make deploy IMG=zakihmkc/awx-operator:0.16.1-arm
 ```
+
+### awx
+
+Makefileあるけど使い方がよくわからなかった。
+tools/ansible/build.ymlがあるので、こっちでビルドできた。
+
+```console
+$ cd tools/ansible/
+$ ansible-playbook build.yml
+```
+
+```console
+$ docker images ansible/awx
+REPOSITORY    TAG             IMAGE ID       CREATED         SIZE
+ansible/awx   19.5.2.dev117   5c0f58543bbc   5 minutes ago   696MB
+```
+
+ビルドできたらpush
+
+```console
+$ docker tag ansible/awx:19.5.2.dev117 zakihmkc/awx:19.5.2.dev117-arm
+$ docker push zakihmkc/awx:19.5.2.dev117-arm
+```
+
+この状態でデプロイすると、
+
+```console
+$ cat awx-demo.yml 
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx-demo
+spec:
+  service_type: nodeport
+  image: zakihmkc/awx
+  image_version: 19.5.2.dev117-arm
+$ kubectl apply -f awx-demo.yml -n awx
+awx.awx.ansible.com/awx-demo created
+$ kubectl get pod -n awx 
+NAME                                             READY   STATUS    RESTARTS      AGE
+awx-operator-controller-manager-59584d6d-cfvcw   2/2     Running   0             60m
+awx-demo-postgres-0                              1/1     Running   0             83s
+awx-demo-64b6ddfbb5-td57c                        3/4     Error     3 (30s ago)   73s
+```
+
+あー、、
+
+```console
+(awx-build) ubuntu@oci-g-a1-ubuntu:~/src/awx-operator$ kubectl logs -n awx awx-demo-64b6ddfbb5-td57c -c awx-demo-ee
+standard_init_linux.go:228: exec user process caused: exec format error
+```
+
+このイメージもarm版必要だった。
