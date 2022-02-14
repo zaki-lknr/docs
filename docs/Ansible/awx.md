@@ -36,3 +36,15 @@ $ docker image ls zakihmkc/awx-operator
 REPOSITORY              TAG          IMAGE ID       CREATED          SIZE
 zakihmkc/awx-operator   0.16.1-arm   28538a5f08b7   45 seconds ago   516MB
 ```
+
+イメージができたら`push`する。
+
+```console
+$ make docker-push IMG=zakihmkc/awx-operator:0.16.1-arm
+```
+
+ビルドしたカスタムイメージをデプロイするには
+
+```console
+$ make deploy IMG=zakihmkc/awx-operator:0.16.1-arm
+```
