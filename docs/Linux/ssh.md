@@ -173,3 +173,9 @@ $ ssh-keygen -y -f ~/.ssh/id_rsa
 ```
 
 STDOUTへ出力されるので、`> id_rsa.pub`とかファイルへ出力すればOK
+
+### ssh-copy-id
+
+```console
+$ ssh-copy-id [-i identity_file] [-p port] [username@]hostname
+```
