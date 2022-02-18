@@ -229,6 +229,24 @@ dnfモジュールでパッケージインストールし、CentOS7上で`rpm -q
 
 Fedora34 / RHEL8に使える？ => OK
 
+### apt_repository
+
+```yaml
+- name: add apt repository
+  ansible.builtin.apt_repository:
+    repo: deb [arch=arm64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu focal stable
+    filename: docker
+```
+
+これで以下のファイルが作成される。
+
+```console
+$ cat /etc/apt/sources.list.d/docker.list
+deb [arch=arm64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu focal stable
+```
+
+このとき、`/etc/apt/sources.list.d/docker.list`以外のファイルですでに同じ設定がある場合は`docker.list`は作成されずに`ok`となる。
+
 ## ファイル
 
 ### モード
