@@ -293,3 +293,18 @@ fatal: [fedora-node]: FAILED! => changed=false
 
 fetchモジュールの使い方全般ははてブに書いた。  
 [[Ansible] fetchモジュールを使ってリモートのファイルを実行ノードへ転送・集約する - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/12/13/060649)
+
+## make
+
+`/path/to/awx-operator`ディレクトリ上で`make deploy IMG=zakihmkc/awx-operator:0.17.0`を実行するタスクであれば以下の通り。
+
+```yaml
+- name: deploy awx-operator
+  community.general.make:
+    chdir: /path/to/awx-operator
+    target: deploy
+    params:
+      IMG: zakihmkc/awx-operator:0.17.0
+```
+
+ターゲットファイル作成済みで`make`が何も処理しない場合は、実行ステータスは`ok`となる。
