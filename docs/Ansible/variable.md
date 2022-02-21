@@ -110,3 +110,54 @@ gather_facts: true
 
 OS情報程度であれば`min`で取れる。  
 インタフェース毎のネットワーク設定は`network`も必要っぽい。
+
+### 環境変数
+
+`gather_subset: min`で確認。  
+`become`なしの場合。
+
+```json
+        "ansible_env": {
+            "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1001/bus",
+            "HOME": "/home/ubuntu",
+            "LANG": "C.UTF-8",
+            "LOGNAME": "ubuntu",
+            "MOTD_SHOWN": "pam",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+            "PWD": "/home/ubuntu",
+            "SHELL": "/bin/bash",
+            "SHLVL": "0",
+            "SSH_CLIENT": "****",
+            "SSH_CONNECTION": "****",
+            "SSH_TTY": "/dev/pts/1",
+            "TERM": "xterm-256color",
+            "USER": "ubuntu",
+            "XDG_RUNTIME_DIR": "/run/user/1001",
+            "XDG_SESSION_CLASS": "user",
+            "XDG_SESSION_ID": "29",
+            "XDG_SESSION_TYPE": "tty",
+            "_": "/bin/sh"
+        },
+```
+
+`become`ありの場合。
+
+```json
+        "ansible_env": {
+            "HOME": "/root",
+            "LANG": "C.UTF-8",
+            "LOGNAME": "root",
+            "MAIL": "/var/mail/root",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin",
+            "PWD": "/home/ubuntu",
+            "SHELL": "/bin/bash",
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-****** ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-****/AnsiballZ_setup.py",
+            "SUDO_GID": "1001",
+            "SUDO_UID": "1001",
+            "SUDO_USER": "ubuntu",
+            "TERM": "xterm-256color",
+            "USER": "root"
+        },
+```
+
+昇格前のユーザー情報は`SUDO_USER`と`PWD`を見るしか無いかな？
