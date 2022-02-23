@@ -308,3 +308,21 @@ fetchモジュールの使い方全般ははてブに書いた。
 ```
 
 ターゲットファイル作成済みで`make`が何も処理しない場合は、実行ステータスは`ok`となる。
+
+## Docker
+
+### push image
+
+`docker_image`を使用しパラメタに`push: true`を指定。
+
+```yaml
+- name: push container image
+  community.docker.docker_image:
+    name: quay.io/ansible/awx-ee
+    repository: zakihmkc/awx-ee:0.6.0
+    push: true
+    source: local
+```
+
+このタスクの場合は、ローカルにある`quay.io/ansible/awx-ee`イメージをDocker Hubへ`zakihmkc/awx-ee:0.6.0`として`push`する。  
+このとき、`zakihmkc/awx-ee:0.6.0`が既にローカルにある場合はtagの上書きが発生しないため、pushされない。ここでpushしたい場合は、tag設定を上書きする`force_tag: true`も追加する。
