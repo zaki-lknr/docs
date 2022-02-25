@@ -19,6 +19,10 @@
 旧「ベストプラクティス」のページはこちら。  
 [Tips and tricks — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html)
 
+## ネットワーク
+
+[Network Debug and Troubleshooting Guide — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html)
+
 ## venv作るタスク
 
 venvにopenshiftパッケージ入れる
