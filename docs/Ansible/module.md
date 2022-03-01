@@ -309,6 +309,23 @@ fetchモジュールの使い方全般ははてブに書いた。
 
 ターゲットファイル作成済みで`make`が何も処理しない場合は、実行ステータスは`ok`となる。
 
+## metaで再接続
+
+たとえば、OSユーザーのグループを更新した場合、通常であればログインし直さなければ変更が反映されない。  
+Ansibleも同様で、タスクでグループの更新を行っても、後続のタスクは接続が維持されているため、更新されたグループの状態でタスクが実行されない。  
+この場合、[metaモジュール](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/meta_module.html)の`reset_connection`を使って再接続を行い、変更を反映して後続のタスクを実行できる。
+
+```yaml
+  - name: グループを変更するタスク
+    ...
+
+  - name: refresh connection
+    ansible.builtin.meta: reset_connection
+
+  - name: 変更したグループ前提のタスク
+    ...
+```
+
 ## Docker
 
 ### push image
