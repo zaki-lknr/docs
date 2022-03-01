@@ -308,6 +308,12 @@ $ git tag -n
 $ git checkout <tag-name>
 ```
 
+switchの場合はオプションが必要？
+
+```console
+$ git switch --detach <tag-name>
+```
+
 ## 移動
 
 ### ディレクトリを新規作成しそこへ既存ファイルを移動
