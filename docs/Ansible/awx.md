@@ -177,7 +177,7 @@ Step 21/26 : COPY --from=quay.io/ansible/receptor:devel /usr/bin/receptor /usr/b
 devel: Pulling from ansible/receptor
 ```
 
-ってのが出力されてた。
+ってのが出力されてた。(awx-ee)
 
 ### awx-ee
 
