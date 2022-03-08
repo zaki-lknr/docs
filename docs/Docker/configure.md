@@ -1,6 +1,8 @@
-# proxy設定
+# 設定
 
-## Docker Engineのproxy設定
+## proxy設定
+
+### Docker Engineのproxy設定
 
 [HTTP/HTTPS proxy](https://docs.docker.com/config/daemon/systemd/#httphttps-proxy)
 
