@@ -1,5 +1,15 @@
 # 設定
 
+## DNS
+
+コンテナ内で使用するDNS設定を指定するには、`--dns`を指定するか、ホストの`/etc/docker/daemon.json`で一律指定する。
+
+```json
+{
+        "dns": ["8.8.8.8", "8.8.4.4"]
+}
+```
+
 ## proxy設定
 
 ### Docker Engineのproxy設定
