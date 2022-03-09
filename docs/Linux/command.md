@@ -10,6 +10,20 @@
 
 表示中に`-i`押下して`enter`
 
+## find
+
+### ディレクトリ除外
+
+```console
+$ find /path/to -path (除外パス) -prune -o (検索条件) -print
+```
+
+```console
+find . -path "*venv" -prune -o -name "*.py" -print
+```
+
+とか。
+
 ## date
 
 ### 書式
