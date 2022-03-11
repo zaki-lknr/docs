@@ -401,3 +401,31 @@ To                         Action      From
 ```
 
 ※ 操作のみ。この環境はufwを使ってないらしく動作は未確認
+
+## alternatives
+
+ubuntuだと`update-alternatives`で、RHEL系だと`alternatives`になる。
+
+### 設定一覧
+
+ubuntuの場合
+
+```console
+root@oci-ap-a1-ubuntu:~# update-alternatives --get-selections 
+arptables                      auto     /usr/sbin/arptables-nft
+awk                            auto     /usr/bin/gawk
+builtins.7.gz                  auto     /usr/share/man/man7/bash-builtins.7.gz
+c++                            auto     /usr/bin/g++
+:
+:
+```
+
+Fedoraの場合
+
+```
+[root@cloud-dev2 ~]# update-alternatives --list 
+libnssckbi.so.x86_64    auto    /usr/lib64/pkcs11/p11-kit-trust.so
+soelim                  auto    /usr/bin/soelim.groff
+iptables                auto    /usr/sbin/iptables-nft
+:
+```
