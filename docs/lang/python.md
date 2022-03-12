@@ -45,6 +45,28 @@ Installing collected packages: typing-extensions, rich
 Successfully installed rich-9.5.1 typing-extensions-3.10.0.2
 ```
 
+### パッケージアンインストール
+
+```console
+$ pip uninstall docker
+Found existing installation: docker 5.0.3
+Uninstalling docker-5.0.3:
+  Would remove:
+    /home/ubuntu/.local/lib/python3.8/site-packages/docker-5.0.3.dist-info/*
+    /home/ubuntu/.local/lib/python3.8/site-packages/docker/*
+Proceed (y/n)? y
+  Successfully uninstalled docker-5.0.3
+```
+
+`-y`を付ければ強制削除になるっぽい。
+
+```console
+Uninstall Options:
+  -r, --requirement <file>    Uninstall all the packages listed in the given requirements file.
+                              This option can be used multiple times.
+  -y, --yes                   Don't ask for confirmation of uninstall deletions.
+```
+
 ## tool
 
 ### httpサーバ
