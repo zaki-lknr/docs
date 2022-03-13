@@ -127,3 +127,9 @@ Allocatable:
 おぉ、CPUはともかくメモリが潤沢だ。
 
 rebootしてもOK
+
+## アンインストール
+
+```console
+$ k3s-uninstall.sh 
+```
