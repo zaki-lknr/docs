@@ -558,3 +558,49 @@ exit
 ```
 
 eeの実行権限がここだけ`root`になっている。
+
+実行権限じゃなくて`/etc/passwd`かも。
+
+amd64のオリジナル版
+
+```console
+[zaki@cloud-dev2 ~]$ kubectl  exec -it -n awx awx-demo-74d8979549-bszp6 -c awx-demo-ee -- bash
+bash-4.4$ id
+uid=1000(runner) gid=0(root) groups=0(root)
+bash-4.4$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+runner:x:1000:0:,,,:/home/runner:/bin/bash
+```
+
+arm64向けにビルドした版
+
+```console
+ubuntu@oci-ap-a1-ubuntu02:~/tmp$ kubectl exec -n awx -it awx-demo-84b4b75d85-9txt2 -c awx-demo-ee -- bash
+bash-4.4# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+runner:x:0:0:,,,:/home/runner:/bin/bash
+bash-4.4# exit
+```
+
+そもそも`runner`ユーザーのUIDがおかしい感じ。
+
+ベースイメージの`ansible-runner`は？
+
+```console
+[zaki@cloud-dev2 ~]$ docker run -it --rm quay.io/ansible/ansible-runner:latest bash
+bash-4.4# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+runner:x:0:0:,,,:/home/runner:/bin/bash
+bash-4.4# 
+```
+
+```console
+ubuntu@oci-g-a1-ubuntu:~$ docker run -it --rm quay.io/ansible/ansible-runner:latest bash
+bash-4.4# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+runner:x:0:0:,,,:/home/runner:/bin/bash
+bash-4.4# exit
+```
+
+この時点では同じ模様。
+てことはEEのビルド時に`/etc/passwd`を変更する何かが抜けてるのかな
