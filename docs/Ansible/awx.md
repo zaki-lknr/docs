@@ -498,6 +498,31 @@ $ docker tag receptor:latest quay.io/ansible/receptor:devel
 
 ## AWXでジョブが実行できない件(調査中)
 
+AWXで以下のエラーが出てるやつ。
+
+```console
+Traceback (most recent call last):
+  File "/var/lib/awx/venv/awx/lib64/python3.9/site-packages/awx/main/tasks/jobs.py", line 449, in run
+    self.pre_run_hook(self.instance, private_data_dir)
+  File "/var/lib/awx/venv/awx/lib64/python3.9/site-packages/awx/main/tasks/jobs.py", line 979, in pre_run_hook
+    RunProjectUpdate.make_local_copy(job.project, private_data_dir, scm_revision=job_revision)
+  File "/var/lib/awx/venv/awx/lib64/python3.9/site-packages/awx/main/tasks/jobs.py", line 1380, in make_local_copy
+    source_branch = git_repo.create_head(tmp_branch_name, p.scm_revision)
+  File "/var/lib/awx/venv/awx/lib64/python3.9/site-packages/git/repo/base.py", line 386, in create_head
+    return Head.create(self, path, commit, force, logmsg)
+  File "/var/lib/awx/venv/awx/lib64/python3.9/site-packages/git/refs/symbolic.py", line 543, in create
+    return cls._create(repo, path, cls._resolve_ref_on_create, reference, force, logmsg)
+  File "/var/lib/awx/venv/awx/lib64/python3.9/site-packages/git/refs/symbolic.py", line 510, in _create
+    ref.set_reference(target, logmsg)
+  File "/var/lib/awx/venv/awx/lib64/python3.9/site-packages/git/refs/symbolic.py", line 326, in set_reference
+    assure_directory_exists(fpath, is_file=True)
+  File "/var/lib/awx/venv/awx/lib64/python3.9/site-packages/git/util.py", line 177, in assure_directory_exists
+    os.makedirs(path, exist_ok=True)
+  File "/usr/lib64/python3.9/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/var/lib/awx/projects/_6__demo_project/.git/refs/heads/awx_internal'
+```
+
 オリジナルのamd64版、Dockerイメージのユーザー権限
 
 ```console
