@@ -495,3 +495,66 @@ receptor     latest    376efbc54f61   51 seconds ago   777MB
 ```console
 $ docker tag receptor:latest quay.io/ansible/receptor:devel
 ```
+
+## AWXでジョブが実行できない件(調査中)
+
+オリジナルのamd64版、Dockerイメージのユーザー権限
+
+```console
+[zaki@cloud-dev2 ~]$ docker run -it --rm quay.io/ansible/awx-ee:0.6.0 bash
+bash-4.4# id
+uid=0(root) gid=0(root) groups=0(root)
+bash-4.4# exit
+[zaki@cloud-dev2 ~]$ docker run -it --rm quay.io/ansible/awx:20.0.0 bash
+bash-5.1$ id
+uid=1000 gid=0(root) groups=0(root)
+bash-5.1$ 
+```
+
+arm64でビルドしたDockerイメージのユーザー権限
+
+```console
+ubuntu@oci-ap-a1-ubuntu02:~$ docker run -it --rm zakihmkc/awx-ee:0.6.0 bash
+bash-4.4# id
+uid=0(root) gid=0(root) groups=0(root)
+bash-4.4# exit
+exit
+ubuntu@oci-ap-a1-ubuntu02:~$ docker run -it --rm zakihmkc/awx:20.0.0 bash
+bash-5.1$ id
+uid=1000 gid=0(root) groups=0(root)
+bash-5.1$ exit
+exit
+```
+
+Docker上だと同一。
+
+じゃあk8s上だと…
+amd64版はこれ。
+
+```console
+[zaki@cloud-dev2 ~]$ kubectl  exec -it -n awx awx-demo-74d8979549-bszp6 -c awx-demo-ee -- bash 
+bash-4.4$ id
+uid=1000(runner) gid=0(root) groups=0(root)
+bash-4.4$ exit
+[zaki@cloud-dev2 ~]$ kubectl  exec -it -n awx awx-demo-74d8979549-bszp6 -c awx-demo-task -- bash
+bash-5.1$ id
+uid=1000(awx) gid=0(root) groups=0(root)
+bash-5.1$ exit
+exit
+```
+
+arm64版。
+
+```console
+ubuntu@oci-ap-a1-ubuntu02:~$ kubectl exec -n awx -it awx-demo-7847cd4bb-wd4w4 -c awx-demo-ee -- bash
+bash-4.4# id
+uid=0(root) gid=0(root) groups=0(root)
+bash-4.4# exit
+ubuntu@oci-ap-a1-ubuntu02:~$ kubectl exec -n awx -it awx-demo-7847cd4bb-wd4w4 -c awx-demo-task -- bash
+bash-5.1$ id
+uid=1000(awx) gid=0(root) groups=0(root)
+bash-5.1$ 
+exit
+```
+
+eeの実行権限がここだけ`root`になっている。
