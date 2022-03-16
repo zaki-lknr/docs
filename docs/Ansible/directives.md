@@ -173,6 +173,27 @@ ok: [localhost] => (item=baz) =>
 
 使用可能な変数はこちら→ [Extended loop variables](https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html#extended-loop-variables)
 
+### ループとinclude併用時にループに関係ないタスクを1回だけ実行することは…
+
+`run_once`使って出来ないか試したけど予想通り無効。  
+たぶん無理なので、そういうタスクはループの外で実装しましょう。
+
+```yaml
+  - name: include with loop
+    include_tasks: dup-loop-included.yml
+    loop: "{{ users }}"
+```
+
+```yaml
+- name: 1回だけ実行したいタスク
+  debug:
+    msg: zzz
+  run_once: true
+```
+
+このタスクは`users`の要素のループごとに当然毎回実行される。  
+ループ内で毎回実行される必要がないのであれば、includeの外で実行しましょう。
+
 ## when
 
 ### 条件がint型
