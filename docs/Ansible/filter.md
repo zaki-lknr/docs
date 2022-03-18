@@ -232,6 +232,33 @@ ok: [localhost] =>
 
 ちなみに、文字列型の場合でもiterableなので、一文字目・最後の文字が取れる。
 
+## パス処理
+
+### パスの合成 (path_join)
+
+`path_join`を使うと、リストの文字列をディレクトリセパレータで繋ぐ。
+
+```yaml
+- name: create repository url
+  debug:
+    msg:
+    - "{{ (registry_url, registry_username, 'awx') | path_join }}"
+```
+
+```ini
+registry_username = zaki-lknr
+registry_url = ghcr.io
+```
+
+という変数が設定されていれば、実行結果は以下の通り。
+
+```console
+TASK [create repository url] ************************************
+ok: [oci-g-a1-ubuntu] => 
+  msg:
+  - ghcr.io/zaki-lknr/awx
+```
+
 ## 暗号化パスワード
 
 - [How do I generate encrypted passwords for the user module?](https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
