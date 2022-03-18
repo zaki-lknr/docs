@@ -260,6 +260,14 @@ ansible-core 2.11.3で確認 / 2.9だと構文エラー(文字列のみの判定
 when: cond == "foobar" or cond == "bazqux"
 ```
 
+### 定義されてる場合/されてない場合
+
+`foobar_value`が未定義の場合にタスク実行するには以下。
+
+```yaml
+when: foobar_value is not defined
+```
+
 ## includeとimport
 
 - [Re-using Ansible artifacts — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
