@@ -105,3 +105,22 @@ e5c366cb3bba   slowstart_httpd   "sh -c 'sleep 30; ht…"   5 seconds ago   Up 4
 CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS                    PORTS                                   NAMES
 e5c366cb3bba   slowstart_httpd   "sh -c 'sleep 30; ht…"   32 seconds ago   Up 31 seconds (healthy)   0.0.0.0:8080->80/tcp, :::8080->80/tcp   slowstart_httpd
 ```
+
+## GitHub Container Registry
+
+手順は以下。  
+[コンテナレジストリの利用 - GitHub Docs](https://docs.github.com/ja/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
+
+認証に使用するパスワードは、個人用アクセストークンを作成する。  
+[個人アクセストークンを使用する - GitHub Docs](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+GitHubのユーザー名と、入手したトークンをパスワードとして、
+
+```console
+$ docker login ghcr.io
+```
+
+すれば認証できる。
+
+あとは`ghcr.io/zaki-lknr/squid:5.0.4-alpine-3.13`とかの名前のタグをつければ`push`もできる。  
+pushされたイメージは、GitHubのweb画面の「Packages」で確認できる。デフォルトはprivate設定。
