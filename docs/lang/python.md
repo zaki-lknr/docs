@@ -215,6 +215,36 @@ print(str_sample.zfill(8))
 00000foo
 ```
 
+### path
+
+#### ユーザーディレクトリを展開
+
+`os.path.expanduser`を使う。
+
+```text
+[zaki@cloud-dev2 ~]$ grep -e ^zaki -e ^root /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+zaki:x:1000:1000:zaki:/home/zaki:/bin/bash
+```
+
+というユーザーが存在する場合、実行結果は以下の通り。
+
+```python
+[zaki@cloud-dev2 ~]$ whoami 
+zaki
+[zaki@cloud-dev2 ~]$ python
+Python 3.10.2 (main, Jan 17 2022, 00:00:00) [GCC 11.2.1 20211203 (Red Hat 11.2.1-7)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os.path
+>>> print(os.path.expanduser('~zaki'))
+/home/zaki
+>>> print(os.path.expanduser('~root'))
+/root
+>>> print(os.path.expanduser('~'))
+/home/zaki
+>>> 
+```
+
 ### isinstance()で型チェック
 
 ```python
