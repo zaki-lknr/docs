@@ -26,6 +26,8 @@ complete -o default -F __start_kubectl kc
 
 ### secret
 
+#### ファイルのsecret
+
 キー名: ファイル内容のsecret作る
 
 ```console
@@ -61,6 +63,30 @@ kubernetes!
 ```
 
 これはConfigMapと同じ
+
+#### key=valueのsecret
+
+```console
+$ kubectl create secret generic sample-secret --from-literal=username=zaki
+secret/sample-secret created
+```
+
+このコマンド実行で以下のsecretリソースが作成される。
+
+```yaml
+$ kubectl get secret sample-secret -o yaml
+apiVersion: v1
+data:
+  username: emFraQ==
+kind: Secret
+metadata:
+  creationTimestamp: "2022-03-24T02:57:06Z"
+  name: sample-secret
+  namespace: default
+  resourceVersion: "298054"
+  uid: 35c9b58a-247d-4243-b292-193d811f140a
+type: Opaque
+```
 
 ## run
 
