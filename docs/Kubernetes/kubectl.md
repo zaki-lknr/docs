@@ -88,6 +88,42 @@ metadata:
 type: Opaque
 ```
 
+#### マニフェストでsecret
+
+マニュフェストから作成する場合は、base64エンコード済みであること。
+
+```yaml
+$ cat secret-sample.yaml 
+apiVersion: v1
+data:
+  username: emFraQ==
+kind: Secret
+metadata:
+  name: sample-secret2
+  namespace: default
+type: Opaque
+```
+
+```yaml
+$ kubectl apply -f secret-sample.yaml 
+secret/sample-secret2 created
+$ kubectl get secret sample-secret2 -o yaml
+apiVersion: v1
+data:
+  username: emFraQ==
+kind: Secret
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"username":"emFraQ=="},"kind":"Secret","metadata":{"annotations":{},"name":"sample-secret2","namespace":"default"},"type":"Opaque"}
+  creationTimestamp: "2022-03-24T03:01:32Z"
+  name: sample-secret2
+  namespace: default
+  resourceVersion: "298241"
+  uid: a1ae0bf1-3434-4f3d-88d3-a1bb33dee6ac
+type: Opaque
+```
+
 ## run
 
 ### ワーク用のpodをデプロイする
