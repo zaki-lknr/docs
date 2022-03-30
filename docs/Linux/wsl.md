@@ -50,3 +50,21 @@ WSL 2 との主な違いについては、https://aka.ms/wsl2 を参照してく
 ```console
 wsl -l -v
 ```
+
+## rebootする
+
+WSLのターミナルで`reboot`実行しても以下エラーで実行できない。
+
+```console
+zaki@wensley:~$ sudo reboot
+[sudo] password for zaki: 
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+Failed to talk to init daemon.
+```
+
+再起動するには、ホストOSの`wsl`コマンドで実施する。
+
+```console
+wsl --terminate Ubuntu-20.04
+```
