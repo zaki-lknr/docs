@@ -210,6 +210,29 @@ RHELのサブスクリプション割り当てを行う。
 
 これでいうと`subscription-manager register`して`subscription-manager attach --pool=****`まで終わった状態になる。
 
+## alternatives
+
+[community.general.alternatives – Manages alternative programs for common commands — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/community/general/alternatives_module.html)
+
+`community.general.alternatives`で`alternatives`コマンドを使ったコマンド切り替え設定を行う。
+
+```yaml
+- name: alternatives python
+  community.general.alternatives:
+    name: python
+    link: /usr/bin/python
+    path: /usr/bin/python3
+  become: true
+```
+
+これで、`/usr/bin/python` -> `/etc/alternatives/python` -> `/usr/bin/python3`へのリンクが`python`という名前で登録される。  
+コマンドとしては以下と同等。  
+(`priority`はデフォルト50)
+
+```console
+# update-alternatives --install /usr/bin/python python /usr/bin/python3 50
+```
+
 ## パッケージ
 
 ### dnf
