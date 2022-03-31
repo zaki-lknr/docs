@@ -429,3 +429,31 @@ soelim                  auto    /usr/bin/soelim.groff
 iptables                auto    /usr/sbin/iptables-nft
 :
 ```
+
+### 設定の登録
+
+`python`という名前で、`/usr/bin/python`を優先度10で登録する。
+
+```console
+$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+update-alternatives: using /usr/bin/python3 to provide /usr/bin/python (python) in auto mode
+```
+
+これで、以下のリンクが作成される。
+
+```console
+$ ls -l /usr/bin/python /etc/alternatives/python 
+lrwxrwxrwx 1 root root 16 Mar 31 15:16 /etc/alternatives/python -> /usr/bin/python3
+lrwxrwxrwx 1 root root 24 Mar 31 15:16 /usr/bin/python -> /etc/alternatives/python
+```
+
+設定
+
+```console
+$ update-alternatives --display python
+python - auto mode
+  link best version is /usr/bin/python3
+  link currently points to /usr/bin/python3
+  link python is /usr/bin/python
+/usr/bin/python3 - priority 10
+```
