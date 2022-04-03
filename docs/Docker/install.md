@@ -11,7 +11,8 @@ Windowsもhome含めてOK
 
 ## Docker Compose
 
-[Install Docker Compose | Docker Documentation](https://docs.docker.com/compose/install/)
+- v1: [Install Docker Compose | Docker Documentation](https://docs.docker.com/compose/install/)
+- v2: [Compose V2 | Docker Documentation](https://docs.docker.com/compose/cli-command/)
 
 ## dockerグループへユーザーを追加するアレ(コピペ用)
 
