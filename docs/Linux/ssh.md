@@ -195,6 +195,18 @@ $ ssh-keygen -m PEM
 -----BEGIN RSA PRIVATE KEY-----
 ```
 
+### 鍵形式の変更
+
+`-p`を使ったパスフレーズ更新の際に、`-m`で鍵形式を指定することで変換できる。  
+実行することで鍵ファイルが更新される。  
+PEM形式に変換するのであれば以下の通り。
+
+```console
+$ ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
+```
+
+デフォルトは`RFC4716`。OpenSSH形式にする場合は、`-m RFC4716`を指定すればOK
+
 ### ssh-copy-id
 
 ```console
