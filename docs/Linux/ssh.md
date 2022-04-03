@@ -174,6 +174,27 @@ $ ssh-keygen -y -f ~/.ssh/id_rsa
 
 STDOUTへ出力されるので、`> id_rsa.pub`とかファイルへ出力すればOK
 
+### 鍵形式の指定
+
+デフォルトでは以下で始まるOpenSSH形式で作成される。
+
+```text
+-----BEGIN OPENSSH PRIVATE KEY-----
+```
+
+`-m`を使うと、形式を指定できる。  
+PEM形式であれば以下の通り。
+
+```console
+$ ssh-keygen -m PEM
+```
+
+出力される鍵は以下で始まる。
+
+```text
+-----BEGIN RSA PRIVATE KEY-----
+```
+
 ### ssh-copy-id
 
 ```console
