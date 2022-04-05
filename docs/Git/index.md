@@ -58,6 +58,21 @@ $ git commit
 $ git commit -m "commit messages"
 ```
 
+### amend
+
+```console
+$ git commit --amend
+```
+
+直前のコミットに内容をあとから追加できる。  
+コミット漏れのファイルがあった場合などに1コミットにまとめられる。
+
+```console
+$ git commit --amend --no-edit
+```
+
+`--no-edit`を付与すれば、コミットログは前と同じものを使用できる。
+
 ## マージ
 
 ### hogehogeブランチをマージする
