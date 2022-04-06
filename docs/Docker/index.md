@@ -4,6 +4,18 @@
 
 [docker container / image コマンド新旧比較 - Qiita](https://qiita.com/zembutsu/items/6e1ad18f0d548ce6c266)
 
+### run
+
+#### -p | --publish
+
+`localでlistenするポート`:`コンテナに接続するポート`を指定する。
+
+```console
+-p 8081:80
+```
+
+これでホスト上は`8081`でListenして、その接続をコンテナの80へ転送する。
+
 ### save
 
 ```console
