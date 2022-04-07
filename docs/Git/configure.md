@@ -88,3 +88,10 @@ chmod 755 .git-prompt.sh
 [ -f ~/.git-prompt.sh ] && source ~/.git-prompt.sh
 ```
 
+この状態で、`PS1`環境変数を設定する。  
+設定例
+
+```sh
+# prompt
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+```
