@@ -9,6 +9,15 @@
 3. `~/.ansible.cfg`
 4. `/etc/ansible/ansible.cfg`
 
+## 設定ファイル書式
+
+`ansible.cfg`サンプル
+
+```ini
+[defaults]
+stdout_callback = yaml
+```
+
 ## 設定キー
 
 ### 接続ユーザー名
