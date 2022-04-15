@@ -458,3 +458,39 @@ $ git diff -w
 >        -w, --ignore-all-space
 >            Ignore whitespace when comparing lines. This ignores differences
 >            even if one line has whitespace where the other line has none.
+
+## その他
+
+### HEAD
+
+概略(語弊あるかも)
+
+- `HEAD` は最新(カレント)
+- `HEAD~` 1個前
+- `HEAD~1` 同上(1は省略可能)
+- `HEAD~2` 2個前
+
+`git log`した時の、
+
+```console
+ec33978 (HEAD -> main) add: docker: ボリュームのリンク追加
+bd9aa93 add: ansible/config: ansible.cfgサンプル
+bc5eb56 add: git/configure: git-prompt設定後のPS1環境変数
+:
+```
+
+に対して、
+
+- `ec33978`が`HEAD`
+- `bd9aa93`が`HEAD~`
+- `bc5eb56`が`HEAD~2`
+
+---
+
+`^`と`~`は基本は同じ。  
+`HEAD`の一つ前なら`HEAD^`または`HEAD~`、2つ前なら`HEAD^^`または`HEAD~2`になる。  
+ただし厳密には違うもので、`^`はブランチのマージで親が複数ある場合に使用する。
+
+> コミットを指定するときに、~(チルダ)と^(キャレット)を使ってあるコミットからの相対位置で指定することもできます。この時に、よく使われるのがHEADです。~(チルダ)を後ろに付け加えることで何世代前の親かを指定することができます。^(キャレット)は、ブランチのマージで親が複数ある場合に、何番目の親かを指定することができます。
+>
+> [ブランチの切り替え｜サル先生のGit入門【プロジェクト管理ツールBacklog】](https://backlog.com/ja/git-tutorial/stepup/03/)
