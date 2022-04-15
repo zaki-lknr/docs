@@ -24,6 +24,12 @@ $ git clone -b <tag-name> <repository>
 $ git clone -b <branch-name> <repository-URL> -l app-src-work
 ```
 
+実は`-l`は無くてもよい。
+
+```console
+$ git clone <repository-url> <local-path>
+```
+
 ## ローカルリポジトリ作成
 
 リポジトリ用ディレクトリを作ってそのディレクトリ上で`git init`して`README.md`をinitial commitする。
