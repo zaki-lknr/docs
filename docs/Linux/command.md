@@ -24,6 +24,43 @@ find . -path "*venv" -prune -o -name "*.py" -print
 
 とか。
 
+### スペース込みのパスとxargsの連携
+
+以下で、findの結果が\0区切りになり、xargsのデリミタの扱いが\0になる。
+
+```console
+$ find path [opt] -print0 | xargs -0 command
+```
+
+`find`は結果を改行区切りで出力し、`xargs`は改行とスペースを区切りとみなすのがデフォルト。  
+`find`に`-print0`を付与すると区切りが`\0`に変更され、`xargs`に`-0`を付与すると`\0`区切りで動作する。
+
+```console
+zaki@salva% find . -name "*txt"
+./a b.txt
+./a.txt
+./b.txt
+./sub/a b.txt
+./sub/a.txt
+./sub/b.txt
+```
+
+```console
+zaki@salva% find . -name "*txt" | od -c
+0000000   .   /   a       b   .   t   x   t  \n   .   /   a   .   t   x
+0000020   t  \n   .   /   b   .   t   x   t  \n   .   /   s   u   b   /
+0000040   a       b   .   t   x   t  \n   .   /   s   u   b   /   a   .
+0000060   t   x   t  \n   .   /   s   u   b   /   b   .   t   x   t  \n
+```
+
+```console
+zaki@salva% find . -name "*txt" -print0 | od -c
+0000000   .   /   a       b   .   t   x   t  \0   .   /   a   .   t   x
+0000020   t  \0   .   /   b   .   t   x   t  \0   .   /   s   u   b   /
+0000040   a       b   .   t   x   t  \0   .   /   s   u   b   /   a   .
+0000060   t   x   t  \0   .   /   s   u   b   /   b   .   t   x   t  \0
+```
+
 ## date
 
 ### 書式
