@@ -18,6 +18,22 @@ $ ansible-playbook ... -e 'key="foo bar baz"'
 $ ansible-playbook ... -e '{key: "foo bar baz"}'
 ```
 
+変数ファイルを指定する場合
+
+```yaml
+---
+netbox_url: http://netbox.example.org/
+netbox_token: hogehoge
+```
+
+こんなファイルを`netbox-vars.yml`として用意しておき、`ansible-playbook`実行時に
+
+```console
+$ ansible-playbook ... -e @/path/to/netbox-vars.yml
+```
+
+で、このファイルで定義した変数を実行時にextra varsとして参照できる。
+
 ### -l | --limit
 
 playbookの`hosts`で指定してあるホストグループの内、特定のホストだけに処理したい場合に使う。
