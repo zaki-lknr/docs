@@ -150,6 +150,14 @@ terminalでCtrl-kが次コマンド待ちになってしまう場合は以下も
 }
 ```
 
+## diff
+
+### コマンドラインオプション
+
+```console
+$ code -d <file1> <file2>
+```
+
 ## Remote SSH
 
 ### git cloneの認証
