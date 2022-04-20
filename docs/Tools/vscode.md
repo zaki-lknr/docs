@@ -158,6 +158,10 @@ terminalでCtrl-kが次コマンド待ちになってしまう場合は以下も
 $ code -d <file1> <file2>
 ```
 
+### アクティブなファイルとopen済みファイル
+
+コマンドパレットで`File: Compare Active File with...`を選択し、比較対象を選択する。
+
 ## Remote SSH
 
 ### git cloneの認証
