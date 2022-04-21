@@ -95,3 +95,12 @@ chmod 755 .git-prompt.sh
 # prompt
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 ```
+
+既存の`PS1`設定に追加するのであればこんな感じが良いかも。
+
+```sh
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
+    PS1='$(__git_ps1 "(%s) ")'"$PS1"
+fi
+```
