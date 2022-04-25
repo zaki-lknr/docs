@@ -232,6 +232,78 @@ ok: [localhost] =>
 
 ちなみに、文字列型の場合でもiterableなので、一文字目・最後の文字が取れる。
 
+## 辞書のマージ(combine)
+
+```yaml
+- name: merge 2 dicts
+  vars:
+    var1:
+      list1:
+        - item1
+        - item2
+    var2:
+      list2:
+        - itemA
+        - itemB
+  debug:
+    msg: "{{ var1 | combine(var2) }}"
+```
+
+2つの辞書をマージする。  
+重複キーの無い辞書同士は単純合成になり、上のタスクの実行結果は以下の通り。
+
+```console
+TASK [merge 2 dicts] *********************************************
+ok: [localhost] => {
+    "msg": {
+        "list1": [
+            "item1",
+            "item2"
+        ],
+        "list2": [
+            "itemA",
+            "itemB"
+        ]
+    }
+}
+```
+
+同じキーを含む場合は上書きする。
+
+```yaml
+- name: merge 2 dicts
+  vars:
+    var1:
+      list1:
+        - item1
+        - item2
+    var2:
+      list1:
+        - item3
+      list2:
+        - itemA
+        - itemB
+  debug:
+    msg: "{{ var1 | combine(var2) }}"
+```
+
+`combine`する辞書に同じ`lsit1`キーを含む場合、このタスクの実行結果は以下の通りで、`combine`に指定した辞書側の`list1`キーの値で上書きされる。
+
+```console
+TASK [merge 2 dicts] ******************************************************************
+ok: [localhost] => {
+    "msg": {
+        "list1": [
+            "item3"
+        ],
+        "list2": [
+            "itemA",
+            "itemB"
+        ]
+    }
+}
+```
+
 ## パス処理
 
 ### パスの合成 (path_join)
