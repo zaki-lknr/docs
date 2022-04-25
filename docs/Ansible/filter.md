@@ -304,6 +304,121 @@ ok: [localhost] => {
 }
 ```
 
+### list_merge
+
+辞書の要素がリストの場合、キーが同じ場合の上書き動作のデフォルトは、`list_merge`パラメタで動作を変更できる。
+
+`append`を指定すると、要素の末尾に追加。
+
+```yaml
+- name: merge 2 dicts
+  vars:
+    var1:
+      list1:
+        - item1
+        - item2
+    var2:
+      list1:
+        - item3
+      list2:
+        - itemA
+        - itemB
+  debug:
+    msg: "{{ var1 | combine(var2, list_merge='append') }}"
+```
+
+`list1`キーが重複した入力で、`list_merge=append`を指定した場合の実行結果は以下の通り。
+
+```console
+TASK [merge 2 dicts] *********************************************
+ok: [localhost] => {
+    "msg": {
+        "list1": [
+            "item1",
+            "item2",
+            "item3"
+        ],
+        "list2": [
+            "itemA",
+            "itemB"
+        ]
+    }
+}
+```
+
+`list1`キーの値のリストもマージ(`combime`の引数に指定する方が末尾に追加)されている。  
+`list_merge`に指定できるパラメタは以下の通り。
+
+| パラメタ         | 動作                 |
+| ------------ | ------------------ |
+| `append`     | 末尾に追加              |
+| `prepend`    | 先頭に追加              |
+| `append_rp`  | 末尾に追加 (重複時に既存要素は削除) |
+| `prepend_rp` | 先頭に追加 (重複時に既存要素は削除) |
+
+`append_rp`の動作は以下の通り。
+
+```yaml
+- name: merge 2 dicts
+  vars:
+    var1:
+      list1:
+        - item1
+        - item2
+    var2:
+      list1:
+        - item3
+        - item1
+        - item4
+      list2:
+        - itemA
+        - itemB
+  debug:
+    msg: "{{ var1 | combine(var2, list_merge='append_rp') }}"
+```
+
+このタスクを実行すると以下の通り。  
+リスト要素にどちらも`item1`が含まれるためこれが`var1`から削除され、`var2`の要素(`item3`,`item1`,`item4`)が末尾へ追加される。
+
+```console
+TASK [merge 2 dicts] *********************************************
+ok: [localhost] => {
+    "msg": {
+        "list1": [
+            "item2",
+            "item3",
+            "item1",
+            "item4"
+        ],
+        "list2": [
+            "itemA",
+            "itemB"
+        ]
+    }
+}
+```
+
+`prepend_rp`の動作は、↑と同じ条件でパラメタのみ変更して実行すると以下の通り。  
+重複する`item1`が`var1`から削除される動作は同じで、`var2`の要素(`item3`,`item1`,`item4`)が先頭へ追加される。
+
+```console
+TASK [merge 2 dicts] *********************************************
+ok: [localhost] => {
+    "msg": {
+        "list1": [
+            "item3",
+            "item1",
+            "item4",
+            "item2"
+        ],
+        "list2": [
+            "itemA",
+            "itemB"
+        ]
+    }
+}
+```
+
 ## パス処理
 
 ### パスの合成 (path_join)
