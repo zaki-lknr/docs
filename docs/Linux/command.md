@@ -140,6 +140,14 @@ $ ps aux | awk '{print $3, "\t", $4}'
 $ ps aux | awk 'BEGIN { OFS="\t" } {print $3, $4}'
 ```
 
+## diff
+
+コマンド実行結果のstdout同士を比較したい場合は以下。
+
+```console
+$ diff -u <(command1) <(command2)
+```
+
 ## tar
 
 ### 展開時の形式指定オプション
