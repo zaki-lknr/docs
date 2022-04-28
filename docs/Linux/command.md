@@ -304,6 +304,32 @@ KiB Swap:  3670012 total,  3670012 free,        0 used.  5663308 avail Mem
  385441 root      20   0 1130612  62204  26536 S   0.0  0.8   0:10.18 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock      
 ```
 
+## dig
+
+デフォルトは実行ホストのOSで設定されているネームサーバーに対してAレコードを問い合わせる。
+
+```console
+$ dig gmail.com
+
+; <<>> DiG 9.16.28-RH <<>> gmail.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20838
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;gmail.com.                     IN      A
+
+;; ANSWER SECTION:
+gmail.com.              180     IN      A       142.251.42.197
+
+;; Query time: 7 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Thu Apr 28 10:31:34 JST 2022
+;; MSG SIZE  rcvd: 54
+```
 
 ## NetworkManager
 
