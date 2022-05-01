@@ -207,6 +207,14 @@ $ ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
 
 デフォルトは`RFC4716`。OpenSSH形式にする場合は、`-m RFC4716`を指定すればOK
 
+### 鍵サイズ指定
+
+`-b`で指定する。
+
+```console
+$ ssh-keygen -t rsa -b 4096
+```
+
 ### ssh-copy-id
 
 ```console
