@@ -83,6 +83,17 @@ $ python2 -m SimpleHTTPServer 8080
 
 ## 実装
 
+### 制御構文
+
+#### for
+
+foreach式のループ処理は以下。
+
+```python
+for item in items:
+    # itemにリストの要素がセットされる
+```
+
 ### リスト処理
 
 #### リストの定義
