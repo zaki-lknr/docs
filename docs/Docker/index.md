@@ -95,6 +95,14 @@ $ docker image prune
 デフォルトは、タグが設定されずに`<none>`になっているイメージが削除される。  
 `<none>`のイメージをリストアップするだけであれば `docker image ls -f "dangling=true"` でリストアップできる。
 
+## 実行サンプル
+
+### ローカルのwebコンテンツをhttpdに持たせる
+
+```console
+docker run --name http_sample --rm -p 8081:80 -d -v $PWD:/usr/local/apache2/htdocs httpd:latest 
+```
+
 ## ビルド
 
 ### ヘルスチェック
