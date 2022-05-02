@@ -94,6 +94,21 @@ for item in items:
     # itemにリストの要素がセットされる
 ```
 
+ワンライナーでも書ける。  
+ループ処理した結果をリストにセットしたい場合など。  
+その際は`[...]`で囲む。
+
+```python
+result = [ ..itemに対する処理.. for item in items]
+```
+
+BeautifulSoupを使ったスクレイピングの記述例
+
+```python
+links = [li.find('a').get('href') for li in s.find_all('li', class_='toctree-l2')]
+print(links)
+```
+
 ### リスト処理
 
 #### リストの定義
