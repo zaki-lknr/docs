@@ -228,6 +228,28 @@ dict2 = dict(key1="value1", key2="value2")
 この場合、`dict1`と`dict2`の中身は同じ。  
 `dict1 == dict2`の結果もtrueになる。
 
+#### 辞書要素のループ(キーと値の組み合わせを取得)
+
+```python
+sample_dict = {
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3",
+}
+
+for k, v in sample_dict.items():
+    print("key: " + k + ", value: " + v)
+```
+
+`辞書.items()`で、キーと値のペアのリストを得られるので、これでループできる。  
+上のコードの実行結果は以下の通り。
+
+```console
+key: key1, value: value1
+key: key2, value: value2
+key: key3, value: value3
+```
+
 ### 文字列
 
 #### splitlines()
