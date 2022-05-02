@@ -216,6 +216,18 @@ $ python3 slice.py
 始点はindexを「含む」が、終点はindexを「含まない」ので注意。  
 (要素のindexというより、区切り位置のindexと見なすと良い)
 
+### 辞書
+
+#### 辞書の定義
+
+```python
+dict1 = {"key1": "value1", "key2": "value2"}
+dict2 = dict(key1="value1", key2="value2")
+```
+
+この場合、`dict1`と`dict2`の中身は同じ。  
+`dict1 == dict2`の結果もtrueになる。
+
 ### 文字列
 
 #### splitlines()
