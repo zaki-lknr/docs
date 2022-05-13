@@ -26,6 +26,7 @@ markdown_extensions:
         noclasses: true
         pygments_style: emacs
         linenums: false
+    - pymdownx.tilde
 
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
 google_analytics:
