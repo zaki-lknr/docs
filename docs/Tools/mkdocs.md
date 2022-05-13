@@ -74,3 +74,13 @@ google_analytics:
   - UA-XXXXXXXX-X
   - auto
 ```
+
+### 取り消し線の有効化
+
+Material for MkDocsを使っていると(?)、`~~`による取り消し線が動作しない。  
+以下設定を追加すると有効になる。
+
+```yaml
+markdown_extensions:
+    - pymdownx.tilde
+```
