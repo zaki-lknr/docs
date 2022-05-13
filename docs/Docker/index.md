@@ -75,7 +75,7 @@ $ docker container prune
 ```
 
 デフォルトは停止している全コンテナが削除される。  
-10日以前に停止しているコンテナの場合は、
+10日以前に~~停止している~~作成されて現在停止中のコンテナの場合は、
 
 ```console
 $ docker container prune --filter "until=240h"
