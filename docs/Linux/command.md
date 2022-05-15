@@ -333,6 +333,22 @@ gmail.com.              180     IN      A       142.251.42.197
 
 ## NetworkManager
 
+### インタフェース一覧
+
+接続してるもの全部
+
+```console
+$ nmcli connection
+```
+
+デバイス一覧
+
+```console
+$ nmcli device
+```
+
+`connection`と`device`は、それぞれ`c`と`d`に短縮可能。
+
 ### デフォルトゲートウェイ変更
 
 `192.168.39.89`に設定する
