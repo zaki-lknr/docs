@@ -349,6 +349,25 @@ $ nmcli device
 
 `connection`と`device`は、それぞれ`c`と`d`に短縮可能。
 
+### インタフェース詳細
+
+`s`または`show`の引数に、インタフェース名を指定する。
+
+```console
+# nmcli c s ens192
+connection.id:                          ens192
+connection.uuid:                        fd81b589-db4b-445d-9e60-22524aab4e9f
+connection.stable-id:                   --
+connection.type:                        802-3-ethernet
+connection.interface-name:              ens192
+connection.autoconnect:                 はい
+connection.autoconnect-priority:        0
+connection.autoconnect-retries:         -1 (default)
+connection.multi-connect:               0 (default)
+:
+:
+```
+
 ### デフォルトゲートウェイ変更
 
 `192.168.39.89`に設定する
