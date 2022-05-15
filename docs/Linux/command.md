@@ -368,6 +368,14 @@ connection.multi-connect:               0 (default)
 :
 ```
 
+### DNSのsearch行追加
+
+`my.example.org`を設定するには
+
+```console
+# nmcli c m ens192 ipv4.dns-search my.example.org
+```
+
 ### デフォルトゲートウェイ変更
 
 `192.168.39.89`に設定する
