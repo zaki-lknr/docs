@@ -4,10 +4,28 @@
 
 [制限ネットワーク環境のRHEL7でproxy経由でサブスクリプション登録とDockerインストール - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/05/160946)
 
-これで登録とサブスクリプション割り当てをまとめてできる。
+以下で登録とサブスクリプション割り当てをまとめてできる。
 
 ```console
 # subscription-manager register --auto-attach
+```
+
+登録のみは以下。アカウント情報を対話的に入力する。
+
+```console
+# subscription-manager register
+```
+
+登録後のサブスクリプション割り当ては以下。
+
+```console
+# subscription-manager attach
+```
+
+サブスクリプション割り当て時にpool IDを指定する場合は以下。
+
+```console
+# subscription-manager attach --pool=****
 ```
 
 ## package
