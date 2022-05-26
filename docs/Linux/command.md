@@ -374,6 +374,7 @@ connection.multi-connect:               0 (default)
 
 ```console
 # nmcli c m ens192 ipv4.dns-search my.example.org
+# systemctl restart NetworkManager
 ```
 
 ### デフォルトゲートウェイ変更
