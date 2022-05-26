@@ -96,3 +96,9 @@ Extra Packages for Enterprise Linux 8 - x86_64                          7.2 MB/s
 ======================================== 名前 完全一致: sshpass ========================================
 sshpass.x86_64 : Non-interactive SSH authentication utility
 ```
+
+## Simple Content Access設定
+
+<https://access.redhat.com/management>
+
+ここから。
