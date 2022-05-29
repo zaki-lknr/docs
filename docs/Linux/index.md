@@ -18,3 +18,9 @@ Universal USB Installer
 # cat /etc/sudoers.d/nopass 
 %wheel ALL=(ALL) NOPASSWD: ALL
 ```
+
+Debian系はグループ名は`wheel`でなく`sudo`になる。
+
+```
+%sudo ALL=(ALL) NOPASSWD: ALL
+```
