@@ -67,6 +67,12 @@ Uninstall Options:
   -y, --yes                   Don't ask for confirmation of uninstall deletions.
 ```
 
+### 全てアンインストール
+
+```console
+$ pip uninstall -r <(pip freeze)
+```
+
 ## tool
 
 ### httpサーバ
