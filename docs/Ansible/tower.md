@@ -1,5 +1,13 @@
 # Ansible Tower
 
+## プロジェクト
+
+### SCMを使わない場合
+
+Gitとか使わずTowerのホストのファイルシステム上のplaybookを使う場合は `/var/lib/awx/projects` 以下にプロジェクトのディレクトリを作り、その配下にplaybook類を配置する。
+
+たとえば `/var/lib/awx/projects/sample-demo/playbook.yml` など。
+
 ## API
 
 ### 認証
