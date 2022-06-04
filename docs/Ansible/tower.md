@@ -1,5 +1,21 @@
 # Ansible Tower
 
+## バックアップとリストア
+
+バックアップするには以下。  
+Towerは実行中で良い。  
+バックアップに成功すると、カレントに ` tower-backup-YYYY-mm-dd-HH:MM:SS.tar.gz` が作成される。(symlinkの`tower-backup-latest.tar.gz`も作成される)
+
+```console
+# ./setup.sh -b
+```
+
+リストアは以下。
+
+```console
+# ./setup.sh -r -e restore_backup_file=/path/to/tower-backup-....tar.gz
+```
+
 ## プロジェクト
 
 ### SCMを使わない場合
