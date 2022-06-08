@@ -24,3 +24,11 @@ Debian系はグループ名は`wheel`でなく`sudo`になる。
 ```
 %sudo ALL=(ALL) NOPASSWD: ALL
 ```
+
+コマンド
+
+```command
+cat <<__EOL__ > /etc/sudoers.d/nopass
+%wheel ALL=(ALL) NOPASSWD: ALL
+__EOL__
+```
