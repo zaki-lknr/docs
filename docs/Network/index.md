@@ -18,3 +18,16 @@ Retype new password:
 [edit]
 root#
 ```
+
+### ホスト名の設定
+
+```console
+[edit]
+root# set system host-name srx100-demo
+
+[edit]
+root# commit
+
+[edit]
+root@srx100-demo#
+```
