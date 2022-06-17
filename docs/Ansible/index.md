@@ -86,3 +86,9 @@ $ ansible-doc -M /path/to/collection-path/ansible_collections/namespace/collecti
 ```
 
 パスが合わない場合は、エラーメッセージに「これらのパスにそんなモジュールないんだが？」とパス一覧が表示されるので、そこから調整する。
+
+# Automation Hub
+
+## トークンの作成
+
+[Hub への接続](https://console.redhat.com/ansible/automation-hub/token/)
