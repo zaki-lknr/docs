@@ -63,7 +63,7 @@ Failed to connect to bus: Host is down
 Failed to talk to init daemon.
 ```
 
-再起動するには、ホストOSの`wsl`コマンドで実施する。
+再起動するには、ホストOSの`wsl`コマンドでterminateすることで停止するので、再接続する。
 
 ```console
 wsl --terminate Ubuntu-20.04
