@@ -68,3 +68,18 @@ Failed to talk to init daemon.
 ```console
 wsl --terminate Ubuntu-20.04
 ```
+
+## 停止する
+
+```console
+PS C:\Users\h_miyazaki> wsl -l -v
+  NAME                      STATE           VERSION
+* docker-desktop-data       Running         2
+  Ubuntu-20.04              Running         1
+```
+
+`Running`になっているホストを停止するには、↑と同様`--terminate | -t`で停止する。
+
+```console
+wsl -t Ubuntu-20.04
+```
