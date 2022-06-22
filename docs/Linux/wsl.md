@@ -83,3 +83,10 @@ PS C:\Users\h_miyazaki> wsl -l -v
 ```console
 wsl -t Ubuntu-20.04
 ```
+
+## 環境の削除
+
+```console
+> wsl --unregister ubuntu-20.04-container
+登録を解除しています...
+```
