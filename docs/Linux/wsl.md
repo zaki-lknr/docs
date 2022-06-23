@@ -90,3 +90,35 @@ wsl -t Ubuntu-20.04
 > wsl --unregister ubuntu-20.04-container
 登録を解除しています...
 ```
+
+## VM環境のエクスポート
+
+tar形式にエクスポートする。
+
+```console
+wsl --export Ubuntu-20.04 Ubuntu-20.04.tar
+```
+
+カレントに `Ubuntu-20.04.tar` ファイルが作成される。
+
+## VM環境のインポート
+
+エクスポートしたtarファイルをWSLに登録する。  
+名前を変更することで、環境のコピーとなる。
+
+書式は `wsl --import ディストリビューション名 インストール先ファイルパス インポートするtarファイル`。
+
+```console
+wsl --import ubuntu-20.04-container .\work\wsl\ubuntu-20.04-container .\Ubuntu-20.04.tar
+```
+
+制限として、デフォルトユーザーが`root`になってしまう仕様がある。
+
+## デフォルトユーザーの変更
+
+PowerShellで設定可能。
+
+```console
+PS C:\Users\zaki> Function WSL-SetDefaultUser ($distro, $user) { Get-ItemProperty Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss\*\ DistributionName | Where-Object -Property DistributionName -eq $distro | Set-ItemProperty -Name DefaultUid -Value ((wsl -d $distro -u $user -e id -u) | Out-String); };
+PS C:\Users\zaki> WSL-SetDefaultUser ubuntu-20.04-container zaki
+```
