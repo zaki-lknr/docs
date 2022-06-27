@@ -31,3 +31,11 @@ root# commit
 [edit]
 root@srx100-demo#
 ```
+
+### ページャーの無効化
+
+`terminal length 0`相当の操作は以下。
+
+```console
+set cli screen-length 0
+```
