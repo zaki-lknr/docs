@@ -111,3 +111,12 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 [sshdの場合はこちら](https://zaki-lknr.github.io/Linux/ssh/#sshd)
+
+## semanage
+
+コマンドがない場合は `policycoreutils-python-utils` パッケージをインストールする。
+
+```console
+[zaki@cloud-dev2 ~]$ rpm -qf /usr/sbin/semanage
+policycoreutils-python-utils-3.3-1.fc35.noarch
+```
