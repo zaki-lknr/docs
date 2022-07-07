@@ -157,3 +157,35 @@ $ docker login ghcr.io
 
 あとは`ghcr.io/zaki-lknr/squid:5.0.4-alpine-3.13`とかの名前のタグをつければ`push`もできる。  
 pushされたイメージは、GitHubのweb画面の「Packages」で確認できる。デフォルトはprivate設定。
+
+## ECR (Elastic COntainer Registry)
+
+認証(のためのパスワード取得)には `aws` CLIが必要。
+
+- [AWS CLI の最新バージョンをインストールまたは更新します。 - AWS Command Line Interface](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/getting-started-install.html)
+- [設定の基本 - AWS Command Line Interface](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-configure-quickstart.html)
+
+Linux(x86_64)は以下の通り。
+
+```console
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+$ unzip awscliv2.zip
+$ sudo ./aws/install
+```
+
+インストール後の設定は以下。
+
+```console
+$ aws configure
+AWS Access Key ID [None]: ....
+AWS Secret Access Key [None]: ....
+Default region name [None]: ap-northeast-1
+Default output format [None]: json
+```
+
+これで、`aws ecr get-login-password` を実行するとレジストリ認証に使用するパスワードを取得できる。
+ログイン時のユーザー名は `AWS` 固定のため、コマンドは以下の通り。
+
+```console
+$ podman login <registry URL> -u AWS -p $(aws ecr get-login-password)
+```
