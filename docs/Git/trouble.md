@@ -143,6 +143,14 @@ $ git restore /path/to/file
 $ git reset HEAD <path>
 ```
 
+ただし、`git init`直後の場合はこの操作は不可。  
+`git rm --cached`でバージョン管理から外す操作を行う。
+
+```console
+$ git rm --cached <filename>
+$ git rm --cached -r <dirname>
+```
+
 ### mvの取り消し
 
 ```
