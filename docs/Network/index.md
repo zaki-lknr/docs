@@ -39,3 +39,18 @@ root@srx100-demo#
 ```console
 set cli screen-length 0
 ```
+
+### シャットダウン
+
+rootでログインして`cli`を実行。
+
+```console
+root@SRX% cli
+```
+
+その後`request system power-off`を実行する。
+
+```console
+request system power-off
+Power Off the system ? [yes,no] (no) yes
+```
