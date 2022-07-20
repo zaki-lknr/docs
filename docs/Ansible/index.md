@@ -6,7 +6,8 @@
 
 ## リリースとメンテナンス情報
 
-[Releases and maintenance — Ansible Documentation](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html)
+- [Releases and maintenance — Ansible Documentation](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html)
+- [Red Hat Ansible Automation Platform のライフサイクル - Red Hat Customer Portal](https://access.redhat.com/ja/support/policy/updates/ansible-automation-platform)
 
 ## ロードマップ
 
