@@ -472,6 +472,20 @@ TCPポート許可追加
 iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 172.29.0.14:443
 ```
 
+#### リダイレクトルールの削除
+
+まずルールの確認を`--line-numbers`を付与して行番号を確認。
+
+```console
+# iptables -L -t nat --line-numbers
+```
+
+番号を確認したら、それを引数に以下を実行。(`PREROUTING`ルールの場合)
+
+```console
+# iptables -t nat -D PREROUTING 1
+```
+
 ### firewall-cmd
 
 [[コマンドメモ] firewall-cmd備忘録 (firewalld) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/26/230958)
