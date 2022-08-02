@@ -466,6 +466,12 @@ TCPポート許可追加
 # iptables -t nat -A PREROUTING -p tcp -s 10.0.0.1 --dport 80 -j REDIRECT --to 8080
 ```
 
+自分への443/tcpアクセスをリモートの172.29.0.14:443へリダイレクトする場合。
+
+```console
+iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 172.29.0.14:443
+```
+
 ### firewall-cmd
 
 [[コマンドメモ] firewall-cmd備忘録 (firewalld) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/26/230958)
