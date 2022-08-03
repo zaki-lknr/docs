@@ -111,6 +111,15 @@ curl --cacert ../myca_server.crt --resolve ansible.example.org:443:192.168.0.41 
 
 `ansible.example.org`という名前で`192.168.0.41:443`へアクセスする。
 
+## wget
+
+リソースの内容をstdoutへ出力
+
+```console
+$ wget -q -O - https://storage.googleapis.com/kubernetes-release/release/stable.txt
+v1.24.3
+```
+
 ## sed
 
 ```console
