@@ -103,6 +103,14 @@ $ docker image prune
 docker run --name http_sample --rm -p 8081:80 -d -v $PWD:/usr/local/apache2/htdocs httpd:latest 
 ```
 
+### centos:stream8
+
+[quayにあるイメージ](https://quay.io/repository/centos/centos?tab=tags)を使う
+
+```console
+docker run --name cent-stream --rm -it quay.io/centos/centos:stream8 bash
+```
+
 ## ビルド
 
 ### ヘルスチェック
