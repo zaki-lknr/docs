@@ -91,7 +91,7 @@ $ python2 -m SimpleHTTPServer 8080
 
 ### 演算子
 
-#### 比較
+#### 比較(==)
 
 Pythonは文字列も`==`を使う。  
 以下の比較処理は真。
@@ -102,6 +102,17 @@ string = "foobar"
 if string == "foobar":
     print("string is 'foobar'")
 ```
+
+配列の比較も`==`で行う。以下はtrue
+
+```python
+obj_list = [1, 2, 3, "abc"]
+
+if obj_list == [1, 2, 3, "abc"]:
+    print("true")
+```
+
+というか`==`はオブジェクトの比較に使えるってことかな。
 
 ### 制御構文
 
