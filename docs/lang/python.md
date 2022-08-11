@@ -89,6 +89,20 @@ $ python2 -m SimpleHTTPServer 8080
 
 ## 実装
 
+### 演算子
+
+#### 比較
+
+Pythonは文字列も`==`を使う。  
+以下の比較処理は真。
+
+```python
+string = "foobar"
+
+if string == "foobar":
+    print("string is 'foobar'")
+```
+
 ### 制御構文
 
 #### for
