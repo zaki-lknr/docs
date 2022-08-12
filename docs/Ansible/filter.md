@@ -232,6 +232,48 @@ ok: [localhost] =>
 
 ちなみに、文字列型の場合でもiterableなので、一文字目・最後の文字が取れる。
 
+## リストから要素の除外(difference)
+
+リストから特定要素を除外するには`difference`フィルタを使う。  
+入力のリストの要素から、`difference`フィルタの引数に指定したリストの要素を除外したリストを返す。  
+`difference`にもリストを指定する必要がある(iterableな変数でなければエラーとなる)
+
+```yaml
+---
+- hosts: localhost
+  vars:
+    int_list1: [1, 2, 3]
+    int_list2: [3, 4]
+
+  tasks:
+  - name: defference filter sample
+    debug:
+      msg:
+      - "{{ int_list1 | difference(int_list2) }}"
+```
+
+出力は`[1, 2]`になる。
+
+なお、文字列の場合は元々iterableのため、`difference`の引数はリストでなくても一応動作する。
+
+```yaml
+---
+- hosts: localhost
+  vars:
+    list1: ["foo", "bar", "baz"]
+    list2: ["baz", "qux"]
+    str_item: "baz"
+
+  tasks:
+  - name: defference filter sample
+    debug:
+      msg:
+      - "{{ list1 | difference(list2) }}"
+      - "{{ list1 | difference(str_item) }}"
+```
+
+どちらの結果も`["foo", "bar"]`になる。
+
 ## 辞書のマージ(combine)
 
 ```yaml
