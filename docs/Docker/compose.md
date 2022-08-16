@@ -14,3 +14,16 @@ docker compose up
 ```console
 docker compose up -d
 ```
+
+### 停止と削除
+
+```console
+docker compose down
+```
+
+`down`でコンテナは削除されるが、ボリュームは残る。  
+ボリュームも削除するには`-v`オプションを追加する。
+
+```console
+docker compose down -v
+```
