@@ -208,6 +208,23 @@ ok: [localhost] =>
   msg: hello worlds!!
 ```
 
+roleの場合は、ロール名含めて指定すればよい。(実行時の`TASK [***]`の`***`の部分を指定する)
+
+```console
+$ ansible-playbook -i inventory-oci-l-dev.ini playbook.yml -v
+:
+:
+TASK [build_awx/awx-ee : clone repository] ***************************************************
+fatal: [oci-l-a1-ubuntu]: FAILED! => {"before": "54de4047be742783f69678f942a515e991c097ab", "changed": false, "msg": "Local modifications exist in repository (force=no)."}
+
+PLAY RECAP ***********************************************************************************
+oci-l-a1-ubuntu            : ok=33   changed=5    unreachable=0    failed=1    skipped=3    rescued=0    ignored=0   
+
+:
+:
+$ ansible-playbook -i inventory-oci-l-dev.ini playbook.yml -v --start-at "build_awx/awx-ee : create working directory"
+```
+
 # sample
 
 ## playbook
