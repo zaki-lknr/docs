@@ -32,3 +32,21 @@ cat <<__EOL__ > /etc/sudoers.d/nopass
 %wheel ALL=(ALL) NOPASSWD: ALL
 __EOL__
 ```
+
+## 環境変数
+
+### 設定
+
+```console
+export PATH=$PATH:~/bin
+```
+
+### 削除
+
+環境変数`EDITOR`を削除するには
+
+```console
+export -n EDITOR
+```
+
+シェル変数に残るので`echo $EDITOR`の出力は変化しないが環境変数としては消える。
