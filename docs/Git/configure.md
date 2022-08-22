@@ -1,5 +1,21 @@
 # Git設定
 
+## ユーザー名・メールアドレスの設定
+
+```console
+git config --global user.name zaki
+git config --global user.email zaki.hmkc@...
+```
+
+### 共用アカウントなどで$HOMEに記録したくない場合
+
+`--local`を使えば、`$HOME/.gitconfig`でなく、現在のリポジトリの設定に記録される。
+
+```console
+git config --local user.name zaki
+git config --local user.email zaki.hmkc@...
+```
+
 ## 現在の設定確認
 
 ### 現在適用される設定全て
