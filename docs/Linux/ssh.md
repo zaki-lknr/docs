@@ -5,7 +5,7 @@
 ### 鍵作る
 
 ```console
-$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_nopass -N ""
+$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_nopass -N "" -C "comments"
 Generating public/private rsa key pair.
 Your identification has been saved in /home/zaki/.ssh/id_rsa_nopass.
 Your public key has been saved in /home/zaki/.ssh/id_rsa_nopass.pub.
