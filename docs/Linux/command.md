@@ -377,6 +377,17 @@ connection.multi-connect:               0 (default)
 :
 ```
 
+### DNSのセカンダリ追加
+
+追加する項目である`ipv4.dns`の手前に`+`を付与すると「追加」になる。  
+`-`を付与すると対象を削除になる。
+
+`DNS1`の設定がある状態で下記を実行すると、`DNS2`の設定として追加される。
+
+```console
+# nmcli c m "System ens192" +ipv4.dns 192.168.0.1
+```
+
 ### DNSのsearch行追加
 
 `my.example.org`を設定するには
