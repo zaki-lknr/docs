@@ -27,3 +27,11 @@ docker compose down
 ```console
 docker compose down -v
 ```
+
+特定のコンテナのみ停止・削除するには、引数にCompose Fileで指定している名称を指定する。  
+ただし`down`ではこの指定はできない。
+
+```console
+docker compose stop myapp
+docker compose rm myapp
+```
