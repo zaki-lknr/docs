@@ -29,3 +29,9 @@ standard_init_linux.go:228: exec user process caused: exec format error
 
 の場合、イメージのアーキテクチャと実行環境のアーキテクチャが合ってない。  
 イメージはamd64だけど実行環境がarm64など。
+
+## service
+
+### FQCN (A/AAAAレコード)
+
+podからは`<service-name>.<namespace-name>.svc.cluster.local`で名前解決できる。
