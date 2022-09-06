@@ -25,11 +25,21 @@ Debian系はグループ名は`wheel`でなく`sudo`になる。
 %sudo ALL=(ALL) NOPASSWD: ALL
 ```
 
-コマンド
+### コマンドでパス不要設定
+
+rhel系
 
 ```command
 cat <<__EOL__ > /etc/sudoers.d/nopass
 %wheel ALL=(ALL) NOPASSWD: ALL
+__EOL__
+```
+
+debian系
+
+```command
+cat <<__EOL__ > /etc/sudoers.d/nopass
+%sudo ALL=(ALL) NOPASSWD: ALL
 __EOL__
 ```
 
