@@ -1,5 +1,13 @@
 # openssl
 
+## 証明書作成
+
+### オレオレ証明書作成(CommonName)
+
+```console
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout /path/to/example.org.key -x509 -days 365 -out /path/to/example.org.crt -subj '/CN=example.org/'
+```
+
 ## ファイル内容確認
 
 ### RSA秘密鍵の確認
