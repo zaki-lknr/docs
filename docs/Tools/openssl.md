@@ -8,6 +8,14 @@
 openssl req -newkey rsa:4096 -nodes -sha256 -keyout /path/to/example.org.key -x509 -days 365 -out /path/to/example.org.crt -subj '/CN=example.org/'
 ```
 
+### Alternative Name指定のオレオレ証明書
+
+`appserv`と`appserv.example.org`いう名前のSANを追加する場合。
+
+```console
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout server.key -x509 -days 365  -out server.crt -subj '/C=JP/' -addext "subjectAltName=DNS:appserv,DNS:appserv.example.org" 
+```
+
 ## ファイル内容確認
 
 ### RSA秘密鍵の確認
