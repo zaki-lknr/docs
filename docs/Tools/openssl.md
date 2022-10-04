@@ -1,6 +1,8 @@
 # openssl
 
-## RSA秘密鍵の確認
+## ファイル内容確認
+
+### RSA秘密鍵の確認
 
 ```
 -----BEGIN RSA PRIVATE KEY-----
@@ -17,7 +19,7 @@ MIIJKAIBAAKCAgEAntBW2JpzhtCgXGjKsR........
 # openssl rsa -text -noout -in account.key 
 ```
 
-## CSR(証明書署名要求)の確認
+### CSR(証明書署名要求)の確認
 
 ```
 -----BEGIN CERTIFICATE REQUEST-----
@@ -34,7 +36,7 @@ MIIEkDCCAngCAQAwHDEaMB........
 # openssl req -text -noout -in server.csr
 ```
 
-## 証明書ファイルの確認
+### 証明書ファイルの確認
 
 ```
 -----BEGIN CERTIFICATE-----
