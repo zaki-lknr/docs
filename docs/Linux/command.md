@@ -463,6 +463,14 @@ route1=172.29.0.0/24,172.16.1.3
 # nmcli c m ens224 -ipv4.routes "172.29.0.0/24 172.16.1.3"
 ```
 
+## ホスト名
+
+### 変更
+
+```console
+sudo hostnamectl set-hostname rhel8
+```
+
 ## ファイアウォール
 
 ### iptables
