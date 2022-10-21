@@ -117,6 +117,10 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 ```sh
 if [ -f ~/.git-prompt.sh ]; then
     source ~/.git-prompt.sh
-    PS1='$(__git_ps1 "(%s) ")'"$PS1"
+    PS1='\[\e[31m\]$(__git_ps1 "(%s) ")\[\e[0m\]'"$PS1"
+    export GIT_PS1_SHOWDIRTYSTATE=true
+    export GIT_PS1_SHOWUNTRACKEDFILES=true
+    export GIT_PS1_SHOWSTASHSTATE=true
+    export GIT_PS1_SHOWUPSTREAM=auto
 fi
 ```
