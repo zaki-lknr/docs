@@ -471,6 +471,16 @@ route1=172.29.0.0/24,172.16.1.3
 sudo hostnamectl set-hostname rhel8
 ```
 
+## resolvectl
+
+Fedoraなど。
+
+### DNS設定確認
+
+```console
+resolvectl status
+```
+
 ## ファイアウォール
 
 ### iptables
