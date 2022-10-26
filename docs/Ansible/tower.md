@@ -26,6 +26,9 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 
 ## API
 
+API一覧は以下。  
+[11. Controller API Reference Guide — Automation Controller API Guide v4.2.1](https://docs.ansible.com/automation-controller/latest/html/controllerapi/api_ref.html)
+
 ### 認証
 
 #### パーソナルトークン作成
