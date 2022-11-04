@@ -2,52 +2,6 @@
 
 ## ssh client
 
-### 鍵作る
-
-```console
-$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_nopass -N "" -C "comments"
-Generating public/private rsa key pair.
-Your identification has been saved in /home/zaki/.ssh/id_rsa_nopass.
-Your public key has been saved in /home/zaki/.ssh/id_rsa_nopass.pub.
-The key fingerprint is:
-SHA256:vDhmhHyGepTu929HGu0oPPKS/2HrJexF97CBWu9k0M4 zaki@cloud-dev
-The key's randomart image is:
-+---[RSA 2048]----+
-|                 |
-|                 |
-|                 |
-|   . + .     o   |
-|    * + S  .= =  |
-|   + + . o.+o* = |
-|  . o =o. **o E .|
-|   o o=.+o+*o+   |
-|    .. *+B*.  .  |
-+----[SHA256]-----+
-$ ls ~/.ssh/
-id_rsa  id_rsa.pub  id_rsa_nopass  id_rsa_nopass.pub  known_hosts
-```
-
-### リモートへ公開鍵コピー
-
-```console
-$ ssh-copy-id -i ~/.ssh/id_rsa_nopass 192.168.0.31
-/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/zaki/.ssh/id_rsa_nopass.pub"
-The authenticity of host '192.168.0.31 (192.168.0.31)' can't be established.
-ECDSA key fingerprint is SHA256:WQpvcX7UfYAmdFIMfhak4pCevQvOjZkIZ/fpE4Sofm4.
-ECDSA key fingerprint is MD5:97:15:37:72:88:ab:59:01:ad:3c:a2:e9:10:90:11:59.
-Are you sure you want to continue connecting (yes/no)? yes
-/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
-/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
-zaki@192.168.0.31's password: 
-
-Number of key(s) added: 1
-
-Now try logging into the machine, with:   "ssh '192.168.0.31'"
-and check to make sure that only the key(s) you wanted were added.
-
-$
-```
-
 ### 鍵指定してssh
 
 ```console
@@ -170,7 +124,56 @@ systemd[1]: Failed to start OpenSSH server daemon.
 これで`systemctl restart sshd`が有効になる。
 まぁsshd_configの`Port`のすぐ上にコメントで書かれてるんだけど。
 
-## 鍵
+## 鍵管理
+
+### キーペア作成
+
+- `-f` で作成先鍵ファイル (デフォルトは`$HOME/.ssh/id_***`)
+- `-N` でパスフレーズ (デフォルトは対話的に聞かれる)
+
+```console
+$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_nopass -N "" -C "comments"
+Generating public/private rsa key pair.
+Your identification has been saved in /home/zaki/.ssh/id_rsa_nopass.
+Your public key has been saved in /home/zaki/.ssh/id_rsa_nopass.pub.
+The key fingerprint is:
+SHA256:vDhmhHyGepTu929HGu0oPPKS/2HrJexF97CBWu9k0M4 zaki@cloud-dev
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|                 |
+|                 |
+|   . + .     o   |
+|    * + S  .= =  |
+|   + + . o.+o* = |
+|  . o =o. **o E .|
+|   o o=.+o+*o+   |
+|    .. *+B*.  .  |
++----[SHA256]-----+
+$ ls ~/.ssh/
+id_rsa  id_rsa.pub  id_rsa_nopass  id_rsa_nopass.pub  known_hosts
+```
+
+### リモートへ公開鍵コピー
+
+```console
+$ ssh-copy-id -i ~/.ssh/id_rsa_nopass 192.168.0.31
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/zaki/.ssh/id_rsa_nopass.pub"
+The authenticity of host '192.168.0.31 (192.168.0.31)' can't be established.
+ECDSA key fingerprint is SHA256:WQpvcX7UfYAmdFIMfhak4pCevQvOjZkIZ/fpE4Sofm4.
+ECDSA key fingerprint is MD5:97:15:37:72:88:ab:59:01:ad:3c:a2:e9:10:90:11:59.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+zaki@192.168.0.31's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh '192.168.0.31'"
+and check to make sure that only the key(s) you wanted were added.
+
+$
+```
 
 ### フィンガープリント確認
 
