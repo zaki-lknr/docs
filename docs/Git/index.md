@@ -500,3 +500,7 @@ bc5eb56 add: git/configure: git-prompt設定後のPS1環境変数
 > コミットを指定するときに、~(チルダ)と^(キャレット)を使ってあるコミットからの相対位置で指定することもできます。この時に、よく使われるのがHEADです。~(チルダ)を後ろに付け加えることで何世代前の親かを指定することができます。^(キャレット)は、ブランチのマージで親が複数ある場合に、何番目の親かを指定することができます。
 >
 > [ブランチの切り替え｜サル先生のGit入門【プロジェクト管理ツールBacklog】](https://backlog.com/ja/git-tutorial/stepup/03/)
+
+## .gitignore
+
+[空のディレクトリを維持するための、 .gitkeep と .gitignore の使い分け - Qiita](https://qiita.com/ndxbn/items/f124d2b183b60cb074e2)
