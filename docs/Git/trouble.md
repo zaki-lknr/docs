@@ -183,3 +183,11 @@ mergeしようとしたらconflictしてしまい、競合を解消するより�
 ```console
 $ git merge --abort
 ```
+
+### rebaseの取り消し(conflict)
+
+`merge`と同様に`--abort`で元に戻せる。
+
+```console
+$ git rebase --abort
+```
