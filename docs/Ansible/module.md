@@ -393,6 +393,17 @@ PLAY RECAP *********************************************************************
 localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 ```
 
+### インベントリの再読み込み
+
+ダイナミックインベントリでホスト情報を再収集したい場合、など。
+
+```yaml
+- name: refresh inventory
+  ansible.builtin.meta: refresh_inventory
+```
+
+[[Ansible] 任意のタイミングでダイナミックインベントリのホスト情報収集を行う - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2022/11/09/203145)
+
 ## Docker
 
 ### push image
