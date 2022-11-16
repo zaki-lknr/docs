@@ -37,6 +37,23 @@ $ docker run --name httpd --rm -d -v webvolume:/var/tmp httpd
 docker inspect <container name or ID>
 ```
 
+#### formatでIPアドレス
+
+`docker run`でデフォルトのネットワークへデプロイしたコンテナであればこの通り。
+
+```console
+$ docker inspect <container name or ID> --format '{{ .NetworkSettings.IPAddress }}'
+172.17.0.2
+```
+
+デフォルト以外のネットワークはこのパスの値は空になっているので、ネットワークの指定も必要。  
+Compose使用時もこのパターン。
+
+```console
+$ docker inspect <container name or ID> --format '{{ .NetworkSettings.Networks.<network name>.IPAddress }}'
+172.18.0.2
+```
+
 ### save
 
 ```console
