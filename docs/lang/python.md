@@ -75,6 +75,12 @@ $ pip uninstall -r <(pip freeze)
 
 ## tool
 
+### JSON整形
+
+```console
+$ ... | python -m json.tool
+```
+
 ### httpサーバ
 
 ```console
