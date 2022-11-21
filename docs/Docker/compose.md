@@ -35,3 +35,11 @@ docker compose down -v
 docker compose stop myapp
 docker compose rm myapp
 ```
+
+### コマンド起動
+
+`docker exec`と異なり`-it`オプションは不要。アプリ名とコマンド名のみでOK
+
+```console
+docker compose exec <app名> bash
+```
