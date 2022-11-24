@@ -132,6 +132,14 @@ type: Opaque
 $ kubectl run work-pod --image=fedora --command -- tail -f /dev/null
 ```
 
+## expose
+
+### podベースでserviceを作成
+
+```console
+$ kubectl expose pod <pod-name> --port 80
+```
+
 ## config
 
 [[kubectl / oc]コンテキストやクラスタ情報の確認 (コマンドメモ) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/04/07/080241)
