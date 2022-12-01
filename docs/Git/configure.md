@@ -16,6 +16,18 @@ git config --local user.name zaki
 git config --local user.email zaki.hmkc@...
 ```
 
+### 環境変数を使う場合
+
+以下を設定することで、`user.name`と`user.email`を上書きできる。  
+共用アカウントで誰かが`$HOME/.gitconfig`を設定してしまい、自分のワークディレクトリの`.gitconfig`の設定忘れでの事故防止的にはこちらが良いかも。
+
+```sh
+export GIT_AUTHOR_NAME
+export GIT_AUTHOR_EMAIL
+export GIT_COMMITTER_NAME
+export GIT_COMMITTER_EMAIL
+```
+
 ## 現在の設定確認
 
 ### 現在適用される設定全て
