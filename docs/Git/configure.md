@@ -67,6 +67,14 @@ Host <space>.git.backlog.com
     IdentityFile ~/.ssh/id_rsa_git
 ```
 
+### 共用アカウントなどで$HOME/.ssh/config以外を使いたい場合
+
+以下設定。
+
+```sh
+export GIT_SSH_COMMAND="ssh -F /path/to/myconf/ssh/config"
+```
+
 ## リモートリポジトリ
 
 ### 現在の設定
