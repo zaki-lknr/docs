@@ -1,5 +1,10 @@
 # K3s
 
+## docs
+
+- [K3s - Lightweight Kubernetes | K3s](https://docs.k3s.io/)
+- [日本語版 K3sマニュアル](https://www.rancher.co.jp/pdfs/K3s-eBook4Styles0507.pdf)
+
 ## Always FreeのOCI(A1.Flex 2cpu/12gb ram)にシングルノードクラスタ作る
 
 標準のE2.1.Microの場合↓  
