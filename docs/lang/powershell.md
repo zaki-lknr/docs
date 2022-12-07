@@ -30,3 +30,36 @@ PS> $PSVersionTable
 ## httpアクセス
 
 [curl/PowerShellでHTTPアクセスいろいろ - Qiita](https://qiita.com/zaki-lknr/items/8950f6acea20961a8afc)
+
+## コーディング
+
+### 型
+
+#### 配列
+
+```ps1
+PS C:\Users\zaki> $list = @(1,2,3,"foo","bar","baz")
+PS C:\Users\zaki> $list
+1
+2
+3
+foo
+bar
+baz
+PS C:\Users\zaki>
+```
+
+#### 連想配列
+
+```ps1
+PS C:\Users\zaki> $dict = @{key1="value1"; key2=123}
+PS C:\Users\zaki> $dict
+
+Name                           Value
+----                           -----
+key1                           value1
+key2                           123
+
+
+PS C:\Users\zaki>
+```
