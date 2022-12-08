@@ -63,3 +63,20 @@ key2                           123
 
 PS C:\Users\zaki>
 ```
+
+#### 型を確認する
+
+`GetType()`を使用する。
+
+```ps1
+$flen_values.GetType()
+```
+
+これで型を確認できる。  
+例えばこんな出力になる。
+
+```console
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     Byte[]                                   System.Array
+```
