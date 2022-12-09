@@ -213,6 +213,8 @@ $ ssh-keygen -m PEM
 
 ### 鍵形式の変更
 
+#### 秘密鍵
+
 `-p`を使ったパスフレーズ更新の際に、`-m`で鍵形式を指定することで変換できる。  
 実行することで鍵ファイルが更新される。  
 PEM形式に変換するのであれば以下の通り。
@@ -222,6 +224,22 @@ $ ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
 ```
 
 デフォルトは`RFC4716`。OpenSSH形式にする場合は、`-m RFC4716`を指定すればOK
+
+#### 公開鍵
+
+OpenSSH形式(`ssh-rsa`などで始まる1行の書式) -> PEM形式(`BEGIN PUBLIC KEY`から`END`までの複数行形式)
+
+```console
+$ ssh-keygen -f ~/.ssh/id_rsa.pub -e -m PKCS8
+```
+
+PEM形式 -> OpenSSH形式
+
+```console
+$ ssh-keygen -f ~/.ssh/id_rsa.pub -i -m PKCS8
+```
+
+「OpenSSH形式と〇〇の変換」で、出力(`-e`export)や入力(`-i`import)の鍵形式を`-m`で指定するっぽい。(片方は指定できるがもう片方はOpenSSH形式固定)
 
 ### 鍵サイズ指定
 
