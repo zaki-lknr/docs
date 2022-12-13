@@ -106,7 +106,7 @@ $ man 5 crontab
 ### 名前解決オプション
 
 ```
-curl --cacert ../myca_server.crt --resolve ansible.example.org:443:192.168.0.41 https://ansible.example.org/
+curl --resolve ansible.example.org:443:192.168.0.41 https://ansible.example.org/
 ```
 
 `ansible.example.org`という名前で`192.168.0.41:443`へアクセスする。
