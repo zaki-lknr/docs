@@ -29,11 +29,12 @@ stdout_callback = yaml
 
 ### SSH秘密鍵
 
-| 設定場所         | 設定名                      |
-| ------------ | ------------------------ |
-| コマンドラインオプション | `--private-key`          |
-| 環境変数         | ANSIBLE_PRIVATE_KEY_FILE |
-| 変数           | ansible_private_key_file |
+| 設定場所         | 設定名                                   |
+| ------------ | ------------------------------------- |
+| コマンドラインオプション | `--private-key`                       |
+| 環境変数         | ANSIBLE_PRIVATE_KEY_FILE              |
+| 変数           | ansible_private_key_file              |
+| ansible.cfg  | private_key_file  ([defaults]section) |
 
 ### Pythonインタプリタパス
 
