@@ -201,3 +201,10 @@ CURRENT   NAME                          CLUSTER               AUTHINFO          
 $ kubectl config current-context
 oci-k3s-le
 ```
+
+コンテキストをセットする
+
+```console
+$ kubectl config use-context k3d-k3s-default
+Switched to context "k3d-k3s-default".
+```
