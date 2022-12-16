@@ -254,3 +254,11 @@ $ ssh-keygen -t rsa -b 4096
 ```console
 $ ssh-copy-id [-i identity_file] [-p port] [username@]hostname
 ```
+
+## その他
+
+- [パスワードを設定していないユーザで ssh ログインしようとすると公開鍵認証でもログインに失敗する - tkuchikiの日記](https://tkuchiki.hatenablog.com/entry/2013/05/27/211051)
+    - `/etc/shadow`の`USERNAME`の次に`!!`と書かれている場合はアカウントがロックされている
+    - パスワードを設定すればロックは解除される
+    - ロック中の認証失敗は`/var/log/secure`にログが出力される
+    - `/etc/ssh/sshd_config`に`UsePam yes`を設定すれば制限緩和されるがセキュリティは落ちるらしい
