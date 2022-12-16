@@ -315,6 +315,8 @@ KiB Swap:  3670012 total,  3670012 free,        0 used.  5663308 avail Mem
 
 ## dig
 
+### Aレコード
+
 デフォルトは実行ホストのOSで設定されているネームサーバーに対してAレコードを問い合わせる。
 
 ```console
@@ -338,6 +340,34 @@ gmail.com.              180     IN      A       142.251.42.197
 ;; SERVER: 127.0.0.53#53(127.0.0.53)
 ;; WHEN: Thu Apr 28 10:31:34 JST 2022
 ;; MSG SIZE  rcvd: 54
+```
+
+### 逆引き
+
+`-x`オプションを使う
+
+```console
+$ dig -x 192.168.0.16
+
+; <<>> DiG 9.16.33-RH <<>> -x 192.168.0.16
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3719
+;; flags: qr aa rd ra ad; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;16.0.168.192.in-addr.arpa.     IN      PTR
+
+;; ANSWER SECTION:
+16.0.168.192.in-addr.arpa. 0    IN      PTR     cloud-dev2.
+16.0.168.192.in-addr.arpa. 0    IN      PTR     cloud-dev2.local.
+
+;; Query time: 2 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Thu Dec 15 17:03:57 JST 2022
+;; MSG SIZE  rcvd: 108
 ```
 
 ## NetworkManager
