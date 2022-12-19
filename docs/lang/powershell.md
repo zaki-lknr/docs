@@ -80,3 +80,33 @@ IsPublic IsSerial Name                                     BaseType
 -------- -------- ----                                     --------
 True     True     Byte[]                                   System.Array
 ```
+
+## Azure PowerShell
+
+### Azure Az PowerShellインストール
+
+[Azure Az PowerShell モジュールをインストールする | Microsoft Learn](https://learn.microsoft.com/ja-jp/powershell/azure/install-az-ps)
+
+```ps1
+Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+```
+
+### サインイン
+
+```ps1
+Connect-AzAccount
+```
+
+ディレクトリが複数ある場合は指定の必要がある。
+
+```ps1
+Connect-AzAccount -TenantId ********
+```
+
+### ディレクトリ切り替え
+
+```ps1
+Select-AzContext ...
+```
+
+サインイン済みのディレクトリはtabでサジェストできる。
