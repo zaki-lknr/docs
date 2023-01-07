@@ -19,10 +19,10 @@
 
 「Sample directory layout」や「Alternative directory layout」を参照。
 
-## Tips and trics
+## Playbook書き方
 
-旧「ベストプラクティス」のページはこちら。  
-[Tips and tricks — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html)
+- [Tips and tricks — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html) 旧「ベストプラクティス」のページ。
+- [Conditionals — Ansible Documentation](https://terryhowe.github.io/ansible-modules-hashivault/user_guide/playbooks_conditionals.html) 条件分
 
 ## ネットワーク
 
