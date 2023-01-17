@@ -1,5 +1,13 @@
 # ネットワーク
 
+## Cisco
+
+### DevNetのCSR1000v (Always-On)
+
+[DevNet Sandbox - Lab Catalog - Dashboard](https://devnetsandbox.cisco.com/RM/Topology)  
+上記から"CSR100v"で検索して見つかるもののうち"Always-On"になっているものを利用する。  
+リンクを開けばOverviewの項に接続情報が記載されている。
+
 ## Junos
 
 ### rootのパスワードを設定する
