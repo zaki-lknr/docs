@@ -36,6 +36,14 @@ VirtualPortGroup0      192.168.35.101  YES TFTP   up                    up
 
 とか。
 
+### コンフィギュレーションモードへ移行
+
+```console
+ios#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+ios(config)#
+```
+
 ### DevNetのCSR1000v (Always-On)
 
 [DevNet Sandbox - Lab Catalog - Dashboard](https://devnetsandbox.cisco.com/RM/Topology)  
