@@ -7,6 +7,16 @@
 
 ## Cisco
 
+### 昇格
+
+```console
+ios>enable
+Password: 
+rt-center#
+```
+
+`show interfaces`とか実行するには昇格する。
+
 ### DevNetのCSR1000v (Always-On)
 
 [DevNet Sandbox - Lab Catalog - Dashboard](https://devnetsandbox.cisco.com/RM/Topology)  
