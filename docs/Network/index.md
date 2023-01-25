@@ -1,5 +1,10 @@
 # ネットワーク
 
+## 用語
+
+- VRRP
+    - [VRRPとは](https://www.infraexpert.com/study/fhrpz06.html)
+
 ## Cisco
 
 ### DevNetのCSR1000v (Always-On)
