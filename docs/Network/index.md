@@ -17,6 +17,25 @@ rt-center#
 
 `show interfaces`とか実行するには昇格する。
 
+### インタフェースの情報を見る
+
+```console
+show interfaces
+```
+
+とか、
+
+```console
+ios# show ip interface brief 
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       10.1.1.254      YES DHCP   up                    up      
+GigabitEthernet2       10.1.2.254      YES DHCP   up                    up      
+Loopback0              10.255.255.1    YES TFTP   up                    up      
+VirtualPortGroup0      192.168.35.101  YES TFTP   up                    up     
+```
+
+とか。
+
 ### DevNetのCSR1000v (Always-On)
 
 [DevNet Sandbox - Lab Catalog - Dashboard](https://devnetsandbox.cisco.com/RM/Topology)  
