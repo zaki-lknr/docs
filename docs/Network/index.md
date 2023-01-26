@@ -44,6 +44,37 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 ios(config)#
 ```
 
+### ホスト名変更
+
+```console
+ios(config)#hostname router1
+router1(config)#
+```
+
+### 再起動
+
+```console
+router1#reload 
+
+System configuration has been modified. Save? [yes/no]: yes
+Building configuration...
+[OK]
+Proceed with reload? [confirm]
+Connection to 10.1.1.254 closed by remote host.
+Connection to 10.1.1.254 closed.
+```
+
+### インタフェースの無効化
+
+`shutdown`を使う。元に戻すのは`no shutdown`  
+以下はGigabitEthernet 2を無効化する場合。
+
+```console
+router1(config)#interface GigabitEthernet 2
+router1(config-if)#shutdown
+router1(config-if)#
+```
+
 ### DevNetのCSR1000v (Always-On)
 
 [DevNet Sandbox - Lab Catalog - Dashboard](https://devnetsandbox.cisco.com/RM/Topology)  
