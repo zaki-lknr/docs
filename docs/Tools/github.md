@@ -1,5 +1,11 @@
 # GitHub
 
+## 設定
+
+### 2要素認証を設定
+
+[2 要素認証を設定する - GitHub Docs](https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
+
 ## API
 
 ### デフォルトブランチを取得する
