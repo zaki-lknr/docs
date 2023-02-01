@@ -111,6 +111,20 @@ $ git remote set-url origin git@github.com:zaki-lknr/ansible-sample.git
 $ git remote add hoge <other repository>
 ```
 
+## gitconfig
+
+### コマンドのalias
+
+`git st`で`git status`にしたい場合はこんな感じ
+
+```ini
+[user]
+	email = ...
+	name = ...
+[alias]
+	st = status
+```
+
 ## git prompt
 
 ```console
