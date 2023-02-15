@@ -2,6 +2,8 @@
 
 ## command
 
+- [Overview of docker compose CLI | Docker Documentation](https://docs.docker.com/compose/reference/)
+
 ### 起動
 
 ```console
@@ -45,6 +47,8 @@ docker compose exec <app名> bash
 ```
 
 ## Composeファイル
+
+- [Compose file version 3 reference | Docker Documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/)
 
 ### network_mode
 
