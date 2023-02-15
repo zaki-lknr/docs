@@ -43,3 +43,24 @@ docker compose rm myapp
 ```console
 docker compose exec <app名> bash
 ```
+
+## Composeファイル
+
+### network_mode
+
+`"service:[service name]"`と記述すると、対象サービスのネットワーク設定を使用する。  
+記述例
+
+```yaml
+services:
+    app:
+        image: myapp
+        ports:
+            - 8080:8080
+        networks:
+            default:
+                ipv4_address: 192.168.0.100
+    db:
+        image: mysql
+        network_mode: service:app
+```
