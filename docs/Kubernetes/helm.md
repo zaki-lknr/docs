@@ -46,6 +46,20 @@ $ helm repo add prometheus-community https://prometheus-community.github.io/helm
 $ helm repo update
 ```
 
+### チャート一覧
+
+登録済み全リポジトリのチャート一覧
+
+```console
+$ helm search repo
+```
+
+指定リポジトリのチャート一覧
+
+```console
+$ helm search repo <repository-name>
+```
+
 ### チャートの検索
 
 ```console
