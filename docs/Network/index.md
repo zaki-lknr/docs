@@ -135,3 +135,13 @@ root@SRX% cli
 request system power-off
 Power Off the system ? [yes,no] (no) yes
 ```
+
+## SmartCS
+
+NW機器のコンソールポートへアクセスするためのコンソールサーバー。  
+2通りのアクセス方法がある。
+
+- ダイレクトモード
+    - SmartCSの特定ポートへsshすると、接続しているTTYへアクセスできる
+- セレクトモード
+    - SmartCSの代表ポート(22/TCPのssh)へまずアクセスし、そこからTTYを選択
