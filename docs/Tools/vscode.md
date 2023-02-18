@@ -61,6 +61,15 @@
 
 ```
 
+### ターミナルのシェルをcygwinのzshにする
+
+`chere`パッケージを入れて以下の設定を追加する。
+
+```json
+    "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",
+    "terminal.integrated.shellArgs.windows": ["/bin/xhere", "/bin/zsh"],
+```
+
 ## ショートカット
 
 ※ windows前提
