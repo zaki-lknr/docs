@@ -208,3 +208,11 @@ oci-k3s-le
 $ kubectl config use-context k3d-k3s-default
 Switched to context "k3d-k3s-default".
 ```
+
+## delete
+
+### 指定namespaceの指定typeを全部消す
+
+```console
+$ kubectl delete pvc -n zzz --all
+```
