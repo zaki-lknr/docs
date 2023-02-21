@@ -92,6 +92,14 @@ fullnameOverride: ""
 
 これをファイル出力すればインストール用のカスタマイズYAML作れる
 
+### リリース一覧
+
+実行中のリリースの一覧
+
+```console
+$ helm list [-n <namespace-name>]
+```
+
 ### リリースの設定値
 
 チャートからリリースされているアプリケーションの設定値を`helm get values`で確認できる。
