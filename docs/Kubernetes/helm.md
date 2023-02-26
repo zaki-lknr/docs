@@ -131,6 +131,24 @@ service:
   type: LoadBalancer
 ```
 
+## チャートインストール例
+
+### Fluent Bit
+
+[fluent/helm-charts: Helm Charts for Fluentd and Fluent Bit](https://github.com/fluent/helm-charts)
+
+リポジトリ追加
+
+```console
+helm repo add fluent https://fluent.github.io/helm-charts
+```
+
+インストール
+
+```console
+helm upgrade --install fluent-bit fluent/fluent-bit -n logging --create-namespace -f values.yaml
+```
+
 ## 環境変数
 
 Helmで使用する環境編素は`helm env`で確認できる。
