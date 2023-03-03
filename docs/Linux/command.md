@@ -149,6 +149,22 @@ $ ps aux | awk '{print $3, "\t", $4}'
 $ ps aux | awk 'BEGIN { OFS="\t" } {print $3, $4}'
 ```
 
+## envsubst
+
+```console
+$ cat sample.template 
+hello ${USER}
+```
+
+環境変数`$USER`が定義されてる状態で、stdinから↑の内容を入力にあたえると
+
+```console
+$ envsubst < sample.template 
+hello zaki
+```
+
+変数名の書式で記述した箇所が環境変数で展開される。
+
 ## diff
 
 コマンド実行結果のstdout同士を比較したい場合は以下。
