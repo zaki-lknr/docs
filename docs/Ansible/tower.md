@@ -50,3 +50,157 @@ $ curl -sk https://192.168.0.27/api/v2/job_templates/ -H "Authorization: Bearer 
 ```console
 $ curl -sk https://192.168.0.27/api/v2/job_templates/?page_size=1000 | python -m json.tool
 ```
+
+### 設定のcategory_slug確認
+
+「Settings」にある `/api/v2/settings/` で確認できる。
+
+```console
+curl -sk https://tower.example.org/api/v2/settings/ | python3 -m json.tool
+{
+    "count": 20,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "url": "/api/v2/settings/all/",
+            "slug": "all",
+            "name": "All"
+        },
+        {
+            "url": "/api/v2/settings/authentication/",
+            "slug": "authentication",
+            "name": "Authentication"
+        },
+        {
+            "url": "/api/v2/settings/azuread-oauth2/",
+            "slug": "azuread-oauth2",
+            "name": "Azure AD OAuth2"
+        },
+        {
+            "url": "/api/v2/settings/changed/",
+            "slug": "changed",
+            "name": "Changed"
+        },
+        {
+            "url": "/api/v2/settings/github/",
+            "slug": "github",
+            "name": "GitHub OAuth2"
+        },
+        {
+            "url": "/api/v2/settings/github-enterprise/",
+            "slug": "github-enterprise",
+            "name": "GitHub Enterprise OAuth2"
+        },
+        {
+            "url": "/api/v2/settings/github-enterprise-org/",
+            "slug": "github-enterprise-org",
+            "name": "GitHub Enterprise Organization OAuth2"
+        },
+        {
+            "url": "/api/v2/settings/github-enterprise-team/",
+            "slug": "github-enterprise-team",
+            "name": "GitHub Enterprise Team OAuth2"
+        },
+        {
+            "url": "/api/v2/settings/github-org/",
+            "slug": "github-org",
+            "name": "GitHub Organization OAuth2"
+        },
+        {
+            "url": "/api/v2/settings/github-team/",
+            "slug": "github-team",
+            "name": "GitHub Team OAuth2"
+        },
+        {
+            "url": "/api/v2/settings/google-oauth2/",
+            "slug": "google-oauth2",
+            "name": "Google OAuth2"
+        },
+        {
+            "url": "/api/v2/settings/jobs/",
+            "slug": "jobs",
+            "name": "Jobs"
+        },
+        {
+            "url": "/api/v2/settings/ldap/",
+            "slug": "ldap",
+            "name": "LDAP"
+        },
+        {
+            "url": "/api/v2/settings/logging/",
+            "slug": "logging",
+            "name": "Logging"
+        },
+        {
+            "url": "/api/v2/settings/named-url/",
+            "slug": "named-url",
+            "name": "Named URL"
+        },
+        {
+            "url": "/api/v2/settings/radius/",
+            "slug": "radius",
+            "name": "RADIUS"
+        },
+        {
+            "url": "/api/v2/settings/saml/",
+            "slug": "saml",
+            "name": "SAML"
+        },
+        {
+            "url": "/api/v2/settings/system/",
+            "slug": "system",
+            "name": "System"
+        },
+        {
+            "url": "/api/v2/settings/tacacsplus/",
+            "slug": "tacacsplus",
+            "name": "TACACS+"
+        },
+        {
+            "url": "/api/v2/settings/ui/",
+            "slug": "ui",
+            "name": "UI"
+        }
+    ]
+}
+```
+
+### その他のシステム設定
+
+category_slugに`system`を指定。  
+キー一覧は以下の通り
+
+```console
+$ curl -sk https://tower.example.org/api/v2/settings/system/ ... | python3 -m json.tool
+{
+    "ACTIVITY_STREAM_ENABLED": true,
+    "ACTIVITY_STREAM_ENABLED_FOR_INVENTORY_SYNC": false,
+    "ORG_ADMINS_CAN_SEE_ALL_USERS": true,
+    "MANAGE_ORGANIZATION_AUTH": true,
+    "TOWER_URL_BASE": "https://127.0.0.1",
+    "REMOTE_HOST_HEADERS": [
+        "REMOTE_ADDR",
+        "REMOTE_HOST"
+    ],
+    "PROXY_IP_ALLOWED_LIST": [],
+    "LICENSE": {
+        ...
+    },
+    "REDHAT_USERNAME": "",
+    "REDHAT_PASSWORD": "",
+    "SUBSCRIPTIONS_USERNAME": "",
+    "SUBSCRIPTIONS_PASSWORD": "",
+    "AUTOMATION_ANALYTICS_URL": "https://cloud.redhat.com/api/ingress/v1/upload",
+    "INSTALL_UUID": "...",
+    "DEFAULT_CONTROL_PLANE_QUEUE_NAME": "controlplane",
+    "DEFAULT_EXECUTION_QUEUE_NAME": "default",
+    "DEFAULT_EXECUTION_ENVIRONMENT": null,
+    "CUSTOM_VENV_PATHS": [],
+    "INSIGHTS_TRACKING_STATE": false,
+    "AUTOMATION_ANALYTICS_LAST_GATHER": null,
+    "AUTOMATION_ANALYTICS_LAST_ENTRIES": "",
+    "AUTOMATION_ANALYTICS_GATHER_INTERVAL": 14400,
+    "IS_K8S": false
+}
+```
