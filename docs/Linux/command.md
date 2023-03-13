@@ -111,6 +111,12 @@ curl --resolve ansible.example.org:443:192.168.0.41 https://ansible.example.org/
 
 `ansible.example.org`という名前で`192.168.0.41:443`へアクセスする。
 
+### basic認証
+
+```command
+curl -u username:password http://example.org/
+```
+
 ## wget
 
 リソースの内容をstdoutへ出力
