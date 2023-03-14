@@ -155,6 +155,22 @@ $ ps aux | awk '{print $3, "\t", $4}'
 $ ps aux | awk 'BEGIN { OFS="\t" } {print $3, $4}'
 ```
 
+### if文
+
+1カラム目が`root`の場合の11カラム目を出力
+
+```console
+ps aux | awk '{if($1 == "root"){print $11}}'
+```
+
+### if文で正規表現
+
+1カラム目が数字のみの場合の行全部
+
+```console
+ps aux | awk '{if($1 ~ /[0-9]+/){print $0}}'
+```
+
 ## envsubst
 
 ```console
