@@ -70,6 +70,12 @@
     "terminal.integrated.shellArgs.windows": ["/bin/xhere", "/bin/zsh"],
 ```
 
+### ターミナルをGit Bashをデフォルトにする
+
+```json
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+```
+
 ## ショートカット
 
 ※ windows前提
