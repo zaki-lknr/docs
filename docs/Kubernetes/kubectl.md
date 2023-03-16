@@ -2,6 +2,20 @@
 
 分類変えるかも…
 
+## コンテキスト
+
+### 一覧
+
+```console
+kubectl config get-contexts
+```
+
+### 切り替え
+
+```console
+kubectl config set-contexts <context-name>
+```
+
 ## 設定
 
 ### kubeconfigのマージ
