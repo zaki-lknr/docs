@@ -84,6 +84,20 @@ prometheus-community/prometheus-cloudwatch-expo...      0.16.0          0.10.0  
 :
 ```
 
+### チャートのバージョン一覧
+
+チャート検索でチャート名を付与しつつ`-l`を追加
+
+```console
+$ helm search repo fluent/fluentd -l
+NAME            CHART VERSION   APP VERSION     DESCRIPTION                
+fluent/fluentd  0.3.9           v1.14.6         A Helm chart for Kubernetes
+fluent/fluentd  0.3.8           v1.12.4         A Helm chart for Kubernetes
+fluent/fluentd  0.3.7           v1.12.4         A Helm chart for Kubernetes
+fluent/fluentd  0.3.6           v1.12.4         A Helm chart for Kubernetes
+fluent/fluentd  0.3.5           v1.12.4         A Helm chart for Kubernetes
+```
+
 ### チャートのデフォルト値
 
 ```console
