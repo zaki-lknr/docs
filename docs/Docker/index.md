@@ -191,7 +191,7 @@ $ docker login ghcr.io
 あとは`ghcr.io/zaki-lknr/squid:5.0.4-alpine-3.13`とかの名前のタグをつければ`push`もできる。  
 pushされたイメージは、GitHubのweb画面の「Packages」で確認できる。デフォルトはprivate設定。
 
-## ECR (Elastic COntainer Registry)
+## ECR (Elastic Container Registry)
 
 認証(のためのパスワード取得)には `aws` CLIが必要。
 
