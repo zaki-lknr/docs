@@ -180,6 +180,7 @@ e5c366cb3bba   slowstart_httpd   "sh -c 'sleep 30; ht…"   32 seconds ago   Up 
 認証に使用するパスワードは、個人用アクセストークンを作成する。  
 [個人アクセストークンを使用する - GitHub Docs](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
+[Personal Access Tokens (Classic)](https://github.com/settings/tokens)で[Generate new token]押下、Select scopesの`write:packages`にチェックして[Generate token]押下すればトークンが生成される。  
 GitHubのユーザー名と、入手したトークンをパスワードとして、
 
 ```console
