@@ -16,7 +16,7 @@ Towerは実行中で良い。
 # ./setup.sh -r -e restore_backup_file=/path/to/tower-backup-....tar.gz
 ```
 
-## プロジェクト
+## プロジェクト設定
 
 ### SCMを使わない場合
 
