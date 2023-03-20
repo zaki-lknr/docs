@@ -28,6 +28,7 @@
 
 - [Ansible Network Examples — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html)
 - [Network Debug and Troubleshooting Guide — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html)
+- [Platform Options — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/user_guide/platform_index.html)
 
 ## venv作るタスク
 
