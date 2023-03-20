@@ -16,6 +16,10 @@ Towerは実行中で良い。
 # ./setup.sh -r -e restore_backup_file=/path/to/tower-backup-....tar.gz
 ```
 
+## アンインストール
+
+[How to uninstall Red Hat Ansible Controller(Ansible Automation Platform 2.x)? - Red Hat Customer Portal](https://access.redhat.com/solutions/6733721)
+
 ## プロジェクト設定
 
 ### SCMを使わない場合
