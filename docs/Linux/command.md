@@ -1,5 +1,17 @@
 # コマンドメモ
 
+## forループワンライナー
+
+```console
+for i in `seq 1 3`; do curl 192.168.0.16; done
+```
+
+`seq`の値を参照
+
+```console
+for i in `seq 1 3`; do curl 192.168.0.${i}; done
+```
+
 ## less
 
 ### 制御文字を認識させる
