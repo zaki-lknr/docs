@@ -91,6 +91,11 @@ $ git rebase --continue
 
 編集前、直前の`git commit`完了時点に戻す (対象ファイルを間違えたとかコミットを間違えただけで編集内容は正しい場合はこれやると事故る)
 
+### --amendの取り消し
+
+`git commit --amend`直後であれば`git reset --soft HEAD@{1}`で元に戻る。  
+どこに戻るかは`git reflog`で確認できる。
+
 ## resetの取り消し
 
 ```
