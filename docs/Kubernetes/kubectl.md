@@ -230,3 +230,12 @@ Switched to context "k3d-k3s-default".
 ```console
 $ kubectl delete pvc -n zzz --all
 ```
+
+## wait
+
+リソースが指定の条件になるまで待つ。  
+podがrunningになるまで待つには以下。
+
+```console
+kubectl wait --for=jsonpath='{.status.phase}'=Running pod/*****
+```
