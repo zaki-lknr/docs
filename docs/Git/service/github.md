@@ -35,3 +35,15 @@ $ curl https://api.github.com/repos/netbox-community/ansible_modules
   :
 }
 ```
+
+## diff
+
+[コミットを比較する - GitHub Docs](https://docs.github.com/ja/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits)
+
+コミットを比較するには、`<リポジトリURL>/compare/SHAコードA..SHAコードB` を開く。  
+例： [Comparing 3474..faf3 · zaki-lknr/docs](https://github.com/zaki-lknr/docs/compare/3474..faf3)
+
+同じコードを指定して`^`や`~n`も指定できる。
+
+- <https://github.com/zaki-lknr/docs/compare/faf3~2..faf3>
+- <https://github.com/zaki-lknr/docs/compare/faf3%5E%5E..faf3>
