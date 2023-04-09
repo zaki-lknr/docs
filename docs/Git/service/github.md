@@ -36,6 +36,12 @@ $ curl https://api.github.com/repos/netbox-community/ansible_modules
 }
 ```
 
+### PRマージ時のブランチ自動削除
+
+リポジトリの設定から。
+
+[ブランチの自動的削除を管理する - GitHub Docs](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches)
+
 ## diff
 
 [コミットを比較する - GitHub Docs](https://docs.github.com/ja/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits)
