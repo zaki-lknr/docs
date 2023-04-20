@@ -36,6 +36,18 @@ $ echo ${list[1]}
 
 ## 制御構文
 
+### if
+
+```bash
+if [ -z $value1 ] || [ -z $value2 ]; then
+    echo '$value1 or $value2 is not defined'
+elif [ -z $value3 ]; then
+    echo '$value3 is not defined'
+else
+    echo OK
+fi
+```
+
 ### ループ
 
 #### 配列要素をループ処理
