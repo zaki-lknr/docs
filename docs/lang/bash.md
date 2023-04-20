@@ -22,6 +22,10 @@ echo $hoge
 123
 ```
 
+### set -* の解除
+
+`set -u`を解除するには`set +u`
+
 ## 配列
 
 ```console
