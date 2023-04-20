@@ -160,6 +160,26 @@ $ git add <path>
 
 パスはディレクトリ指定の場合は再帰的にファイルが追加される
 
+### 行単位のadd
+
+```console
+$ git add -p
+```
+
+実行するとdiffが表示されるので、変更単位ごとに`y`で追加・`n`でスルーできる。  
+変更単位を細かく分割する場合は`e`でエディタが起動するので、
+
+- `-`の削除行を対象外にするにはスペースに変更
+- `+`の追加行を対象外にするには行削除
+
+する。
+
+> # To remove '-' lines, make them ' ' lines (context).
+> # To remove '+' lines, delete them.
+> # Lines starting with # will be removed.
+> # If the patch applies cleanly, the edited hunk will immediately be marked for staging.
+> # If it does not apply cleanly, you will be given an opportunity to
+
 ### 追加の取り消し
 
 ```
