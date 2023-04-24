@@ -48,3 +48,17 @@ az network nsg rule create \
 | -------------------- | --------------------------------------------------- |
 | `*-address-prefixes` | IPアドレス(`192.168.0.0/24`など)や`VirtualNetwork`などサービスタグ |
 | `*-port-ranges`      | ポート番号(値のみ、範囲指定`1024-4096`など)、`*`                    |
+
+## storage account
+
+### キーの取得
+
+[az storage account keys | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/account/keys?view=azure-cli-latest)
+
+```console
+az storage account keys list \
+  --resoure-group ${resource_group} \
+  --account-name ${storage_account_name}
+```
+
+2つヒットするはずなので、`--query '[0].value' -o tsv` とかやれば取り出せる。
