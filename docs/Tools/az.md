@@ -4,6 +4,18 @@
 
 ### ネットワークセキュリティグループ
 
+#### NSG作成
+
+NSGの箱を作る
+
+[az network nsg | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/nsg?view=azure-cli-latest)
+
+```console
+az network nsg create \
+  --name ${nsg_name} \
+  --resource-group ${resource_group}
+```
+
 #### ルール作成
 
 [az network nsg rule | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/nsg/rule?view=azure-cli-latest)
