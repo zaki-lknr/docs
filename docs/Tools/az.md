@@ -51,6 +51,10 @@ az network nsg rule create \
 
 ## storage account
 
+### セキュリティ
+
+[Azure Storage ファイアウォールおよび仮想ネットワークを構成する | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-network-security?tabs=azure-cli)
+
 ### キーの取得
 
 [az storage account keys | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/account/keys?view=azure-cli-latest)
