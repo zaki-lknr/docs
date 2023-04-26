@@ -6,6 +6,18 @@
 
 [2 要素認証を設定する - GitHub Docs](https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
 
+## PR
+
+### レビュー
+
+- [プルリクエストで提案された変更をレビューする - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+
+コメント入力のあとに[Submit review]を忘れないこと。
+
+- Request changes / 追加修正がある場合
+- Approve / 問題ない場合
+- Comment / その他
+
 ## API
 
 ### デフォルトブランチを取得する
