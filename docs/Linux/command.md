@@ -363,6 +363,31 @@ KiB Swap:  3670012 total,  3670012 free,        0 used.  5663308 avail Mem
  385441 root      20   0 1130612  62204  26536 S   0.0  0.8   0:10.18 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock      
 ```
 
+## ユーザー作成
+
+### 作成する
+
+```console
+useradd zaki -m -d /home/zaki -s /bin/bash -G admin,sudo
+```
+
+| オプション | 動作             |
+| ----- | -------------- |
+| `-m`  | ホームディレクトリ作成を有効 |
+| `-d`  | ホームディレクトリのパス   |
+| `-s`  | デフォルトシェル指定     |
+| `-G`  | 追加の所属グループ指定    |
+
+### 削除する
+
+```console
+userdel zaki -r
+```
+
+| オプション | 動作                 |
+| ----- | ------------------ |
+| `-r`  | ホームディレクトリなどのデータを削除 |
+
 ## dig
 
 ### Aレコード
