@@ -461,7 +461,56 @@ dict_val is dict
 
 - [[Ansible] そのtag設定、想定通りに動いてますか？ (継承機能とその実装を確認する) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/03/24/100317)
 
-## 仮想環境
+## 環境
+
+### pyenv
+
+[pyenv/pyenv: Simple Python version management](https://github.com/pyenv/pyenv)
+
+#### インストール
+
+```console
+curl https://pyenv.run | bash
+```
+
+#### 設定追加
+
+```console
+cat <<'__EOL__' >> $HOME/.bashrc
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+__EOL__
+. $HOME/.bashrc
+```
+
+#### 依存パッケージのインストール
+
+以下はUbuntuの場合。
+
+```console
+sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
+
+その他の環境はwiki参照: <https://github.com/pyenv/pyenv/wiki#suggested-build-environment>
+
+#### Pythonインストール
+
+```console
+pyenv install 3.11.3
+```
+
+インストール可能なPythonは`pyenv install -l`で確認
+
+#### `python`の切替
+
+```console
+pyenv global 3.11.3
+```
+
+切替可能なPythonは`pyenv versions`で確認
 
 ### venv
 
