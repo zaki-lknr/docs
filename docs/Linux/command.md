@@ -633,6 +633,32 @@ iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 172.29
 
 [[コマンドメモ] firewall-cmd備忘録 (firewalld) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/26/230958)
 
+#### 確認
+
+ゾーンの設定確認
+
+```console
+firewall-cmd --list-all [--zone=internal]
+```
+
+全ゾーンの設定確認
+
+```console
+firewall-cmd --list-all-zones
+```
+
+ゾーン一覧
+
+```console
+firewall-cmd --get-zones
+```
+
+アクティブなゾーンの一覧
+
+```console
+firewall-cmd --get-active-zones
+```
+
 ### ufw
 
 現在の状態。  
