@@ -659,6 +659,20 @@ firewall-cmd --get-zones
 firewall-cmd --get-active-zones
 ```
 
+#### ゾーン設定
+
+ゾーンに指定インタフェースを設定
+
+```console
+firewall-cmd --permanent --zone=trusted --change-interface=cni0
+```
+
+ゾーンから指定インタフェースを削除
+
+```console
+firewall-cmd --permanent --zone=trusted --remove-interface=cni0
+```
+
 ### ufw
 
 現在の状態。  
