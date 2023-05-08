@@ -174,11 +174,11 @@ $ git add -p
 
 する。
 
-> # To remove '-' lines, make them ' ' lines (context).
-> # To remove '+' lines, delete them.
-> # Lines starting with # will be removed.
-> # If the patch applies cleanly, the edited hunk will immediately be marked for staging.
-> # If it does not apply cleanly, you will be given an opportunity to
+> To remove '-' lines, make them ' ' lines (context).
+> To remove '+' lines, delete them.
+> Lines starting with # will be removed.
+> If the patch applies cleanly, the edited hunk will immediately be marked for staging.
+> If it does not apply cleanly, you will be given an opportunity to
 
 ### 追加の取り消し
 
