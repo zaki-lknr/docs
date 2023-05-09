@@ -482,6 +482,16 @@ connection.multi-connect:               0 (default)
 :
 ```
 
+### インタフェースの接続と切断
+
+```console
+# nmcli con up ens224
+```
+
+```console
+# nmcli con down ens224
+```
+
 ### DNSのセカンダリ追加
 
 追加する項目である`ipv4.dns`の手前に`+`を付与すると「追加」になる。  
