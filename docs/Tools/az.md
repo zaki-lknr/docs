@@ -12,6 +12,14 @@ az network vnet list --query "[?name=='${vnet_name}' && resourceGroup=='${resour
 
 ## network
 
+### サブネット
+
+#### サービスエンドポイント一覧
+
+```console
+az network vnet list-endpoint-services
+```
+
 ### ネットワークセキュリティグループ
 
 #### NSG作成
