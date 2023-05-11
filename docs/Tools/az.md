@@ -29,6 +29,16 @@ az network vnet create \
 
 [az network vnet subnet | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/vnet/subnet?view=azure-cli-latest)
 
+#### サブネットID取得
+
+```console
+az network vnet subnet show \
+  --vnet-name ${vnet_name} \
+  --resource-group ${resource_group} \
+  --name ${subnet_name} \
+  --query id
+```
+
 #### サブネット作成
 
 VNetのアドレス範囲であることは必須
