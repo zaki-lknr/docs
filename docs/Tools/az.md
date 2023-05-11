@@ -12,6 +12,19 @@ az network vnet list --query "[?name=='${vnet_name}' && resourceGroup=='${resour
 
 ## network
 
+### VNet
+
+[az network vnet | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/vnet?view=azure-cli-latest)
+
+VNetを単体で作成
+
+```console
+az network vnet create \
+  --resource-group ${resource_group} \
+  --name ${vnet_name} \
+  --address-prefixes 192.168.0.0/16
+```
+
 ### サブネット
 
 #### サービスエンドポイント一覧
