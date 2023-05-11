@@ -27,6 +27,21 @@ az network vnet create \
 
 ### サブネット
 
+[az network vnet subnet | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/vnet/subnet?view=azure-cli-latest)
+
+#### サブネット作成
+
+VNetのアドレス範囲であることは必須
+
+```console
+az network vnet subnet create \
+  --name ${subnet_name} \
+  --vnet-name ${vnet_name} \
+  --resource-group ${resource_group} \
+  --network-security-group ${nsg_name} \
+  --address-prefixes 192.168.10.0/24
+```
+
 #### サービスエンドポイント一覧
 
 ```console
