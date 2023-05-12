@@ -16,7 +16,18 @@ az network vnet list --query "[?name=='${vnet_name}' && resourceGroup=='${resour
 
 [az network vnet | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/vnet?view=azure-cli-latest)
 
-VNetを単体で作成
+#### VNetID取得
+
+```console
+az network vnet show \
+  --name ${vnet_name} \
+  --resource-group ${resource_group} \
+  --query id
+```
+
+#### VNet作成
+
+VNetを単体で作成する
 
 ```console
 az network vnet create \
