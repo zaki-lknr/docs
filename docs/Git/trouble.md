@@ -196,3 +196,16 @@ $ git merge --abort
 ```console
 $ git rebase --abort
 ```
+
+## エラー
+
+### pushでcannot lock ref
+
+リモートリポジトリに`feature`が存在する状態で`feature/foobar`を`push`しようとすると以下のエラー
+
+```
+! [remote rejected] feature/foobar -> feature/foobar (cannot lock ref 'refs/heads/feature/foobar': 'refs/heads/feature' exists; cannot create 'refs/heads/feature/foobar')
+error: failed to push some refs to 'github.com:...'
+```
+
+リモートブランチの削除とローカルの`origin/feature`を削除すればOK
