@@ -1,5 +1,9 @@
 # AKS
 
+## FQA
+
+[Azure Kubernetes Service (AKS) についてよく寄せられる質問 - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/faq)
+
 ## ノードに接続する
 
 [Azure Kubernetes Service (AKS) クラスター ノードへの接続 - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/node-access)
