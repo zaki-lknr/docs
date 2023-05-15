@@ -1,1 +1,1 @@
-../Git/service/github.md
+../Git/github.md
