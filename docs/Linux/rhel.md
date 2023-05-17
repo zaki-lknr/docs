@@ -1,5 +1,10 @@
 # RHEL
 
+## サブスクリプション更新
+
+期限が切れた場合は、[Red Hat Developer](https://developers.redhat.com/)にアクセスすれば更新される。ログイン時に利用許諾の確認がある。  
+その後は[Red Hat カスタマーポータル](https://access.redhat.com/)にアクセスしてイメージのダウンロードなど利用できる。
+
 ## サブスクリプション
 
 [制限ネットワーク環境のRHEL7でproxy経由でサブスクリプション登録とDockerインストール - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/05/160946)
