@@ -148,6 +148,12 @@ $ git restore /path/to/file
 $ git reset HEAD <path>
 ```
 
+または
+
+```console
+$ git restore --staged <path>
+```
+
 ただし、`git init`直後の場合はこの操作は不可。  
 `git rm --cached`でバージョン管理から外す操作を行う。
 
