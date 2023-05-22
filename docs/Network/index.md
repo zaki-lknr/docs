@@ -64,6 +64,15 @@ Connection to 10.1.1.254 closed by remote host.
 Connection to 10.1.1.254 closed.
 ```
 
+### インタフェース設定モード
+
+コンフィギュレーションモードからさらにインタフェースを指定
+
+```console
+router1#configure terminal
+router1(config)#interface GigabitEthernet 2
+```
+
 ### インタフェースの無効化
 
 `shutdown`を使う。元に戻すのは`no shutdown`  
