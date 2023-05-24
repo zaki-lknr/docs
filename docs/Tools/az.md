@@ -36,6 +36,18 @@ az network vnet create \
   --address-prefixes 192.168.0.0/16
 ```
 
+VNetとサブネットを同時に作成
+
+```console
+az network vnet create \
+  --resource-group ${resource_group} \
+  --name ${vnet_name} \
+  --address-prefixes 192.168.0.0/16 \
+  --subnet-name ${subnet_name} \
+  --subnet-prefixes 102.168.10.0/24 \
+  --network-security-group ${nsg_name}
+```
+
 ### サブネット
 
 [az network vnet subnet | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/vnet/subnet?view=azure-cli-latest)
