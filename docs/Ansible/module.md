@@ -40,6 +40,23 @@ $ ansible -i inventory.ini all -m setup
       - 'sample_text | regex_search("could not found: foobar")'
 ```
 
+## uri
+
+HTTPをしゃべる。  
+以下はAWX/AAPで通知テストをkickするRESTを叩くタスク。  
+basic認証+HTTPSでSSL検証無効の設定で、レスポンスコードが`200`or`201`or`202`を期待している。
+
+```yaml
+  ansible.builtin.uri:
+    method: POST
+    url: "https://{{ aap_address }}/api/v2/notification_templates/{{ notify_id }}/test/"
+    url_username: "{{ username }}"
+    url_password: "{{ password }}"
+    validate_certs: false
+    force_basic_auth: true
+    status_code: [200, 201, 202]
+```
+
 ## lineinfile
 
 [ansible.builtin.lineinfile – Manage lines in text files — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
