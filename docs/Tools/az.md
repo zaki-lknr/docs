@@ -135,3 +135,17 @@ az storage account keys list \
 ```
 
 2つヒットするはずなので、`--query '[0].value' -o tsv` とかやれば取り出せる。
+
+## AKS
+
+### 使用可能バージョンの確認
+
+```console
+az aks get-versions --query 'orchestrators[].orchestratorVersion'
+```
+
+ロケールを指定するには以下
+
+```console
+az aks get-versions -l eastus --query 'orchestrators[].orchestratorVersion'
+```
