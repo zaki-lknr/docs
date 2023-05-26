@@ -149,3 +149,21 @@ az aks get-versions --query 'orchestrators[].orchestratorVersion'
 ```console
 az aks get-versions -l eastus --query 'orchestrators[].orchestratorVersion'
 ```
+
+### ノードプールの追加
+
+[az aks nodepool | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-add)
+
+```console
+az aks nodepool add \
+  --resoure-group ${resource_group} \
+  --name ${nodepool_name} \
+  --cluster-name ${cluster_name} \
+  --kubernetes-version ${k8s_version} \
+  --mode User \
+  --os-type Linux \
+  --vnet-subnet-id ${vnet_subnet_id} \
+  --node-vm-size Standard_B2s \
+  --node-count 2 \
+  --max-pods 32
+```
