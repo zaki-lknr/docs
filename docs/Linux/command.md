@@ -482,6 +482,20 @@ connection.multi-connect:               0 (default)
 :
 ```
 
+### 名称変更
+
+デフォルトの`有線接続 1`を`ens192`とかに変えたい場合
+
+```console
+[zaki@fedora-node ~]$ nmcli c s
+NAME             UUID                                  TYPE      DEVICE
+有線接続 1       e8d83bb5-ce0a-3fe8-911e-8bc57153091c  ethernet  ens18
+[zaki@fedora-node ~]$ sudo nmcli c m "有線接続 1" connection.id ens18
+[zaki@fedora-node ~]$ nmcli c s
+NAME             UUID                                  TYPE      DEVICE
+ens18            e8d83bb5-ce0a-3fe8-911e-8bc57153091c  ethernet  ens18
+```
+
 ### インタフェースの接続と切断
 
 ```console
