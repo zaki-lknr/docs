@@ -506,6 +506,12 @@ ens18            e8d83bb5-ce0a-3fe8-911e-8bc57153091c  ethernet  ens18
 # nmcli con down ens224
 ```
 
+### インタフェースの削除
+
+```console
+nmcli c delete ens224
+```
+
 ### DNSのセカンダリ追加
 
 追加する項目である`ipv4.dns`の手前に`+`を付与すると「追加」になる。  
