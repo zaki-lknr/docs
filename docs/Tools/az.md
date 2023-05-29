@@ -150,6 +150,16 @@ az aks get-versions --query 'orchestrators[].orchestratorVersion'
 az aks get-versions -l eastus --query 'orchestrators[].orchestratorVersion'
 ```
 
+### KUBECONFIGの取得
+
+```console
+az aks get-credentials \
+  --resoure-group ${resource_group} \
+  --name ${cluster_name}
+```
+
+`--overwrite-existing`を付与すると確認無しで上書きされる。
+
 ### ノードプールの追加
 
 [az aks nodepool | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-add)
