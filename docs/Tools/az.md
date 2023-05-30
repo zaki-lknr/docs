@@ -118,6 +118,24 @@ az network nsg rule create \
 | `*-address-prefixes` | IPアドレス(`192.168.0.0/24`など)や`VirtualNetwork`などサービスタグ |
 | `*-port-ranges`      | ポート番号(値のみ、範囲指定`1024-4096`など)、`*`                    |
 
+### public ip
+
+#### アドレス一覧
+
+```console
+az network public-ip list \
+  --resoure-group ${resource_group}
+```
+
+必要なアドレスは`--query`で取り出す。
+
+```console
+az network public-ip list \
+  --resoure-group ${resource_group} \
+  --query "[?id=='$publicip_id'].ipAddress" \
+  --o tsv
+```
+
 ## storage account
 
 ### セキュリティ
