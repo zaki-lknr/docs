@@ -136,6 +136,18 @@ az network public-ip list \
   --o tsv
 ```
 
+### DNS
+
+#### レコード作成
+
+```console
+az network dns record-set a add-record \
+  --resoure-group ${resource_group} \
+  --zone-name "example.org" \
+  --ipv4-address ${publicip_address} \
+  --record-set-name ${recordset_name}
+```
+
 ## storage account
 
 ### セキュリティ
