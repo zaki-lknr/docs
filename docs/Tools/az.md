@@ -148,6 +148,16 @@ az network dns record-set a add-record \
   --record-set-name ${recordset_name}
 ```
 
+### Private DNS
+
+#### ゾーン作成
+
+```console
+az network private-dns zone create \
+  --resoure-group ${resource_group} \
+  --name "private.example.org"
+```
+
 ## storage account
 
 ### セキュリティ
