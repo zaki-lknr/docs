@@ -105,3 +105,21 @@ abc
 123
 xyz
 ```
+
+#### nからmまで(`seq`利用)
+
+```bash
+#!/bin/bash
+
+for i in $(seq 1 3); do
+    echo $i
+done
+```
+
+実行結果は以下
+
+```console
+1
+2
+3
+```
