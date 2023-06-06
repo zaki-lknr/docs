@@ -289,6 +289,43 @@ deb [arch=arm64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https:
 
 ## ファイル
 
+### state
+
+#### file
+
+対象ファイルがない場合はエラーになる。  
+逆手にとってファイル存在チェックに使える(その場合エラーは無視するようにする必要はある)
+
+以下は`/var/tmp/ansible-file`が無い場合に最初のタスクが失敗(`ignore_errors`により無視)し、次のタスクで`file not exist`が出力される。ファイルがある場合は最初のタスクは成功し、続くタスクは`when`の条件を満たさないためスキップされる。
+
+```yaml
+- name: exist file?
+  file:
+    path: /var/tmp/ansible-file
+    state: file
+  register: result
+  ignore_errors: true
+
+- debug:
+    msg: file not exist
+  when: result is failed
+```
+
+`failed_when`を使うなら以下
+
+```yaml
+  - name: dounaru
+    file:
+      path: /var/tmp/ansible-file
+      state: file
+    register: result
+    failed_when: false
+
+  - debug:
+      msg: file not exist
+    when: result.state == "absent"
+```
+
 ### モード
 
 ```yaml
