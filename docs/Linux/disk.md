@@ -178,3 +178,21 @@ root@zaki-CF-J10YYBHR:~# e2label /dev/sdb1 "HD-LDS-A"
 root@zaki-CF-J10YYBHR:~# e2label /dev/sdb1
 HD-LDS-A
 ```
+
+## fsck
+
+### cleanでも強制スキャン
+
+`-f`を付与
+
+```console
+fsck.ext4 -f /dev/mapper/ubuntu--vg-ubuntu--lv
+```
+
+### 起動時に強制fsck
+
+`shutdown`のオプションに`-F`を付与
+
+```console
+shutdown -F -r now
+```
