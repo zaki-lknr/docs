@@ -60,3 +60,24 @@ export -n EDITOR
 ```
 
 シェル変数に残るので`echo $EDITOR`の出力は変化しないが環境変数としては消える。
+
+## シングルユーザーモード
+
+### ubuntu
+
+GRUBメニュー画面で`e`し、
+
+```text
+setparams 'Ubuntu'
+
+        recordfail
+        load_video
+        gfxmode $linux_gfx_mode
+
+        [...]
+
+        linux   /vmlinuz-... root=/dev/... ...
+```
+
+の`linux`で始まる行の末尾に`single`を追記して`Ctrl-x`で起動する。  
+ルートファイルシステムをmountしたくない場合は`single`でなく`break`を追記。
