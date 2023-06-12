@@ -158,6 +158,16 @@ az network private-dns zone create \
   --name "private.example.org"
 ```
 
+#### Aレコード作成
+
+```console
+az network private-dns record-set a add-record \
+  --resoure-group ${resource_group} \
+  --zone-name "private.example.org"
+  --ipv4-adderss ${ipaddr} \
+  --record-set-name hostname
+```
+
 ## storage account
 
 ### セキュリティ
