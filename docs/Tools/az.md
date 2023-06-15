@@ -168,6 +168,18 @@ az network private-dns record-set a add-record \
   --record-set-name hostname
 ```
 
+#### 仮想ネットワークとのリンク作成
+
+ゾーンと仮想ネットワークが同じリソースグループであれば、`--virtual-network`は仮想ネットワーク名だけで良い。
+
+```console
+az network private-dns link vnet create \
+  --zone "private.example.org" \
+  --resource-group ${resource_group} \
+  --virtual-network ${vnet_name} \
+  --name ${link_name}
+```
+
 ## storage account
 
 ### セキュリティ
