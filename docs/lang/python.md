@@ -146,6 +146,21 @@ links = [li.find('a').get('href') for li in s.find_all('li', class_='toctree-l2'
 print(links)
 ```
 
+### 関数
+
+#### main
+
+```python
+#!/usr/bin/python3
+
+def func():
+    print("begin func()")
+
+if __name__ == "__main__":
+    print("begin main()")
+    func()
+```
+
 ### リスト処理
 
 #### リストの定義
