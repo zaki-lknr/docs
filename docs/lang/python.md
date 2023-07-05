@@ -408,6 +408,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
+### 通信
+
+#### HTTP
+
+`Requests`を使うと楽。
+
+```python
+import requests
+r = requests.get("http://www.example.org")
+```
+
 ### isinstance()で型チェック
 
 ```python
