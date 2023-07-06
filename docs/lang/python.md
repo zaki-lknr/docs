@@ -419,6 +419,12 @@ import requests
 r = requests.get("http://www.example.org")
 ```
 
+##### SSL検証無視
+
+```python
+r = requests.get("https://www.example.org", verify=False)
+```
+
 ### isinstance()で型チェック
 
 ```python
