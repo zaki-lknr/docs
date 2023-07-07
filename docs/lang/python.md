@@ -433,6 +433,12 @@ import requests
 r = requests.get("http://www.example.org")
 ```
 
+##### レスポンス
+
+```python
+print(r.status_code)  # ステータスコード(200など)
+```
+
 ##### SSL検証無視
 
 ```python
