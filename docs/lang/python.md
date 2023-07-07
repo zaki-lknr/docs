@@ -187,6 +187,20 @@ items = []
 items.append('qux')
 ```
 
+#### リストの結合
+
+複数のリストを結合(1つのリストに全要素をまとめる)するには`+`を使う
+
+```python
+list1 = ['foo', 'bar', 'baz']
+list2 = [1, 2, 3]
+
+print(list1 + list2)
+```
+
+実行結果は`['foo', 'bar', 'baz', 1, 2, 3]`になる。  
+`+=` で代入も可能。
+
 #### length
 
 ```python
