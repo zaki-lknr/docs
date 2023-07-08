@@ -437,6 +437,9 @@ r = requests.get("http://www.example.org")
 
 ```python
 print(r.status_code)  # ステータスコード(200など)
+
+print(r.request)      # Requestオブジェクト
+print(r.request.url)  # アクセスしたURL
 ```
 
 ##### SSL検証無視
