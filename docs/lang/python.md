@@ -398,6 +398,12 @@ $ python replace.py
 print("sample", end="")
 ```
 
+ただし行ごとにフラッシュされるため、プログレス表示的に使う場合は追加オプションが必要
+
+```python
+print(".", end="", flush=True)
+```
+
 ### path
 
 #### ユーザーディレクトリを展開
