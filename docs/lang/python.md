@@ -392,6 +392,12 @@ $ python replace.py
 /(p)_(t)h/(t)o/s_m(p)le
 ```
 
+#### printで改行無し
+
+```python
+print("sample", end="")
+```
+
 ### path
 
 #### ユーザーディレクトリを展開
