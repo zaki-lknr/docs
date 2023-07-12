@@ -329,6 +329,16 @@ key: key2, value: value2
 key: key3, value: value3
 ```
 
+#### 辞書->YAML化
+
+```python
+import yaml
+
+print(yaml.dump(dict_data, default_flow_style=False))
+```
+
+子要素がフロースタイルになってブロックスタイルにならない場合は`default_flow_style`のオプションを`False`指定する。
+
 ### 文字列
 
 #### splitlines()
