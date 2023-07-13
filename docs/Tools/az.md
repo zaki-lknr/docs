@@ -180,6 +180,40 @@ az network private-dns link vnet create \
   --name ${link_name}
 ```
 
+### Application Gateway
+
+#### SKUをStandard v2からWAF v2に変更する
+
+[Azure Application Gateway WAF ポリシーにアップグレードする | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/upgrade-ag-waf-policy?tabs=portal)
+
+基本構文は`az network application-gateway update --resource-group ${rg} --name ${appgw} --sku WAF_v2`だが、これだけだとエラーになる。
+「WAF v2に変更」と「WAFポリシーの設定」を同時に行う必要がある。
+
+```console
+# WAFポリシーの作成
+az network application-gateway waf-policy create \
+  --name ${waf_policy_name} \
+  --resource-group ${resource_group} \
+  --version 3.2
+
+# WAFポリシー設定
+az network application-gateway waf-policy policy-setting update \
+  --policy-name ${waf_policy_name} \
+  --resource-group ${resource_group} \
+  --request-body-check ${check} \
+  --mode ${waf_mode} \
+  --state ${waf_state}
+
+# WAFのSKUをWAF_v2に更新
+waf_id=$(az network application-gateway waf-policy show -g ${resource_group} -n ${waf_policy_name} --query id -o tsv)
+az network application-gateway update \
+  --name ${appgw_name} \
+  --resource-group ${resouce_group} \
+  --sku WAF_v2 \
+  --set sku.tier=WAF_v2 \
+  --set firewallPolicy.id=${waf_id}
+```
+
 ## storage account
 
 ### セキュリティ
