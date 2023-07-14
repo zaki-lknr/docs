@@ -30,8 +30,37 @@ aws configure
 ```console
 aws ec2 get-vpn-connection-device-sample-configuration \
   --vpn-connection-id <VPN-ID> \
-  --vpn-connection-device-type-id <デバイスID> \
+  --vpn-connection-device-type-id <デバイスタイプID> \
   --internet-key-exchange-version ikev1 \
   --region ${region} \
   --output text > vpn-sample.txt
+```
+
+#### デバイスタイプIDの取得
+
+```console
+aws ec2 get-vpn-connection-device-types --region ap-southeast-1
+
+{
+    "VpnConnectionDeviceTypes": [
+        {
+            :
+            :
+        },
+        {
+            "VpnConnectionDeviceTypeId": "9d9470de",
+            "Vendor": "Fortinet",
+            "Platform": "Fortigate 40+ Series",
+            "Software": "FortiOS 5.0+"
+        },
+        :
+        :
+    ]
+}
+```
+
+上記の「FortiOS 5.0+」のID(`9d9470de`)を変数セットするには`--query`を使って以下の通り。
+
+```console
+devicetypeid=$(aws ec2 get-vpn-connection-device-types --region ${region} --query "VpnConnectionDeviceTypes[?Vendor=='Fortinet' && Software=='FortiOS 5.0+'].VpnConnectionDeviceTypeId" --output text)
 ```
