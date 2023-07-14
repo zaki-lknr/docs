@@ -22,3 +22,16 @@ aws-cli/2.11.15 Python/3.11.3 Linux/4.4.0-19041-Microsoft exe/x86_64.ubuntu.20 p
 ```console
 aws configure
 ```
+
+## ネットワーク
+
+### サイト間VPN接続の設定サンプルダウンロード
+
+```console
+aws ec2 get-vpn-connection-device-sample-configuration \
+  --vpn-connection-id <VPN-ID> \
+  --vpn-connection-device-type-id <デバイスID> \
+  --internet-key-exchange-version ikev1 \
+  --region ${region} \
+  --output text > vpn-sample.txt
+```
