@@ -25,6 +25,15 @@ aws configure
 
 ## ネットワーク
 
+### ゲートウェイIDの取得
+
+```console
+aws ec2 describe-vpn-gateways \
+  --region <リージョン> \
+  --query "VpnGateways[?Tags[?Key=='Name' && Value=='nameタグの名前']].VpnGatewayId" \
+  --output text
+```
+
 ### サイト間VPN接続の設定サンプルダウンロード
 
 ```console
