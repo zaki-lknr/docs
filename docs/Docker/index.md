@@ -66,6 +66,18 @@ $ docker save imagename:tag > imagename-tag.tar
 $ docker save imagename:tag -o imagename-tag.tar
 ```
 
+### load
+
+```console
+$ docker load -i image.tar
+```
+
+あるいは
+
+```console
+$ docker load < image.tar
+```
+
 ### pull
 
 sha256ハッシュ値指定
