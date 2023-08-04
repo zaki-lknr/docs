@@ -2,6 +2,10 @@
 
 ## インストール
 
+```console
+ansible-galaxy collection install amazon.aws
+```
+
 `requirements.yml`使用時は以下。
 
 ```console
