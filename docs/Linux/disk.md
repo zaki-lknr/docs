@@ -179,6 +179,16 @@ root@zaki-CF-J10YYBHR:~# e2label /dev/sdb1
 HD-LDS-A
 ```
 
+## LVM
+
+### LVの論理ボリュームのリサイズ
+
+現在のサイズから+10GB拡張する。
+
+```console
+# lvresize -r -L +10G /dev/mapper/centos-root
+```
+
 ## fsck
 
 ### cleanでも強制スキャン
