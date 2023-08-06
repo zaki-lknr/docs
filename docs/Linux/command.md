@@ -512,6 +512,14 @@ ens18            e8d83bb5-ce0a-3fe8-911e-8bc57153091c  ethernet  ens18
 nmcli c delete ens224
 ```
 
+### DNSの設定変更
+
+```console
+# nmcli c m ens192 ipv4.dns 192.168.0.11
+```
+
+これで設定ファイルが更新されるので、`systemctl restart NetworkManager`すれば設定が反映される。
+
 ### DNSのセカンダリ追加
 
 追加する項目である`ipv4.dns`の手前に`+`を付与すると「追加」になる。  
