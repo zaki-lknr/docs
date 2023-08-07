@@ -19,7 +19,7 @@ kubectl config get-contexts
 ### 切り替え
 
 ```console
-kubectl config set-contexts <context-name>
+kubectl config use-contexts <context-name>
 ```
 
 ## 設定
