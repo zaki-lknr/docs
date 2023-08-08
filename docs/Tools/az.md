@@ -220,6 +220,15 @@ az network application-gateway update \
 
 [Azure Storage ファイアウォールおよび仮想ネットワークを構成する | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-network-security?tabs=azure-cli)
 
+#### トラフィックのデフォルト拒否設定
+
+```console
+az storage account update \
+  --resource-group ${resource_group} \
+  --name ${storage_account_name} \
+  --default-action Deny
+```
+
 ### キーの取得
 
 [az storage account keys | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/account/keys?view=azure-cli-latest)
