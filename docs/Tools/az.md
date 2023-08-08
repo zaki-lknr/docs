@@ -229,6 +229,25 @@ az storage account update \
   --default-action Deny
 ```
 
+#### VNET/サブネットを追加
+
+```console
+az storage account network-rule add \
+  --resource-group ${resource_group} \
+  --account-name ${storage_account_name} \
+  --subnet ${subnet_id}
+```
+
+ただしこれを実行するにはサブネット側エンドポイントのポリシー設定が必要
+
+```console
+az network vnet subnet update \
+  --name ${subnet} \
+  --vnet-name ${vnet} \
+  --resource-group ${resource_group} \
+  --service-endpoints Microsoft.Storage
+```
+
 ### キーの取得
 
 [az storage account keys | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/account/keys?view=azure-cli-latest)
