@@ -339,6 +339,17 @@ print(yaml.dump(dict_data, default_flow_style=False))
 
 子要素がフロースタイルになってブロックスタイルにならない場合は`default_flow_style`のオプションを`False`指定する。
 
+#### 辞書->JSON化
+
+```python
+import json
+
+print(json.dumps(dict_data))
+```
+
+YAMLと違ってメソッド名は`dumps()`で`s`が付与される。  
+`dump()`は、ファイル出力を行うメソッドとして別に存在する。
+
 ### 文字列
 
 #### splitlines()
