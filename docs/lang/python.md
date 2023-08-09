@@ -466,6 +466,17 @@ import requests
 r = requests.get("http://www.example.org")
 ```
 
+##### リクエストヘッダ
+
+```python
+headers = {
+    'Accept': 'application/json',
+    'Authorization': 'Bearer ********'
+}
+
+requests.get(url, headers=headers)
+```
+
 ##### レスポンス
 
 ```python
