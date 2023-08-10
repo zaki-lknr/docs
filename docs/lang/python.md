@@ -495,7 +495,11 @@ print(r.status_code)  # ステータスコード(200など)
 
 print(r.request)      # Requestオブジェクト
 print(r.request.url)  # アクセスしたURL
+
+print(r.text)   # レスポンスbody
 ```
+
+REST APIのようにレスポンスがJSON形式のテキストの場合は、`r.json()`を使うとオブジェクトとして値をとれる。
 
 ##### SSL検証無視
 
