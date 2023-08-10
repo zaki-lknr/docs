@@ -339,6 +339,17 @@ print(yaml.dump(dict_data, default_flow_style=False))
 
 子要素がフロースタイルになってブロックスタイルにならない場合は`default_flow_style`のオプションを`False`指定する。
 
+#### YAMLファイル->辞書化
+
+```python
+import yaml
+
+with open('config.yaml', 'r') as yml:
+    config = yaml.safe_load(yml)
+```
+
+これで`config`変数にYAMLファイルに定義した情報が辞書型オブジェクトとしてセットされる。
+
 #### 辞書->JSON化
 
 ```python
