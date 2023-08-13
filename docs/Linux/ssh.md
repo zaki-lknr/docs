@@ -265,6 +265,14 @@ $ ssh-copy-id [-i identity_file] [-p port] [username@]hostname
 scp -r src dst
 ```
 
+### 属性維持してコピー
+
+`-p`を付与する。
+
+```console
+scp -p src dst
+```
+
 ## その他
 
 - [パスワードを設定していないユーザで ssh ログインしようとすると公開鍵認証でもログインに失敗する - tkuchikiの日記](https://tkuchiki.hatenablog.com/entry/2013/05/27/211051)
