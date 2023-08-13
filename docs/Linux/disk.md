@@ -1,5 +1,33 @@
 # ディスク
 
+## フォーマット確認
+
+`df -T`を実行
+
+```console
+$ df -T
+ファイルシス            タイプ   1K-ブロック     使用   使用可 使用% マウント位置
+devtmpfs                devtmpfs        4096        0     4096    0% /dev
+tmpfs                   tmpfs        3927684        0  3927684    0% /dev/shm
+tmpfs                   tmpfs        1571076     1280  1569796    1% /run
+/dev/mapper/centos-root xfs        121047300 95026992 26020308   79% /
+tmpfs                   tmpfs        3927688        0  3927688    0% /tmp
+/dev/sda1               xfs          1038336   319000   719336   31% /boot
+tmpfs                   tmpfs         785536        0   785536    0% /run/user/1000
+```
+
+```console
+$ df -T
+Filesystem                Type  1K-blocks      Used Available Use% Mounted on
+tmpfs                     tmpfs    804648      2192    802456   1% /run
+/dev/mapper/vgubuntu-root ext4  120977096  49076772  65708812  43% /
+tmpfs                     tmpfs   4023240         0   4023240   0% /dev/shm
+tmpfs                     tmpfs      5120         4      5116   1% /run/lock
+/dev/sda1                 vfat     523248         4    523244   1% /boot/efi
+tmpfs                     tmpfs    804648       148    804500   1% /run/user/1000
+/dev/sdb2                 ext4  479594152 178667716 276490880  40% /media/zaki/376b22ca-a013-11e8-81fd-000180792463
+```
+
 ## ディスク追加
 
 USB接続の外付けHDDが死にかけてたので交換してデータ移行。
