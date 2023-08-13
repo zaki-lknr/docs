@@ -255,6 +255,16 @@ $ ssh-keygen -t rsa -b 4096
 $ ssh-copy-id [-i identity_file] [-p port] [username@]hostname
 ```
 
+## scp
+
+### ディレクトリのコピー
+
+`-r`を付与して再帰コピーする
+
+```console
+scp -r src dst
+```
+
 ## その他
 
 - [パスワードを設定していないユーザで ssh ログインしようとすると公開鍵認証でもログインに失敗する - tkuchikiの日記](https://tkuchiki.hatenablog.com/entry/2013/05/27/211051)
