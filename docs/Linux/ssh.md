@@ -257,6 +257,14 @@ $ ssh-copy-id [-i identity_file] [-p port] [username@]hostname
 
 ## scp
 
+### メタ文字のエスケープ
+
+クォートが無いとエラーになる
+
+```console
+scp server:'/path/to/file\(...\)' dest
+```
+
 ### ディレクトリのコピー
 
 `-r`を付与して再帰コピーする
