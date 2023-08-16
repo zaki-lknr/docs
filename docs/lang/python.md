@@ -540,6 +540,17 @@ list_val is list
 dict_val is dict
 ```
 
+### 例外
+
+#### 例外を投げる(raise)
+
+```python
+raise RuntimeError('application error: ' + error_value)
+```
+
+標準で使用できる組み込み例外は以下。  
+[組み込み例外](https://docs.python.org/ja/3/library/exceptions.html)
+
 ### 部分適用(partial application)
 
 - `functiontools#partial()`を使う。
