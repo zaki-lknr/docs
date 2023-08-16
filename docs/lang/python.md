@@ -542,6 +542,19 @@ dict_val is dict
 
 ### 例外
 
+#### 例外の捕捉
+
+`try`,`except`を使う
+
+```python
+try:
+    # 例外が発生するコード
+except RuntimeError as e:
+    # エラーハンドリング処理
+    # エラー情報は"e"に入っている
+    print(e)
+```
+
 #### 例外を投げる(raise)
 
 ```python
