@@ -146,6 +146,10 @@ links = [li.find('a').get('href') for li in s.find_all('li', class_='toctree-l2'
 print(links)
 ```
 
+#### break
+
+ループを途中で抜けるには`break`
+
 ### 関数
 
 #### main
