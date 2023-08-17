@@ -555,6 +555,15 @@ except RuntimeError as e:
     print(e)
 ```
 
+捕捉する例外が複数の場合は、`except`を複数並べるか、カッコでまとめる。
+
+```python
+try:
+    # 例外が発生するコード
+except (RuntimeError, TypeError) as e:
+    print(e)
+```
+
 #### 例外を投げる(raise)
 
 ```python
