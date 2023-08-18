@@ -19,8 +19,29 @@ aws-cli/2.11.15 Python/3.11.3 Linux/4.4.0-19041-Microsoft exe/x86_64.ubuntu.20 p
 
 ## 初期設定
 
+- [設定の基本 - AWS Command Line Interface](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-configure-quickstart.html)
+
 ```console
 aws configure
+```
+
+こんな感じ
+
+```console
+$ aws configure
+AWS Access Key ID [None]: ....
+AWS Secret Access Key [None]: ....
+Default region name [None]: ap-northeast-1
+Default output format [None]: json
+```
+
+設定ファイル例は以下(直接ファイルを作っても良い)
+
+```ini
+$ cat ~/.aws/credentials 
+[default]
+aws_access_key_id = ....
+aws_secret_access_key = ....
 ```
 
 ## ネットワーク
