@@ -1,78 +1,5 @@
 # Python
 
-## pip
-
-### requirements.txtの利用
-
-```txt
-ansible==2.9.7
-jmespath=0.10.0
-```
-
-という内容の`requirements.txt`ファイルを作成し、これで
-
-```console
-$ pip install -r requirements.txt
-```
-
-※ ファイル名は任意
-
-### pipのアップデート
-
-venvとか作った直後は`pip`自体のバージョンが古いので(目的にパッケージ入れるときにエラーになる前に先に)アップデートする
-
-```console
-$ pip install --upgrade pip
-```
-
-### パッケージのダウングレード
-
-基本的には古いバージョンを指定して以下でOK
-
-```console
-$ pip install hogehoge=0.0.1
-```
-
-`requirements.txt`記載の場合も、記載した指定バージョンがインストール済みのものより古ければ自動で更新される。  
-以下は`rich==11.0.0`がインストール済みの状態で`rich==9.5.1`をインストールした場合のログ。
-
-```console
-Installing collected packages: typing-extensions, rich
-  Attempting uninstall: rich
-    Found existing installation: rich 11.0.0
-    Uninstalling rich-11.0.0:
-      Successfully uninstalled rich-11.0.0
-Successfully installed rich-9.5.1 typing-extensions-3.10.0.2
-```
-
-### パッケージアンインストール
-
-```console
-$ pip uninstall docker
-Found existing installation: docker 5.0.3
-Uninstalling docker-5.0.3:
-  Would remove:
-    /home/ubuntu/.local/lib/python3.8/site-packages/docker-5.0.3.dist-info/*
-    /home/ubuntu/.local/lib/python3.8/site-packages/docker/*
-Proceed (y/n)? y
-  Successfully uninstalled docker-5.0.3
-```
-
-`-y`を付ければ強制削除になるっぽい。
-
-```console
-Uninstall Options:
-  -r, --requirement <file>    Uninstall all the packages listed in the given requirements file.
-                              This option can be used multiple times.
-  -y, --yes                   Don't ask for confirmation of uninstall deletions.
-```
-
-### 全てアンインストール
-
-```console
-$ pip uninstall -r <(pip freeze)
-```
-
 ## tool
 
 ### JSON整形
@@ -626,6 +553,79 @@ raise RuntimeError('application error: ' + error_value)
 - [[Ansible] そのtag設定、想定通りに動いてますか？ (継承機能とその実装を確認する) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/03/24/100317)
 
 ## 環境
+
+### pip
+
+#### requirements.txtの利用
+
+```txt
+ansible==2.9.7
+jmespath=0.10.0
+```
+
+という内容の`requirements.txt`ファイルを作成し、これで
+
+```console
+$ pip install -r requirements.txt
+```
+
+※ ファイル名は任意
+
+#### pipのアップデート
+
+venvとか作った直後は`pip`自体のバージョンが古いので(目的にパッケージ入れるときにエラーになる前に先に)アップデートする
+
+```console
+$ pip install --upgrade pip
+```
+
+#### パッケージのダウングレード
+
+基本的には古いバージョンを指定して以下でOK
+
+```console
+$ pip install hogehoge=0.0.1
+```
+
+`requirements.txt`記載の場合も、記載した指定バージョンがインストール済みのものより古ければ自動で更新される。  
+以下は`rich==11.0.0`がインストール済みの状態で`rich==9.5.1`をインストールした場合のログ。
+
+```console
+Installing collected packages: typing-extensions, rich
+  Attempting uninstall: rich
+    Found existing installation: rich 11.0.0
+    Uninstalling rich-11.0.0:
+      Successfully uninstalled rich-11.0.0
+Successfully installed rich-9.5.1 typing-extensions-3.10.0.2
+```
+
+#### パッケージアンインストール
+
+```console
+$ pip uninstall docker
+Found existing installation: docker 5.0.3
+Uninstalling docker-5.0.3:
+  Would remove:
+    /home/ubuntu/.local/lib/python3.8/site-packages/docker-5.0.3.dist-info/*
+    /home/ubuntu/.local/lib/python3.8/site-packages/docker/*
+Proceed (y/n)? y
+  Successfully uninstalled docker-5.0.3
+```
+
+`-y`を付ければ強制削除になるっぽい。
+
+```console
+Uninstall Options:
+  -r, --requirement <file>    Uninstall all the packages listed in the given requirements file.
+                              This option can be used multiple times.
+  -y, --yes                   Don't ask for confirmation of uninstall deletions.
+```
+
+#### 全てアンインストール
+
+```console
+$ pip uninstall -r <(pip freeze)
+```
 
 ### pyenv
 
