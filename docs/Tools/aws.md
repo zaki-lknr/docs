@@ -44,6 +44,16 @@ aws_access_key_id = ....
 aws_secret_access_key = ....
 ```
 
+## コンテナを使った実行
+
+ECRの認証トークンを得るには以下。
+
+```console
+podman run --rm -it -v ~/.aws:/root/.aws public.ecr.aws/aws-cli/aws-cli ecr get-login-password --region ap-northeast-1
+```
+
+`aws`を指定しないのがポイント
+
 ## ネットワーク
 
 ### ゲートウェイIDの取得
