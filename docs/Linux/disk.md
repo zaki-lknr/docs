@@ -234,3 +234,14 @@ fsck.ext4 -f /dev/mapper/ubuntu--vg-ubuntu--lv
 ```console
 shutdown -F -r now
 ```
+
+## mount
+
+### CIFS
+
+```console
+[root@cloud-dev2 ~]# mount -t cifs -o username=zaki,uid=***,gid=*** //pecorino/HD-LDS-A /mnt/
+Password for zaki@//pecorino/HD-LDS-A: 
+```
+
+`uid`と`gid`も指定しないとownerの設定ができない(mountした時のもので固定される)
