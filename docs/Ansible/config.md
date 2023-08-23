@@ -2,6 +2,20 @@
 
 [Ansible Configuration Settings — Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html)
 
+## 設定の確認
+
+現在の設定値を確認する
+
+```console
+ansible-config dump
+```
+
+デフォルト値と異なるもののみ出力するには`--only-changed`を付与
+
+```console
+ansible-config dump --only-changed
+```
+
 ## 設定ファイル優先順位
 
 1. `ANSIBLE_CONFIG` 環境変数
