@@ -216,6 +216,37 @@ az network application-gateway update \
 
 ## storage account
 
+### ファイル共有
+
+[az storage file | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/file?view=azure-cli-latest)
+
+#### ファイル一覧
+
+[az storage file | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/file?view=azure-cli-latest#az-storage-file-list)
+
+```console
+az storage file list \
+  --account-name ${account_name} \
+  --account-key ${account_key} \
+  --share-name ${share_name}
+```
+
+#### ファイルダウンロード
+
+[az storage file | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/file?view=azure-cli-latest#az-storage-file-download)
+
+```console
+az storage file download \
+  --path ${shared_file_path} \
+  --dest ${output_dir_name} \
+  --share-name ${share_name} \
+  --account-name ${account_name} \
+  --account-key ${account_key}
+```
+
+`dest`はドキュメントには「パス」と書かれているが、実際に動かすとディレクトリ名になる。  
+(`destのディレクトリ名`/`元のファイル名`で保存される)
+
 ### セキュリティ
 
 [Azure Storage ファイアウォールおよび仮想ネットワークを構成する | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-network-security?tabs=azure-cli)
