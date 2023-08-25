@@ -31,3 +31,7 @@ Host git-codecommit.*.amazonaws.com
     User APK......
     IdentityFile ~/.ssh/......
 ```
+
+## ブランチの削除
+
+メニューの[リポジトリ]->[ブランチ]で、対象をチェックして「ブランチの削除」
