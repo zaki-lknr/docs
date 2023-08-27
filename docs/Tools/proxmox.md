@@ -1,5 +1,25 @@
 # Proxmox (PVE)
 
+## ovfインポート
+
+```console
+qm importovf <VM ID> <OVFファイルのパス> <VM用ストレージ名>
+```
+
+実行例
+
+```console
+root@pve:~# qm importovf 201 /mnt/pve/pecorino/archive/export/fedora-node/fedora-node.ovf wdblue1000gb
+  Logical volume "vm-201-disk-0" created.
+transferred 0.0 B of 20.0 GiB (0.00%)
+transferred 204.8 MiB of 20.0 GiB (1.00%)
+transferred 409.6 MiB of 20.0 GiB (2.00%)
+:
+:
+transferred 20.0 GiB of 20.0 GiB (100.00%)
+root@pve:~# 
+```
+
 ## VM定義ファイル関連
 
 ```console
