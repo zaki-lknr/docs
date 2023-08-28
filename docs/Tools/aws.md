@@ -67,6 +67,8 @@ aws ec2 describe-vpn-gateways \
 
 ### サイト間VPN接続の設定サンプルダウンロード
 
+[get-vpn-connection-device-sample-configuration — AWS CLI 1.29.35 Command Reference](https://docs.aws.amazon.com/cli/latest/reference/ec2/get-vpn-connection-device-sample-configuration.html)
+
 ```console
 aws ec2 get-vpn-connection-device-sample-configuration \
   --vpn-connection-id <VPN-ID> \
