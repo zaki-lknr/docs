@@ -152,6 +152,23 @@ type: Opaque
 $ kubectl run work-pod --image=fedora --command -- tail -f /dev/null
 ```
 
+マニフェストにするとこんな感じ
+
+```yaml
+kind: Pod
+apiVersion: v1
+metadata:
+  name: work-pod
+spec:
+  containers:
+  - name: work-pod
+    image: fedora
+    command:
+    - tail
+    - -f
+    - /dev/null
+```
+
 ## expose
 
 ### podベースでserviceを作成
