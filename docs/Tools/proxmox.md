@@ -53,3 +53,32 @@ brw-rw---- 1 root disk 253, 15 Aug  5 10:13 /dev/dm-15
 root@pve:/# file /dev/dm-15
 /dev/dm-15: block special (253/15)
 ```
+
+## バックアップとリストア
+
+### リストア
+
+VM削除済みの場合はCLIで実行する。  
+以下はバックアップデータをVM ID:500としてリストア。
+
+```console
+root@pve:~# qmrestore /mnt/pve/pecorino-dev/dump/vzdump-qemu-500-2023_09_05-15_29_11.vma.zst 500
+restore vma archive: zstd -q -d -c /mnt/pve/pecorino-dev/dump/vzdump-qemu-500-2023_09_05-15_29_11.vma.zst | vma extract -v -r /var/tmp/vzdumptmp177197.fifo - /var/tmp/vzdumptmp177197
+CFG: size: 458 name: qemu-server.conf
+DEV: dev_id=1 size: 17179869184 devname: drive-scsi0
+CTIME: Tue Sep  5 15:29:21 2023
+  Logical volume "vm-500-disk-0" created.
+new volume ID is 'WDS100T2BA0A:vm-500-disk-0'
+map 'drive-scsi0' to '/dev/WDS100T2BA0A/vm-500-disk-0' (write zeros = 0)
+progress 1% (read 171835392 bytes, duration 1 sec)
+progress 2% (read 343605248 bytes, duration 2 sec)
+progress 3% (read 515440640 bytes, duration 4 sec)
+:
+progress 100% (read 17179869184 bytes, duration 20 sec)
+total bytes read 17179869184, sparse bytes 12563259392 (73.1%)
+space reduction due to 4K zero blocks 2.95%
+rescan volumes...
+```
+
+ストレージはデフォルトだとバックアップ時と同じところへリストアされる？それともデフォルトのストレージかな？  
+`--storage`で指定できそう
