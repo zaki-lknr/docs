@@ -247,6 +247,21 @@ az storage file download \
 `dest`はドキュメントには「パス」と書かれているが、実際に動かすとディレクトリ名になる。  
 (`destのディレクトリ名`/`元のファイル名`で保存される)
 
+#### ファイルBlobのダウンロード
+
+[az storage blob | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/blob?view=azure-cli-latest#az-storage-blob-download)
+
+```console
+az storage blob download \
+  --container-name ${container_name} \
+  --name ${blob_filepath} \
+  --file ${output_dir_name} \
+  --account-name ${storage_account} \
+  --account-key ${account_key}
+```
+
+`container_name`はコンテナーの名称、`blob_filepath`はコンテナー内におけるファイルのパス、`output_dir_name`は出力先(ダウンロード先のファイル名)
+
 ### セキュリティ
 
 [Azure Storage ファイアウォールおよび仮想ネットワークを構成する | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-network-security?tabs=azure-cli)
