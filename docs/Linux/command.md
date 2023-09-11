@@ -138,6 +138,17 @@ $ wget -q -O - https://storage.googleapis.com/kubernetes-release/release/stable.
 v1.24.3
 ```
 
+## base64
+
+デコード
+
+```console
+# stdinから
+command | base64 -d
+# ファイルから
+base64 -d FILENAME
+```
+
 ## sed
 
 ```console
