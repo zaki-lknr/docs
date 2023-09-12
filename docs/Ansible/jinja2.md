@@ -4,6 +4,10 @@
 
 [Templating (Jinja2) — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_templating.html)
 
+## オンラインパーサー
+
+[TTL255 J2Live - Live Jinja2 Parser](https://j2live.ttl255.com/)
+
 ## 変数
 
 ### 変数宣言
