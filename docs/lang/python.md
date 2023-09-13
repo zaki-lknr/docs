@@ -408,6 +408,20 @@ import requests
 r = requests.get("http://www.example.org")
 ```
 
+##### POST
+
+辞書型データをJSON形式のリクエストヘッダにするなら`json.dumps`を使うと楽。
+
+```python
+payload = json.dumps(dict_params)
+headers = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Bearer ' + token
+}
+requests.post(url, data=payload, headers=headers)
+```
+
 ##### リクエストヘッダ
 
 ```python
