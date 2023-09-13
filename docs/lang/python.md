@@ -438,6 +438,12 @@ REST APIのようにレスポンスがJSON形式のテキストの場合は、`r
 r = requests.get("https://www.example.org", verify=False)
 ```
 
+##### Basic認証
+
+```python
+requests.get(url, auth=HTTPBasicAuth(username, password))
+```
+
 ### isinstance()で型チェック
 
 ```python
