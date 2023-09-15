@@ -422,6 +422,14 @@ headers = {
 requests.post(url, data=payload, headers=headers)
 ```
 
+##### DELETE
+
+POSTと同じ要領
+
+```python
+requests.delete(url)
+```
+
 ##### リクエストヘッダ
 
 ```python
