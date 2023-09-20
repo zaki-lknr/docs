@@ -294,6 +294,15 @@ az network vnet subnet update \
   --service-endpoints Microsoft.Storage
 ```
 
+#### 許可IPアドレスの追加
+
+```console
+az storage account network-rule add \
+  --resource-group ${resource_group} \
+  --account-name ${storage_account_name} \
+  --ip-address ${ip_address}
+```
+
 ### キーの取得
 
 [az storage account keys | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/account/keys?view=azure-cli-latest)
