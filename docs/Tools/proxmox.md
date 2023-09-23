@@ -84,3 +84,30 @@ rescan volumes...
 `--storage`で指定できそう
 
 Web UIでリストアする場合は、VMのメニューでなくストレージのメニューからリストアを選ぶと、全バックアップデータが表示されるのでそこからリストアを行う。
+
+### バックアップデータの実データ保存先
+
+内蔵ストレージの場合は`/var/lib/vz/dump/`
+
+```console
+root@pve:~# ls /var/lib/vz/dump/
+vzdump-qemu-500-2023_09_24-01_05_17.log
+vzdump-qemu-500-2023_09_24-01_05_17.vma.zst
+vzdump-qemu-500-2023_09_24-01_05_17.vma.zst.notes
+:
+:
+```
+
+外部の場合はマウントポイント配下の`dump`以下
+
+```console
+root@pve:~# ls /mnt/pve/pecorino/dump/
+vzdump-qemu-116-2023_09_04-18_23_48.log
+vzdump-qemu-116-2023_09_04-18_23_48.vma.zst
+vzdump-qemu-116-2023_09_04-18_23_48.vma.zst.notes
+vzdump-qemu-116-2023_09_05-23_58_49.log
+vzdump-qemu-116-2023_09_05-23_58_49.vma.zst
+vzdump-qemu-116-2023_09_05-23_58_49.vma.zst.notes
+:
+:
+```
