@@ -54,6 +54,30 @@ root@pve:/# file /dev/dm-15
 /dev/dm-15: block special (253/15)
 ```
 
+## ストレージ定義ファイル
+
+`/etc/pve/storage.cfg`にある。
+
+```console
+root@pve:~# cat /etc/pve/storage.cfg
+dir: local
+        path /var/lib/vz
+        content iso,vztmpl,backup
+        shared 0
+
+lvmthin: local-lvm
+        thinpool data
+        vgname pve
+        content rootdir,images
+
+nfs: pecorino
+        export /share
+        path /mnt/pve/pecorino
+        server *.*.*.*
+        content iso,backup
+        prune-backups keep-all=1
+```
+
 ## バックアップとリストア
 
 ### リストア
