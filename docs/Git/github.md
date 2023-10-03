@@ -6,6 +6,20 @@
 
 [2 要素認証を設定する - GitHub Docs](https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
 
+### git cloneの認証
+
+#### HTTPS
+
+GitHubのアカウントでは認証できないので、個人用アクセストークンを作成する。
+
+- [コマンドラインで認証する](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#authenticating-with-the-command-line)
+- [HTTPS URL を使ってクローンを作成する](https://docs.github.com/ja/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls)
+
+トークンの作成は、[個人アクセストークンを使用する - GitHub Docs](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)を参照。  
+
+Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で、「Generate new token (classic)」押下し、Scopeの`repo`にチェックを入れて作成したトークンをパスワードとして使用する。  
+ユーザー名はGitHubアカウント名を使用する。
+
 ## PR
 
 ### issueとの関連付け
