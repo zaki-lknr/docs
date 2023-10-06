@@ -262,3 +262,11 @@ podがrunningになるまで待つには以下。
 ```console
 kubectl wait --for=jsonpath='{.status.phase}'=Running pod/*****
 ```
+
+## get
+
+### eventで作成時ソート
+
+```console
+kubectl get event --sort-by='.metadata.creationTimestamp'
+```
