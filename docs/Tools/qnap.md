@@ -10,17 +10,3 @@
 
 CIFS共有時のコメントを設定するには「コントロールパネル」->「共有フォルダ―」の「プロパティの編集」から。  
 でもリブートしたら消える？
-
-## OVFインポート
-
-ESXiなどからエクスポートしたovfファイルは `qm` コマンドでインポートする。
-
-```console
-qm importovf <VM ID> <OVFファイルのパス> <VM用ストレージ名>
-```
-
-実行例
-
-```console
-root@pve:~# qm importovf 111 /mnt/pve/pecorino/archive/export/cheddar/cheddar.ovf local-lvm
-```
