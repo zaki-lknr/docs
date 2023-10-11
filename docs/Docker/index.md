@@ -29,6 +29,16 @@ $ docker run --name httpd --rm -d -v webvolume:/var/tmp httpd
 `webvolume`ボリュームを(無ければ自動作成して)`/var/tmp`にマウントしてコンテナ起動。  
 コンテナを停止・削除してもボリュームは残るので、このボリュームを別コンテナでマウントすればデータを保持できる。
 
+#### ホストのアドレス(--add-host)
+
+`host.docker.internal`をホストOSのアドレスに設定するには`host-gateway`を指定する。
+
+```console
+docker run --add-host host.docker.internal:host-gateway --rm -it centos bash
+```
+
+これでコンテナ内の`/etc/hosts`に`host.docker.internal`のエントリが追加され、ホストOSへのアドレスが設定される。
+
 ### inspect
 
 コンテナの状態を確認する
