@@ -230,6 +230,8 @@ eyJwYXls ......
 $ podman login <registry URL> -u AWS -p $(aws ecr get-login-password)
 ```
 
+[プライベートレジストリの認証 - Amazon ECR](https://docs.aws.amazon.com/ja_jp/AmazonECR/latest/userguide/registry_auth.html)
+
 ## ACR
 
 ポータルからの場合は、レジストリメニューの「トークン」から、「追加」でトークンを作成する。スコープマップに権限を入力。  
