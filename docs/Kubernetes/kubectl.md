@@ -270,3 +270,28 @@ kubectl wait --for=jsonpath='{.status.phase}'=Running pod/*****
 ```console
 kubectl get event --sort-by='.metadata.creationTimestamp'
 ```
+
+## label
+
+リソースのラベルを追加/変更/削除する
+
+### 追加
+
+```console
+$ kubectl label pod rsync-pod app=rsync
+pod/rsync-pod labeled
+$ kubectl get pod --show-labels
+NAME                       READY   STATUS    RESTARTS   AGE   LABELS
+rsync-pod                  1/1     Running   3          28d   app=rsync
+sockserv-db66b7df7-rtcv9   1/1     Running   1          17d   app=sockserv,pod-template-hash=db66b7df7
+```
+
+更に追加
+
+```console
+$ kubectl label pod rsync-pod state=normal
+pod/rsync-pod labeled
+$ kubectl get pod -l app=rsync --show-labels
+NAME        READY   STATUS    RESTARTS   AGE   LABELS
+rsync-pod   1/1     Running   3          28d   app=rsync,state=normal
+```
