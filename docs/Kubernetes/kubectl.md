@@ -295,3 +295,22 @@ $ kubectl get pod -l app=rsync --show-labels
 NAME        READY   STATUS    RESTARTS   AGE   LABELS
 rsync-pod   1/1     Running   3          28d   app=rsync,state=normal
 ```
+
+### 更新
+
+既に存在する場合はエラーになる。
+
+```console
+$ kubectl label pod rsync-pod state=error
+error: 'state' already has a value (normal), and --overwrite is false
+```
+
+が、メッセージにある通り`--overwrite`を追加すれば上書きできる。
+
+```console
+kubectl label pod rsync-pod state=error --overwrite
+pod/rsync-pod labeled
+kubectl get pod -l app=rsync --show-labels
+NAME        READY   STATUS    RESTARTS   AGE   LABELS
+rsync-pod   1/1     Running   3          28d   app=rsync,state=error
+```
