@@ -54,6 +54,39 @@ root@pve:/# file /dev/dm-15
 /dev/dm-15: block special (253/15)
 ```
 
+## ネットワーク
+
+### ブリッジポート無しで作成したブリッジに物理ポートを追加
+
+UIでLinux Bridgeの「ブリッジポート」にポート名を追加し「OK」押下。  
+画面下部にメッセージが表示される。
+
+```diff
+## 変更を保留中 (有効にするには再起動か、 'Apply Configuration' (needs ifupdown2)を使用)
+--- /etc/network/interfaces	2023-05-21 15:33:29.906403987 +0900
++++ /etc/network/interfaces.new	2023-10-17 09:10:38.701832421 +0900
+@@ -29,7 +29,7 @@
+ auto vmbr1
+ iface vmbr1 inet static
+ 	address 172.16.0.1/23
+-	bridge-ports none
++	bridge-ports enp3s0
+ 	bridge-stp off
+ 	bridge-fd 0
+ #private-network-1
+```
+
+シェルを起動し
+
+```console
+root@pve:~# ifdown vmbr1 
+root@pve:~# ifup vmbr1 
+```
+
+…だけだと反映されてなさそうだったので(`ifup enp3s0`も実施したが変化なし)rebootした。
+
+※ `ifupdown2`というコマンドを別途インストールすれば良かったかも
+
 ## ストレージ定義ファイル
 
 `/etc/pve/storage.cfg`にある。
