@@ -61,3 +61,14 @@ type: Worker
 host: Running
 kubelet: Running
 ```
+
+## クラスタの停止
+
+```console
+$ minikube stop
+```
+
+これでstatusはstopになる。コンテナの状態はExitedになっており、APIサーバー不在の状態なので`kubectl`コマンドは不通になる。  
+`start`で一応起動するがworkerは再作成されるっぽい？
+
+一時停止と再開は`pause`と`unpause`コマンドがある。
