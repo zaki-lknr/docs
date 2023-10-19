@@ -478,6 +478,13 @@ r = requests.get("https://www.example.org", verify=False)
 requests.get(url, auth=HTTPBasicAuth(username, password))
 ```
 
+##### 接続タイムアウト設定
+
+```python
+timeout_sec = 3
+requests.get(url, timeout=timeout_sec)
+```
+
 ### isinstance()で型チェック
 
 ```python
