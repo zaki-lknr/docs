@@ -485,6 +485,17 @@ timeout_sec = 3
 requests.get(url, timeout=timeout_sec)
 ```
 
+##### 接続エラーのハンドリング
+
+例外が発生するのでそれをcatchする。
+
+```python
+try:
+    requests.post(url)
+except (requests.ConnectionError, requests.ConnectTimeout) as e:
+    print(e)
+```
+
 ### isinstance()で型チェック
 
 ```python
