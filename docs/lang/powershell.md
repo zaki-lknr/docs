@@ -27,6 +27,12 @@ PS> Set-ExecutionPolicy RemoteSigned
 PS> $PSVersionTable
 ```
 
+## help
+
+```ps1
+Get-Help 〇〇
+```
+
 ## httpアクセス
 
 [curl/PowerShellでHTTPアクセスいろいろ - Qiita](https://qiita.com/zaki-lknr/items/8950f6acea20961a8afc)
