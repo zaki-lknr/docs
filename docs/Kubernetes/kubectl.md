@@ -314,3 +314,11 @@ kubectl get pod -l app=rsync --show-labels
 NAME        READY   STATUS    RESTARTS   AGE   LABELS
 rsync-pod   1/1     Running   3          28d   app=rsync,state=error
 ```
+
+### 削除
+
+ラベルのキーに`-`を付与したものをセットすれば削除される。
+
+```console
+kubectl label pod rsync-pod state-
+```
