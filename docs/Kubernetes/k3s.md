@@ -5,6 +5,13 @@
 - [K3s - Lightweight Kubernetes | K3s](https://docs.k3s.io/)
 - [日本語版 K3sマニュアル](https://www.rancher.co.jp/pdfs/K3s-eBook4Styles0507.pdf)
 
+### 起動パラメタ
+
+- [server | K3s](https://docs.k3s.io/cli/server)
+- [agent | K3s](https://docs.k3s.io/cli/agent)
+- [Configuration Options | K3s](https://docs.k3s.io/installation/configuration)
+- [Network Options | K3s](https://docs.k3s.io/installation/network-options)
+
 ## K3d (compose)
 
 [k3s/docker-compose.yml at master · k3s-io/k3s](https://github.com/k3s-io/k3s/blob/master/docker-compose.yml)
