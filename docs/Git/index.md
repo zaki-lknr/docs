@@ -485,6 +485,16 @@ $ git diff -w
 >            Ignore whitespace when comparing lines. This ignores differences
 >            even if one line has whitespace where the other line has none.
 
+## 前の状態に戻す
+
+### 指定コミットの状態に戻す
+
+```console
+git reset --hard '対象のコミットID'
+```
+
+`reset --hard`は[コミットの取り消し](trouble/#_6)にも使用する
+
 ## その他
 
 ### HEAD
