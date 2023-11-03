@@ -218,6 +218,16 @@ hello zaki
 $ diff -u <(command1) <(command2)
 ```
 
+## screen
+
+### マウススクロールで表示をスクロールする
+
+`.screenrc`に以下追加
+
+```console
+termcapinfo xterm* ti@:te@
+```
+
 ## tar
 
 ### 展開時の形式指定オプション
