@@ -228,6 +228,16 @@ $ diff -u <(command1) <(command2)
 termcapinfo xterm* ti@:te@
 ```
 
+## gzip
+
+### .gzファイルを展開してstdoutへ出力
+
+gz圧縮されたログファイルの中身を見たいときなど
+
+```console
+gzip -dc /var/log/syslog.10.gz | less
+```
+
 ## tar
 
 ### 展開時の形式指定オプション
