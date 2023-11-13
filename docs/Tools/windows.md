@@ -6,6 +6,14 @@
 
 [Microsoft Evaluation Center で Windows 10 Enterprise を試す](https://www.microsoft.com/ja-jp/evalcenter/evaluate-windows-10-enterprise)
 
+## network
+
+### ルートテーブルの確認
+
+```
+route print -4
+```
+
 ## disk
 
 ### diskpart
