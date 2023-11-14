@@ -254,6 +254,14 @@ $ git branch --delete features/swapoff features/replace-yum-config-manager
 
 ↑複数指定した場合
 
+### ローカルブランチの強制削除
+
+未マージのコミットがあったりすると削除できないけど、`-D`で強制的に削除できる
+
+```console
+$ git branch features/foobar -D
+```
+
 ### ローカルブランチ名の変更
 
 ```console
