@@ -317,6 +317,14 @@ $ git fetch origin <remote-branch>
 $ git push origin :<remote-branch-name>
 ```
 
+`git remote -r`で出力されるのにすでにリモートには無い場合は`git fetch --prune`で参照のないブランチは消える
+
+```console
+$ git push origin :<remote-branch-name>
+error: failed to push some refs to 'github.com:******'   # 消せない
+$ git fetch --prune
+```
+
 ## tag操作
 
 タグ操作は基本的にブランチと同じ。
