@@ -12,6 +12,14 @@
 - [Configuration Options | K3s](https://docs.k3s.io/installation/configuration)
 - [Network Options | K3s](https://docs.k3s.io/installation/network-options)
 
+### デフォルト値
+
+| 項目          | 値            |
+| ----------- | ------------ |
+| Pod IPs     | 10.42.0.0/16 |
+| Service IPs | 10.43.0.0/16 |
+| cluster dns | 10.43.0.10   |
+
 ## K3d (compose)
 
 [k3s/docker-compose.yml at master · k3s-io/k3s](https://github.com/k3s-io/k3s/blob/master/docker-compose.yml)
