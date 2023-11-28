@@ -1,5 +1,20 @@
 # 設定
 
+## insecureなレジストリ設定
+
+```console
+Error response from daemon: Get "https://registry.example.org/v2/": tls: failed to verify certificate: x509: certificate relies on legacy Common Name field, use SANs instead
+```
+
+ローカルに立てたレジストリとかでこんなエラーが出る場合。  
+`/etc/docker/daemon.json`に、TLS検証を無視したいサイトを以下のように追加
+
+```json
+{
+  "insecure-registries" : ["gitlab-ce.example.org:25000", "gitlab-ce.local:25000" ]
+}
+```
+
 ## DNS
 
 コンテナ内で使用するDNS設定を指定するには、`--dns`を指定するか、ホストの`/etc/docker/daemon.json`で一律指定する。
