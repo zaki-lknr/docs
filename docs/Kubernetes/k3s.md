@@ -20,6 +20,31 @@
 | Service IPs | 10.43.0.0/16 |
 | cluster dns | 10.43.0.10   |
 
+## オフライン環境
+
+### プライベートレジストリ設定
+
+プライベートレジストリを利用するには「デフォルトで`docker.io`向きになっている通信をローカルにフォワードする」設定を追加する。
+ローカル環境にたてたGitLabのコンテナレジストリを使う場合でパスが深くなる場合も`rewrite`を使って調整可能。(イメージ名は変更しない)
+
+`/etc/rancher/k3s/registries.yaml`に以下のように設定。  
+証明書の検証をスキップする場合は`insecure_skip_verify`を追加する。
+
+```yaml
+mirrors:
+  docker.io:
+    endpoint:
+      - "https://gitlab.example.org:25000"
+    rewrite:
+      "^rancher/(.*)": "zaki/images/$1"
+configs:
+  "gitlab.example.org:25000":
+    tls:
+      insecure_skip_verify: true
+```
+
+また、この設定はノード毎に必要なので、マルチノード構成の場合は全てのノードに設定する。
+
 ## K3d (compose)
 
 [k3s/docker-compose.yml at master · k3s-io/k3s](https://github.com/k3s-io/k3s/blob/master/docker-compose.yml)
