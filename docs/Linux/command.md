@@ -561,6 +561,24 @@ ens18            e8d83bb5-ce0a-3fe8-911e-8bc57153091c  ethernet  ens18
 nmcli c delete ens224
 ```
 
+### IPアドレスをstaticに変更
+
+DHCPでインストールしたあとに変更したいときとか。  
+methodをmanualに変更するのはaddressesをセットしたあとでないとエラーになるので注意。
+
+```console
+nmcli c m ens192 ipv4.addresses "192.168.0.79/24"
+nmcli c m ens192 ipv4.gateway "192.168.0.1"
+nmcli c m ens192 ipv4.method manual
+```
+
+最後に再起動
+
+```console
+nmcli c down ens192
+nmcli c up ens192
+```
+
 ### DNSの設定変更
 
 ```console
