@@ -1,5 +1,12 @@
 # Proxmox (PVE)
 
+## UIでVMのIPアドレス確認
+
+VMの「サマリー」でIPアドレスを確認するには、以下実行する
+
+- オプションの「QEMU Guest Agent」を有効にする
+- VMで`qemu-guest-agent`パッケージをインストールしサービスを有効にする
+
 ## ovfインポート
 
 ```console
