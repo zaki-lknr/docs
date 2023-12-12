@@ -8,6 +8,15 @@
 $ psql -d <DB名> -U <ユーザー名>
 ```
 
+### SQL実行時のページャを無効にするには
+
+環境変数`PAGER`に`cat`をセットする
+
+```console
+$ export PAGER=cat
+$ psql -d <DB名> -U <ユーザー名>
+```
+
 ### DB一覧
 
 ```console
