@@ -1,5 +1,10 @@
 # AWX
 
+## document
+
+- [Ansible AWX Documentation — Ansible AWX community documentation](https://ansible.readthedocs.io/projects/awx/en/latest/)
+- [Ansible AWX Operator Documentation](https://ansible.readthedocs.io/projects/awx-operator/en/latest/)
+
 ## arm64版ビルド
 
 arm64版はイメージが公開されてないのでビルドする必要がある。  
