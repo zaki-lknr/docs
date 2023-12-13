@@ -28,3 +28,9 @@ $ psql -d <DB名> -U <ユーザー名>
 ```console
 \dt
 ```
+
+### テーブル定義
+
+```console
+\d <table-name>
+```
