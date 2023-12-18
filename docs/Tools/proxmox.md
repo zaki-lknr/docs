@@ -94,7 +94,9 @@ root@pve:~# ifup vmbr1
 
 ※ `ifupdown2`というコマンドを別途インストールすれば良かったかも
 
-## ストレージ定義ファイル
+## ストレージ
+
+### 定義ファイル
 
 `/etc/pve/storage.cfg`にある。
 
@@ -117,6 +119,10 @@ nfs: pecorino
         content iso,backup
         prune-backups keep-all=1
 ```
+
+### 登録済みストレージの設定変更
+
+用途とかNFSのバージョンとかを変更するには、ノードでもストレージでもなく「データセンター」から。
 
 ## バックアップとリストア
 
