@@ -24,6 +24,8 @@
 
 ### プライベートレジストリ設定
 
+[Private Registry Configuration | K3s](https://docs.k3s.io/installation/private-registry)
+
 プライベートレジストリを利用するには「デフォルトで`docker.io`向きになっている通信をローカルにフォワードする」設定を追加する。
 ローカル環境にたてたGitLabのコンテナレジストリを使う場合でパスが深くなる場合も`rewrite`を使って調整可能。(イメージ名は変更しない)
 
