@@ -1,5 +1,15 @@
 # コマンドメモ
 
+## bash
+
+### 除外のglob
+
+```console
+ls !(*.txt)
+```
+
+`*.txt`以外を展開
+
 ## forループワンライナー
 
 ```console
