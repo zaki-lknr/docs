@@ -1,5 +1,13 @@
 # Kubernetes
 
+## docs
+
+- [Initコンテナ | Kubernetes](https://kubernetes.io/ja/docs/concepts/workloads/pods/init-containers/)
+- [TaintとToleration | Kubernetes](https://kubernetes.io/ja/docs/concepts/scheduling-eviction/taint-and-toleration/)
+- 設定関連
+    - [Set Kubelet Parameters Via A Configuration File | Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/)
+    - [kube-controller-manager | Kubernetes](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/)
+
 ## pod
 
 ### CrashLoopBackOff
