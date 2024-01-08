@@ -39,6 +39,16 @@ docker run --add-host host.docker.internal:host-gateway --rm -it centos bash
 
 これでコンテナ内の`/etc/hosts`に`host.docker.internal`のエントリが追加され、ホストOSへのアドレスが設定される。
 
+### build
+
+#### Dockerfile指定
+
+`-f`で指定する。
+
+```console
+docker build -f my-dockerfile . -t image:tag
+```
+
 ### inspect
 
 コンテナの状態を確認する
