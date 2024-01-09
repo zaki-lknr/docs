@@ -123,3 +123,12 @@ done
 2
 3
 ```
+
+#### whileで無限ループ
+
+```bash
+while :
+do
+  # 処理
+done
+```
