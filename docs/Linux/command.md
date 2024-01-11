@@ -155,6 +155,12 @@ curl --resolve ansible.example.org:443:192.168.0.41 https://ansible.example.org/
 curl -u username:password http://example.org/
 ```
 
+### ステータスコードのみ取得
+
+```console
+curl http://www.example.org/ -w '%{http_code}\n' -sS -o /dev/null
+```
+
 ## wget
 
 リソースの内容をstdoutへ出力
