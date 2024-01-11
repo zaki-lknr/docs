@@ -144,6 +144,14 @@ metadata:
 type: Opaque
 ```
 
+## patch
+
+### 値の更新
+
+```console
+kubectl patch -n namespace pdb resource -p '{ "spec": { "maxUnavailable": 0 }}'
+```
+
 ## run
 
 ### ワーク用のpodをデプロイする
