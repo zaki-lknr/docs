@@ -356,3 +356,13 @@ az aks nodepool add \
   --node-count 2 \
   --max-pods 32
 ```
+
+### ノードのスケーリング
+
+```console
+az aks scale \
+  --resoure-group ${resource_group} \
+  --name ${nodepool_name} \
+  --nodepool-name ${nodepool_name} \
+  --node-count 3
+```
