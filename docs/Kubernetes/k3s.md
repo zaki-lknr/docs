@@ -5,6 +5,22 @@
 - [K3s - Lightweight Kubernetes | K3s](https://docs.k3s.io/)
 - [日本語版 K3sマニュアル](https://www.rancher.co.jp/pdfs/K3s-eBook4Styles0507.pdf)
 
+## インストール
+
+### server(control plane)
+
+```console
+curl -sfL https://get.k3s.io | sh -
+```
+
+### agent(worker node)
+
+```console
+curl -sfL https://get.k3s.io | K3S_URL=https://server:6443 K3S_TOKEN=${token} sh -
+```
+
+tokenはserverの `/var/lib/rancher/k3s/server/agent-token` にある。
+
 ## 起動パラメタ
 
 - [server | K3s](https://docs.k3s.io/cli/server)
