@@ -130,6 +130,16 @@ helm install stable/mysql --generate-name --create-namespace -n mysql
 helm install ... --version x.y.z
 ```
 
+### チャートインストールに使われるマニフェスト生成
+
+`install`の代わりに`template`を使う
+
+```console
+helm template stable/mysql --generate-name --create-namespace -n mysql
+```
+
+※ heml 3.14だと`--create-namespace`が効かない
+
 ### リリース一覧
 
 実行中のリリースの一覧
