@@ -116,6 +116,12 @@ fullnameOverride: ""
 
 これをファイル出力すればインストール用のカスタマイズYAML作れる
 
+### チャートのインストール
+
+```console
+helm install stable/mysql --generate-name --create-namespace -n mysql
+```
+
 ### チャートのバージョン指定インストール
 
 インストール時にチャートのバージョンを指定するには`--version`を使う
