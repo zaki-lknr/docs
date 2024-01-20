@@ -138,6 +138,12 @@ helm install ... --version x.y.z
 $ helm list [-n <namespace-name>]
 ```
 
+### リリースの削除
+
+```console
+helm uninstall <char-name> [-n <namespace-name>]
+```
+
 ### リリースの設定値
 
 チャートからリリースされているアプリケーションの設定値を`helm get values`で確認できる。
