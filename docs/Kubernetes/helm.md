@@ -140,6 +140,12 @@ helm template stable/mysql --generate-name --create-namespace -n mysql
 
 ※ heml 3.14だと`--create-namespace`が効かない
 
+### アップグレード
+
+```console
+helm upgrade <release> <chart> [-n <namespace>] [-f values.yaml]
+```
+
 ### リリース一覧
 
 実行中のリリースの一覧
