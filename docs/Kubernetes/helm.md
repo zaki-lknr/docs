@@ -122,6 +122,18 @@ fullnameOverride: ""
 helm install stable/mysql --generate-name --create-namespace -n mysql
 ```
 
+### アップグレード
+
+```console
+helm upgrade <release> <chart> [-n <namespace>] [-f values.yaml]
+```
+
+未インストールであればインストールし、インストール済みであればアップグレードするには`--install`を付加
+
+```console
+helm upgrade --install sample-logstash elastic/logstash -f values.yaml --create-namespace -n logging
+```
+
 ### チャートのバージョン指定インストール
 
 インストール時にチャートのバージョンを指定するには`--version`を使う
@@ -139,12 +151,6 @@ helm template stable/mysql --generate-name --create-namespace -n mysql
 ```
 
 ※ heml 3.14だと`--create-namespace`が効かない
-
-### アップグレード
-
-```console
-helm upgrade <release> <chart> [-n <namespace>] [-f values.yaml]
-```
 
 ### リリース一覧
 
