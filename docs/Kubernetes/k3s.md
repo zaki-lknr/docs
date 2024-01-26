@@ -36,6 +36,18 @@ tokenはserverの `/var/lib/rancher/k3s/server/agent-token` にある。
 | Service IPs | 10.43.0.0/16 |
 | cluster dns | 10.43.0.10   |
 
+## ネットワーク
+
+## LoadBalancer Service
+
+### 特定のノードのみでlistenするには
+
+ノードに以下のラベルを付与するとallow-list modeになり、このラベルが付いたノードのみでlistenするようになる
+
+```console
+svccontroller.k3s.cattle.io/enablelb=true
+```
+
 ## オフライン環境
 
 ### プライベートレジストリ設定
