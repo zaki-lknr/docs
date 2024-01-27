@@ -46,6 +46,12 @@ docker compose rm myapp
 docker compose exec <app名> bash
 ```
 
+### ファイルコピー
+
+```console
+docker compose cp app:/path/to/file ./file
+```
+
 ## Composeファイル
 
 - [Compose file version 3 reference | Docker Documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/)
