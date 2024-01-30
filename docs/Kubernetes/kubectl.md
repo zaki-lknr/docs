@@ -304,6 +304,13 @@ NAME        READY   STATUS    RESTARTS   AGE   LABELS
 rsync-pod   1/1     Running   3          28d   app=rsync,state=normal
 ```
 
+複数まとめても可
+
+```console
+$ kubectl label node k3s-node1 label1=foo label2=bar label3=baz
+node/k3s-node1 labeled
+```
+
 ### 更新
 
 既に存在する場合はエラーになる。
