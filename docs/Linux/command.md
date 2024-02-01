@@ -451,6 +451,16 @@ userdel zaki -r
 | ----- | ------------------ |
 | `-r`  | ホームディレクトリなどのデータを削除 |
 
+## timedatectl
+
+### NTPの無効・有効
+
+```console
+timedatectl set-ntp false
+```
+
+`true`で有効
+
 ## dig
 
 ### Aレコード
