@@ -10,6 +10,20 @@
 az network vnet list --query "[?name=='${vnet_name}' && resourceGroup=='${resource_group}'].id"
 ```
 
+## アカウント
+
+### アカウント情報
+
+```console
+az account list
+```
+
+### テナントID一覧
+
+```console
+az account tenant list
+```
+
 ## network
 
 ### VNet
