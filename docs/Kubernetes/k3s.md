@@ -28,6 +28,16 @@ tokenはserverの `/var/lib/rancher/k3s/server/agent-token` にある。
 - [Configuration Options | K3s](https://docs.k3s.io/installation/configuration)
 - [Network Options | K3s](https://docs.k3s.io/installation/network-options)
 
+## 証明書
+
+[certificate | K3s](https://docs.k3s.io/cli/certificate)
+
+デフォルトではデプロイ時起点で1年の証明書が作成される。90日を切った時点でクラスターを再起動するとその日から1年の期限の新しい証明書にローテートされる。  
+強制的にローテートしたい場合は`k3s certificate rotate`を実行し再起動する。
+
+期限をカスタマイズする場合は環境変数 `CATTLE_NEW_SIGNED_CERT_EXPIRATION_DAYS` を使用する。  
+[[Kubernetes] K3sにおける証明書の期限の延長や設定（平たく言うと塩漬け運用したい場合のｘ年設定）について - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2024/01/24/221706)
+
 ## デフォルト値
 
 | 項目          | 値            |
