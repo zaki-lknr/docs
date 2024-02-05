@@ -8,6 +8,58 @@
     - [Set Kubelet Parameters Via A Configuration File | Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/)
     - [kube-controller-manager | Kubernetes](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/)
 
+## ヘルスチェック
+
+[Kubernetes API health endpoints | Kubernetes](https://kubernetes.io/docs/reference/using-api/health-checks/)
+
+APIエンドポイントとして `/readyz` と `/livez` が用意されている。
+
+```console
+$ curl -k 'https://192.168.0.131:6443/readyz'
+ok
+```
+
+K3sだと認証が必要
+
+```console
+$ curl -k -H "Authorization: Bearer $TOKEN" 'https://192.168.0.75:6443/livez?verbose'
+[+]ping ok
+[+]log ok
+[+]etcd ok
+[+]poststarthook/start-kube-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-deprecated-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-status-available-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+livez check passed
+```
+
+tokenはsecretリソースを作成して取得する。  
+[[Kubernetes] ヘルスチェックAPIを試す (bearer token認証付き) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2024/02/05/101259)
+
 ## pod
 
 ### CrashLoopBackOff
