@@ -21,6 +21,23 @@ curl -sfL https://get.k3s.io | K3S_URL=https://server:6443 K3S_TOKEN=${token} sh
 
 tokenはserverの `/var/lib/rancher/k3s/server/agent-token` にある。
 
+## バージョン指定
+
+バージョン番号を指定する場合
+
+```console
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.26.9+k3s1  sh -
+```
+
+チャンネルを指定する場合
+
+```console
+curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=latest sh -
+```
+
+チャンネルはデフォルト`stable`で1個前のメジャーバージョンだったりする。  
+[チャンネル一覧](https://update.k3s.io/v1-release/channels)
+
 ## 起動パラメタ
 
 - [server | K3s](https://docs.k3s.io/cli/server)
