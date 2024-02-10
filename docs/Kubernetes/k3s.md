@@ -106,6 +106,32 @@ configs:
 
 [k3s/docker-compose.yml at master · k3s-io/k3s](https://github.com/k3s-io/k3s/blob/master/docker-compose.yml)
 
+### ワーカーのスケーリング
+
+初期構築時であれば`--scale`で指定できる
+
+```console
+$ docker compose up -d --scale agent=5
+[+] Running 6/8
+ ⠸ Network k3s-compose_default      Created                                                                 1.3s 
+ ⠹ Volume "k3s-compose_k3s-server"  Created                                                                 1.2s 
+ ✔ Container k3s-compose-server-1   Started                                                                 0.4s 
+ ✔ Container k3s-compose-agent-5    Started                                                                 1.2s 
+ ✔ Container k3s-compose-agent-2    Started                                                                 1.0s 
+ ✔ Container k3s-compose-agent-3    Started                                                                 0.8s 
+ ✔ Container k3s-compose-agent-1    Started                                                                 0.6s 
+ ✔ Container k3s-compose-agent-4    Started                                                                 0.4s 
+
+$ kubectl get node
+NAME           STATUS   ROLES                  AGE   VERSION
+4c1f8de42bfe   Ready    control-plane,master   20s   v1.29.1+k3s2
+2f5893c02aa3   Ready    <none>                 9s    v1.29.1+k3s2
+8239e04d52ef   Ready    <none>                 19s   v1.29.1+k3s2
+9952de1bc166   Ready    <none>                 12s   v1.29.1+k3s2
+412b213f3d10   Ready    <none>                 12s   v1.29.1+k3s2
+b513c8231aad   Ready    <none>                 11s   v1.29.1+k3s2
+```
+
 ## Always FreeのOCI(A1.Flex 2cpu/12gb ram)にシングルノードクラスタ作る
 
 標準のE2.1.Microの場合↓  
