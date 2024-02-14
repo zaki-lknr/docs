@@ -15,6 +15,14 @@ $ sudo apt-get update && sudo apt-get install terraform
 
 ## CLI
 
+### providerバージョン確認
+
+```console
+terraform providers -version
+```
+
+といわれてるけど`providers`が無くても出力は同じ。
+
 ### リソース一覧
 
 ```console
