@@ -13,6 +13,14 @@ $ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $
 $ sudo apt-get update && sudo apt-get install terraform
 ```
 
+## CLI
+
+### リソース一覧
+
+```console
+terraform state list
+```
+
 ## backend設定
 
 ### S3
