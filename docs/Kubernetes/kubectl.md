@@ -385,3 +385,13 @@ rsync-pod   1/1     Running   3          28d   app=rsync,state=error
 ```console
 kubectl label pod rsync-pod state-
 ```
+
+## drain
+
+大抵はDaemonSetのpodが動いているので`--ignore-daemonsets`オプションを付ける。
+
+```console
+kubectl drain k3s-node2 --force --ignore-daemonsets
+```
+
+ノードを完全にクラスタから除外するにはさらに`kubectl delete node <node-name>`する。
