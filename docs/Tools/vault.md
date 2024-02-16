@@ -51,8 +51,20 @@ vault kv list <secret-engine-name>
 vault kv put -mount=<secret-engine-name> <key-name> key1=value1 key2=value2 ...
 ```
 
+これも一緒
+
+```console
+vault kv put <secret-engine-name>/<key-name> key1=value1 key2=value2 ...
+```
+
 #### データ参照
 
 ```console
 vault kv get -mount=<secret-engine-name> <key-name>
+```
+
+これも一緒
+
+```console
+vault kv get <secret-engine-name>/<key-name>
 ```
