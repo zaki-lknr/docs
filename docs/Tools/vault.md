@@ -68,3 +68,12 @@ vault kv get -mount=<secret-engine-name> <key-name>
 ```console
 vault kv get <secret-engine-name>/<key-name>
 ```
+
+RESTであれば
+
+```console
+curl -H "X-Vault-Token: ${token}" http://server:port/v1/<secret-engine-name>/data/<key-name>
+```
+
+`curl -H "X-Vault-Token: ${token}" http://192.168.0.75:8200/v1/kv/data/zzz?version=1`とか。  
+[KV - Secrets Engines - HTTP API | Vault | HashiCorp Developer](https://developer.hashicorp.com/vault/api-docs/secret/kv/kv-v2)
