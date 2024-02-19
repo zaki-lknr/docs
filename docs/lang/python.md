@@ -409,6 +409,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
+### 外部コマンド実行
+
+`subprocess.run()`を使う。(`os.system`はもう使わない)
+
+```python
+import subprocess
+
+ret = subprocess.run(["ls", "-l"], capture_output=True, text=True)
+print(ret.stdout)
+```
+
 ### 通信
 
 #### HTTP
