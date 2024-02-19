@@ -289,6 +289,14 @@ import json
 print(json.dumps(dict_data))
 ```
 
+#### JSON文字列->辞書(オブジェクト)
+
+```python
+import json
+
+obj = json.loads(json_strings)
+```
+
 YAMLと違ってメソッド名は`dumps()`で`s`が付与される。  
 `dump()`は、ファイル出力を行うメソッドとして別に存在する。
 
