@@ -23,6 +23,14 @@ terraform providers -version
 
 といわれてるけど`providers`が無くても出力は同じ。
 
+### providerバージョンアップグレード
+
+tfファイルのprovicersの定義で指定バージョンを変更して、以下コマンド実行。
+
+```console
+terraform init -upgrade
+```
+
 ### リソース一覧
 
 ```console
