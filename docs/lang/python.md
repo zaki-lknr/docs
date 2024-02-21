@@ -77,6 +77,18 @@ print(links)
 
 ループを途中で抜けるには`break`
 
+### 変数
+
+#### 環境変数の参照
+
+```python
+import os
+
+aws_access_key = os.environ.get("AWS_ACCESS_KEY_ID")
+if aws_access_key is None:
+    print("AWS_ACCESS_KEY_ID not defined")
+```
+
 ### 関数
 
 #### main
