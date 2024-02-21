@@ -440,6 +440,12 @@ ret = subprocess.run(["ls", "-l"], capture_output=True, text=True)
 print(ret.stdout)
 ```
 
+リストでなく文字列を指定したい場合は`shell=True`を付与
+
+```python
+subprocess.run("ls -l", shell=True)
+```
+
 ### 通信
 
 #### HTTP
