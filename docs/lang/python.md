@@ -312,6 +312,17 @@ obj = json.loads(json_strings)
 YAMLと違ってメソッド名は`dumps()`で`s`が付与される。  
 `dump()`は、ファイル出力を行うメソッドとして別に存在する。
 
+#### JSONファイル->オブジェクト
+
+STDINの場合は
+
+```python
+import json
+
+with sys.stdin as f:
+    obj = json.load(f)
+```
+
 ### 文字列
 
 #### 末尾1文字
