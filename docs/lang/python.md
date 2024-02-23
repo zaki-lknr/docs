@@ -77,6 +77,10 @@ print(links)
 
 ループを途中で抜けるには`break`
 
+#### continue
+
+次のループへ飛ぶには`continue`
+
 ### 変数
 
 #### 環境変数の参照
