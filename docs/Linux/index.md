@@ -81,3 +81,14 @@ setparams 'Ubuntu'
 
 の`linux`で始まる行の末尾に`single`を追記して`Ctrl-x`で起動する。  
 ルートファイルシステムをmountしたくない場合は`single`でなく`break`を追記。
+
+## アップグレード
+
+### Fedora
+
+[Upgrading Fedora Using DNF System Plugin :: Fedora Docs](https://docs.fedoraproject.org/en-US/quick-docs/upgrading-fedora-offline/)
+
+- `sudo dnf upgrade --refresh`, `sudo reboot`
+- `sudo dnf install dnf-plugin-system-upgrade`
+- `sudo dnf system-upgrade download --releasever=39`  # 39はターゲットバージョン。飛び級がサポートされるのは2段階(37 -> 39)
+- `sudo dnf system-upgrade reboot`
