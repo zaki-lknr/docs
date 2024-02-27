@@ -33,6 +33,8 @@ PS> $PSVersionTable
 Get-Help 〇〇
 ```
 
+<https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/get-help>
+
 ## httpアクセス
 
 [curl/PowerShellでHTTPアクセスいろいろ - Qiita](https://qiita.com/zaki-lknr/items/8950f6acea20961a8afc)
