@@ -33,6 +33,24 @@
 # subscription-manager attach --pool=****
 ```
 
+利用可能なサブスクリプションの確認
+
+```console
+# subscription-manager list --available
+```
+
+リポジトリの状態
+
+```console
+# subscription-manager repos --list-enabled
+```
+
+利用可能になっていないリポジトリは以下
+
+```console
+# subscription-manager repos --list-disabled
+```
+
 ## package
 
 ### RHEL8にEPELリポジトリを追加
