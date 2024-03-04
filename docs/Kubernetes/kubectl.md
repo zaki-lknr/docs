@@ -273,6 +273,34 @@ kubectl wait --for=jsonpath='{.status.phase}'=Running pod/*****
 
 ## get
 
+### 全てのリソース
+
+`kubectl get all`だと全リソースが対象ではないが、本当にすべてのリソースを取得するには以下
+
+```console
+kubectl get "$(kubectl api-resources --namespaced=true --verbs=list -o name | tr "\n" "," | sed -e 's/,$//')"
+```
+
+pluginを使ってサブコマンドにしておくと便利。  
+※ rootで実行
+
+```console
+cat <<'EOL' > /usr/local/bin/kubectl-get_all
+#!/usr/bin/env bash
+
+set -e -o pipefail; [[ -n "$DEBUG" ]] && set -x
+
+exec kubectl get "$(kubectl api-resources --namespaced=true --verbs=list --output=name | tr "\n" "," | sed -e 's/,$//')" "$@"
+EOL
+chmod +x /usr/local/bin/kubectl-get_all
+```
+
+実行
+
+```console
+kubectl get-all -n awx
+```
+
 ### eventで作成時ソート
 
 ```console
