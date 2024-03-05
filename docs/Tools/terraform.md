@@ -37,6 +37,17 @@ terraform init -upgrade
 terraform state list
 ```
 
+### workspace
+
+#### 一覧
+
+```console
+$ terraform workspace list
+  default
+* 1
+  2
+```
+
 ## backend設定
 
 ### S3
