@@ -39,6 +39,13 @@ terraform state list
 
 ### workspace
 
+#### 現在のworkspace
+
+```console
+$ terraform workspace show
+default
+```
+
 #### 一覧
 
 ```console
