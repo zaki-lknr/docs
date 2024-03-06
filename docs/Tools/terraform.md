@@ -55,6 +55,17 @@ $ terraform workspace list
   2
 ```
 
+#### 変更
+
+workspace `2` に変更
+
+```console
+$ terraform workspace select 2
+Switched to workspace "2".
+```
+
+設定値は`.terraform/environment`に記録される。
+
 ## backend設定
 
 ### S3
