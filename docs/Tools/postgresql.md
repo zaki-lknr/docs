@@ -17,6 +17,12 @@ $ export PAGER=cat
 $ psql -d <DB名> -U <ユーザー名>
 ```
 
+### 設定一覧
+
+```console
+show all;
+```
+
 ### DB一覧
 
 ```console
