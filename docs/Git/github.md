@@ -1,5 +1,11 @@
 # GitHub
 
+## リポジトリ
+
+### デフォルトブランチの変更
+
+[デフォルトブランチを変更する - GitHub Docs](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch)
+
 ## 設定
 
 ### 2要素認証を設定
