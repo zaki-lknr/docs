@@ -95,3 +95,25 @@ standard_init_linux.go:228: exec user process caused: exec format error
 ### FQCN (A/AAAAレコード)
 
 podからは`<service-name>.<namespace-name>.svc.cluster.local`で名前解決できる。
+
+## 消えないnamespace
+
+`kubectl delete ns hoge`が応答無くなりstatusがTerminatingのままになった場合の対処。
+
+```console
+kubectl get ns hoge -o json > deletens.json
+```
+
+namespace定義の中から、`spec.finalizers["kubernetes"]`の定義を見つけ、中身を空にする。
+
+```json
+    "spec": {
+        "finalizers": []
+    },```
+```
+
+最後に編集したファイルをパラメタに、以下コマンドを実行
+
+```console
+kubectl replace --raw "/api/v1/namespaces/hoge/finalize" -f deletens.json 
+```
