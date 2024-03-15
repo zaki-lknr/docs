@@ -528,6 +528,12 @@ $ dig -x 192.168.0.16
 ip route add 192.168.0.0/24 via 172.16.1.0 dev enp4s0
 ```
 
+### デフォルトルート追加
+
+```console
+ip route add default via 172.16.1.0 dev eth1 metric 1000
+```
+
 ## NetworkManager
 
 ### インタフェース一覧
