@@ -1,4 +1,4 @@
-# 設定
+# Docker設定
 
 ## insecureなレジストリ設定
 
