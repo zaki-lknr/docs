@@ -65,6 +65,14 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=latest sh -
 
 ## ネットワーク
 
+### resolv.conf
+
+```
+$ cat /etc/k3s.resolve.conf 
+nameserver 8.8.8.8
+$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --resolv-conf /etc/k3s.resolv.conf 
+```
+
 ## LoadBalancer Service
 
 ### 特定のノードのみでlistenするには
