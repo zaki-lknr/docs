@@ -117,3 +117,13 @@ namespace定義の中から、`spec.finalizers["kubernetes"]`の定義を見つ�
 ```console
 kubectl replace --raw "/api/v1/namespaces/hoge/finalize" -f deletens.json 
 ```
+
+これで削除できるはず。
+
+namespaceの定義が簡単な場合は以下コマンドでも行ける。
+
+```console
+kubectl get ns ${namespace} -o json | grep -v -- '"kubernetes"' | kubectl replace --raw "/api/v1/namespaces/${namespace}/finalize" -f -
+```
+
+※ `kubectl get ns hoge -o json | grep -2 -- '"kubernetes"'`を実行して、1か所しかヒットしない場合
