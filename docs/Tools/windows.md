@@ -1,5 +1,15 @@
 # Windows
 
+## 設定
+
+### スタートアップ
+
+```
+%HOME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+```
+
+もしくは `shell:startup` でもアクセスできる。
+
 ## 評価版 Windows10
 
 必要事項を入力してダウンロードしたISOは、ライセンスキー入力がなく90日検証に使用できる。
