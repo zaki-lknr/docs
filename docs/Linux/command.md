@@ -161,6 +161,12 @@ curl -u username:password http://example.org/
 curl http://www.example.org/ -w '%{http_code}\n' -sS -o /dev/null
 ```
 
+### レスポンスヘッダ
+
+```console
+curl -I http://www.exmaple.org
+```
+
 ## wget
 
 リソースの内容をstdoutへ出力
