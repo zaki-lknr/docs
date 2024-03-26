@@ -467,6 +467,12 @@ timedatectl set-ntp false
 
 `true`で有効
 
+### タイムゾーン設定
+
+```console
+timedatectl set-timezone Asia/Tokyo
+```
+
 ## dig
 
 ### Aレコード
