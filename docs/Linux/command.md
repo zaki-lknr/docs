@@ -725,6 +725,14 @@ route1=172.29.0.0/24,172.16.1.3
 # nmcli c m ens224 -ipv4.routes "172.29.0.0/24 172.16.1.3"
 ```
 
+## systemd
+
+### 一覧
+
+```console
+systemctl list-unit-files
+```
+
 ## ホスト名
 
 ### 変更
