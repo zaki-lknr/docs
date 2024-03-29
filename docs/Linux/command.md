@@ -278,6 +278,14 @@ gzip -dc /var/log/syslog.10.gz | less
 
 ## tar
 
+### ファイルの追加
+
+既存のtarファイルへ新たにファイルを追加する(append)
+
+```console
+tar rvf archive.tar.gz file.txt
+```
+
 ### 展開時の形式指定オプション
 
 gzの場合はzとかは不要。  
