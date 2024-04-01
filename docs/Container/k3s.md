@@ -45,6 +45,13 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=latest sh -
 - [Configuration Options | K3s](https://docs.k3s.io/installation/configuration)
 - [Network Options | K3s](https://docs.k3s.io/installation/network-options)
 
+## 停止
+
+k3sサービス自体は`systemctl`で停止できAPIエンドポイントなどは停止されるが実はコンテナは動作したまま。
+コンテナも停止するには`k3s-killall.sh`を実行する。
+
+[Stopping K3s | K3s](https://docs.k3s.io/upgrades/killall)
+
 ## 証明書
 
 [certificate | K3s](https://docs.k3s.io/cli/certificate)
