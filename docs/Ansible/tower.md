@@ -58,6 +58,12 @@ $ curl -sk https://192.168.0.27/api/v2/job_templates/ -H "Authorization: Bearer 
 
 [19.2. パーソナルアクセストークン (PAT) 向けの OAuth2 トークンシステムの使用](https://docs.ansible.com/ansible-tower/latest/html_ja/administration/oauth2_token_auth.html#using-oauth-2-token-system-for-personal-access-tokens-pat)
 
+### ping
+
+```console
+$ curl -sk https://server/api/v2/ping/
+```
+
 ### ジョブテンプレート一覧
 
 ```console
