@@ -196,6 +196,14 @@ $ sed -i -e 's/regexp/string/' file
 `-i`でファイル更新を行う。  
 `-ie`って書くと、`-i.bak`で`file.bak`のバックアップ作成と解釈されるので分ける。
 
+### デリミタ変更
+
+普通に使えばOK
+
+```console
+sed -e 's#foo#bar#' file
+```
+
 ## awk
 
 `ps aux`の結果の3カラム目を抜き出す。
