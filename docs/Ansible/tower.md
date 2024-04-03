@@ -70,6 +70,12 @@ $ curl -sk https://server/api/v2/ping/
 $ curl -sk https://192.168.0.27/api/v2/job_templates/?page_size=1000 | python -m json.tool
 ```
 
+#### テンプレートの検索
+
+```console
+curl https://server/api/v2/job_templates/?search=Demo+Job+Template
+```
+
 ### 設定のcategory_slug確認
 
 「Settings」にある `/api/v2/settings/` で確認できる。
