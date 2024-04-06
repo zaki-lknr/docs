@@ -42,6 +42,12 @@ complete -o default -F __start_kubectl kc
 
 `kind`や`helm`も同じ要領。
 
+tab押下で `_get_comp_words_by_ref: command not found` エラーが出るときは、`bash-completion`が無いのでパッケージ追加する。
+
+```console
+$ kubectl get -bash: _get_comp_words_by_ref: command not found
+```
+
 ## create
 
 ### secret
