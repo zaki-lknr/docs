@@ -121,6 +121,18 @@ $ docker volume ls
 $ docker volume ls -f dangling=true
 ```
 
+### image
+
+#### サイズ順にソート
+
+テンプレート付きのtableフォーマットでサイズをまず出力し、`sort`を`-h (--human-numeric-sort)`オプション付けてソートする。
+
+```console
+docker image ls --format "table {{.Size}}\t{{.Repository}}:{{.Tag}}\t{{.ID}}" | sort -h
+```
+
+[Docker image 一覧を容量順でソートする #Docker - Qiita](https://qiita.com/peaceiris/items/e38648a1e8614c7d5083)
+
 ### prune
 
 不要オブジェクトを削除するには`docker prune`を使う。
