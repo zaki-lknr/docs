@@ -280,6 +280,12 @@ $ git branch -M main
 # --helpを見る限り`--move --force`っぽい
 ```
 
+作成済みリポジトリの`master`を`main`に変更するのもこれ。
+
+```console
+git branch -m master main
+```
+
 ### ブランチをpush
 
 ```console
