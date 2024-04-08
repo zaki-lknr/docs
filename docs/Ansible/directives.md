@@ -196,6 +196,19 @@ ok: [localhost] => (item=baz) =>
 
 ## when
 
+### 基本
+
+```yaml
+tasks:
+- module:
+  vars:
+    cond: (bool)
+  when:
+    - cond
+```
+
+`when`部分は変数参照の `"{{ values }}"` の表記は不要で、bool型の条件式・変数をそのまま書けば良い。
+
 ### 条件がint型
 
 ```yml
