@@ -46,3 +46,14 @@ docker.io/zakihmkc/net-ee        latest             119f99382b23  13 minutes ago
 ```
 
 レジストリのURLを省略すると`localhost`が付与されるみたいね。
+
+## ベースイメージ
+
+### RHEL
+
+builderイメージは [Certified container images](https://catalog.redhat.com/software/containers/search) で"ansible-builder"で検索。
+だいたいRHEL8かRHEL9のイメージが出てくるのでそれを選択し、tagで1.2系か3系を選択する。(1.2系はRHEL8のみかな？)
+
+ベースイメージはImage typeで「Automation execution environment」にチェックを入れれば出てくる。
+カスタムするのであればminimalを選択して必要なパッケージを追加していけばいいと思う。
+TagでAnsibleバージョンを選択する。最新はlatest
