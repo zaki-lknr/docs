@@ -10,7 +10,7 @@ ls !(*.txt)
 
 `*.txt`以外を展開
 
-## forループワンライナー
+### forループワンライナー
 
 ```console
 for i in `seq 1 3`; do curl 192.168.0.16; done
@@ -20,6 +20,12 @@ for i in `seq 1 3`; do curl 192.168.0.16; done
 
 ```console
 for i in `seq 1 3`; do curl 192.168.0.${i}; done
+```
+
+### if/elseワンライナー
+
+```console
+if [ $value == "fobar" ]; then command_a; else commandb; fi
 ```
 
 ## less
