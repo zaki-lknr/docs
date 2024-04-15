@@ -475,3 +475,15 @@ localhost                  : ok=2    changed=0    unreachable=0    failed=0    s
 
 このタスクの場合は、ローカルにある`quay.io/ansible/awx-ee`イメージをDocker Hubへ`zakihmkc/awx-ee:0.6.0`として`push`する。  
 このとき、`zakihmkc/awx-ee:0.6.0`が既にローカルにある場合はtagの上書きが発生しないため、pushされない。ここでpushしたい場合は、tag設定を上書きする`force_tag: true`も追加する。
+
+## git
+
+```yaml
+  ansible.builtin.git:
+    repo: https://github.com/zaki-lknr/awx_build_and_deploy.git
+    version: feature/awx-ver-21.13.0
+    dest: /var/tmp/work-dir
+```
+
+destのディレクトリは事前に作成しておく。  
+GitモジュールはCLIの`git clone`と異なり、上の例でいうと`awx_build_and_deploy`サブディレクトリは作成されない。
