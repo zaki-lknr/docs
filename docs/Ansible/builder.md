@@ -57,3 +57,5 @@ builderイメージは [Certified container images](https://catalog.redhat.com/s
 ベースイメージはImage typeで「Automation execution environment」にチェックを入れれば出てくる。
 カスタムするのであればminimalを選択して必要なパッケージを追加していけばいいと思う。
 TagでAnsibleバージョンを選択する。最新はlatest
+
+大まかなバージョン(RHEL8かRHEL9か、など)はマウスオーバーしたときのURLで判断できる。(rhel8やrhel9がパスに入っている)
