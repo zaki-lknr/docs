@@ -185,3 +185,11 @@ vzdump-qemu-116-2023_09_05-23_58_49.vma.zst.notes
 :
 :
 ```
+
+## CLI
+
+### VM削除
+
+```console
+qm destroy <vmid> --destroy-unreferenced-disks=1
+```
