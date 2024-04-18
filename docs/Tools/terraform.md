@@ -15,6 +15,16 @@ $ sudo apt-get update && sudo apt-get install terraform
 
 ## CLI
 
+### フォーマッタ
+
+standard styleへ変換する。
+
+```console
+terraform fmt -recursive
+```
+
+`-recursive`無しの場合はカレントディレクトリのみが対象
+
 ### providerバージョン確認
 
 ```console
