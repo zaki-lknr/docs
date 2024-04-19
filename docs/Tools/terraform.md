@@ -76,6 +76,14 @@ Switched to workspace "2".
 
 設定値は`.terraform/environment`に記録される。
 
+### variable
+
+#### 引数
+
+```console
+terraform plan -var='enable_wan=false'
+```
+
 ## backend設定
 
 ### S3
