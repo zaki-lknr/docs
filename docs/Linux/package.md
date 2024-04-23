@@ -111,6 +111,14 @@ rhel-8-for-x86_64-baseos-rpms                                      Red Hat Enter
 # dnf config-manager --disable ansible-2.9-for-rhel-8-x86_64-rpms
 ```
 
+### 強制インストール
+
+自動化するときとか
+
+```console
+dnf install -y <package-name>
+```
+
 ## yum
 
 ### リポジトリ一覧
@@ -144,6 +152,13 @@ rhel-8-for-x86_64-baseos-rpms                                      Red Hat Enter
     - [APT の設定 (/etc/apt/sources.list) をちゃんと理解する - くじらにっき++](https://kujira16.hateblo.jp/entry/2019/10/14/190008)
     - [Ubuntuのパッケージ管理のメモ - 蒼の王座・裏口](https://sqlazure.jp/r/ubuntu/857/)
 
+### 強制インストール
+
+自動化するときとか
+
+```console
+apt-get install -y <package-name>
+```
 
 ## apk
 
