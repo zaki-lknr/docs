@@ -119,6 +119,12 @@ rhel-8-for-x86_64-baseos-rpms                                      Red Hat Enter
 dnf install -y <package-name>
 ```
 
+### rpmファイルダウンロード
+
+```console
+dnf install --downloadonly --destdir /path/to <package-name>
+```
+
 ## yum
 
 ### リポジトリ一覧
