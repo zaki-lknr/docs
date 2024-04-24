@@ -100,3 +100,10 @@ AviUtl使用
 3. 最後に「ファイル」「エクスポート」「MP4 Export」
 
 準備としてmp4を扱うプラグイン(MP4Plugin)をセットアップしておく。
+
+## Terminal
+
+### WindowsTerminal
+
+- 指定ディレクトリをカレントで起動するには`wt -d c:/path/to`
+- エクスプローラーから指定パスで起動するには`wt -d .`
