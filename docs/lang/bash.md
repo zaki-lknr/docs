@@ -39,6 +39,12 @@ $ echo $((13 % 3))
 1
 ```
 
+インクリメント
+
+```console
+    count=$((++count))
+```
+
 ## 配列
 
 ```console
