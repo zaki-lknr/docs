@@ -53,6 +53,18 @@ $ echo ${list[1]}
 123
 ```
 
+## 関数
+
+```bash
+#!/bin/bash
+
+function myfunc() {
+    echo "function arg1($1) arg2($2)"
+}
+
+myfunc a b
+```
+
 ## 制御構文
 
 ### test/評価
