@@ -55,6 +55,8 @@ $ echo ${list[1]}
 
 ## 関数
 
+### 引数
+
 ```bash
 #!/bin/bash
 
@@ -63,6 +65,18 @@ function myfunc() {
 }
 
 myfunc a b
+```
+
+### 戻り値
+
+```bash
+function myfunc() {
+    echo "function arg1($1) arg2($2)"
+    return 1
+}
+
+myfunc a b
+echo $?
 ```
 
 ## 制御構文
