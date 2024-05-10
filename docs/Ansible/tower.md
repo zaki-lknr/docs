@@ -64,7 +64,9 @@ $ curl -sk https://192.168.0.27/api/v2/job_templates/ -H "Authorization: Bearer 
 $ curl -sk https://server/api/v2/ping/
 ```
 
-### ジョブテンプレート一覧
+### ジョブテンプレート
+
+#### 一覧
 
 ```console
 $ curl -sk https://192.168.0.27/api/v2/job_templates/?page_size=1000 | python -m json.tool
@@ -74,6 +76,12 @@ $ curl -sk https://192.168.0.27/api/v2/job_templates/?page_size=1000 | python -m
 
 ```console
 curl https://server/api/v2/job_templates/?search=Demo+Job+Template
+```
+
+#### ジョブの起動
+
+```console
+curl -XPost https://server/api/v2/job_templates/${TEMPLATE_ID}/launch/
 ```
 
 ### 設定のcategory_slug確認
