@@ -125,3 +125,21 @@ provider "aws" {
 6. `terraform plan`で差分がないことを確認
 
 でいける。
+
+## 構文
+
+### count
+
+EC2を3つ立てNameタグに連番を振る
+
+```terraform
+resource "aws_instance" "cloud-vm" {
+  count           = 3
+  instance_type   = "t2.medium"
+  :
+
+  tags = {
+    Name = "cloud-${count.index}"
+  }
+}
+```
