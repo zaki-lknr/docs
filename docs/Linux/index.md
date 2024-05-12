@@ -82,6 +82,42 @@ setparams 'Ubuntu'
 の`linux`で始まる行の末尾に`single`を追記して`Ctrl-x`で起動する。  
 ルートファイルシステムをmountしたくない場合は`single`でなく`break`を追記。
 
+## GRUB
+
+ブートローダーが壊れてgrub rescueモードになった場合。  
+まず`ls`で/bootがあるパーティションを探す。
+
+```console
+grub rescue> ls
+(hd0) (hd0,gpt3) (hd0,gpt2) (hd0,gpt1)
+grub rescue> ls (hd0,gpt1)
+(hd0,gpt3): Filesystem is unknown.
+grub rescue> ls (hd0,gpt3)
+(hd0,gpt3): Filesystem is ext2.
+grub rescue> ls (hd0,gpt3)/
+./ ../ lost+found/ bin boot/ dev/ etc/ home/ lib lib32 lib64 libx32 media/ mnt/
+opt/ proc/ root/ run/ sbin snap/ srv/ sys/ tmp/ usr/ var/
+grub rescue>
+```
+
+みつかったら`set prefix`
+
+```console
+grub rescue>set prefix=(hd0,gpt3)/boot/grub
+grub rescue>set root=(hd0,gpt3)
+grub rescue>insmod normal
+grub rescue>insmod linux
+grub rescue>normal
+```
+
+これでブートできる。  
+Linuxが起動したらGRUBを再インストール
+
+```console
+sudo update-grub
+sudo grub-install /dev/sda
+```
+
 ## アップグレード
 
 ### Fedora
