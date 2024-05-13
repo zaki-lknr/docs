@@ -164,6 +164,14 @@ done
 3
 ```
 
+#### nからmまで(ブレース)
+
+```bash
+for i in {1..10}; do
+    echo $i
+done
+```
+
 #### whileで無限ループ
 
 ```bash
