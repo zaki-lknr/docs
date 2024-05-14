@@ -173,6 +173,13 @@ curl http://www.example.org/ -w '%{http_code}\n' -sS -o /dev/null
 curl -I http://www.exmaple.org
 ```
 
+### タイムアウト設定
+
+```console
+$ curl --connect-timeout 2 http://192.168.0.249
+curl: (28) Failed to connect to 192.168.0.249 port 80 after 2000 ms: Timeout was reached
+```
+
 ## wget
 
 リソースの内容をstdoutへ出力
