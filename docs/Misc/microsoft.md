@@ -1,6 +1,8 @@
-# Microsoft Edge Browser
+# Microsoft
 
-## コマンドラインからの起動
+## Edge Browser
+
+### コマンドラインからの起動
 
 実行ファイルは以下
 
