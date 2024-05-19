@@ -15,3 +15,26 @@ pdbedit -a zaki
 ```console
 pdbedit -L
 ```
+
+## HAProxy
+
+### 外部コマンドを使った死活チェック
+
+スクリプトはUPの場合は戻り値を0、DOWNは非0を返すように用意する。
+スクリプト実行の際には、第3引数に接続先ホストのアドレス、第4引数にポート番号が渡される。
+
+```
+global
+  external-check
+
+frontend foobar
+  bind *:8080
+  default_backend bazqux
+
+backend bazqux
+  option external-check
+  external-check path "/usr/bin:/bin"
+  external-check command /path/to/script.sh
+  server host1 192.168.0.121:8080 check
+  server host2 192.168.0.122:8080 check
+```
