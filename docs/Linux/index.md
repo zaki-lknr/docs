@@ -128,3 +128,19 @@ sudo grub-install /dev/sda
 - `sudo dnf install dnf-plugin-system-upgrade`
 - `sudo dnf system-upgrade download --releasever=39`  # 39はターゲットバージョン。飛び級がサポートされるのは2段階(37 -> 39)
 - `sudo dnf system-upgrade reboot`
+
+### Ubuntu
+
+- `sudo apt-get update`
+- `sudo apt-get upgrade`
+- `sudo apt-get dist-upgrade`
+- `sudo apt-get autoremove`
+- `sudo do-release-upgrade`
+
+```console
+If you continue, an additional ssh daemon will be started at port '1022'. 
+Do you want to continue? 
+```
+
+SSH経由だと上記警告が出るが続けるなら続ける。
+あとは進めていくと確認が出るので都度進める。
