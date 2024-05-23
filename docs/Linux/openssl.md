@@ -1,1 +1,1 @@
-../Tools/openssl.md
+../Misc/openssl.md
