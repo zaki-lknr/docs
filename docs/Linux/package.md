@@ -125,6 +125,8 @@ dnf install -y <package-name>
 dnf install --downloadonly --destdir /path/to <package-name>
 ```
 
+ホストにインストール済みの場合はダウンロードされないため `--installroot` を併用する。
+
 ## yum
 
 ### リポジトリ一覧
