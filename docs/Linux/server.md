@@ -38,3 +38,10 @@ backend bazqux
   server host1 192.168.0.121:8080 check
   server host2 192.168.0.122:8080 check
 ```
+
+### ssl検証無視
+
+```
+backend servers
+  server host1 192.168.0.68:6443 ssl verify none check
+```
