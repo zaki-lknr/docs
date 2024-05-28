@@ -208,11 +208,11 @@ tasks:
 ```
 
 `when`部分は変数参照の `"{{ values }}"` の表記は不要で、bool型の条件式・変数をそのまま書けば良い。  
-否定は`not`でなく`!`
+否定は`not`
 
 ```yaml
   when:
-    - ! enable_foobar
+    - not disable_foobar
 ```
 
 ### 条件がint型
