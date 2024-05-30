@@ -72,6 +72,13 @@ k3sサービス自体は`systemctl`で停止できAPIエンドポイントなど
 
 ## ネットワーク
 
+### IPアドレス
+
+| 項目          | 変更方法                      |
+| ----------- | ------------------------- |
+| Pod IPs     | --cluster-cidr 0.0.0.0/16 |
+| Service IPs | --service-cidr 0.0.0.0/16 |
+
 ### resolv.conf
 
 ```
