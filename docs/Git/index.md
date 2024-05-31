@@ -246,6 +246,14 @@ Git 2.23以降は
 $ git switch -c features/divide_playbook
 ```
 
+### ブランチ間の差分
+
+ブランチ名を引数に実行すればOK
+
+```console
+git diff <branch1-name> <branch2-name>
+```
+
 ### ローカルブランチの削除
 
 ```
@@ -496,6 +504,14 @@ M       docs/Ansible/directives.md
 `--oneline`との併用も可
 
 ## 差分
+
+### ブランチ間の差分
+
+ブランチ名を引数に実行すればOK
+
+```console
+git diff <branch1-name> <branch2-name>
+```
 
 ### whitespace無視
 
