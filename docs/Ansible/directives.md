@@ -215,6 +215,13 @@ tasks:
     - not disable_foobar
 ```
 
+インベントリファイル(ini形式)のbooleanっぽい変数を使う場合は`bool`に変換して使う。
+
+```yaml
+  when:
+    - not (flag | bool)
+```
+
 ### 条件がint型
 
 ```yml
