@@ -126,6 +126,26 @@ provider "aws" {
 
 でいける。
 
+### S3 + DynamoDBでのロック
+
+DynamoDBでテーブルを作成
+
+- 名前は任意
+- パーティションキーは`LockID`
+- その他はデフォルト
+
+あとはバックエンド設定に以下追加
+
+```terraform
+  backend "s3" {
+    bucket         = S3バケット名
+    key            = "terraform.tfstate"
+    region         = リージョン
+    dynamodb_table = DynamoDBテーブル名
+    encrypt        = true
+  }
+```
+
 ## 構文
 
 ### count
