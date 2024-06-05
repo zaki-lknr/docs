@@ -26,6 +26,21 @@ firewall-cmd --permanent --zone=FedoraServer --add-service=samba
 firewall-cmd --reload
 ```
 
+### SELinux設定
+
+ホームは見えるけどアクセスできない場合
+
+```console
+setsebool -P samba_enable_home_dirs on
+```
+
+共有ディレクトリの場合
+
+```console
+semanage fcontext -a -t samba_share_t /share
+restorecon -R /share/
+```
+
 ## HAProxy
 
 ### 外部コマンドを使った死活チェック
