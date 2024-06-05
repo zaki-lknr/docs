@@ -16,6 +16,16 @@ pdbedit -a zaki
 pdbedit -L
 ```
 
+### firewalld設定
+
+```console
+# 使用してるインタフェースがどのゾーンか確認
+firewall-cmd --get-active-zones
+# 対象ゾーンに許可追加
+firewall-cmd --permanent --zone=FedoraServer --add-service=samba
+firewall-cmd --reload
+```
+
 ## HAProxy
 
 ### 外部コマンドを使った死活チェック
