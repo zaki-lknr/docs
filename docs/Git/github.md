@@ -48,6 +48,17 @@ Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で�
 
 [ブランチの自動的削除を管理する - GitHub Docs](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches)
 
+## Release
+
+### webでtag作成とrelease作成
+
+まずリリース一覧ページへ遷移、[Draft a new release]押下し、[Choose a tag]から[Find or create a new tag]に作成するタグ名を入力してCreateする。  
+[Generate release notes]押下すると、それっぽい情報が自動入力されるのでそれを編集。
+
+下部の"Attach binaries by dropping them here or selecting them"にzipなどのバイナリファイルがあれば添付する。
+
+あとは[Publish release]すればtagとreleaseが作成され公開される。
+
 ## API
 
 ### デフォルトブランチを取得する
