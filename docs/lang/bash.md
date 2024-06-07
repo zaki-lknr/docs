@@ -6,7 +6,7 @@
 
 `set`や、shebangで`#!/bin/bash -u`などでセットする
 
-### 未定義変数使用時にエラー
+### 未定義変数使用時にエラー (-u)
 
 `-u` (nounset)
 
@@ -20,6 +20,28 @@ echo $hoge
 [zaki@cloud-dev2 sh]$ export hoge=123
 [zaki@cloud-dev2 sh]$ ./set.sh 
 123
+```
+
+### コマンドと引数を表示 (-x)
+
+```console
+$ cat option.sh 
+#!/bin/bash -x
+
+ls /
+$ ./option.sh 
++ ls /
+afs  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin  dev   home  lib64  mnt    proc  run   srv   tmp  var
+```
+
+出力の先頭文字は変数`PS4`で指定。
+
+```console
+$ PS4="---" ./option.sh 
+---ls /
+afs  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin  dev   home  lib64  mnt    proc  run   srv   tmp  var
 ```
 
 ### set -* の解除
