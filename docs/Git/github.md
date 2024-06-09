@@ -50,6 +50,8 @@ Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で�
 
 ## Release
 
+[リポジトリのリリースを管理する - GitHub Docs](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+
 ### webでtag作成とrelease作成
 
 まずリリース一覧ページへ遷移、[Draft a new release]押下し、[Choose a tag]から[Find or create a new tag]に作成するタグ名を入力してCreateする。  
