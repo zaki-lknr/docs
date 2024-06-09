@@ -245,3 +245,9 @@ Password for zaki@//pecorino/HD-LDS-A:
 ```
 
 `uid`と`gid`も指定しないとownerの設定ができない(mountした時のもので固定される)
+
+### NFS
+
+```console
+mount -t nfs -o rw pecorino:/dev /mnt/
+```
