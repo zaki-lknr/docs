@@ -150,6 +150,20 @@ $ git merge --abort
 
 マージ前の状態に戻る
 
+### stash pop後のconflict
+
+メッセージが以下のようになり`git merge --abort`は効かない。  
+状態としてはステージングになっている。
+
+```console
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   filename
+```
+
+メッセージにある通り、コンフリクトを解決したのであれば`git add`を、変更を破棄したい場合は`git restore --staged`で`add`を取り消し、さらに`git restore`すれば変更前の状態に戻る。
+
 ## add (ステージング)
 
 ### ステージングに追加
