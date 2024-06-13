@@ -16,6 +16,19 @@ openssl req -newkey rsa:4096 -nodes -sha256 -keyout /path/to/example.org.key -x5
 openssl req -newkey rsa:4096 -nodes -sha256 -keyout server.key -x509 -days 365  -out server.crt -subj '/C=JP/' -addext "subjectAltName=DNS:appserv,DNS:appserv.example.org" 
 ```
 
+### 国や都道府県等の指定
+
+```console
+openssl req ... -subj '/C=JP/ST=Tokyo/L=Daiba/CN=example.org'
+```
+
+- C(Country Name): 国(2文字)
+- ST(State or Province Name): 都道府県
+- L(Locality Name): 市区町村
+- O(Organization Name): 組織名
+- OU(Organization Unit Name): 部門名
+- CN(Common Name): FQDN
+
 ## ファイル内容確認
 
 ### RSA秘密鍵の確認
