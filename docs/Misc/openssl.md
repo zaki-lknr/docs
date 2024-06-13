@@ -1,5 +1,23 @@
 # openssl
 
+## 秘密鍵作成
+
+### RSA秘密鍵
+
+```console
+openssl genrsa > private.key
+```
+
+鍵長を指定するには引数に指定
+
+```console
+$ openssl genrsa 4096 > private.key
+$ openssl rsa -text -noout -in private.key 
+Private-Key: (4096 bit, 2 primes)
+:
+:
+```
+
 ## 証明書作成
 
 ### オレオレ証明書作成(CommonName)
