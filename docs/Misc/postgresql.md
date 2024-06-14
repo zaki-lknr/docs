@@ -23,6 +23,12 @@ $ psql -d <DB名> -U <ユーザー名>
 show all;
 ```
 
+### 拡張一覧
+
+```console
+select * from pg_available_extensions;
+```
+
 ### DB一覧
 
 ```console
