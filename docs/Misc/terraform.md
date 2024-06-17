@@ -163,3 +163,23 @@ resource "aws_instance" "cloud-vm" {
   }
 }
 ```
+
+### 変数
+
+#### 変数参照
+
+`vm_ami_id`という変数を定義しているなら以下。
+
+```terraform
+ami = var.vm_ami_id
+```
+
+#### 補完
+
+文字列リテラルの中で参照する場合は「補完」で書式は以下。
+
+```terraform
+tags = {
+  Name = "${var.name_prefix}-server"
+}
+```
