@@ -47,6 +47,12 @@ git rebase -i HEAD^^
 $ git revert <取り消したいコミットID>
 ```
 
+範囲指定も可能
+
+```console
+$ git revert HEAD~5..HEAD~3
+```
+
 対象コミット後に変更があったりするとコンフリクトになるので、手動で修正し、`add`,`commit`する。
 
 ## コミットログの変更
