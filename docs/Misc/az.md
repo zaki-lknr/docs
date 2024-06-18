@@ -4,7 +4,10 @@
 
 [Azure CLI での JMESPath クエリ コマンドの結果 | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/query-azure-cli?tabs=concepts%2Cbash)
 
-たとえば、「VNetの一覧からリソースグループ名とVNet名が指定のもののリソースIDを取得」であれば以下
+
+### 辞書型データのリストから指定キーが特定の値のものを検索(and)
+
+VNetの一覧からリソースグループ名とVNet名が指定のもののリソースIDを取得
 
 ```console
 az network vnet list --query "[?name=='${vnet_name}' && resourceGroup=='${resource_group}'].id"
