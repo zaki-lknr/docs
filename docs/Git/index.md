@@ -337,7 +337,8 @@ $ git branch -r
 $ git fetch origin <remote-branch>
 ```
 
-これで `git checkout <remote-branch(localにfetch済み)>` できる。
+リモートのブランチをローカルの追跡ブランチに取り込む。  
+これでローカルブランチに`merge`や`rebase`出来る。
 
 ### リモートブランチを削除
 
