@@ -1,6 +1,6 @@
 # AKS
 
-## FQA
+## FAQ
 
 [Azure Kubernetes Service (AKS) についてよく寄せられる質問 - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/faq)
 
