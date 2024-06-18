@@ -331,6 +331,12 @@ az storage account keys list \
 
 ## AKS
 
+### クラスター一覧
+
+```console
+az aks list [-g <resource-group>]
+```
+
 ### 使用可能バージョンの確認
 
 ```console
