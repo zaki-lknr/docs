@@ -158,3 +158,13 @@ if [ -f ~/.git-prompt.sh ]; then
     export GIT_PS1_SHOWUPSTREAM=auto
 fi
 ```
+
+### 記号
+
+| 記号           | 意味                                     |
+| ------------ | -------------------------------------- |
+| `=`,`<`, `>` | upstreamと差分なし(`=`)より遅れてる(`<`)進んでる(`>`) |
+| `*`          | unstage (変更あるけど未add)                   |
+| `+`          | uncommit (add済み未commit)                |
+| `%`          | untrack                                |
+| `$`          | stashed                                |
