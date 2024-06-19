@@ -431,6 +431,26 @@ print("sample", end="")
 print(".", end="", flush=True)
 ```
 
+### byte型
+
+変数出力すると`b'....'`と表記され出力される。
+
+```python
+byte_data = b'zzzzzzzz'
+
+print(byte_data)
+print(len(byte_data))
+print(type(byte_data))
+```
+
+出力は以下。
+
+```console
+b'zzzzzzzz'
+8
+<class 'bytes'>
+```
+
 ### path
 
 #### ユーザーディレクトリを展開
