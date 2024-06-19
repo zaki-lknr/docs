@@ -20,6 +20,20 @@ VNetの一覧からリソースグループ名とVNet名が指定のもののリ
 az network vnet list --query "[?name=='${vnet_name}' && resourceGroup=='${resource_group}'].id"
 ```
 
+#### 文字列を含む(部分一致)検索
+
+`name`キーに`dev`を含むデータの検索
+
+```console
+az aks list --query "[?contains(name,'dev')]"
+```
+
+オブジェクト全体でなくここからさらにnameのみの一覧を出力するなら以下。
+
+```console
+az aks list --query "[?contains(name,'dev')].name"
+```
+
 ## アカウント
 
 ### アカウント情報
