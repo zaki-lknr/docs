@@ -4,6 +4,13 @@
 
 [Azure CLI での JMESPath クエリ コマンドの結果 | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/query-azure-cli?tabs=concepts%2Cbash)
 
+### 辞書型データのリストから指定キーの値一覧
+
+AKSのクラスター名一覧を取得
+
+```console
+az aks list [-g resource-group] --query '[].name'
+```
 
 ### 辞書型データのリストから指定キーが特定の値のものを検索(and)
 
