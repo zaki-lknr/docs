@@ -451,6 +451,17 @@ b'zzzzzzzz'
 <class 'bytes'>
 ```
 
+#### byte -> string変換
+
+```python
+string_data = byte_data.decode()
+
+print(string_data)
+print(type(string_data))
+```
+
+出力は`<class 'str'>`
+
 ### path
 
 #### ユーザーディレクトリを展開
