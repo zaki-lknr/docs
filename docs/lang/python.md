@@ -93,6 +93,12 @@ if aws_access_key is None:
     print("AWS_ACCESS_KEY_ID not defined")
 ```
 
+#### 型の確認
+
+```python
+type(value)
+```
+
 ### 関数
 
 #### main
