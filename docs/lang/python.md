@@ -366,6 +366,17 @@ print(str_sample.zfill(8))
 
 #### 正規表現処理
 
+##### re.search()で文字列判定
+
+```python
+import re
+
+if re.search(regexp, string):
+    # stringがregexpにマッチ
+```
+
+`re.match()`は先頭からマッチを行うため、文字列の途中にはマッチしない。
+
 ##### re.sub()で置換
 
 ```python
