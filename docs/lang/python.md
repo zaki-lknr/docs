@@ -462,6 +462,16 @@ print(type(string_data))
 
 出力は`<class 'str'>`
 
+#### string -> byte変換
+
+```python
+byte_data = string_data.encode()
+print(byte_data)
+print(type(byte_data))
+```
+
+これで出力は`<class 'bytes'>`
+
 ### path
 
 #### ユーザーディレクトリを展開
