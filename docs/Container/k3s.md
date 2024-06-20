@@ -79,6 +79,14 @@ k3sサービス自体は`systemctl`で停止できAPIエンドポイントなど
 | Pod IPs     | --cluster-cidr 0.0.0.0/16 |
 | Service IPs | --service-cidr 0.0.0.0/16 |
 
+```console
+curl -sfL https://get.k3s.io | sh -s - \
+  --cluster-cidr "172.28.0.0/16" \
+  --service-cidr "172.29.0.0/16" \
+  --kube-controller-manager-arg=node-cidr-mask-size=24 \
+  --kubelet-arg=max-pods=200
+```
+
 ### resolv.conf
 
 ```
