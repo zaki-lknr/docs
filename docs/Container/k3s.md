@@ -95,6 +95,14 @@ nameserver 8.8.8.8
 $ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --resolv-conf /etc/k3s.resolv.conf 
 ```
 
+### デプロイ後のアドレス変更は不可
+
+> You cannot change the CIDRs or add a new address family to an existing cluster. Cluster networking should be established when the cluster is initially started.
+>
+> https://github.com/k3s-io/k3s/issues/93#issuecomment-1551967292
+
+systemdユニットファイルに記載のアドレス指定部分を変更しても、クラスターには反映されず動作が不安定になる
+
 ## LoadBalancer Service
 
 ### 特定のノードのみでlistenするには
