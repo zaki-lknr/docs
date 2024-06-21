@@ -18,6 +18,9 @@
         - インデントレベル毎にスペース部分をハイライト
     - [TODO Highlight - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
         - ファイル中テキストの`TODO:`とか`FIXME:`をハイライトしてくれる
+- テーマ系
+    - [GitHub Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
+    - [Material Icon Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
 ## 設定
 
