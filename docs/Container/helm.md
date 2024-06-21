@@ -142,6 +142,12 @@ helm upgrade --install sample-logstash elastic/logstash -f values.yaml --create-
 helm install ... --version x.y.z
 ```
 
+### チャートのダウンロード(tgz形式)
+
+```console
+helm pull fluent/fluent-bit --version 0.43.0
+```
+
 ### チャートインストールに使われるマニフェスト生成
 
 `install`の代わりに`template`を使う
