@@ -41,6 +41,25 @@ $ git add README.md
 $ git commit -m "first commit"
 ```
 
+## リモートリポジトリ作成
+
+### ssh
+
+```console
+$ cd /opt/repos
+$ git init --bare sample.git
+```
+
+これで `/opt/repos/sample.git` リポジトリが出来る。
+
+```console
+$ cd ${workdir}
+$ git clone ssh://localhost/opt/repos/sample.git
+```
+
+これでワークディレクトリにcloneできる。  
+この場合対象の書き込み権限は必要。
+
 ## commit
 
 ### まず対象をadd
