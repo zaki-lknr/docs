@@ -9,4 +9,5 @@
 
 ## author
 
-- [@zaki_hmkc](https://twitter.com/zaki_hmkc)
+- [🦋](https://bsky.app/profile/jp-z.jp)
+- [𝕏](https://twitter.com/zaki_hmkc)
