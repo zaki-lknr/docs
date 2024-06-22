@@ -12,3 +12,9 @@ chpasswd: { expire: false }
 
 記号を含む場合はクォートするのが無難。
 `expire: false`は初回ログイン時にパスワード変更を行わない。
+
+### sshのパスワード認証許可
+
+```ini
+ssh_pwauth: true
+```
