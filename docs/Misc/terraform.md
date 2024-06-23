@@ -183,3 +183,13 @@ tags = {
   Name = "${var.name_prefix}-server"
 }
 ```
+
+## resource
+
+### デフォルトのルートテーブル
+
+VPCのパラメタの`default_route_table_id`を参照する。
+
+```terraform
+route_table_ids = [aws_vpc.my_vpc.default_route_table_id]
+```
