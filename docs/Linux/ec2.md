@@ -4,7 +4,7 @@
 
 ### パスワード設定
 
-```ini
+```yaml
 #cloud-config
 password: 'p@ssword'
 chpasswd: { expire: false }
@@ -15,6 +15,13 @@ chpasswd: { expire: false }
 
 ### sshのパスワード認証許可
 
-```ini
+```yaml
 ssh_pwauth: true
+```
+
+### コマンドの実行
+
+```yaml
+runcmd:
+- systemctl disable --now ...
 ```
