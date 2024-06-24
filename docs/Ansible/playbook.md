@@ -46,6 +46,16 @@ $ ansible-playbook ... -l host1
 
 開発やデバッグのお供に。
 
+### --connection-password-file
+
+リモートへのログインに使用するパスワードが書かれたファイルを指定し、対話的処理を回避する。
+
+```console
+ansible-playbook playbook.yml -i inventory.ini --connection-password-file password.txt 
+```
+
+指定するファイルはパスワードのみがtext/plainで書かれている。
+
 ## ansible-playbook コマンド
 
 ### --check
