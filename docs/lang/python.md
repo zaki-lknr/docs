@@ -335,6 +335,13 @@ with sys.stdin as f:
 
 ### 文字列
 
+#### 指定文字で始まるか
+
+```python
+if string_value.startswith("kube"):
+    # 文字列が"kube"で始まる場合
+```
+
 #### 末尾1文字
 
 ```python
