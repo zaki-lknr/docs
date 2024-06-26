@@ -48,6 +48,10 @@ Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で�
 
 [ブランチの自動的削除を管理する - GitHub Docs](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches)
 
+### PR作成後にコミットを追加したい場合
+
+PRがopenのままリジェクトとかされてないなら、追いpushすれば自動的に反映される。
+
 ## Release
 
 [リポジトリのリリースを管理する - GitHub Docs](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
