@@ -426,6 +426,16 @@ $ python replace.py
 /(p)_(t)h/(t)o/s_m(p)le
 ```
 
+### 出力
+
+#### 標準エラー出力
+
+```python
+import sys
+
+print("error", file=sys.stderr)
+```
+
 #### printで改行無し
 
 ```python
