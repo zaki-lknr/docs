@@ -84,6 +84,14 @@ curl https://server/api/v2/job_templates/?search=Demo+Job+Template
 curl -XPost https://server/api/v2/job_templates/${TEMPLATE_ID}/launch/
 ```
 
+### チーム
+
+#### チーム一覧
+
+```console
+curl -XGET https://server/api/v2/teams/
+```
+
 ### 設定のcategory_slug確認
 
 「Settings」にある `/api/v2/settings/` で確認できる。
