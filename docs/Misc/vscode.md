@@ -26,13 +26,13 @@
 
 自動同期設定してるから個別に設定することなくなった…けど、クローズドなPCの設定用に。
 
-|item|value|description|
-|---|---|---|
-|files.autoSave|afterDelay|自動保存|
-|files.autoGuessEncoding|true|ファイルを開くときのエンコードを自動判別|
-|editor.mouseWheelZoom|true|Ctrl+wheelでフォントサイズ変更|
-|editor.renderWhitespace|all|スペースやtabの可視化|
-|files.insertFinalNewline|true|ファイル末尾に改行を付ける|
+| item                     | value      | description          |
+| ------------------------ | ---------- | -------------------- |
+| files.autoSave           | afterDelay | 自動保存                 |
+| files.autoGuessEncoding  | true       | ファイルを開くときのエンコードを自動判別 |
+| editor.mouseWheelZoom    | true       | Ctrl+wheelでフォントサイズ変更 |
+| editor.renderWhitespace  | all        | スペースやtabの可視化         |
+| files.insertFinalNewline | true       | ファイル末尾に改行を付ける        |
 
 ```json
     "files.insertFinalNewline": true,
