@@ -72,6 +72,12 @@ $ curl -sk https://server/api/v2/ping/
 $ curl -sk https://192.168.0.27/api/v2/job_templates/?page_size=1000 | python -m json.tool
 ```
 
+#### 詳細
+
+```console
+$ curl -sk https://192.168.0.27/api/v2/job_templates/{template-ID}/
+```
+
 #### テンプレートの検索
 
 ```console
