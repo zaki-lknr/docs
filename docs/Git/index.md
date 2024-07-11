@@ -60,6 +60,8 @@ $ git clone ssh://localhost/opt/repos/sample.git
 これでワークディレクトリにcloneできる。  
 この場合対象の書き込み権限は必要。
 
+この`git init --bare <path>`は`git clone`したクローンしたリポジトリにも有効。
+
 ## commit
 
 ### まず対象をadd
