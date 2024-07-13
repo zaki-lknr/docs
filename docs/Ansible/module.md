@@ -487,3 +487,30 @@ localhost                  : ok=2    changed=0    unreachable=0    failed=0    s
 
 destのディレクトリは事前に作成しておく。  
 GitモジュールはCLIの`git clone`と異なり、上の例でいうと`awx_build_and_deploy`サブディレクトリは作成されない。
+
+## ssh
+
+### openssh_keypair
+
+ssh key pair作成
+
+```yaml
+    community.crypto.openssh_keypair:
+      path: "{{ ansible_env.HOME }}/.ssh/id_rsa"
+      size: 4096  # default
+      type: rsa   # default
+    register: ssh_keypair_result
+```
+
+### authorized_key
+
+`authorized_keys`への公開鍵登録
+
+```yaml
+    ansible.posix.authorized_key:
+      user: "{{ ansible_env.USER }}"
+      key: "{{ ssh_keypair_result.public_key }}"
+      # key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    delegate_to: localhost
+    run_once: true
+```
