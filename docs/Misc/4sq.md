@@ -45,3 +45,13 @@ curl --request GET \
      --header "Authorization: $FSQ_APP_API_KEY" \
      --header "accept: application/json"
 ```
+
+### Get User Checkins
+
+```console
+curl --request GET \
+     --url "https://api.foursquare.com/v2/users/self/checkins?v=20231010&limit=5&offset=0&oauth_token=$FSQ_OAUTH_TOKEN" \
+     --header 'accept: application/json'
+```
+
+`offset`から`limit`件数分のチェックイン一覧
