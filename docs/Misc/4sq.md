@@ -15,6 +15,17 @@
 
 「Generate API Key」押下で作成。閉じると再表示は不可なのでメモしておく。
 
+### OAuth(手動)
+
+[Authentication](https://docs.foursquare.com/developer/reference/personalization-apis-authentication)
+
+- トークンがqueryとしてログに記録されても困らないwebサーバーを用意して「Redirect URL」に設定
+- `https://foursquare.com/oauth2/authenticate?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=YOUR_REGISTERED_REDIRECT_URI`にブラウザでアクセスして「許可」
+- リダイレクト先URLに遷移して、そのときのURL末尾の`code=***`をメモ
+- `https://foursquare.com/oauth2/access_token?client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&grant_type=authorization_code&redirect_uri=YOUR_REGISTERED_REDIRECT_URI&code=CODE`にアクセス
+
+これでtokenが表示される
+
 ## API
 
 ### Place Search
