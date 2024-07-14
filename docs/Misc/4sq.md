@@ -55,3 +55,15 @@ curl --request GET \
 ```
 
 `offset`から`limit`件数分のチェックイン一覧
+
+### Get Check-in Details
+
+CheckinsでチェックインのIDが取れたらDetailsでシェア用URLなども取れる
+
+```console
+curl --request GET \
+     --url "https://api.foursquare.com/v2/checkins/$CHECKIN_ID?v=20231010&oauth_token=$FSQ_OAUTH_TOKEN" \
+     --header 'accept: application/json'
+```
+
+このレスポンスにアクセス可能な`response.checkin.checkinShortUrl`がある。
