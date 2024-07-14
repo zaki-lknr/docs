@@ -420,6 +420,18 @@ $ ps --ppid 1961 --no-headers
  241073 ?        00:00:00 docker-proxy
 ```
 
+## kill
+
+### kill -0
+
+> If sig is 0, then no signal is sent, but existence and permission checks are still performed; this can be used to check for the existence of a process ID or process group ID that the caller is permitted to signal.
+>
+> sig に 0 を指定した場合、シグナルは送られないが、 プロセスの存在と権限のチェックは行われる。これを使って、送信者がシグナルを送信できるプロセス ID や プロセスグループ ID の存在確認を行うことができる。
+>
+> man kill(2)
+
+[linux - kill -0 <PID> は何をするのでしょうか？ - スタック・オーバーフロー](https://ja.stackoverflow.com/questions/53077/kill-0-pid-%E3%81%AF%E4%BD%95%E3%82%92%E3%81%99%E3%82%8B%E3%81%AE%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B)
+
 ## top
 
 ### ソート
