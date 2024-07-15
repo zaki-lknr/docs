@@ -55,7 +55,7 @@ curl --request GET \
 ```
 
 `offset`から`limit`件数分のチェックイン一覧。  
-基本的な構造は以下の通り。(`shout`はコメントが無ければキーも無い)
+レスポンスの基本的な構造は以下の通り。(`shout`はコメントが無ければキーも無い)
 
 ```json
 {
@@ -88,4 +88,25 @@ curl --request GET \
      --header 'accept: application/json'
 ```
 
-このレスポンスにアクセス可能な`response.checkin.checkinShortUrl`がある。
+このレスポンスにアクセス可能な`response.checkin.checkinShortUrl`がある。  
+レスポンスの基本的な構造は以下の通り。
+
+```json
+{
+  "response": {
+    "checkin": {
+      "id": "チェックインID",
+      "shout": "233日記念日",
+      :
+      ,
+      "user": {
+      },
+      "venue": {
+      },
+      "photos": {
+      },
+      "checkinShortUrl": "https://www.swarmapp.com/.../checkin/...",
+    }
+  }
+}
+```
