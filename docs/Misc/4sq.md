@@ -71,12 +71,35 @@ curl --request GET \
                         "id": "ヴェニューID",
                         "name": "ヴェニュー名",
                         ...
+                    },
+                    "photos": {
+                        ...
                     }
                 }
 }
 ```
 
 このチェックインIDでdetailsを取得する。
+
+photosに関しては以下。
+
+```json
+"photos": {
+    "count": 枚数,
+    "items": [
+        {
+            "id": "...",
+            "prefix": "https://fastly.4sqi.net/img/general/",
+            "suffix": "/.........jpg",
+            "width": width,
+            "height": height,
+        }
+    ]
+}
+```
+
+このときの画像のリンクは `prefix + width + "x" + height + suffix` でアクセスできる。  
+(厳密にはwidth x heightは指定した値に拡縮・トリミングされる)
 
 ### Get Check-in Details
 
