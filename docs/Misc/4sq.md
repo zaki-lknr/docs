@@ -54,7 +54,29 @@ curl --request GET \
      --header 'accept: application/json'
 ```
 
-`offset`から`limit`件数分のチェックイン一覧
+`offset`から`limit`件数分のチェックイン一覧。  
+基本的な構造は以下の通り。(`shout`はコメントが無ければキーも無い)
+
+```json
+{
+    "response": {
+        "checkins": {
+            "count": 総チェックイン数,
+            "items": [
+                {
+                    "id": "チェックインID",
+                    "shout": "コメント",
+                    ...
+                    "venue": {
+                        "id": "ヴェニューID",
+                        "name": "ヴェニュー名",
+                        ...
+                    }
+                }
+}
+```
+
+このチェックインIDでdetailsを取得する。
 
 ### Get Check-in Details
 
