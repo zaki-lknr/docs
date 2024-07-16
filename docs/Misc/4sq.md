@@ -33,7 +33,7 @@
 ```console
 curl --request GET \
      --url https://api.foursquare.com/v3/places/search \
-     --header "Authorization: FSQ_APP_API_KEY" \
+     --header "Authorization: $FSQ_APP_API_KEY" \
      --header 'accept: application/json'
 ```
 
