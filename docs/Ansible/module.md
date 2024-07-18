@@ -371,6 +371,28 @@ fatal: [fedora-node]: FAILED! => changed=false
 fetchモジュールの使い方全般ははてブに書いた。  
 [[Ansible] fetchモジュールを使ってリモートのファイルを実行ノードへ転送・集約する - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/12/13/060649)
 
+## slurp
+
+ターゲットノード上のファイルの中身を取得する。  
+fetchと異なりファイルシステム上へ保存せずにオンメモリ処理。  
+base64エンコードされているのででコードして使用する。
+
+```yaml
+  - name: get private key
+    ansible.builtin.slurp:
+      src: /home/ec2-user/.ssh/id_rsa
+    register: ssh_private_key
+
+  - name: create repository credential on awx
+    awx.awx.credential:
+      name: git-repository-credential
+      organization: Default
+      credential_type: Source Control
+      inputs:
+        username: ec2-user
+        ssh_key_data: "{{ ssh_private_key.content | b64decode }}"
+```
+
 ## make
 
 `/path/to/awx-operator`ディレクトリ上で`make deploy IMG=zakihmkc/awx-operator:0.17.0`を実行するタスクであれば以下の通り。
