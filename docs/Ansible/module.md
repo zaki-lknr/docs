@@ -514,3 +514,25 @@ ssh key pair作成
     delegate_to: localhost
     run_once: true
 ```
+
+## pause
+
+sleepする
+
+```yaml
+  - name: sleep
+    ansible.builtin.pause:
+      seconds: 10
+```
+
+単純なsleepでなく、最大で指定時間だけwaitがかかり、その間に`Ctrl-c`押下で「即再開 or 処理中断」の選択が可能になる。  
+`a`で中断した場合はそこで処理が終了する。
+
+```console
+TASK [sleep] *************************************************************************
+Pausing for 10 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+Press 'C' to continue the play or 'A' to abort 
+fatal: [localhost]: FAILED! => 
+  msg: user requested abort!
+```
