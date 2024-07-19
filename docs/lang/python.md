@@ -769,7 +769,7 @@ pip install ansible>=8
 
 ```txt
 ansible==2.9.7
-jmespath=0.10.0
+jmespath==0.10.0
 ```
 
 という内容の`requirements.txt`ファイルを作成し、これで
