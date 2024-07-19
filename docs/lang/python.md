@@ -753,6 +753,18 @@ raise RuntimeError('application error: ' + error_value)
 
 ### pip
 
+#### バージョン指定
+
+```console
+pip install ansible==9
+```
+
+「以上」の場合は以下
+
+```console
+pip install ansible>=8
+```
+
 #### requirements.txtの利用
 
 ```txt
