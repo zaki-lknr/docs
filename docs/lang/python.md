@@ -770,7 +770,8 @@ $ pip install -r requirements.txt
 
 #### pipのアップデート
 
-venvとか作った直後は`pip`自体のバージョンが古いので(目的にパッケージ入れるときにエラーになる前に先に)アップデートする
+venvとか作った直後は`pip`自体のバージョンが古いので(目的にパッケージ入れるときにエラーになる前に先に)アップデートする  
+※ そもそもvenv作成時に `--upgrade-deps` をつけておけば自動更新されて環境が作成される。
 
 ```console
 $ pip install --upgrade pip
@@ -879,6 +880,12 @@ pyenv global 3.11.3
 
 ```console
 $ python3 -m venv venv/ansible
+```
+
+#### 作成時にpipとsetuptoolsを更新する
+
+```console
+$ python3 -m venv ~/venv/dev --upgrade-deps
 ```
 
 #### systemのパッケージパスも参照
