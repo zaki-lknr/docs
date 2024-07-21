@@ -361,6 +361,16 @@ $ kubectl get --raw='/readyz?verbose'
 readyz check passed
 ```
 
+## rollout
+
+### restart
+
+podの再作成 (delete podでも同じ)
+
+```console
+kubectl rollout restart deployment <resource-name>
+```
+
 ## label
 
 リソースのラベルを追加/変更/削除する
