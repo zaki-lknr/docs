@@ -80,3 +80,15 @@ backend bazqux
 backend servers
   server host1 192.168.0.68:6443 ssl verify none check
 ```
+
+## dnsmasq
+
+### dhcp
+
+#### IPアドレス固定
+
+書式：`dhcp-host=hwaddr,hostname,ipaddr`
+
+```
+dhcp-host=00:00:5E:00:53:00,raclette,192.168.0.129
+```
