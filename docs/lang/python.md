@@ -106,6 +106,28 @@ if data is not None:
     # dataがNoneでない場合
 ```
 
+### 引数
+
+#### コマンドライン引数
+
+`sys.argv`を使う
+
+```python
+import sys
+
+args = sys.argv
+print(args)
+print(args[0])
+print(args[1])
+```
+
+```console
+$ ./argv.py hello
+['./argv.py', 'hello']
+./argv.py
+hello
+```
+
 ### 関数
 
 #### main
