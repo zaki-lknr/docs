@@ -99,6 +99,13 @@ if aws_access_key is None:
 type(value)
 ```
 
+#### None判定
+
+```python
+if data is not None:
+    # dataがNoneでない場合
+```
+
 ### 関数
 
 #### main
