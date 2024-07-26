@@ -7,6 +7,23 @@
 
 ## インストール
 
+### 準備
+
+#### Raspberry Pi
+
+デフォルト状態でインストールしようとしても下記メッセージが出力されて起動失敗する。
+
+> [INFO]  Failed to find memory cgroup, you may need to add "cgroup_memory=1 cgroup_enable=memory" to your linux cmdline (/boot/cmdline.txt on a Raspberry Pi)
+
+インストールドキュメントにも同じことが書かれている。  
+<https://docs.k3s.io/installation/requirements?os=pi>
+
+`/boot/cmdline.txt`(中身に`moved to /boot/firmware/cmdline.txt`と書かれていればそっち)を編集して以下を末尾に追記。
+
+```text
+cgroup_memory=1 cgroup_enable=memory
+```
+
 ### server(control plane)
 
 ```console
