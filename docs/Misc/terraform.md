@@ -203,3 +203,15 @@ VPCのパラメタの`default_route_table_id`を参照する。
 ```terraform
 route_table_ids = [aws_vpc.my_vpc.default_route_table_id]
 ```
+
+## docs
+
+[terraform-docs](https://terraform-docs.io/)  
+Terraformコードからドキュメント生成するツール。
+
+CLIをインストールできるがコンテナ実行でも生成できる。  
+Podmanであれば、Terraformコードのあるディレクトリで以下を実行すれば`README.md`が生成される。
+
+```console
+podman run --rm -v "$(pwd):/terraform-docs" quay.io/terraform-docs/terraform-docs:0.18.0 markdown /terraform-docs --output-file README.md
+```
