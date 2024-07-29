@@ -57,6 +57,8 @@ vault kv put -mount=<secret-engine-name> <key-name> key1=value1 key2=value2 ...
 vault kv put <secret-engine-name>/<key-name> key1=value1 key2=value2 ...
 ```
 
+繰り返し実行すればversion更新される。
+
 #### データ参照
 
 ```console
