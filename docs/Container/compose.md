@@ -38,6 +38,14 @@ docker compose stop myapp
 docker compose rm myapp
 ```
 
+### composeファイル指定
+
+`-f`で指定する。
+
+```console
+docker compose -f compose-v1.2.3.yml up -d
+```
+
 ### コマンド起動
 
 `docker exec`と異なり`-it`オプションは不要。アプリ名とコマンド名のみでOK
