@@ -267,6 +267,23 @@ KUBECONFIG=~/.kube/config:kubeconfig-1.yaml:kubeconfig-2.yaml kubectl config vie
 mv tmp.yaml ~/.kube/config
 ```
 
+コンテキスト名の変更
+
+```console
+$ kubectl config get-contexts 
+CURRENT   NAME                    CLUSTER                 AUTHINFO                NAMESPACE
+*         default                 default                 default                 
+          kind-ansible-cookbook   kind-ansible-cookbook   kind-ansible-cookbook   
+          kind-awx-sample         kind-awx-sample         kind-awx-sample
+$ kubectl config rename-context default rasp5-01
+Context "default" renamed to "rasp5-01".
+$ kubectl config get-contexts 
+CURRENT   NAME                    CLUSTER                 AUTHINFO                NAMESPACE
+          kind-ansible-cookbook   kind-ansible-cookbook   kind-ansible-cookbook   
+          kind-awx-sample         kind-awx-sample         kind-awx-sample         
+*         rasp5-01                default                 default
+```
+
 ## delete
 
 ### 指定namespaceの指定typeを全部消す
