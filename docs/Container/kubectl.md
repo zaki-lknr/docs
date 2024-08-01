@@ -260,6 +260,13 @@ $ kubectl config use-context k3d-k3s-default
 Switched to context "k3d-k3s-default".
 ```
 
+複数のkubeconfigのマージするには、`:`で繋げて`view --merge --flatten`する。
+
+```console
+KUBECONFIG=~/.kube/config:kubeconfig-1.yaml:kubeconfig-2.yaml kubectl config view --merge --flatten > tmp.yaml
+mv tmp.yaml ~/.kube/config
+```
+
 ## delete
 
 ### 指定namespaceの指定typeを全部消す
