@@ -82,3 +82,16 @@ services:
         image: mysql
         network_mode: service:app
 ```
+
+### ファイルのbindマウント
+
+```yaml
+services:
+
+  server:
+    image: "rancher/k3s:v1.30.2-k3s2"
+    command: server
+    :
+    volumes:
+    - ./registries.yaml:/etc/rancher/k3s/registries.yaml
+```
