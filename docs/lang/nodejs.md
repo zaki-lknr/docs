@@ -43,3 +43,44 @@ $ sudo dnf install nodejs
 インストール後のサイズ: 185 M
 これでよろしいですか? [y/N]: 
 ```
+
+## yarnのインストール
+
+root権限が必要
+
+```console
+$ npm install -g yarn
+npm ERR! code EACCES
+npm ERR! syscall mkdir
+npm ERR! path /usr/local/lib/node_modules
+npm ERR! errno -13
+npm ERR! Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules'
+npm ERR!  [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules'] {
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'mkdir',
+npm ERR!   path: '/usr/local/lib/node_modules'
+npm ERR! }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR! 
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in: /home/zaki/.npm/_logs/2024-08-04T07_02_22_789Z-debug-0.log
+```
+
+```console
+$ sudo npm install -g yarn
+
+added 1 package in 720ms
+npm notice 
+npm notice New minor version of npm available! 10.5.0 -> 10.8.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.2
+npm notice Run npm install -g npm@10.8.2 to update!
+npm notice 
+$ which yarn
+/usr/local/bin/yarn
+```
