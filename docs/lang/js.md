@@ -30,3 +30,11 @@ for (const item of items) {
 #### continue
 
 次のループへ
+
+### 型の確認
+
+`typeof`を使う。
+
+```js
+console.log("type: " + typeof(users))
+```
