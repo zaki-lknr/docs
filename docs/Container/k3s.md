@@ -38,7 +38,7 @@ curl -sfL https://get.k3s.io | K3S_URL=https://server:6443 K3S_TOKEN=${token} sh
 
 tokenはserverの `/var/lib/rancher/k3s/server/agent-token` にある。
 
-## バージョン指定
+### バージョン指定
 
 バージョン番号を指定する場合
 
@@ -55,12 +55,53 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=latest sh -
 チャンネルはデフォルト`stable`で1個前のメジャーバージョンだったりする。  
 [チャンネル一覧](https://update.k3s.io/v1-release/channels)
 
-## 起動パラメタ
+### 起動パラメタ
 
 - [server | K3s](https://docs.k3s.io/cli/server)
 - [agent | K3s](https://docs.k3s.io/cli/agent)
 - [Configuration Options | K3s](https://docs.k3s.io/installation/configuration)
 - [Network Options | K3s](https://docs.k3s.io/installation/network-options)
+
+### デフォルト値
+
+| 項目          | 値            |
+| ----------- | ------------ |
+| Pod IPs     | 10.42.0.0/16 |
+| Service IPs | 10.43.0.0/16 |
+| cluster dns | 10.43.0.10   |
+
+### ネットワーク
+
+#### IPアドレス
+
+| 項目          | 変更方法                      |
+| ----------- | ------------------------- |
+| Pod IPs     | --cluster-cidr 0.0.0.0/16 |
+| Service IPs | --service-cidr 0.0.0.0/16 |
+
+```console
+curl -sfL https://get.k3s.io | sh -s - \
+  --cluster-cidr "172.28.0.0/16" \
+  --service-cidr "172.29.0.0/16" \
+  --kube-controller-manager-arg=node-cidr-mask-size=24 \
+  --kubelet-arg=max-pods=200
+```
+
+#### resolv.conf
+
+```
+$ cat /etc/k3s.resolve.conf 
+nameserver 8.8.8.8
+$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --resolv-conf /etc/k3s.resolv.conf 
+```
+
+#### デプロイ後のアドレス変更は不可
+
+> You cannot change the CIDRs or add a new address family to an existing cluster. Cluster networking should be established when the cluster is initially started.
+>
+> https://github.com/k3s-io/k3s/issues/93#issuecomment-1551967292
+
+systemdユニットファイルに記載のアドレス指定部分を変更しても、クラスターには反映されず動作が不安定になる
 
 ## 停止
 
@@ -78,47 +119,6 @@ k3sサービス自体は`systemctl`で停止できAPIエンドポイントなど
 
 期限をカスタマイズする場合は環境変数 `CATTLE_NEW_SIGNED_CERT_EXPIRATION_DAYS` を使用する。  
 [[Kubernetes] K3sにおける証明書の期限の延長や設定（平たく言うと塩漬け運用したい場合のｘ年設定）について - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2024/01/24/221706)
-
-## デフォルト値
-
-| 項目          | 値            |
-| ----------- | ------------ |
-| Pod IPs     | 10.42.0.0/16 |
-| Service IPs | 10.43.0.0/16 |
-| cluster dns | 10.43.0.10   |
-
-## ネットワーク
-
-### IPアドレス
-
-| 項目          | 変更方法                      |
-| ----------- | ------------------------- |
-| Pod IPs     | --cluster-cidr 0.0.0.0/16 |
-| Service IPs | --service-cidr 0.0.0.0/16 |
-
-```console
-curl -sfL https://get.k3s.io | sh -s - \
-  --cluster-cidr "172.28.0.0/16" \
-  --service-cidr "172.29.0.0/16" \
-  --kube-controller-manager-arg=node-cidr-mask-size=24 \
-  --kubelet-arg=max-pods=200
-```
-
-### resolv.conf
-
-```
-$ cat /etc/k3s.resolve.conf 
-nameserver 8.8.8.8
-$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --resolv-conf /etc/k3s.resolv.conf 
-```
-
-### デプロイ後のアドレス変更は不可
-
-> You cannot change the CIDRs or add a new address family to an existing cluster. Cluster networking should be established when the cluster is initially started.
->
-> https://github.com/k3s-io/k3s/issues/93#issuecomment-1551967292
-
-systemdユニットファイルに記載のアドレス指定部分を変更しても、クラスターには反映されず動作が不安定になる
 
 ## LoadBalancer Service
 
