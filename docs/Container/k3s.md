@@ -103,6 +103,20 @@ $ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --resolv-co
 
 systemdユニットファイルに記載のアドレス指定部分を変更しても、クラスターには反映されず動作が不安定になる
 
+## アップグレード
+
+[Manual Upgrades | K3s](https://docs.k3s.io/upgrades/manual)
+
+インストール時に指定した環境変数・パラメタを指定しつつ、インストールスクリプトを追加実行すればアップグレードできる。
+
+```console
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=vX.Y.Z+k3s1 <EXISTING_K3S_ENV> sh -s - <EXISTING_K3S_ARGS>
+```
+
+マイナーバージョンのskipはサポート外なので、リリースチャンネル指定よりもバージョン指定の方がやりやすいと思う。
+
+> Ensure that your plan does not skip intermediate minor versions when upgrading.
+
 ## 停止
 
 k3sサービス自体は`systemctl`で停止できAPIエンドポイントなどは停止されるが実はコンテナは動作したまま。
