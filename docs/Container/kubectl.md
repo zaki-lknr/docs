@@ -158,6 +158,21 @@ type: Opaque
 kubectl patch -n namespace pdb resource -p '{ "spec": { "maxUnavailable": 0 }}'
 ```
 
+### キーと値の追加(辞書)
+
+定義が存在しなかった`spec.init_container_image`キーに値を追加する。
+
+```console
+kubectl patch -n namespace awx awx-demo -p '{"spec":{"init_container_image":"quay.io/ansible/awx-ee"}}' --type merge
+```
+
+`--type merge`がないとエラーになる。
+
+```console
+$ kubectl patch -n namespace awx awx-demo -p '{"spec":{"init_container_image":"quay.io/ansible/awx-ee"}}'
+error: application/strategic-merge-patch+json is not supported by awx.ansible.com/v1beta1, Kind=AWX: the body of the request was in an unknown format - accepted media types include: application/json-patch+json, application/merge-patch+json, application/apply-patch+yaml
+```
+
 ## run
 
 ### ワーク用のpodをデプロイする
