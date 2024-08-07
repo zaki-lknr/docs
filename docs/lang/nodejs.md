@@ -84,3 +84,18 @@ npm notice
 $ which yarn
 /usr/local/bin/yarn
 ```
+
+## 実行
+
+```js:hello-world.js
+function hello() {
+    console.log("hello world");
+}
+
+hello();
+```
+
+```console
+$ node hello-world.js 
+hello world
+```
