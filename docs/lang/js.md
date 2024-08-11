@@ -38,3 +38,24 @@ for (const item of items) {
 ```js
 console.log("type: " + typeof(users))
 ```
+
+### プロパティの存在チェック
+
+`in`を使う。
+
+```javascript
+let data = {
+    host: '192.168.0.1',
+    user: 'zaki',
+    home: '/home/zaki'
+}
+
+if ('password' in data) {
+    console.log('defined password');
+}
+else {
+    console.log('not defined password');
+}
+```
+
+これは`not defined`の方が動作する。
