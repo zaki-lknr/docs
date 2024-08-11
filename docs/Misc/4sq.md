@@ -81,6 +81,8 @@ curl --request GET \
 
 このチェックインIDでdetailsを取得する。
 
+#### photos
+
 photosに関しては以下。
 
 ```json
@@ -100,6 +102,30 @@ photosに関しては以下。
 
 このときの画像のリンクは `prefix + width + "x" + height + suffix` でアクセスできる。  
 (厳密にはwidth x heightは指定した値に拡縮・トリミングされる)
+
+#### location
+
+旧シェア文字列のアドレスの「港区, 東京都」は `venue.location.formattedAddress` に配列要素の一つとしてセットされている。
+
+```json
+"venue": {
+    "location": {
+        "address": "台場一丁目",
+        "postalCode": "135-0091",
+        "cc": "JP",
+        "city": "東京",
+        "state": "東京都",
+        "country": "日本",
+        "formattedAddress": [
+            "台場一丁目",
+            "港区, 東京都",
+            "135-0091"
+        ]
+    },
+```
+
+ただし、`location`の要素の`postalCode`が無い場合は3つ目の"135-0091"相当が、`address`が無い場合は1つ目の"台場一丁目"が無いため、配列要素は固定ではない。  
+(2番目の"港区, 東京都"が無いパターンの有無は不明)
 
 ### Get Check-in Details
 
