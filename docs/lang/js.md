@@ -59,3 +59,25 @@ else {
 ```
 
 これは`not defined`の方が動作する。
+
+### 時刻処理
+
+#### UNIXタイムからDate型
+
+```javascript
+// Date()の引数はミリ秒で指定する
+unix_date_sec = '1723426784'
+let datetime = new Date(unix_date_sec * 1000);
+
+console.log(datetime);
+console.log(datetime.toLocaleDateString());
+console.log(datetime.toLocaleTimeString());
+```
+
+出力は以下
+
+```console
+2024-08-12T01:39:44.000Z
+2024/8/12
+10:39:44
+```
