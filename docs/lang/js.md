@@ -81,3 +81,18 @@ console.log(datetime.toLocaleTimeString());
 2024/8/12
 10:39:44
 ```
+
+### 非同期処理
+
+#### Promise変数
+
+resolve()で中身を取り出す
+
+```javascript
+let promise_value = async_func();
+const promise = new Promise((resolve) => {
+    resolve(promise_value);
+}).then((val) => {
+    console.log(val);  // Promiseをresolve()したので取れる
+})
+```
