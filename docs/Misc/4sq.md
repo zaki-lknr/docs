@@ -127,6 +127,8 @@ photosに関しては以下。
 ただし、`location`の要素の`postalCode`が無い場合は3つ目の"135-0091"相当が、`address`が無い場合は1つ目の"台場一丁目"が無いため、配列要素は固定ではない。  
 (2番目の"港区, 東京都"が無いパターンの有無は不明)
 
+また、`formattedAddress`自体が無いヴェニューもある。
+
 ### Get Check-in Details
 
 CheckinsでチェックインのIDが取れたらDetailsでシェア用URLなども取れる
