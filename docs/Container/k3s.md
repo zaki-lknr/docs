@@ -103,6 +103,21 @@ $ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --resolv-co
 
 systemdユニットファイルに記載のアドレス指定部分を変更しても、クラスターには反映されず動作が不安定になる
 
+### インストールパラメタの設定ファイル化
+
+`/etc/rancher/k3s/config.yaml`ファイルに定義する。
+
+```yaml
+---
+write-kubeconfig-mode: "0644"
+cluster-cidr: "172.28.0.0/16"
+service-cidr: "172.29.0.0/16"
+kube-controller-manager-arg:
+  - node-cidr-mask-size=24
+kubelet-arg:
+  - max-pods=200
+```
+
 ## アップグレード
 
 [Manual Upgrades | K3s](https://docs.k3s.io/upgrades/manual)
