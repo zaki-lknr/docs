@@ -31,6 +31,23 @@ for (const item of items) {
 
 次のループへ
 
+### 配列
+
+#### 定義
+
+```js
+sample_array = [1, 2, 3];
+```
+
+#### 最後の要素
+
+```js
+sample_array = [1, 2, 3];
+console.log(sample_array.at(-1));
+```
+
+結果は `3`
+
 ### 型の確認
 
 `typeof`を使う。
