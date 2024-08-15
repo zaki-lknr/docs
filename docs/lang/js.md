@@ -113,3 +113,17 @@ const promise = new Promise((resolve) => {
     console.log(val);  // Promiseをresolve()したので取れる
 })
 ```
+
+## DOM
+
+### 要素の取得
+
+```javascript
+const niji = document.getElementById("niji");
+```
+
+これでhtml内の以下の要素が取得できる。
+
+```html
+<div id="niji">
+```
