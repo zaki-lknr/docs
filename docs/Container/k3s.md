@@ -116,6 +116,8 @@ kube-controller-manager-arg:
   - node-cidr-mask-size=24
 kubelet-arg:
   - max-pods=200
+  - kube-reserved=cpu=100m,memory=100Mi
+  - system-reserved=cpu=100m,memory=100Mi
 ```
 
 ## アップグレード
