@@ -128,6 +128,13 @@ const niji = document.getElementById("niji");
 <div id="niji">
 ```
 
+### 要素の幅・高さ
+
+```javascript
+let width  = document.getElementById("niji").clientWidth;
+let height = document.getElementById("niji").clientHeight;
+```
+
 ### 要素別
 
 #### img
