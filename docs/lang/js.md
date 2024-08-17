@@ -127,3 +127,12 @@ const niji = document.getElementById("niji");
 ```html
 <div id="niji">
 ```
+
+### 要素別
+
+#### img
+
+```javascript
+let image_item = document.createElement("img");
+image_item.src = image_url;
+```
