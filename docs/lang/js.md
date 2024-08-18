@@ -31,6 +31,14 @@ for (const item of items) {
 
 次のループへ
 
+### 数値
+
+#### 四捨五入
+
+```javascript
+Math.round(double_value);
+```
+
 ### 配列
 
 #### 定義
