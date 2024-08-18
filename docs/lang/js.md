@@ -79,6 +79,13 @@ else {
 
 ### 時刻処理
 
+```javascript
+let d = new Date();
+console.log(d.toISOString());
+```
+
+結果(の書式)は`2024-08-17T10:28:28.466Z`
+
 #### UNIXタイムからDate型
 
 ```javascript
