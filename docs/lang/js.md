@@ -39,6 +39,17 @@ for (const item of items) {
 Math.round(double_value);
 ```
 
+### 文字列
+
+#### 文字列長のバイト換算
+
+`string.length`は文字数を返す。  
+バイト数を得るには以下。
+
+```javascript
+const size = new Blob(["文字列"]).size;
+```
+
 ### 配列
 
 #### 定義
