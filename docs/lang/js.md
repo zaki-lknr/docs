@@ -184,3 +184,20 @@ let height = document.getElementById("niji").clientHeight;
 let image_item = document.createElement("img");
 image_item.src = image_url;
 ```
+
+### 複数の子要素を全て削除する
+
+```javascript
+const component = document.getElementById("component");
+while(component.firstChild) {
+    component.removeChild(component.firstChild);
+```
+
+firstChildで子要素が存在する間はその子要素を削除する、をループで回せばOK  
+以下のように子要素リストでループしてもうまくいかない。
+
+```javascript
+for(const child of component.children) {
+    component.removeChild(child);
+}
+```
