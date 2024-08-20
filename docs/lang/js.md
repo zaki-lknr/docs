@@ -41,14 +41,29 @@ Math.round(double_value);
 
 ### 文字列
 
+#### 文字列長
+
+文字数は`length`メソッド。
+
+```javascript
+const sample_str = '完全にときめいちゃった';
+console.log(sample_str.length);
+```
+
+出力は`11`
+
 #### 文字列長のバイト換算
 
 `string.length`は文字数を返す。  
 バイト数を得るには以下。
 
 ```javascript
-const size = new Blob(["文字列"]).size;
+const sample_str = '完全にときめいちゃった';
+const size = new Blob([sample_str]).size;
+console.log(size);
 ```
+
+結果は`33`
 
 ### 配列
 
