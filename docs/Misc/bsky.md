@@ -75,3 +75,36 @@ JavaScriptの場合は以下。
 
     const res = await fetch(url, { method: "POST", body: body, headers: headers });
 ```
+
+### リンク付き
+
+URL文字列のリンクを有効にするにはバイト数でテキスト位置のリンク部分を指定し、リッチテキストとして投稿する。  
+セッションを作成するところは同じで、投稿時のリクエストBodyのパラメタが増える。  
+`facets`に指定する位置とURLが本文テキスト中のリンクになる仕様のため、本文にURLがある必要はない。
+
+[Links, mentions, and rich text | Bluesky](https://docs.bsky.app/docs/advanced-guides/post-richtext)
+
+```javascript
+let body = JSON.stringify({
+    repo: user_id,
+    collection: "app.bsky.feed.post",
+    record: {
+        text: message,
+        createdAt: new Date().toISOString(),
+        facets = [
+            {
+                index: {
+                    byteStart: ＜message中のリンクURLの開始バイト位置＞,
+                    byteEnd: ＜message中のリンクURLの終了バイト位置＞
+                },
+                features: [{
+                    $type: 'app.bsky.richtext.facet#link',
+                    uri: ＜URL＞
+                }]
+            }
+        ]
+    }
+});
+
+await fetch(url, { method: "POST", body: body, headers: headers });
+```
