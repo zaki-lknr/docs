@@ -28,6 +28,16 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 
 たとえば `/var/lib/awx/projects/sample-demo/playbook.yml` など。
 
+## ログ
+
+[第11章 Automation Controller ログファイル | Red Hat Product Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.4/html/automation_controller_administration_guide/assembly-controller-log-files)
+
+- /var/log/tower/
+- /var/log/supervisor/
+- /var/log/nginx/
+- /var/lib/pgsql/data/pg_log/
+- /var/log/redis/
+
 ## API
 
 API一覧は以下。  
