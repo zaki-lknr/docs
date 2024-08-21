@@ -155,6 +155,22 @@ const promise = new Promise((resolve) => {
 })
 ```
 
+### HTTP
+
+#### GET
+
+基本はこれ。
+
+```javascript
+const resp = fetch(url);
+```
+
+text形式でレスポンスbodyを取り出すには
+
+```javascript
+const body = resp.text();
+```
+
 ## DOM
 
 ### 要素の取得
