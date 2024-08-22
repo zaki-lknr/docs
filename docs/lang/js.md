@@ -171,6 +171,15 @@ text形式でレスポンスbodyを取り出すには
 const body = resp.text();
 ```
 
+#### リクエストヘッダ
+
+```javascript
+const headers = new Headers();
+headers.append('accept', 'application/json');
+
+const res = await fetch(url, { headers: headers });
+```
+
 ## DOM
 
 ### 要素の取得
