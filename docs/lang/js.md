@@ -180,6 +180,20 @@ headers.append('accept', 'application/json');
 const res = await fetch(url, { headers: headers });
 ```
 
+#### POST
+
+辞書型データをJSON形式でpostする。
+
+```javascript
+const headers = new Headers();
+headers.append('Content-Type', 'application/json');
+headers.append('Authorization', 'Bearer ' + token);
+
+const payload = JSON.stringify(dict_param);
+
+const res = await fetch(url, { method: "POST", body: payload, headers: headers });
+```
+
 ## DOM
 
 ### 要素の取得
