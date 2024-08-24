@@ -4,6 +4,20 @@
 
 ### 制御構文
 
+#### if else
+
+```javascript
+if (val > 0) {
+    console.log('plus');
+}
+else if (val < 0) {
+    console.log('minus');
+}
+else {
+    console.log('else');
+}
+```
+
 #### for
 
 indexを使った普通のfor文
