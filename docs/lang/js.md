@@ -82,6 +82,24 @@ console.log(sample_array.at(-1));
 
 結果は `3`
 
+### 辞書
+
+#### 辞書の定義
+
+```javascript
+const data = {
+    host: '192.168.0.1',
+    user: 'zaki',
+    home: '/home/zaki'
+}
+```
+
+空データ
+
+```javascript
+const dict = {};
+```
+
 ### 型の確認
 
 `typeof`を使う。
