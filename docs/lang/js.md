@@ -100,6 +100,20 @@ const data = {
 const dict = {};
 ```
 
+#### 要素の追加
+
+そのまま追加すればOK
+
+```javascript
+data.password = 'curry_tabetai';
+```
+
+キー部分に記号を含んだり変数参照したい場合は'[]'を使う。
+
+```javascript
+data[foo.bar.buz.get('key')] = foo.bar.buz.get('value');
+```
+
 ### 型の確認
 
 `typeof`を使う。
