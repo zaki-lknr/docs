@@ -79,6 +79,34 @@ console.log(size);
 
 結果は`33`
 
+#### URL文字列のparse
+
+`URL`を使うと簡単
+
+```javascript
+const url = 'https://www.swarmapp.com/zaki_hmkc/checkin/66ca6619c1e2dd41311a7dcb?s=UrwNh_CXxd93txmhWtdxCdPOTLQ';
+const url_obj = new URL(url);
+```
+
+`url_obj`の中身は以下の通り
+
+```javascript
+URL {
+  href: 'https://www.swarmapp.com/zaki_hmkc/checkin/66ca6619c1e2dd41311a7dcb?s=UrwNh_CXxd93txmhWtdxCdPOTLQ',
+  origin: 'https://www.swarmapp.com',
+  protocol: 'https:',
+  username: '',
+  password: '',
+  host: 'www.swarmapp.com',
+  hostname: 'www.swarmapp.com',
+  port: '',
+  pathname: '/zaki_hmkc/checkin/66ca6619c1e2dd41311a7dcb',
+  search: '?s=UrwNh_CXxd93txmhWtdxCdPOTLQ',
+  searchParams: URLSearchParams { 's' => 'UrwNh_CXxd93txmhWtdxCdPOTLQ' },
+  hash: ''
+}
+```
+
 ### 配列
 
 #### 定義
