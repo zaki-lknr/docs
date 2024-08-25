@@ -87,6 +87,18 @@ console.log(size);
 sample_array = [1, 2, 3];
 ```
 
+#### 要素の追加
+
+`push`で末尾に追加。
+
+```javascript
+const result = [];
+for (...) {
+    const item = { ... };
+    result.push(item);
+}
+```
+
 #### 最後の要素
 
 ```js
