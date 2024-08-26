@@ -280,6 +280,17 @@ const payload = JSON.stringify(dict_param);
 const res = await fetch(url, { method: "POST", body: payload, headers: headers });
 ```
 
+### 例外
+
+#### throwする
+
+```javascript
+const res = await fetch(url, { method: "POST", body: body, headers: headers });
+if (!res.ok) {
+    throw new Error('fetch failed: ' + await res.text());
+}
+```
+
 ## DOM
 
 ### 要素の取得
