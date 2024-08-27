@@ -314,6 +314,16 @@ let height = document.getElementById("niji").clientHeight;
 
 ### 要素別
 
+#### button
+
+```javascript
+const btn = document.createElement("button");
+btn.textContent = "start";
+btn.addEventListener('click', ()=> {
+    foobar();
+});
+```
+
 #### img
 
 ```javascript
