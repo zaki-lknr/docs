@@ -251,10 +251,18 @@ const promise = new Promise((resolve) => {
 const resp = fetch(url);
 ```
 
+#### レスポンス
+
 text形式でレスポンスbodyを取り出すには
 
 ```javascript
 const body = resp.text();
+```
+
+RESTなどでレスポンスがJSON形式の場合は、オブジェクトとして取り出すこともできる。
+
+```javascript
+const obj = resp.json();
 ```
 
 #### リクエストヘッダ
