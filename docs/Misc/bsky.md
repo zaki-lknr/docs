@@ -108,3 +108,21 @@ let body = JSON.stringify({
 
 await fetch(url, { method: "POST", body: body, headers: headers });
 ```
+
+### クライアント名(via)
+
+公式にはないパラメタで、一部のクライアントが非公式に使っている。  
+`via`に指定する。
+
+```javascript
+const body = {
+    repo: bsky_id,
+    collection: "app.bsky.feed.post",
+    record: {
+        text: message,
+        createdAt: new Date().toISOString(),
+        $type: "app.bsky.feed.post",
+        via: 'NJGK'
+    }
+};
+```
