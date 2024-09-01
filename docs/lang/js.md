@@ -288,6 +288,29 @@ const payload = JSON.stringify(dict_param);
 const res = await fetch(url, { method: "POST", body: payload, headers: headers });
 ```
 
+### ファイル
+
+#### ブラウザJavaScriptでPC上のファイルを読む
+
+```html
+<input type="file" id="file" accept="image/*"/>
+<div id="view"></div>
+```
+
+```javascript
+const file_blob = document.getElementById("file").files[0];
+const reader = new FileReader();
+reader.readAsDataURL(file_blob);
+
+reader.onload = function() {
+    const img = document.createElement("img");
+    img.src = reader.result;
+
+    const div = document.getElementById('view');
+    div.appendChild(img);
+}
+```
+
 ### 例外
 
 #### throwする
