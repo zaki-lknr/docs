@@ -161,3 +161,26 @@ curl --request GET \
   }
 }
 ```
+
+### Get Place Details
+
+APIはv2がすでに無くなりv3を使う必要がある。  
+[Get Place Details](https://docs.foursquare.com/developer/reference/place-details)
+
+```console
+curl --request GET \
+     --url "https://api.foursquare.com/v3/places/${PLACE_ID}?fields=social_media" \
+     --header "Authorization: ${FSQ_APP_API_KEY}" \
+     --header "accept: application/json"
+```
+
+`?fields=`で返すフィールドを指定できる。  
+TwitterIDなどのソーシャルメディア情報であれば`?fields=social_media`を指定。
+
+```json
+{
+  "social_media": {
+    "twitter": "3rdhakatadaruma"
+  }
+}
+```
