@@ -17,6 +17,16 @@ docker compose up
 docker compose up -d
 ```
 
+### プロジェクト名を指定
+
+デフォルトではディレクトリ名が使用されるが、そのままだと異なるコンテナ環境でもディレクトリ名がたまたまでも同一だと競合してしまう。その場合はプロジェクト名を指定する。
+
+```console
+docker compose -p project-name up -d
+docker compose -p project-name ps
+
+```
+
 ### 停止と削除
 
 ```console
