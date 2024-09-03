@@ -140,6 +140,7 @@ curl --request GET \
 ```
 
 このレスポンスにアクセス可能な`response.checkin.checkinShortUrl`がある。  
+Twitterなどのシェアを有効にしていると`shares`フィールドが追加される。  
 レスポンスの基本的な構造は以下の通り。
 
 ```json
@@ -157,6 +158,9 @@ curl --request GET \
       "photos": {
       },
       "checkinShortUrl": "https://www.swarmapp.com/.../checkin/...",
+      "shares": {
+        "twitter": true
+      }
     }
   }
 }
