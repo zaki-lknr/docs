@@ -46,6 +46,22 @@ curl --request GET \
      --header "accept: application/json"
 ```
 
+### Get User Detail
+
+```console
+curl --request GET \
+     --url "https://api.foursquare.com/v2/users/self?v=20240109&oauth_token=$FSQ_OAUTH_TOKEN" \
+     --header "accept: application/json"
+```
+
+任意のユーザーの情報であれば以下。
+
+```console
+curl --request GET \
+     --url "https://api.foursquare.com/v2/users/${USER_ID}?v=20240109&oauth_token=$FSQ_OAUTH_TOKEN" \
+     --header "accept: application/json"
+```
+
 ### Get User Checkins
 
 ```console
