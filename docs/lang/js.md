@@ -107,6 +107,12 @@ URL {
 }
 ```
 
+#### URLエンコード
+
+```javascript
+encodeURIComponent(string);
+```
+
 ### 配列
 
 #### 定義
