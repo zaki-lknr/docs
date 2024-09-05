@@ -174,6 +174,15 @@ data.password = 'curry_tabetai';
 data[foo.bar.buz.get('key')] = foo.bar.buz.get('value');
 ```
 
+#### 空判定
+
+特にそれ用のメソッド等は無い。  
+キー一覧を取り出してlengthを見るのがセオリー
+
+```javascript
+if (Object.keys(dict).length) { ... }
+```
+
 ### 型の確認
 
 `typeof`を使う。
