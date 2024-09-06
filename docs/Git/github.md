@@ -42,6 +42,12 @@ Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で�
 - Approve / 問題ない場合
 - Comment / その他
 
+### suggested change
+
+その場で修正コミットを送るには、対象行を選択して「Commit suggestion」押下、テキストフィールドに`suggestion`というコードブロックが入るので、その内容を正しいものに修正して
+
+[プルリクエストでのフィードバックを取り込む - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request)
+
 ### PRマージ時のブランチ自動削除
 
 リポジトリの設定から。
