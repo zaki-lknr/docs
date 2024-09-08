@@ -377,6 +377,18 @@ let image_item = document.createElement("img");
 image_item.src = image_url;
 ```
 
+#### checkbox
+
+```javascript
+const checkbox_item = document.createElement("input");
+checkbox_item.type = 'checkbox';
+checkbox_item.name = 'sample';
+checkbox_item.value = 'sample';
+checkbox_item.checked = true;
+```
+
+チェックボックスのチェック状態を参照するには`.checked`を見ればOK
+
 ### 複数の子要素を全て削除する
 
 ```javascript
