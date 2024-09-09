@@ -382,12 +382,24 @@ image_item.src = image_url;
 ```javascript
 const checkbox_item = document.createElement("input");
 checkbox_item.type = 'checkbox';
+checkbox_item.id = 'sample';
 checkbox_item.name = 'sample';
 checkbox_item.value = 'sample';
 checkbox_item.checked = true;
 ```
 
 チェックボックスのチェック状態を参照するには`.checked`を見ればOK
+
+#### label
+
+```javascript
+const label_item = document.createElement("label");
+label_item.htmlFor = 'sample';
+label_item.textContent = '設定';
+```
+
+`id`の指定は`for`でなく`htmlFor`であることに注意。  
+[JSでlabel要素にfor属性が追加できない](https://teratail.com/questions/140944)
 
 ### 複数の子要素を全て削除する
 
