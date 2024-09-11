@@ -1,5 +1,11 @@
 # JavaScript
 
+## 環境・バージョンの対応状況
+
+- [ECMAScript 5 compatibility table](https://compat-table.github.io/compat-table/es5/)
+- [ECMAScript 6 compatibility table](https://compat-table.github.io/compat-table/es6/)
+- [ECMAScript 2016+ compatibility table](https://compat-table.github.io/compat-table/es2016plus/)
+
 ## 実装
 
 ### 制御構文
@@ -78,6 +84,13 @@ console.log(size);
 ```
 
 結果は`33`
+
+#### 正規表現置換
+
+```javascript
+const str = 'foobarbaz';
+console.log(str.replace(/ba/g, 'BA'));
+```
 
 #### URL文字列のparse
 
