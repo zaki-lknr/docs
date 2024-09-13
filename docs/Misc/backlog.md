@@ -4,3 +4,11 @@
 
 - プロジェクトID
     - 「プロジェクト設定」のURLのQueryStringで確認(`?projectId=nnnnnn`がついている)
+
+## REST
+
+### プロジェクト一覧
+
+```console
+https://${BACKLOG_SPACE}.backlog.com/api/v2/projects?apiKey=${BACKLOG_APIKEY}
+```
