@@ -61,6 +61,12 @@ Math.round(double_value);
 
 ### 文字列
 
+#### 数値から文字への変換
+
+```javascript
+String(number_value);
+```
+
 #### 文字列長
 
 文字数は`length`メソッド。
