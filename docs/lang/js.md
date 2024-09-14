@@ -260,6 +260,13 @@ console.log(datetime.toLocaleTimeString());
 10:39:44
 ```
 
+#### あるDateオブジェクトの翌日
+
+```javascript
+const tomorrow = new Date(foobar_date);
+tomorrow.setDate(tomorrow.getDate() + 1);
+```
+
 ### 非同期処理
 
 #### Promise変数
