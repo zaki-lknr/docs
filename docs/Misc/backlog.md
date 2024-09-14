@@ -12,3 +12,11 @@
 ```console
 https://${BACKLOG_SPACE}.backlog.com/api/v2/projects?apiKey=${BACKLOG_APIKEY}
 ```
+
+### プロジェクトメンバー一覧
+
+```console
+https://${BACKLOG_SPACE}.backlog.com/api/v2/projects/${PROJECT_KEY}/users?apiKey=${BACKLOG_APIKEY} 
+```
+
+`${PROJECT_KEY}`はIDでも可
