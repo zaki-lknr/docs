@@ -152,6 +152,17 @@ for (...) {
 }
 ```
 
+#### 要素のクリア
+
+```javascript
+const list = [1,2,3,4,5];
+list.splice(0);
+console.log(list);
+console.log(list.length);
+```
+
+出力は`[]`と`0`
+
 #### 最後の要素
 
 ```js
