@@ -374,6 +374,18 @@ if (!res.ok) {
 }
 ```
 
+#### catchする
+
+```javascript
+try {
+    const res_img = await fetch(url);
+}
+catch(err) {
+    throw new Error('http access failed: ' + err + "\nurl: " + url);
+}
+
+```
+
 ## DOM
 
 ### 要素の取得
@@ -453,4 +465,12 @@ firstChildで子要素が存在する間はその子要素を削除する、を�
 for(const child of component.children) {
     component.removeChild(child);
 }
+```
+
+## html関連
+
+### 画面遷移(動画面)
+
+```javascript
+window.location.href = url;
 ```
