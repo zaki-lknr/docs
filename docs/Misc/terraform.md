@@ -84,6 +84,14 @@ Switched to workspace "2".
 terraform plan -var='enable_wan=false'
 ```
 
+### デバッグログ
+
+verboseオプション的なものはなく、変数指定する。
+
+```console
+TF_LOG=DEBUG terraform command
+```
+
 ## backend設定
 
 ### S3
