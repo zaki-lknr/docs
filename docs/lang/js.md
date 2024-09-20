@@ -213,6 +213,18 @@ data[foo.bar.buz.get('key')] = foo.bar.buz.get('value');
 if (Object.keys(dict).length) { ... }
 ```
 
+### 関数定義
+
+#### 昔ながらの実装
+
+```javascript
+function func(arg) {
+    console.log(arg);
+}
+
+func('njgk');
+```
+
 ### 型の確認
 
 `typeof`を使う。
@@ -385,6 +397,8 @@ catch(err) {
 }
 
 ```
+
+### import
 
 ## DOM
 
