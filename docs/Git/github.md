@@ -6,6 +6,12 @@
 
 [デフォルトブランチを変更する - GitHub Docs](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch)
 
+### ライセンスファイルの追加
+
+[リポジトリへのライセンスの追加 - GitHub Docs](https://docs.github.com/ja/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
+
+「新規ファイル追加」でファイル名`LICENSE`を追加しようとするとテンプレートを選択するボタンが表示される。
+
 ## 設定
 
 ### 2要素認証を設定
