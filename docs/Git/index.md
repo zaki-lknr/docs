@@ -578,6 +578,16 @@ git blame --ignore-rev <除外したいコミットID> <filename>
 
 除外対象が複数ある場合は、その分指定すればOK
 
+## サブモジュール
+
+### カレントのリポジトリに別のリポジトリをサブモジュールとして追加
+
+ローカルリポジトリの作業ディレクトリ内に`bsky-client`ディレクトリへ別リポジトリのソースを取得する。
+
+```console
+git submodule add https://github.com/zaki-lknr/bsky-client.git bsky-client
+```
+
 ## 前の状態に戻す
 
 ### 指定コミットの状態に戻す
