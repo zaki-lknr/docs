@@ -203,6 +203,15 @@ do
 done
 ```
 
+#### ファイルを1行ずつ
+
+```bash
+while read line
+do
+    # ${line}に行が入っている
+done < "/path/to/file.txt"
+```
+
 #### 途中で抜ける
 
 `break`
