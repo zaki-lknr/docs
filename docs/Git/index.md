@@ -375,6 +375,30 @@ error: failed to push some refs to 'github.com:******'   # 消せない
 $ git fetch --prune
 ```
 
+## stash
+
+### 一覧
+
+stashに退避している内容の一覧
+
+```console
+git stash list
+```
+
+### 退避
+
+現在の未コミットの変更をstashへ退避
+
+```console
+git stash save
+```
+
+### 退避データをもとに戻す
+
+```console
+git stash pop
+```
+
 ## tag操作
 
 タグ操作は基本的にブランチと同じ。
