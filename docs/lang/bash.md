@@ -212,6 +212,15 @@ do
 done < "/path/to/file.txt"
 ```
 
+#### コマンドの結果を1行ずつ
+
+```bash
+command | filter | while read line
+do
+    # ${line}の処理
+done
+```
+
 #### 途中で抜ける
 
 `break`
