@@ -481,6 +481,16 @@ for(const child of component.children) {
 }
 ```
 
+### イベントリスナ
+
+#### ページの読み込み後
+
+```javascript
+document.addEventListener("DOMContentLoaded", () => {
+    // ...
+});
+```
+
 ## html関連
 
 ### 画面遷移(動画面)
