@@ -5,6 +5,15 @@
 - [Ansible AWX Documentation — Ansible AWX community documentation](https://ansible.readthedocs.io/projects/awx/en/latest/)
 - [Ansible AWX Operator Documentation](https://ansible.readthedocs.io/projects/awx-operator/en/latest/)
 
+## helmインストール版
+
+基本的に情報が少ない。  
+細かいパラメタはGitHubのREADMEに記載あり。
+
+- [AWX Operator Helm Chart](https://ansible.readthedocs.io/projects/awx-operator-helm/index.html)
+- [awx-operator Helm charts | awx-operator-helm](https://ansible-community.github.io/awx-operator-helm/)
+- [ansible-community/awx-operator-helm: Helm chart for the AWX operator.](https://github.com/ansible-community/awx-operator-helm/tree/main)
+
 ## arm64版ビルド
 
 arm64版はイメージが公開されてないのでビルドする必要がある。  
