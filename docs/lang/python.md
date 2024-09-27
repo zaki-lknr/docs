@@ -875,6 +875,18 @@ Uninstall Options:
 $ pip uninstall -r <(pip freeze)
 ```
 
+#### 依存関係の確認
+
+```console
+$ pip show ansible-core
+:
+:
+Requires: cryptography, jinja2, packaging, PyYAML, resolvelib
+Required-by: ansible
+```
+
+Required-byの`ansible`によってインストールされ、このパッケージによって`cryptography`, `jinja2`, `packaging`, `PyYAML`, `resolvelib`がインストールされる。
+
 ### pyenv
 
 [pyenv/pyenv: Simple Python version management](https://github.com/pyenv/pyenv)
