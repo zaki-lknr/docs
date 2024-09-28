@@ -10,7 +10,13 @@
 - [Red Hat Ansible Automation Platform のライフサイクル - Red Hat Customer Portal](https://access.redhat.com/ja/support/policy/updates/ansible-automation-platform)
 - [Ansible Automation Platform のライフサイクル - 赤帽エンジニアブログ](https://rheb.hatenablog.com/entry/aap_lifecycle)
 
-## サポートバージョンマトリクス
+### コミュニティバージョンとansible-coreバージョン
+
+Ansible Xとansible-core zのバージョン
+
+Release and maintenanceの中の[Ansible community changelogs](https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#ansible-community-changelogs)
+
+### サポートバージョンマトリクス
 
 Release and maintenanceの中の[ansible-core support matrix](https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#ansible-core-support-matrix)
 
