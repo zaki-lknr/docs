@@ -403,6 +403,14 @@ git stash pop
 
 タグ操作は基本的にブランチと同じ。
 
+### tagを作成
+
+最新コミットへtagを作成
+
+```console
+git tag -a tag-name -m 'coment'
+```
+
 ### tagをpushする
 
 デフォルトではtagはpushされない
