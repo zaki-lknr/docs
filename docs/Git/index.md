@@ -393,6 +393,14 @@ git stash list
 git stash save
 ```
 
+### 名前付きの退避
+
+```console
+git stash save comment
+```
+
+`list`実行時にコメントが表示される。
+
 ### 退避データをもとに戻す
 
 ```console
