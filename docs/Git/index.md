@@ -407,6 +407,15 @@ git stash save comment
 git stash pop
 ```
 
+### 退避データの詳細
+
+```console
+git stash show stash@{0} -p
+```
+
+これでdiffを確認できるできる。  
+`-p`無しの場合はサマリのみ。
+
 ## tag操作
 
 タグ操作は基本的にブランチと同じ。
