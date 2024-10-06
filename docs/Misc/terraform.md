@@ -92,6 +92,8 @@ verboseオプション的なものはなく、変数指定する。
 TF_LOG=DEBUG terraform command
 ```
 
+[Debugging | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/internals/debugging)
+
 ## backend設定
 
 ### S3
