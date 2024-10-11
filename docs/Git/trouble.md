@@ -27,6 +27,17 @@ $ git checkout <branch-name>
 $ git stash pop
 ```
 
+## ブランチ作成せずにcommitしまくってた
+
+その時点で新しいブランチを作成し、mainはorigin/mainで上書きする。
+
+```console
+git switch -c new-branch
+git switch main
+git reset origin/main --hard
+git switch new-branch
+```
+
 ## --amendを忘れてcommit
 
 未コミットの変更でなく、コミット済みAとBをまとめるには`git rebase`を使う
