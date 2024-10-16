@@ -172,6 +172,15 @@ console.log(sample_array.at(-1));
 
 結果は `3`
 
+#### 要素の有無
+
+```js
+status = get_http_status();
+if ([200, 201, 202, 203].includes(status)) {
+    ...
+}
+```
+
 ### 辞書
 
 #### 辞書の定義
