@@ -4,6 +4,7 @@
 
 - [Ansible AWX Documentation — Ansible AWX community documentation](https://ansible.readthedocs.io/projects/awx/en/latest/)
 - [Ansible AWX Operator Documentation](https://ansible.readthedocs.io/projects/awx-operator/en/latest/)
+- [Ansible Tower/AWXのアーキテクチャとジョブ実行の仕組み(1) #awx - Qiita](https://qiita.com/saito_hideki/items/e19f39f792eb7d0e720c)
 
 ## helmインストール版
 
