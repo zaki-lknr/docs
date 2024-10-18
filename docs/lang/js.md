@@ -338,6 +338,14 @@ RESTなどでレスポンスがJSON形式の場合は、オブジェクトとし
 const obj = resp.json();
 ```
 
+##### レスポンスコード
+
+```js
+if (res.status === 200) {
+    // statusが200の場合の処理
+}
+```
+
 #### リクエストヘッダ
 
 ```javascript
