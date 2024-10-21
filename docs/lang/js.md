@@ -78,6 +78,15 @@ console.log(sample_str.length);
 
 出力は`11`
 
+#### split
+
+```js
+const string = 'abc,def,ghi';
+const items = string.split(",");
+```
+
+結果は `[ 'abc', 'def', 'ghi' ]` になる。
+
 #### 文字列長のバイト換算
 
 `string.length`は文字数を返す。  
