@@ -637,6 +637,22 @@ git blame --ignore-rev <除外したいコミットID> <filename>
 git submodule add https://github.com/zaki-lknr/bsky-client.git bsky-client
 ```
 
+### サブモジュールを更新する
+
+対象ディレクトリで`git pull`を実行する。  
+親リポジトリで`git diff`すれば更新されていることを確認できる。
+
+```diff
+$ git diff
+diff --git a/bsky-client b/bsky-client
+index ae590a7..2a0550c 160000
+--- a/bsky-client
++++ b/bsky-client
+@@ -1 +1 @@
+-Subproject commit ae590a7142b82f0cb77d4fd7b970c6ab3a9dc8fa
++Subproject commit 2a0550cfc11ca1d06f13596f2eb087cc75dcdf9b
+```
+
 ## 前の状態に戻す
 
 ### 指定コミットの状態に戻す
