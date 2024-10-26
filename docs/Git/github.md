@@ -12,6 +12,15 @@
 
 「新規ファイル追加」でファイル名`LICENSE`を追加しようとするとテンプレートを選択するボタンが表示される。
 
+## ブランチ
+
+### ブランチ作成
+
+[リポジトリ内でブランチを作成および削除する - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository)
+
+GitHub上でブランチを作成するには「View all branches」画面で「New branch」押下する。  
+あるいはブランチ選択のドロップダウンで作成したいブランチ名を入力してCreateを押下。
+
 ## 設定
 
 ### 2要素認証を設定
