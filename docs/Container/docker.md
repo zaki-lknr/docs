@@ -6,6 +6,23 @@
 
 ### run
 
+#### -u | --user
+
+ユーザーIDを指定して実行。  
+例えばroot権限でシェル起動とか。
+
+```console
+docker run --rm -it localhost:5000/my-image sh
+sh-5.1$ id
+uid=1000(1000) gid=0(root) groups=0(root)
+sh-5.1$ exit
+exit
+docker run --rm -it --user root localhost:5000/my-image sh
+sh-5.1# id
+uid=0(root) gid=0(root) groups=0(root)
+sh-5.1# 
+```
+
 #### -p | --publish
 
 `localでlistenするポート`:`コンテナに接続するポート`を指定する。
