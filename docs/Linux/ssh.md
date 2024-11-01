@@ -190,6 +190,23 @@ $ ssh-keygen -y -f ~/.ssh/id_rsa
 
 STDOUTへ出力されるので、`> id_rsa.pub`とかファイルへ出力すればOK
 
+### パスフレーズ変更
+
+```console
+ssh-keygen -f <private-key> -p
+```
+
+```console
+$ ssh-keygen -f /path/to/id_rsa -p
+Enter old passphrase:
+Key has comment ''
+Enter new passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved with the new passphrase.
+```
+
+空入力すればパスフレーズを解除できる
+
 ### 鍵形式の指定
 
 デフォルトでは以下で始まるOpenSSH形式で作成される。
