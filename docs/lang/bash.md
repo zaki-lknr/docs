@@ -134,6 +134,32 @@ else
 fi
 ```
 
+### case
+
+```sh
+#!/bin/bash
+
+arg="$1"
+
+case $arg in
+    start)
+        echo "start"
+        ;;
+    stop)
+        echo "stop"
+        ;;
+    reload|restart)
+        echo "restart"
+        ;;
+    st|status)
+        echo "status"
+        ;;
+    *)
+        echo "unknown arg"
+        ;;
+esac
+```
+
 ### ループ
 
 #### 配列要素をループ処理
