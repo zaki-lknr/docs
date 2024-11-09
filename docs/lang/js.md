@@ -93,6 +93,8 @@ const items = string.split(",");
 
 結果は `[ 'abc', 'def', 'ghi' ]` になる。
 
+[String.prototype.split() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+
 #### 文字列長のバイト換算
 
 `string.length`は文字数を返す。  
