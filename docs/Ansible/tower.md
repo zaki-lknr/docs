@@ -82,6 +82,13 @@ $ curl -sk https://server/api/v2/ping/
 $ curl -sk https://192.168.0.27/api/v2/jobs/?page_size=200
 ```
 
+ソートするには`order_by`を使う。キーは`-`を先頭につけると逆順。  
+以下で最新のジョブが先頭に来る。
+
+```console
+$ curl -sk "https://192.168.0.27/api/v2/jobs/?page_size=200&order_by=-created"
+```
+
 `page_size`に指定できるのはMAX200？(オーバー時は無視されて200扱い)
 
 ### ジョブテンプレート
