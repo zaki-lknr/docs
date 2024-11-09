@@ -37,6 +37,8 @@
 
 `@import`を使う。
 
+[@import - CSS: カスケーディングスタイルシート | MDN](https://developer.mozilla.org/ja/docs/Web/CSS/@import)
+
 ### カーソル変更
 
 マウスオーバー時にリンクのスタイルにする
