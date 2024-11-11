@@ -66,7 +66,13 @@ $ ssh rhel8 -L 25080:10.88.250.10:80
 ~.
 ```
 
----
+### sshpass
+
+#### パスワード認証をバッチ処理
+
+```console
+sshpass -p $(cat password.txt) ssh user@hostname
+```
 
 ## sshd
 
