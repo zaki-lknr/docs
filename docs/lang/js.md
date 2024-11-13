@@ -84,6 +84,14 @@ console.log(sample_str.length);
 
 出力は`11`
 
+#### 文字列の繰り返し
+
+```js
+str = 'abc';
+console.log(str.repeat(3));
+// 結果は "abcabcabc"
+```
+
 #### split
 
 ```js
