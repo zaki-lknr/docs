@@ -4,6 +4,8 @@
 
 ### デフォルトブランチの変更
 
+リポジトリの「Settings」->「Default branch」で対象を選択する。
+
 [デフォルトブランチを変更する - GitHub Docs](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch)
 
 ### ライセンスファイルの追加
