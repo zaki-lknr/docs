@@ -558,3 +558,30 @@ Press 'C' to continue the play or 'A' to abort
 fatal: [localhost]: FAILED! => 
   msg: user requested abort!
 ```
+
+## debug
+
+`msg`を使えば(変数を含め)任意の文字列をプリントする。  
+変数だけで良ければ`var`を使う方が楽。
+
+```yaml
+---
+- hosts: localhost
+  gather_facts: false
+  vars:
+    val1: 1234
+
+  tasks:
+    - debug:
+        var: val1
+```
+
+ただし`var`の場合はリスト出力は不可
+
+```yaml
+debug:
+  var:
+  - val1
+  - val2
+  # 不可
+```
