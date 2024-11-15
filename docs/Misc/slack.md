@@ -11,6 +11,9 @@ Windows基準
 | (チャンネル一覧などの)左サイドバーon/off | `Ctrl + Shift + d` |
 | スレッドの表示                  | `Ctrl + Shift + t` |
 | チャンネルなどの移動               | `Ctrl + k`         |
+| ホーム                      | `Ctrl + Shfit + 1` |
+| DM                       | `Ctrl + Shift + 2` |
+| 後で                       | `Ctrl + Shift + 4` |
 
 ## 全員への通知
 
