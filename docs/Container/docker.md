@@ -56,6 +56,23 @@ docker run --add-host host.docker.internal:host-gateway --rm -it centos bash
 
 これでコンテナ内の`/etc/hosts`に`host.docker.internal`のエントリが追加され、ホストOSへのアドレスが設定される。
 
+#### ENTRYPOINTの上書き(--entrypoint)
+
+`CMD`でコマンド指定されたイメージであれば
+
+```console
+docker run -it image:tag sh
+```
+
+などでコンテナ内のシェルを起動できるが、`ENTRYPOINT`が使われていると起動コマンドの上書きはできない。  
+その場合は`--entrypoint`オプションで上書きする。
+
+ただしイメージ指定より手前に指定する必要がある。
+
+```console
+docker run -it --entrypoint sh image:tag
+```
+
 ### build
 
 #### Dockerfile指定
