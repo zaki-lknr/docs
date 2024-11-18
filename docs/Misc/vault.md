@@ -16,6 +16,25 @@ vault token lookup
 
 トークンを省略すれば対話的に聞いてくる
 
+## 初期処理
+
+### init
+
+```console
+vault operator init
+```
+
+Unseal KeyとRoot Tokenが出力されるのでメモしておく
+
+### unseal
+
+```console
+vault operator unseal
+```
+
+Unseal keyの入力を求められるので`init`実行時に出力されたキーを入力する。  
+`Sealed  true`が`Sealed  false`になるまで繰り返す。
+
 ## secret engine
 
 ### secret一覧
