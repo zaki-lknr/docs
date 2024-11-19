@@ -401,6 +401,12 @@ az aks nodepool add \
   --max-pods 32
 ```
 
+### ノードプールの詳細
+
+```console
+az aks nodepool show -g ${resource_group} --cluster-name ${cluster_name} -n ${nodepool_name}
+```
+
 ### ノードのスケーリング
 
 ```console
