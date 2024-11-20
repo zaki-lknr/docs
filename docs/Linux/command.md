@@ -859,9 +859,35 @@ iptables -I INPUT [n] ...
 
 `-I`は`--insert`で先頭に追加。nに数値を指定すれば、その位置に挿入。
 
-#### リダイレクトルールの削除
+#### ルールの削除
 
-まずルールの確認を`--line-numbers`を付与して行番号を確認。
+まずルールの状態を`--line-numbers`を付与して行番号を確認。(目視でも良い)
+
+```console
+# iptables -nL --line-numbers
+Chain INPUT (policy ACCEPT)
+num  target     prot opt source               destination         
+1    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0            state RELATED,ESTABLISHED
+2    ACCEPT     icmp --  0.0.0.0/0            0.0.0.0/0           
+3    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+4    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp spt:123
+5    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:80
+6    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:443
+7    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:22
+8    REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-host-prohibited
+9    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:80
+10   ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:443
+11   ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:443
+12   ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:80
+```
+
+行番号が分かったら、番号を指定して`-D`でルールと行番号指定で削除
+
+```console
+iptables -D INPUT 12
+```
+
+リダイレクト(nat)の場合も同様
 
 ```console
 # iptables -L -t nat --line-numbers
