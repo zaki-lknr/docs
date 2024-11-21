@@ -105,6 +105,14 @@ zaki@salva% find . -name "*txt" -print0 | od -c
 0000060   t   x   t  \0   .   /   s   u   b   /   b   .   t   x   t  \0
 ```
 
+## grep
+
+### マッチした行番号表示
+
+```console
+grep -n pattern
+```
+
 ## date
 
 ### 書式
