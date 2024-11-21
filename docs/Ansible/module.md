@@ -11,6 +11,26 @@ ad-hocで実行する方が多いかも？
 $ ansible -i inventory.ini all -m setup 
 ```
 
+## set_fact
+
+`vars`ディレクティブと異なりホスト変数を定義するので、セット後の以降のタスク・プレイでも変数参照できる。
+
+```yaml
+- name: define variable
+  ansible.builtin.set_fact:
+    _state_val: "{{ foobar | default(true) }}"
+```
+
+`vars`ディレクティブと異なり定義した変数を即参照することはできない。
+
+```yaml
+# ダメな例
+- name: define variable
+  ansible.builtin.set_fact:
+    _state_val: "{{ foobar | default(true) }}"
+    _mode: "{{ _state_val | ternary(...) }}"
+```
+
 ## assert
 
 [ansible.builtin.assert – Asserts given expressions are true — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/assert_module.html)
