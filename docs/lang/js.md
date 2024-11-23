@@ -92,6 +92,19 @@ console.log(str.repeat(3));
 // 結果は "abcabcabc"
 ```
 
+#### 先頭が指定の文字列で始まっているか
+
+```js
+val = 'http://www.example.org';
+
+if (val.startsWith('http')) {
+    console.log('valid');
+}
+else {
+    console.log('invalid');
+}
+```
+
 #### split
 
 ```js
