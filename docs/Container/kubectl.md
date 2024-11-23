@@ -50,6 +50,16 @@ $ kubectl get -bash: _get_comp_words_by_ref: command not found
 
 ## create
 
+### job
+
+#### 既存CronJobから即時実行のjobを作成
+
+CronJobリソースの定義をもとに、即時実行するJobリソースを作成する
+
+```console
+kubectl create job exec --from=cronjob/cronjob-resource -n namespace
+```
+
 ### secret
 
 #### ファイルのsecret
