@@ -500,6 +500,15 @@ localhost                  : ok=2    changed=0    unreachable=0    failed=0    s
 
 [[Ansible] 任意のタイミングでダイナミックインベントリのホスト情報収集を行う - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2022/11/09/203145)
 
+## fail
+
+指定のメッセージを出力してplayを失敗させる
+
+```yaml
+- ansible.builtin.fail:
+    msg: failed task
+```
+
 ## Docker
 
 ### push image
