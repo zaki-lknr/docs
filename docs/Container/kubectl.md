@@ -488,3 +488,26 @@ kubectl drain k3s-node2 --force --ignore-daemonsets
 ```
 
 ノードを完全にクラスタから除外するにはさらに`kubectl delete node <node-name>`する。
+
+## KUBECONFIG
+
+### 証明書検証無視
+
+<https://kubernetes.io/docs/reference/config-api/kubeconfig.v1/#Cluster>
+
+```yaml
+apiVersion: v1
+clusters:
+- cluster:
+    # certificate-authority-data: LS0tL...
+    server: https://my-cluster.example.org:6443
+    insecure-skip-tls-verify: true
+  name: my-cluster
+
+# snip...
+```
+
+`insecure-skip-tls-verify: true`を使用する。  
+ただしその時`certificate-authority-data`は未定義にしておく。
+
+[Kubernetes:Why does the 'insecure-skip-tls-verify' in kubeconfig not work? - Stack Overflow](https://stackoverflow.com/questions/33049185/kuberneteswhy-does-the-insecure-skip-tls-verify-in-kubeconfig-not-work)
