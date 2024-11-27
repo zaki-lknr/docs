@@ -24,3 +24,8 @@ chroot /host
 # 特権コンテナを削除
 kubectl delete pod node-debugger-aks-********
 ```
+
+## ログとイベントを記録する
+
+監視->分析情報で、Container insightsを有効（収集データに「ログとイベント」を選択）にする。  
+これでLog Analyticsワークスペースの画面から収集情報を検索できる。
