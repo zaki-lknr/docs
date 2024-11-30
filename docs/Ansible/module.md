@@ -588,6 +588,22 @@ fatal: [localhost]: FAILED! =>
   msg: user requested abort!
 ```
 
+## wait_for
+
+処理対象ホストの80/TCPがAnsible実行ホストから接続可能になるまで最大300秒waitするタスク
+
+```yaml
+- ansible.builtin.wait_for:
+    host: "{{ ansible_host }}"
+    port: 80
+    delay: 5
+    state: started
+    timeout: 300
+  delegate_to: localhost
+```
+
+逆に終了処理の確認などで接続不可になるまでwaitするのであれば、`state: stopped`を指定する。
+
 ## debug
 
 `msg`を使えば(変数を含め)任意の文字列をプリントする。  
