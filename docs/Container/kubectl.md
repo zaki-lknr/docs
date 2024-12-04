@@ -124,6 +124,33 @@ metadata:
 type: Opaque
 ```
 
+#### TLS証明書のsecret
+
+事前に`server.crt`と`server.key`は生成しておく。
+
+```console
+kubectl create secret tls host-secret -n kube-system \
+  --cert=server.crt \
+  --key=server.key
+```
+
+以下のsecretリソースが作成される
+
+```yaml
+apiVersion: v1
+data:
+  tls.crt: ...
+  tls.key: ...
+kind: Secret
+metadata:
+  creationTimestamp: "2024-11-24T08:30:11Z"
+  name: host-secret
+  namespace: kube-system
+  resourceVersion: "140527"
+  uid: e5399e4b-7d62-4c57-b97e-a9b2d65d1375
+type: kubernetes.io/tls
+```
+
 #### マニフェストでsecret
 
 マニュフェストから作成する場合は、base64エンコード済みであること。
