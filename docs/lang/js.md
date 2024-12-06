@@ -170,6 +170,25 @@ URL {
 encodeURIComponent(string);
 ```
 
+### 正規表現
+
+#### switch文で使う
+
+```js
+const str = 'テストしたい文字列';
+
+switch (true) {
+    case /^regexp1/.test(str):
+        // ...
+        break;
+    case /^regexp2/.test(str):
+        // ...
+        break;
+    default:
+        break;
+}
+```
+
 ### 配列
 
 #### 定義
