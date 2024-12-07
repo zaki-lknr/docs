@@ -18,6 +18,28 @@ zaki@rasp5-01:~ $ cat /proc/device-tree/model
 Raspberry Pi 5 Model B Rev 1.0
 ```
 
+### OS確認
+
+`lsb_release -a`を実行
+
+```console
+zaki@rasp4-01:~ $ lsb_release -a
+No LSB modules are available.
+Distributor ID: Raspbian
+Description:    Raspbian GNU/Linux 11 (bullseye)
+Release:        11
+Codename:       bullseye
+```
+
+```console
+zaki@rasp5-01:~ $ lsb_release -a
+No LSB modules are available.
+Distributor ID: Debian
+Description:    Debian GNU/Linux 12 (bookworm)
+Release:        12
+Codename:       bookworm
+```
+
 ### 温度
 
 ```console
