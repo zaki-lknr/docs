@@ -9,9 +9,16 @@
 
 rsyslogが無くても`journalctl`でログは確認できる。
 
-### 状態取得
+## 状態取得
 
-#### 温度
+### 本体モデル名の確認
+
+```console
+zaki@rasp5-01:~ $ cat /proc/device-tree/model 
+Raspberry Pi 5 Model B Rev 1.0
+```
+
+### 温度
 
 ```console
 zaki@rasp4-01:~ $ vcgencmd measure_temp
