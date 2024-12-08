@@ -451,6 +451,18 @@ kubectl get pod -n awx -o jsonpath="{..image}" | sed 's/ /\n/g' | sort | uniq
 kubectl get pod -n awx -o yaml | grep image: | sort | uniq
 ```
 
+podに紐づけるには
+
+```console
+$ kubectl get pod -n awx -o custom-columns=NAMESPACE:.metadata.namespace,NAME:.metadata.name,IMAGE:.spec.containers[*].image
+NAMESPACE   NAME                                               IMAGE
+awx         awx-migration-24.6.1-dh8l8                         quay.io/ansible/awx:24.6.1
+awx         awx-operator-controller-manager-745b55d94b-trdrs   gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0,quay.io/ansible/awx-operator:2.19.1
+awx         awx-postgres-15-0                                  quay.io/sclorg/postgresql-15-c9s:latest
+awx         awx-task-dc97f74f7-fmbbn                           docker.io/redis:7,quay.io/ansible/awx:24.6.1,quay.io/ansible/awx-ee:24.6.1,quay.io/ansible/awx:24.6.1
+awx         awx-web-769f8f749f-s4qkz                           docker.io/redis:7,quay.io/ansible/awx:24.6.1,quay.io/ansible/awx:24.6.1
+```
+
 ## rollout
 
 ### restart
