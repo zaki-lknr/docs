@@ -437,6 +437,20 @@ $ kubectl get --raw='/readyz?verbose'
 readyz check passed
 ```
 
+### pod
+
+#### イメージ一覧
+
+```console
+kubectl get pod -n awx -o jsonpath="{..image}" | sed 's/ /\n/g' | sort | uniq
+```
+
+これでもいいかな？
+
+```console
+kubectl get pod -n awx -o yaml | grep image: | sort | uniq
+```
+
 ## rollout
 
 ### restart
