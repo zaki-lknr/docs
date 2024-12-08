@@ -463,6 +463,18 @@ awx         awx-task-dc97f74f7-fmbbn                           docker.io/redis:7
 awx         awx-web-769f8f749f-s4qkz                           docker.io/redis:7,quay.io/ansible/awx:24.6.1,quay.io/ansible/awx:24.6.1
 ```
 
+#### podとコンテナ名
+
+```console
+zaki@cloud-dev2:~$ kubectl get pod -n awx -o custom-columns=NAMESPACE:.metadata.namespace,NAME:.metadata.name,IMAGE:.spec.containers[*].name
+NAMESPACE   NAME                                               IMAGE
+awx         awx-migration-24.6.1-dh8l8                         migration-job
+awx         awx-operator-controller-manager-745b55d94b-trdrs   kube-rbac-proxy,awx-manager
+awx         awx-postgres-15-0                                  postgres
+awx         awx-task-dc97f74f7-fmbbn                           redis,awx-task,awx-ee,awx-rsyslog
+awx         awx-web-769f8f749f-s4qkz                           redis,awx-web,awx-rsyslog
+```
+
 ## rollout
 
 ### restart
