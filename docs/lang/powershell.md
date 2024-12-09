@@ -39,6 +39,21 @@ Get-Help 〇〇
 
 [curl/PowerShellでHTTPアクセスいろいろ - Qiita](https://qiita.com/zaki-lknr/items/8950f6acea20961a8afc)
 
+## コマンドレット
+
+### ファイルのハッシュ値
+
+`Get-FileHash`で取れる。
+
+```ps1
+PS C:\Users\zakih\Downloads> Get-FileHash .\r2tokimeki-0.1.0.zip
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          04B71F5099FDBC96A8497AD88D16C4169F978E931F0D59B7AAE3E2DC8B383CE1       C:\Users\zakih\Downloads\r2to...
+
+```
+
 ## コーディング
 
 ### 型
