@@ -10,6 +10,12 @@ Last login: Tue Aug 11 14:52:32 2020 from 192.168.0.18
 $ 
 ```
 
+### 任意のパスのconfig使用
+
+```console
+$ ssh -F my-ssh/config user@host
+```
+
 ### 多段アクセス
 
 追記: 詳細はこちら -> [[Linux] ProxyJump設定でSSHの多段アクセスとscp/ポートフォワード - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2022/02/03/000245)
