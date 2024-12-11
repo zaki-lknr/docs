@@ -11,6 +11,7 @@
 
 - [Swarm SGBT](https://swarm.jp-z.jp/)
 - [usansible - Chrome ウェブストア](https://chromewebstore.google.com/detail/usansible/aphgdbhkenbiokjnafmboeagdhjkafee)
+- [r2tokimeki - Chrome ウェブストア](https://chromewebstore.google.com/detail/r2tokimeki/bjdpjmnfgcoicabnjeajhfpldmhnhpnl)
 
 ## author
 
