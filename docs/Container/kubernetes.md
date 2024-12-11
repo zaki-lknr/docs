@@ -136,3 +136,13 @@ kubectl get ns ${namespace} -o json | grep -v -- '"kubernetes"' | kubectl replac
 ```
 
 ※ `kubectl get ns hoge -o json | grep -2 -- '"kubernetes"'`を実行して、1か所しかヒットしない場合
+
+## REST
+
+### namespace一覧
+
+```console
+curl https://k8s.example.org:6443/api/v1/namespaces
+```
+
+`NamespaceList`が返る。
