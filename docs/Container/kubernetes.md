@@ -90,6 +90,15 @@ standard_init_linux.go:228: exec user process caused: exec format error
 の場合、イメージのアーキテクチャと実行環境のアーキテクチャが合ってない。  
 イメージはamd64だけど実行環境がarm64など。
 
+## cronjob
+
+### Job/Podの自動削除
+
+CronJobリソースの`.spec.successfulJobsHistoryLimit`と`.spec.failedJobsHistoryLimit`の値で成功と失敗それぞれの保持数が設定される。  
+超過分は自動で削除される。
+
+<https://kubernetes.io/ja/docs/tasks/job/automated-tasks-with-cron-jobs/#job-history-limit>
+
 ## service
 
 ### FQCN (A/AAAAレコード)
