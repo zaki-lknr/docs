@@ -353,6 +353,12 @@ $ tar -C /tmp -xf archive.tar.gz hoge
 ### ファイル一覧
 
 ```console
+unzip -l <zip-file>
+```
+
+あるいは
+
+```console
 $ zipinfo <zip-file>
 ```
 
