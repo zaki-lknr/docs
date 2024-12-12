@@ -12,6 +12,39 @@ ansible-galaxy collection install amazon.aws
 $ ansible-galaxy collection install -r collections/requirements.yml
 ```
 
+### requirements.yml書式
+
+コレクション名のみ(バージョンは最新)
+
+```yaml
+---
+collections:
+- community.general
+```
+
+バージョン指定
+
+```yaml
+---
+collections:
+- name: ansible.netcommon
+  version: 2.1.0
+- name: ansible.utils
+  version: 2.2.0
+- name: seiko.smartcs
+  version: 1.3.0
+```
+
+Gitリポジトリ
+
+```yaml
+---
+collections:
+  - name: https://github.com/zaki-lknr/esxissh-ansible.git
+    version: main
+    type: git
+```
+
 ## リダイレクト設定
 
 <https://github.com/ansible/ansible/blob/devel/lib/ansible/config/ansible_builtin_runtime.yml>
