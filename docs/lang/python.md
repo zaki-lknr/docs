@@ -653,6 +653,11 @@ print(r.text)   # レスポンスbody
 
 REST APIのようにレスポンスがJSON形式のテキストの場合は、`r.json()`を使うとオブジェクトとして値をとれる。
 
+```python
+for item in r.json()['items']:
+    print(item['metadata']['name'])
+```
+
 ##### SSL検証無視
 
 ```python
