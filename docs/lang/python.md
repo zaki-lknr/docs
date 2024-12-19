@@ -598,9 +598,9 @@ subprocess.run("ls -l", shell=True)
 
 ### 通信
 
-#### HTTP
+#### HTTP(requests)
 
-`Requests`を使うと楽。
+`requests`を使うと楽。
 
 ```python
 import requests
@@ -686,6 +686,25 @@ try:
     requests.post(url)
 except (requests.ConnectionError, requests.ConnectTimeout) as e:
     print(e)
+```
+
+#### HTTP (urllib.request)
+
+requestsを追加できない場合など。
+
+##### GET
+
+```python
+import urllib.request
+
+url = 'https://example.org'
+header = {
+    'Authorization': 'Bearer ' + token
+}
+
+req = urllib.request.Request(url, headers=headers)
+with urllib.request.urlopen(req) as res:
+    j = json.load(res)
 ```
 
 ### isinstance()で型チェック
