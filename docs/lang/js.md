@@ -172,6 +172,13 @@ encodeURIComponent(string);
 
 ### 正規表現
 
+#### 変換(replace)
+
+```js
+const sample_string = '......';
+const new_string = sample_string.replace(/regexp/gi, 'replace-string');
+```
+
 #### switch文で使う
 
 ```js
