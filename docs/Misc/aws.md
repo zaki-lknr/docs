@@ -106,3 +106,17 @@ aws ec2 get-vpn-connection-device-types --region ap-southeast-1
 ```console
 devicetypeid=$(aws ec2 get-vpn-connection-device-types --region ${region} --query "VpnConnectionDeviceTypes[?Vendor=='Fortinet' && Software=='FortiOS 5.0+'].VpnConnectionDeviceTypeId" --output text)
 ```
+
+## S3
+
+### 一覧
+
+```console
+aws s3 ls <backet-name>
+```
+
+### ダウンロード
+
+```console
+aws s3 cp s3://<backet-name>/path/to/file /path/to/file
+```
