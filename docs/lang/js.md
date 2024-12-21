@@ -92,6 +92,26 @@ console.log(str.repeat(3));
 // 結果は "abcabcabc"
 ```
 
+#### 部分文字列
+
+##### substring
+
+`substring(開始位置, 終了位置)`を使う。(終了位置は「ここ以降は除外」)
+
+```js
+str = 'hello world';
+console.log(str.substring(3, 8));
+```
+
+出力は`lo wo`
+
+引数が一つの場合は、その位置から最後まで。
+
+```js
+console.log(str.substring(3));
+// 出力は "lo world"
+```
+
 #### 先頭が指定の文字列で始まっているか
 
 ```js
