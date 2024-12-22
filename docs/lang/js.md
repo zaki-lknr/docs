@@ -112,6 +112,19 @@ console.log(str.substring(3));
 // 出力は "lo world"
 ```
 
+第2引数の負数を指定した場合の動作は以下
+
+- `substring()`は負数あるいは`NaN`が指定されたら`0`として処理
+- 第1引数より第2引数が小さい場合は、2つの引数を交換して処理
+
+```js
+str = 'hello world';
+console.log(str.substring(3, -2));
+// "hel"
+```
+
+よって、`substring(3, -2)`の処理は、`substring(0, 3)`として処理される。
+
 ##### slice
 
 ```js
@@ -126,6 +139,14 @@ console.log(str.slice(3, 8));
 str = 'hello world';
 console.log(str.slice(3));
 // "lo world"
+```
+
+第2引数に負数を指定すると末尾から数える。
+
+```js
+str = 'hello world';
+console.log(str.slice(3, -2));
+// "lo wor"
 ```
 
 #### 先頭が指定の文字列で始まっているか
