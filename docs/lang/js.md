@@ -112,6 +112,22 @@ console.log(str.substring(3));
 // 出力は "lo world"
 ```
 
+##### slice
+
+```js
+str = 'hello world';
+console.log(str.slice(3, 8));
+// "lo wo"
+```
+
+基本的には`substring()`と同じ
+
+```js
+str = 'hello world';
+console.log(str.slice(3));
+// "lo world"
+```
+
 #### 先頭が指定の文字列で始まっているか
 
 ```js
