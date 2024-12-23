@@ -186,13 +186,6 @@ console.log(size);
 
 結果は`33`
 
-#### 正規表現置換
-
-```javascript
-const str = 'foobarbaz';
-console.log(str.replace(/ba/g, 'BA'));
-```
-
 #### URL文字列のparse
 
 `URL`を使うと簡単
@@ -229,7 +222,9 @@ encodeURIComponent(string);
 
 ### 正規表現
 
-#### 変換(replace)
+[正規表現 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_expressions)
+
+#### 置換(replace)
 
 ```js
 const sample_string = '......';
