@@ -156,6 +156,27 @@ DynamoDBでテーブルを作成
   }
 ```
 
+### ロックしたままになった場合の解除
+
+処理中の強制中断や、実行ホストのシャットダウンなどで、ロック状態のままになると、次のTerraform実行はできなくなる。  
+解除するには `terraform force-unlock ID` を実行する。
+
+IDはエラーメッセージ中の以下の値
+
+```console
+Error message: operation error DynamoDB: PutItem, https response error
+StatusCode: 400, RequestID: ....
+ConditionalCheckFailedException: The conditional request failed
+Lock Info:
+  ID:        ********
+  Path:      /path/to/terraform.tfstate
+  Operation: OperationTypeApply
+  Who:       ...
+  Version:   1.9.1
+  Created:   ...
+  Info:
+```
+
 ## 構文
 
 ### count
