@@ -590,6 +590,15 @@ M       docs/Ansible/directives.md
 
 ## 差分
 
+### 直前のコミットの差分
+
+```console
+git diff HEAD^
+```
+
+未コミットがあればそれも含めて表示される(`git diff`の結果とミックスされる)  
+未コミットを除くには `git diff HEAD^ HEAD`
+
 ### ブランチ間の差分
 
 ブランチ名を引数に実行すればOK
