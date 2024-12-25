@@ -609,7 +609,8 @@ r = requests.get("http://www.example.org")
 
 ##### POST
 
-辞書型データをJSON形式のリクエストヘッダにするなら`json.dumps`を使うと楽。
+リクエストボディは`data`で指定する。  
+辞書型データをJSON形式のリクエストボディにするなら`json.dumps`を使うと楽。
 
 ```python
 payload = json.dumps(dict_params)
