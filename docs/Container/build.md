@@ -17,3 +17,12 @@ ENV LANG ja_JP.UTF-8
 
 USER 1001
 ```
+
+## ファイルコピー(COPY)
+
+```Dockerfile
+COPY script.py /usr/local/src
+CMD python /usr/local/src/script.py
+```
+
+ビルドするホストのカレントにある`script.py`をコンテナの`/usr/local/src/script.py`へコピーする
