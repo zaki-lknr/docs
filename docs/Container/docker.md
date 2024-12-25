@@ -73,6 +73,14 @@ docker run -it image:tag sh
 docker run -it --entrypoint sh image:tag
 ```
 
+#### 環境変数(-e)
+
+コンテナ環境へ環境変数を渡すには`-e`を使う
+
+```console
+docker run --rm -e APP_VAL=foobar image:tag
+```
+
 ### build
 
 #### Dockerfile指定
