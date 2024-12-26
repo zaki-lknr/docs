@@ -73,6 +73,19 @@ String(number_value);
 Number(string_value);
 ```
 
+#### Dateへの変換
+
+コード上単純な変換は、決められた書式になっていればそのままDateインスタンスを作成できる。
+
+```js
+date_str = "2024.12.26 23:39:22.12345";
+date = new Date(date_str);
+console.log(date);
+// 2024-12-26T14:39:22.123Z
+```
+
+区切り文字がない場合や、24時などは`Invalid Date`となる。
+
 #### 文字列長
 
 文字数は`length`メソッド。
