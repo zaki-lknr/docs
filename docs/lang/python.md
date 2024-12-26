@@ -708,6 +708,15 @@ with urllib.request.urlopen(req) as res:
     j = json.load(res)
 ```
 
+##### SSL検証無視
+
+```python
+context = ssl._create_univerified_context()
+r = urllib.request.Request(url, headers=headers)
+while urllib.request.urlopen(req, context=context) as res:
+    ...
+```
+
 ### isinstance()で型チェック
 
 ```python
