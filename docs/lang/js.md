@@ -224,6 +224,17 @@ encodeURIComponent(string);
 
 [正規表現 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_expressions)
 
+#### 単純なマッチング(test)
+
+true/falseの判定だけなら(StringでなくRegExpのメソッドの)`test`が使える。  
+
+```js
+sample = 'hello world';
+if (/world/.test(sample)) {
+    console.log("match");
+}
+```
+
 #### 置換(replace)
 
 ```js
