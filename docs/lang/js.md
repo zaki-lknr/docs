@@ -463,6 +463,22 @@ const tomorrow = new Date(foobar_date);
 tomorrow.setDate(tomorrow.getDate() + 1);
 ```
 
+#### タイムゾーンのオフセット取得
+
+```javascript
+const d = new Date();
+console.log(d.getTimezoneOffset());
+console.log(d.getTimezoneOffset() / 60);
+```
+
+OSのタイムゾーン設定で決まる。
+JST(GMT+0900)設定で実行すると出力は以下の通り。
+
+```console
+-540
+-9
+```
+
 ### 非同期処理
 
 #### Promise変数
