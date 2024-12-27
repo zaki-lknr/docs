@@ -248,6 +248,30 @@ if (/world/.test(sample)) {
 }
 ```
 
+#### マッチした結果を配列で参照する(match)
+
+```js
+date_str = "20241226";
+
+if (r = date_str.match(/^(\d{4})(\d{2})(\d{2})$/)) {
+    console.log(r);
+}
+```
+
+結果は以下の通り
+
+```console
+[
+  '20241226',
+  '2024',
+  '12',
+  '26',
+  index: 0,
+  input: '20241226 ',
+  groups: undefined
+]
+```
+
 #### 置換(replace)
 
 ```js
