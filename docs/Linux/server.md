@@ -94,3 +94,15 @@ backend servers
 ```
 dhcp-host=00:00:5E:00:53:00,raclette,192.168.0.129
 ```
+
+### DNS
+
+#### ワイルドカード
+
+ワイルドカード的に任意の文字列をサブドメイン扱いですべて特定のアドレスに名前解決する
+
+```
+address=/exmaple.org/192.168.0.15
+```
+
+これで`example.org`だけでなく、`foo.example.org`も`foo.bar.baz.example.org`も`192.168.0.15`となる。
