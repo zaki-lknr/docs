@@ -74,6 +74,8 @@ backend bazqux
   server host2 192.168.0.122:8080 check
 ```
 
+checkでなくbackupもある。check対象が全滅したらbackupを使う動作
+
 ### ssl検証無視
 
 ```
