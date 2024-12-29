@@ -479,6 +479,14 @@ JST(GMT+0900)設定で実行すると出力は以下の通り。
 -9
 ```
 
+#### UTCの時刻情報を得る
+
+`getFullYear()`などに対応した`getUTCFullYear()`というメソッドを使う。
+
+```javascript
+const utc_datestr = d.getUTCFullYear().toString().padStart(4, "0") + "/" + (d.getUTCMonth() + 1).toString().padStart(2, "0") + "/" + d.getUTCDate().toString().padStart(2, "0");
+```
+
 ### 非同期処理
 
 #### Promise変数
