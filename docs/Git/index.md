@@ -169,7 +169,13 @@ origin/mainから取り込むときに`pull`するとmergeになってしまう�
 $ git merge --abort
 ```
 
-マージ前の状態に戻る
+マージ前の状態に戻る。
+
+rebaseのコンフリクト時の取り消しは以下。
+
+```
+git rebase --abort
+```
 
 ### rebaseのコンフリクト
 
