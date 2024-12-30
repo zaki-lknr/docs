@@ -20,6 +20,32 @@ Private-Key: (4096 bit, 2 primes)
 
 ## 証明書作成
 
+### プライベートCA作成と署名
+
+※ ~~OpenSSL 3 では `openssl genrsa`はdeprecatedになっている~~  
+なってなかった  
+[genrsa is not really deprecated although documented so · Issue #21055 · openssl/openssl](https://github.com/openssl/openssl/issues/21055)
+
+`genpkey`使う場合は以下。
+
+```console
+# key作成
+openssl genpkey -algorithm rsa -out ca.key
+# crt作成
+openssl req -new -x509 -days 3650 -key ca.key -subj "/CN=example.org/" -out ca.crt
+```
+
+csrを作らずに一気にcrtファイル作成は↑の通り。
+
+csrも作るには以下(生成情報に若干の差異はあるけど)
+
+```console
+# csr作成
+openssl req -new -key ca.key -subj "/CN=example.org/" -out ca.csr
+# crt作成
+openssl x509 -req -in ca.csr -signkey ca.key -days 3650 -out ca.crt
+```
+
 ### オレオレ証明書作成(CommonName)
 
 ```console
