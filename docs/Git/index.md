@@ -171,6 +171,47 @@ $ git merge --abort
 
 マージ前の状態に戻る
 
+### rebaseのコンフリクト
+
+`git rebase main`したらこのエラー
+
+```console
+Auto-merging <filename>
+CONFLICT (content): Merge conflict in <filename>
+error: could not apply e91cdab... <commit message>
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply e91cdab... <commit message>
+```
+
+`git-prompt`を使っていると、プロンプトの表示は以下のようになる。
+
+```console
+(feature/branch *+|REBASE 1/1) 
+```
+
+コンフリクト箇所の修正と修正後の`add`は`merge`の時と同様。  
+`add`した状態の`status`
+
+```console
+$ git st
+interactive rebase in progress; onto a4650f8
+Last command done (1 command done):
+   pick e91cdab add: 24時間以内のチェックイン数の表示 #59
+No commands remaining.
+You are currently rebasing branch 'feature/count-24' on 'a4650f8'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   swarm.js
+```
+
+ここで`rebase`を続けるために、メッセージに出てる通り`git rebase --continue`を実行するとエディタが起動するのでコミットメッセージを編集すればrebaseが完了する。
+
 ### stash pop後のconflict
 
 メッセージが以下のようになり`git merge --abort`は効かない。  
