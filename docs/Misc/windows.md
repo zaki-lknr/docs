@@ -16,6 +16,10 @@
 
 [ディスプレイの画面の周りが表示されず、黒枠ができる | アイ・オー・データ機器 I-O DATA](https://www.iodata.jp/support/qanda/answer/s30707.htm)
 
+### 証明書管理
+
+`certmgr.msc`で起動。
+
 ## 評価版 Windows10
 
 必要事項を入力してダウンロードしたISOは、ライセンスキー入力がなく90日検証に使用できる。
