@@ -61,6 +61,17 @@ export -n EDITOR
 
 シェル変数に残るので`echo $EDITOR`の出力は変化しないが環境変数としては消える。
 
+## エラー番号
+
+[付録B Solaris/Linux ERRNO テーブル](https://software.fujitsu.com/jp/manual/manualfiles/m210011/j2x14260/25z200/j4260-b-00-00.html)
+
+| No  | code   | 概要                                       |
+| --- | ------ | ---------------------------------------- |
+| 1   | EPERM  | Operation not permitted / not super-user |
+| 2   | ENOENT | No such file or directory                |
+| 5   | EIO    | I/O error                                |
+| 6   | ENXIO  | No such device or address                |
+
 ## シングルユーザーモード
 
 ### ubuntu
