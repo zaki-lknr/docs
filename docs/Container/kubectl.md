@@ -22,6 +22,29 @@ kubectl config get-contexts
 kubectl config use-contexts <context-name>
 ```
 
+### 削除
+
+```console
+zaki@cloud-dev2:~$ kubectl config get-contexts 
+CURRENT   NAME                    CLUSTER                 AUTHINFO                NAMESPACE
+          k3s-node                k3s-node                k3s-node                
+          k3s-oci-4c              k3s-oci-4c              k3s-oci-4c              
+          kind-ansible-cookbook   kind-ansible-cookbook   kind-ansible-cookbook   
+          kind-awx-sample         kind-awx-sample         kind-awx-sample         
+*         rasp5-01                rasp5-01                rasp5-01                
+zaki@cloud-dev2:~$ kubectl config delete-context rasp5-01 
+warning: this removed your active context, use "kubectl config use-context" to select a different one
+deleted context rasp5-01 from /home/zaki/.kube/config
+zaki@cloud-dev2:~$ kubectl config get-contexts 
+CURRENT   NAME                    CLUSTER                 AUTHINFO                NAMESPACE
+          k3s-node                k3s-node                k3s-node                
+          k3s-oci-4c              k3s-oci-4c              k3s-oci-4c              
+          kind-ansible-cookbook   kind-ansible-cookbook   kind-ansible-cookbook   
+          kind-awx-sample         kind-awx-sample         kind-awx-sample         
+```
+
+current削除時は警告されるが削除は可能
+
 ## 設定
 
 ### kubeconfigのマージ
