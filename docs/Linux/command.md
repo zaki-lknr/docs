@@ -376,6 +376,18 @@ $ unzip -q <zip-file>
 $ unzip <zip-file> -d <dirname>
 ```
 
+zip内のファイルパスを指定すれば、そのファイルのみを取り出せる。
+
+```console
+unzip <zip-file> path/to1/file1.yaml path/to2/file2.conf
+```
+
+ワイルドカードも指定可能
+
+```console
+unzip <zip-file> "path/*"
+```
+
 ### 圧縮
 
 ```console
