@@ -186,6 +186,12 @@ const items = string.split(",");
 
 [String.prototype.split() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 
+正規表現を使う場合はそのまま。
+
+```js
+strings.split(/,\s*/);
+```
+
 #### 文字列長のバイト換算
 
 `string.length`は文字数を返す。  
