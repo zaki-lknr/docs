@@ -36,6 +36,10 @@ Release and maintenanceの中の[ansible-core support matrix](https://docs.ansib
 - [Tips and tricks — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html) 旧「ベストプラクティス」のページ。
 - [Conditionals — Ansible Documentation](https://terryhowe.github.io/ansible-modules-hashivault/user_guide/playbooks_conditionals.html) 条件分
 
+## 実行制御
+
+[Controlling playbook execution: strategies and more — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html)
+
 ## ネットワーク
 
 - [Ansible for Network Automation — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/index.html)
