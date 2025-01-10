@@ -1,6 +1,8 @@
-# AWS CLI
+# AWS
 
-## インストール
+## CLI
+
+### インストール
 
 [Installing or updating the latest version of the AWS CLI - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
@@ -17,7 +19,7 @@ $ aws --version
 aws-cli/2.11.15 Python/3.11.3 Linux/4.4.0-19041-Microsoft exe/x86_64.ubuntu.20 prompt/off
 ```
 
-## 初期設定
+### 初期設定
 
 - [設定の基本 - AWS Command Line Interface](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-configure-quickstart.html)
 
@@ -44,7 +46,7 @@ aws_access_key_id = ....
 aws_secret_access_key = ....
 ```
 
-## コンテナを使った実行
+### コンテナを使った実行
 
 ECRの認証トークンを得るには以下。
 
@@ -54,9 +56,11 @@ podman run --rm -it -v ~/.aws:/root/.aws public.ecr.aws/aws-cli/aws-cli ecr get-
 
 `aws`を指定しないのがポイント
 
-## ネットワーク
+### 各操作
 
-### ゲートウェイIDの取得
+#### ネットワーク
+
+##### ゲートウェイIDの取得
 
 ```console
 aws ec2 describe-vpn-gateways \
@@ -65,7 +69,7 @@ aws ec2 describe-vpn-gateways \
   --output text
 ```
 
-### サイト間VPN接続の設定サンプルダウンロード
+##### サイト間VPN接続の設定サンプルダウンロード
 
 [get-vpn-connection-device-sample-configuration — AWS CLI 1.29.35 Command Reference](https://docs.aws.amazon.com/cli/latest/reference/ec2/get-vpn-connection-device-sample-configuration.html)
 
@@ -78,7 +82,7 @@ aws ec2 get-vpn-connection-device-sample-configuration \
   --output text > vpn-sample.txt
 ```
 
-#### デバイスタイプIDの取得
+###### デバイスタイプIDの取得
 
 ```console
 aws ec2 get-vpn-connection-device-types --region ap-southeast-1
@@ -107,15 +111,15 @@ aws ec2 get-vpn-connection-device-types --region ap-southeast-1
 devicetypeid=$(aws ec2 get-vpn-connection-device-types --region ${region} --query "VpnConnectionDeviceTypes[?Vendor=='Fortinet' && Software=='FortiOS 5.0+'].VpnConnectionDeviceTypeId" --output text)
 ```
 
-## S3
+#### S3
 
-### 一覧
+##### 一覧
 
 ```console
 aws s3 ls <backet-name>
 ```
 
-### ダウンロード
+##### ダウンロード
 
 ```console
 aws s3 cp s3://<backet-name>/path/to/file /path/to/file
