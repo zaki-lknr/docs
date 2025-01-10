@@ -124,3 +124,11 @@ aws s3 ls <backet-name>
 ```console
 aws s3 cp s3://<backet-name>/path/to/file /path/to/file
 ```
+
+## サービス
+
+### EC2 / Amazon Linux
+
+- [Amazon Linux 2 から Amazon Linux 2023 への移行 - AWS Elastic Beanstalk](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/using-features.migration-al.generic.from-al2.html)
+- [よくある質問 - Amazon Linux 2 | AWS](https://aws.amazon.com/jp/amazon-linux-2/faqs/)
+- [20240216 Amazon Linux 2 を 2023 に移行してみた - Speaker Deck](https://speakerdeck.com/masaruogura/20240216-amazon-linux-2-wo-2023-niyi-xing-sitemita)
