@@ -156,3 +156,18 @@ NW機器のコンソールポートへアクセスするためのコンソール
     - SmartCSの特定ポートへsshすると、接続しているTTYへアクセスできる
 - セレクトモード
     - SmartCSの代表ポート(22/TCPのssh)へまずアクセスし、そこからTTYを選択
+
+## VyOS
+
+### 設定モード
+
+```console
+vyos@vyos:~$ configure 
+[edit]
+vyos@vyos# 
+```
+
+設定を反映するには`commit`を実行。保存は`save`  
+反映せずに破棄するには`discard`を実行。
+
+設定モードを抜けるには`exit`
