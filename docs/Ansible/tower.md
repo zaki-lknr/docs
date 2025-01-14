@@ -1,5 +1,15 @@
 # Ansible Tower
 
+## docs
+
+- 旧ドキュメント
+    - [1. Overview — Automation Controller User Guide v4.5](https://docs.ansible.com/automation-controller/latest/html/userguide/overview.html)
+    - [1. Red Hat Ansible Automation Platform Controller Licensing, Updates, and Support — Automation Controller Administration Guide v4.5](https://docs.ansible.com/automation-controller/latest/html/administration/license-support.html)
+
+- 現行(v2.4)
+    - [Automation Controller ユーザーガイド | Red Hat Product Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.4/html-single/automation_controller_user_guide/index)
+    - [Automation Controller 管理ガイド | Red Hat Product Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.4/html-single/automation_controller_administration_guide/index)
+
 ## バックアップとリストア
 
 バックアップするには以下。  
