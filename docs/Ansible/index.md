@@ -38,7 +38,8 @@ Release and maintenanceの中の[ansible-core support matrix](https://docs.ansib
 
 ## 実行制御
 
-[Controlling playbook execution: strategies and more — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html)
+- [Controlling playbook execution: strategies and more — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html)
+- [Controlling where tasks run: delegation and local actions — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html)
 
 ## ネットワーク
 
