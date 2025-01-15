@@ -127,6 +127,14 @@ dnf install --downloadonly --destdir /path/to <package-name>
 
 ホストにインストール済みの場合はダウンロードされないため `--installroot` を併用する。
 
+### リポジトリ追加
+
+```console
+dnf config-manager addrepo --from-repofile=https://rpm.example.org/rpm.repo
+```
+
+以前は `dnf config-manager --add-repo https://rpm.example.org/rpm.repo` だったがオプションが変更された。
+
 ## yum
 
 ### リポジトリ一覧
