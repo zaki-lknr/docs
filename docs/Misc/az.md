@@ -206,6 +206,17 @@ az network private-dns record-set a add-record \
   --record-set-name hostname
 ```
 
+#### Aレコード削除
+
+```console
+az network private-dns record-set a delete \
+  --resoure-group ${resource_group} \
+  --zone-name "private.example.org"
+  --name hostname
+```
+
+y/nを聞かれるが、`-y`を付与すれば強制削除
+
 #### 仮想ネットワークとのリンク作成
 
 ゾーンと仮想ネットワークが同じリソースグループであれば、`--virtual-network`は仮想ネットワーク名だけで良い。
