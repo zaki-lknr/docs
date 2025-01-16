@@ -63,3 +63,45 @@ $ sudo yum-config-manager --enable ol7_developer
 ```
 
 [Oracle Linux 7 (aarch64) Development | Oracle, Software. Hardware. Complete.](https://yum.oracle.com/repo/OracleLinux/OL7/developer/aarch64/index.html)
+
+## 古いDocker
+
+検証用に古いバージョンを入れたい場合
+
+### Docker
+
+ディストリビューション毎のパッケージファイルがダウンロードサイトにある。  
+各ディストリビューションのバージョン毎に、その時期のDockerバージョンがアーカイブされている。  
+時間差があるような(新しいFedoraに古いDockerを入れる、みたいな)場合は、プラットフォームバージョン側のバージョンを落として探してみる。
+
+- [Ubuntu 20.04 LTS: Docker 19.03.10 - 20.10.24](https://download.docker.com/linux/ubuntu/dists/focal/pool/stable/amd64/)
+- [Fedora 36: Docker 20.10.15 - 20.10.24](https://download.docker.com/linux/fedora/36/x86_64/stable/Packages/)
+
+### Docker Compose
+
+例えば1.29.2であれば以下から直接バイナリをダウンロードし、`/usr/local/bin/docker-compose`あたりに配置し実行権限を付与する。
+
+<https://github.com/docker/compose/releases/tag/1.29.2>
+
+エラーが出た場合
+
+```console
+$ docker-compose version
+[21740] Error loading Python lib '/tmp/_MEIy05DAM/libpython3.7m.so.1.0': dlopen: libcrypt.so.1: cannot open shared object file: No such file or directory
+```
+
+Fedoraの場合
+
+```console
+$ sudo dnf search libxcrypt
+```
+
+これで動く
+
+```console
+[zaki@fedora40-dev docker-20]$ docker-compose version
+docker-compose version 1.29.2, build 5becea4c
+docker-py version: 5.0.0
+CPython version: 3.7.10
+OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
+```
