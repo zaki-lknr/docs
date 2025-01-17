@@ -193,3 +193,59 @@ vzdump-qemu-116-2023_09_05-23_58_49.vma.zst.notes
 ```console
 qm destroy <vmid> --destroy-unreferenced-disks=1
 ```
+
+## ホスト名変更
+
+```console
+root@pve:~# hostnamectl set-hostname pve01
+root@pve:~# 
+```
+
+他の変更ファイル(ファイル内にホスト名の記述があるものを探す)
+
+- /etc/hosts
+- /etc/hostname
+- /etc/postfix/main.cf
+- /etc/pve/storage.cfg
+
+VMとノード定義
+
+```console
+root@pve01:~# ls -lF /etc/pve/nodes/
+total 0
+drwxr-xr-x 2 root www-data 0 May 14  2023 pve/
+```
+
+しばらく待機すると、新ホスト名のノードが生えるが中身はブランク
+
+```console
+root@pve01:~# ls -lF /etc/pve/nodes/
+total 0
+drwxr-xr-x 2 root www-data 0 May 14  2023 pve/
+drwxr-xr-x 2 root www-data 0 Jan  5 14:51 pve01/
+root@pve01:~# find /etc/pve/nodes/pve01/
+/etc/pve/nodes/pve01/
+/etc/pve/nodes/pve01/qemu-server
+/etc/pve/nodes/pve01/lxc
+```
+
+念のためバックアップ
+
+```console
+root@pve01:~# cp -a /etc/pve/nodes/pve node-backup/
+root@pve01:~# ls -lF node-backup/
+total 4
+drwxr-xr-x 6 root www-data 4096 May 14  2023 pve/
+root@pve01:~# 
+```
+
+VM定義ファイルを移動
+
+```console
+root@pve01:~# mv /etc/pve/nodes/pve/qemu-server/* /etc/pve/nodes/pve01/qemu-server/
+root@pve01:~#
+root@pve01:~# ls /etc/pve/nodes/pve01/qemu-server/
+101.conf  116.conf  201.conf  210.conf  303.conf  312.conf  703.conf  709.conf  712.conf   9002.conf  9011.conf
+111.conf  119.conf  202.conf  301.conf  310.conf  313.conf  707.conf  710.conf  9000.conf  9003.conf  9020.conf
+114.conf  121.conf  203.conf  302.conf  311.conf  702.conf  708.conf  711.conf  9001.conf  9010.conf
+```
