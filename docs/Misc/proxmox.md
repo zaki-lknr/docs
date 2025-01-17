@@ -188,6 +188,14 @@ vzdump-qemu-116-2023_09_05-23_58_49.vma.zst.notes
 
 ## CLI
 
+### VM一覧
+
+```console
+qm list
+```
+
+ID、VM名、起動状態、RAMサイズ、ストレージサイズなどが一覧で出力される
+
 ### VM削除
 
 ```console
