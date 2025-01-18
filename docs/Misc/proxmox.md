@@ -196,6 +196,49 @@ qm list
 
 ID、VM名、起動状態、RAMサイズ、ストレージサイズなどが一覧で出力される
 
+### VM詳細(qemu-guest-agent使用)
+
+qemu-guest-agentが動作しているVMの情報を取得する。  
+NIC情報であれば以下の通り。
+
+```console
+# qm guest cmd 710 network-get-interfaces
+[
+   {
+      "hardware-address" : "00:00:00:00:00:00",
+      "ip-addresses" : [
+         {
+            "ip-address" : "127.0.0.1",
+            "ip-address-type" : "ipv4",
+            "prefix" : 8
+         },
+
+         ...
+      ]
+   },
+   {
+      "hardware-address" : "bc:24:11:d6:b0:61",
+      "ip-addresses" : [
+         {
+            "ip-address" : "192.168.0.201",
+            "ip-address-type" : "ipv4",
+            "prefix" : 24
+         },
+         {
+            "ip-address" : "fe80::be24:11ff:fed6:b061",
+            "ip-address-type" : "ipv6",
+            "prefix" : 64
+         }
+      ],
+
+      ...
+```
+
+使えるサブコマンドは`qm help`で確認できる。  
+[qm(1)](https://pve.proxmox.com/pve-docs/qm.1.html)
+
+(`qm guest`のヘルプは無さげ…)
+
 ### VM削除
 
 ```console
