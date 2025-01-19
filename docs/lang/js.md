@@ -503,6 +503,19 @@ JST(GMT+0900)設定で実行すると出力は以下の通り。
 const utc_datestr = d.getUTCFullYear().toString().padStart(4, "0") + "/" + (d.getUTCMonth() + 1).toString().padStart(2, "0") + "/" + d.getUTCDate().toString().padStart(2, "0");
 ```
 
+#### 差分
+
+Dateインスタンス同士の差分はミリ秒
+
+```js
+const today = new Date();
+const tomorrow = new Date().setDate(today.getDate() + 1);
+
+console.log(tomorrow - today);
+```
+
+出力は86400000
+
 ### 非同期処理
 
 #### Promise変数
