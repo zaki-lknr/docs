@@ -251,3 +251,19 @@ Password for zaki@//pecorino/HD-LDS-A:
 ```console
 mount -t nfs -o rw pecorino:/dev /mnt/
 ```
+
+## fstab
+
+```
+/dev/mapper/centos-root  /      xfs   defaults  0 1
+192.168.0.200:/share     /mnt   nfs   rw        0 0
+```
+
+フィールドは左から順に
+
+1. デバイス
+1. マウントポイント
+1. ファイルシステムタイプ
+1. オプション
+1. `dump`による出力対象フラグ(0:対象外)
+1. 起動時`fsck`の対象フラグ(0:対象外)
