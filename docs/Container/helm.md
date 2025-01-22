@@ -48,6 +48,23 @@ $ helm repo add prometheus-community https://prometheus-community.github.io/helm
 
 とか
 
+### リポジトリ削除
+
+追加したときのリポジトリ名(`helm repo list`で確認可能)を指定して`remove`する。
+
+```console
+$ helm repo list
+NAME            URL
+hashicorp       https://helm.releases.hashicorp.com
+fluent          https://fluent.github.io/helm-charts
+stable          https://charts.helm.sh/stable
+elastic         https://helm.elastic.co
+awx-operator    https://ansible-community.github.io/awx-operator-helm/
+gitlab          https://charts.gitlab.io/
+$ helm repo remove stable
+"stable" has been removed from your repositories
+```
+
 ### ローカルのリポジトリ情報を更新
 
 多分`apt-get update`的な動作。
