@@ -141,3 +141,13 @@ $ curl https://api.github.com/repos/netbox-community/ansible_modules
 
 - <https://github.com/zaki-lknr/docs/compare/faf3~2..faf3>
 - <https://github.com/zaki-lknr/docs/compare/faf3%5E%5E..faf3>
+
+## GitHub Actions
+
+### ワークフローの手動実行
+
+<https://docs.github.com/ja/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow>
+
+### ワークフローとジョブの再実行
+
+ワークフロー実行結果一覧から指定のワークフローを開き、画面右上の「Re-run all jobs」ボタンを押下ｋ
