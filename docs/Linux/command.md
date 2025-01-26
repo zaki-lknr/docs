@@ -597,6 +597,47 @@ $ dig -x 192.168.0.16
 ;; MSG SIZE  rcvd: 108
 ```
 
+## nc
+
+### 疎通確認
+
+102.168.0.100の22/TCPへの疎通確認 (`-v`はverboseオプション)
+
+```console
+$ nc -v 192.168.0.100 22
+Ncat: Version 7.92 ( https://nmap.org/ncat )
+Ncat: Connected to 192.168.0.4:22.
+SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u3
+
+```
+
+サーバーがクライアントからの送信待ちの場合は接続が継続する。  
+疎通を確認して即切断でよければ、`-z`を付与する。  
+(Zero-I/O mode, report connection status only)
+
+```console
+$ nc -z -v 192.168.0.100 22
+Ncat: Version 7.92 ( https://nmap.org/ncat )
+Ncat: Connected to 192.168.0.4:22.
+Ncat: 0 bytes sent, 0 bytes received in 0.01 seconds.
+```
+
+疎通がなければ失敗する。
+
+```console
+### ホストが存在しない
+$ nc -z -v 192.168.0.100 22
+Ncat: Version 7.92 ( https://nmap.org/ncat )
+Ncat: No route to host.
+```
+
+```console
+### ホストは存在するがポートがlistenしてない
+$ nc -z -v 192.168.0.99 22
+Ncat: Version 7.92 ( https://nmap.org/ncat )
+Ncat: Connection refused.
+```
+
 ## ip
 
 ### 指定インタフェースのみ
