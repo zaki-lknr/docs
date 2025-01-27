@@ -597,7 +597,7 @@ $ git log --oneline --graph
 ### 別ブランチのログ
 
 ```
-$ git log --oneline --first-parent <branch-name>
+$ git log --oneline <branch-name>
 ```
 
 ### コミット時の対象ファイルを表示
