@@ -26,6 +26,9 @@ Towerは実行中で良い。
 # ./setup.sh -r -e restore_backup_file=/path/to/tower-backup-....tar.gz
 ```
 
+- ver 2.4 [Chapter 27. Backup and restore | Red Hat Product Documentation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/automation_controller_administration_guide/controller-backup-and-restore#controller-backup-and-restore)
+- ver 2.5 [Chapter 15. Backup and restore | Red Hat Product Documentation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/configuring_automation_execution/controller-backup-and-restore)
+
 ## アンインストール
 
 [How to uninstall Red Hat Ansible Controller(Ansible Automation Platform 2.x)? - Red Hat Customer Portal](https://access.redhat.com/solutions/6733721)
