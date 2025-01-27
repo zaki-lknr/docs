@@ -86,6 +86,26 @@ console.log(date);
 
 区切り文字がない場合や、24時などは`Invalid Date`となる。
 
+#### padStart()で0埋め
+
+> `padStart()`メソッドは、結果の文字列が指定した長さになるように、現在の文字列を他の文字列で（必要に応じて繰り返して）延長します。延長は、現在の文字列の先頭から適用されます。
+
+```js
+const d = new Date();
+const s = d.getFullYear().toString().padStart(4, "0") + "-"
+        + (d.getMonth()+1).toString().padStart(2, "0") + "-"
+        + d.getDate().toString().padStart(2, "0") + " "
+        + d.getHours().toString().padStart(2, "0") + ":"
+        + d.getMinutes().toString().padStart(2, "0") + ":"
+        + d.getSeconds().toString().padStart(2, "0");
+
+console.log(s);
+```
+
+これで現在時刻の`YYYY-mm-dd HH:MM:ss`形式(0埋め)になる。
+
+<https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/padStart>
+
 #### 文字列長
 
 文字数は`length`メソッド。
