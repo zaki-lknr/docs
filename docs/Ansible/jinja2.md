@@ -43,6 +43,22 @@
 {% set _ = host_list.append({'host': host, 'name': hostvars[host].tags.User }) %}
 ```
 
+### 辞書
+
+#### 値の参照
+
+```jinja2
+{{ foo.bar.baz }}
+```
+
+または
+
+```jinja2
+{{ foo['bar']['baz'] }}
+```
+
+後者の書式であればキー名に変数を使うこともできる。
+
 ## 制御構文
 
 ### ループ
