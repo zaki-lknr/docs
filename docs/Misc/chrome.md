@@ -16,3 +16,9 @@
 - URL (query)
 
 を設定する。(アドレスバーに入力した検索用文字列は`%s`で指定できる)
+
+## DevTools
+
+### ページ遷移してもログを継続する
+
+設定の「Console」カテゴリにある「Preserve log upon navigation」にチェックする
