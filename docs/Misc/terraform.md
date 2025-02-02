@@ -195,6 +195,17 @@ resource "aws_instance" "cloud-vm" {
 }
 ```
 
+EIPの付与と連動させるには、[element function](https://developer.hashicorp.com/terraform/language/functions/element)を使って要素を参照する。
+
+```terraform
+resource "aws_eip" "cloud-eip" {
+  count      = 3
+  instance   = "${element(aws_instance.cloud-vm.*.id, count.index)}"
+  depends_on = [ aws_internet_gateway.igw ]
+
+}
+```
+
 ### 変数
 
 #### 変数参照
