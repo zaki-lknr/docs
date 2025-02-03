@@ -600,6 +600,12 @@ $ git log --oneline --graph
 $ git log --oneline <branch-name>
 ```
 
+### マージ元のブランチのコミットは非表示
+
+```
+$ git log --first-parent
+```
+
 ### コミット時の対象ファイルを表示
 
 `pull`のように変更量などを表示
