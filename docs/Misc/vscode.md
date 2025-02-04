@@ -87,6 +87,17 @@
     "terminal.integrated.defaultProfile.windows": "Git Bash",
 ```
 
+### allowedUNCHosts
+
+CIFS上のファイルを開こうとしたときにエラーになる場合「Allowed UNCHosts」に開きたいサーバーを加え、VSCodeを再起動する。  
+settings.jsonに直接記載する場合は以下の通り。
+
+```json
+    "security.allowedUNCHosts": [
+        "file-server"
+    ],
+```
+
 ## ショートカット
 
 ※ windows前提
