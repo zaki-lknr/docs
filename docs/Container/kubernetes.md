@@ -137,6 +137,11 @@ kubectl get ns ${namespace} -o json | grep -v -- '"kubernetes"' | kubectl replac
 
 ※ `kubectl get ns hoge -o json | grep -2 -- '"kubernetes"'`を実行して、1か所しかヒットしない場合
 
+## Initコンテナ
+
+- [Initコンテナ | Kubernetes](https://kubernetes.io/ja/docs/concepts/workloads/pods/init-containers/)
+- [Initコンテナのデバッグ | Kubernetes](https://kubernetes.io/ja/docs/tasks/debug/debug-application/debug-init-containers/)
+
 ## REST
 
 ### namespace一覧
