@@ -1,5 +1,7 @@
 # skopeo
 
+[containers/skopeo: Work with remote images registries - retrieving information, images, signing content](https://github.com/containers/skopeo)
+
 ## copy
 
 ローカルのイメージをリモートへpush
