@@ -694,6 +694,15 @@ let image_item = document.createElement("img");
 image_item.src = image_url;
 ```
 
+#### textfield
+
+```javascript
+const field = document.createElement("input")
+field.type = 'text';
+field.id = 'input_field';
+field.value = 'sample';
+```
+
 #### checkbox
 
 ```javascript
