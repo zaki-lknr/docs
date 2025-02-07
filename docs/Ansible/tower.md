@@ -10,6 +10,18 @@
     - [Automation Controller ユーザーガイド | Red Hat Product Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.4/html-single/automation_controller_user_guide/index)
     - [Automation Controller 管理ガイド | Red Hat Product Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.4/html-single/automation_controller_administration_guide/index)
 
+## ライフサイクルとバージョン
+
+[Red Hat Ansible Automation Platform のライフサイクル - Red Hat Customer Portal](https://access.redhat.com/ja/support/policy/updates/ansible-automation-platform)
+
+| AAP ver | ansible-core | Controller ver |
+| ------- | ------------ | -------------- |
+| 2.5     | 2.16         | 4.6            |
+| 2.4     | 2.15         | 4.4            |
+| 2.3     | 2.14         | 4.3            |
+| 2.2     | 2.13         | 4.2            |
+| 2.1     | 2.12         | 4.1            |
+
 ## バックアップとリストア
 
 バックアップするには以下。  
