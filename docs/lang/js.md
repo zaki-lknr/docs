@@ -472,6 +472,31 @@ console.log(d.toISOString());
 
 結果(の書式)は`2024-08-17T10:28:28.466Z`
 
+#### Dateオブジェクトから年月日時分秒を取得
+
+```js
+const d = new Date();
+console.log(d);
+console.log(d.getFullYear());
+console.log(d.getMonth() + 1);
+console.log(d.getDate());
+console.log(d.getHours());
+console.log(d.getMinutes());
+console.log(d.getSeconds());
+```
+
+出力は以下 (`date`は「2025年  2月  8日 土曜日 22:44:42 JST」)
+
+```console
+2025-02-08T13:44:42.187Z
+2025
+2
+8
+22
+44
+42
+```
+
 #### UNIXタイムからDate型
 
 ```javascript
