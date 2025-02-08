@@ -580,6 +580,21 @@ JST(GMT+0900)設定で実行すると出力は以下の通り。
 const utc_datestr = d.getUTCFullYear().toString().padStart(4, "0") + "/" + (d.getUTCMonth() + 1).toString().padStart(2, "0") + "/" + d.getUTCDate().toString().padStart(2, "0");
 ```
 
+#### タイムゾーン文字列の取得
+
+```js
+const tz = Intl.DateTimeFormat().resolvedOptions().timeZon;
+console.log(tz);
+```
+
+出力は以下
+
+```console
+Asia/Tokyo
+```
+
+[Intl.DateTimeFormat.prototype.resolvedOptions() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
+
 #### 差分
 
 Dateインスタンス同士の差分はミリ秒
