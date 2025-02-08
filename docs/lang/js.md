@@ -556,6 +556,19 @@ const tomorrow = new Date(foobar_date);
 tomorrow.setDate(tomorrow.getDate() + 1);
 ```
 
+#### Dateオブジェクト同士の差分
+
+Dateインスタンス同士の差分はミリ秒
+
+```js
+const today = new Date();
+const tomorrow = new Date().setDate(today.getDate() + 1);
+
+console.log(tomorrow - today);
+```
+
+出力は86400000
+
 #### タイムゾーンのオフセット取得
 
 ```javascript
@@ -594,19 +607,6 @@ Asia/Tokyo
 ```
 
 [Intl.DateTimeFormat.prototype.resolvedOptions() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
-
-#### 差分
-
-Dateインスタンス同士の差分はミリ秒
-
-```js
-const today = new Date();
-const tomorrow = new Date().setDate(today.getDate() + 1);
-
-console.log(tomorrow - today);
-```
-
-出力は86400000
 
 ### 非同期処理
 
