@@ -828,7 +828,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ## html関連
 
-### 画面遷移(動画面)
+### 画面遷移(同画面)
 
 ```javascript
 window.location.href = url;
