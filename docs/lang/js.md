@@ -298,6 +298,20 @@ if (r = date_str.match(/^(\d{4})(\d{2})(\d{2})$/)) {
 ]
 ```
 
+#### マッチした位置を取得する(search)
+
+`search()`を使うと、最初にマッチした位置を返す。
+
+```javascript
+date_str = "date: 20250209";
+r = date_str.search(/\d/);
+if (r != -1) {
+    console.log(r);
+}
+```
+
+マッチしなかった場合は`-1`が返る。
+
 #### 置換(replace)
 
 ```js
