@@ -578,7 +578,7 @@ console.log(d.getTimezoneOffset() / 60);
 ```
 
 OSのタイムゾーン設定で決まる。
-JST(GMT+0900)設定で実行すると出力は以下の通り。
+値は分で得られるためJST(GMT+0900)設定で実行すると出力は以下の通り。
 
 ```console
 -540
