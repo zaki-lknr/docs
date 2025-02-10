@@ -40,3 +40,28 @@ Applications > APIs > Auth0 Management API > API Explorer tabから。
 
 デフォルトのトークン期限は86400秒
 
+プロダクション向けの処理で、web画面でなくAPIを使ってトークンを取得するには以下。  
+[Get Management API Access Tokens for Production](https://auth0.com/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production)
+
+権限を付与した「Machine-to-Machine Applications」のクライアントIDとSecretを使用し、以下のRESTでトークンを取得できる。
+
+```command
+curl -H 'content-type: application/x-www-form-urlencoded' \
+  -X POST \
+  --data grant_type=client_credentials \
+  --data "client_id="${AUTH0_CLIENT_ID} \
+  --data "client_secret=${AUTH0_CLIENT_SECRET}" \
+  --data "audience=https://YOUR-DOMAIN/api/v2/" \
+  https://YOUR-DOMAIN/oauth/token
+```
+
+レスポンスは以下の通り。
+
+```json
+{
+    "access_token": "eyJ...",
+    "scope": "create:client_grants update:client_grants",
+    "expires_in": 86400,
+    "token_type": "Bearer"
+}
+```
