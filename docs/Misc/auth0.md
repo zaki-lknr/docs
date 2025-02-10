@@ -22,6 +22,12 @@
 - Social Connections
     - google-oauth2
 
+## Application
+
+### 作成済みアプリケーションのPermission(scope)変更
+
+APIsタブで認可してるAPIの`∨(expand)`押下で選択画面が表示される。
+
 ## API
 
 ### 認証トークン
@@ -31,3 +37,4 @@ Applications > APIs > Auth0 Management API > API Explorer tabから。
 (作成すると、「API Explorer Application」がApplications以下へ作成される)
 
 デフォルトのトークン期限は86400秒
+
