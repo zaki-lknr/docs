@@ -10,3 +10,15 @@
 
 「無料トライアル」でサインアップすれば「Free」プランでアカウントを作成できる。  
 アカウント作成中に、米国のデータリージョンにテナント名が自動で割り当てられるが、変更する場合はチェックを入れて進める。その場合Japanを含むいくつかのリージョンから選択可能。
+
+### 初期状態
+
+- Applications
+    - Default App
+- APIs
+    - Auth0 Management API
+- Database
+    - Username-Password-Authentication
+- Social Connections
+    - google-oauth2
+
