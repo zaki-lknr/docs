@@ -638,6 +638,24 @@ Ncat: Version 7.92 ( https://nmap.org/ncat )
 Ncat: Connection refused.
 ```
 
+### HTTPをしゃべる
+
+`-v`のみで接続した、クライアントからの送信待ちの状態になったらそのまま入力すればOK
+
+```console
+$ nc -v 192.168.0.1 80
+Ncat: Version 7.92 ( https://nmap.org/ncat )
+Ncat: Connected to 192.168.0.1:80.              # <- ここでサーバーが入力待ち
+GET / HTTP/1.1                                  # <- キーボードからHTTPの内容を入力
+Host: 192.168.0.1                               # <- 2行目
+                                                # <- 空行送信でHTTPとしてクライアントからのsend完了
+HTTP/1.1 200 OK                                 # <- 以降はサーバーのレスポンス
+Server: nginx/1.20.1
+Date: Sat, 08 Feb 2025 14:38:03 GMT
+Content-Type: text/html
+Content-Length: 2602
+```
+
 ## ip
 
 ### 指定インタフェースのみ
