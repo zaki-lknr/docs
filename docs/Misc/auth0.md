@@ -32,6 +32,8 @@ APIsタブで認可してるAPIの`∨(expand)`押下で選択画面が表示さ
 
 ### 認証トークン
 
+[Get Management API Access Tokens for Testing](https://auth0.com/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-testing)
+
 Applications > APIs > Auth0 Management API > API Explorer tabから。  
 初期状態ではAPI Explorerを使うためのテストアプリケーションが存在しないため、作成ボタンを押下する。  
 (作成すると、「API Explorer Application」がApplications以下へ作成される)
