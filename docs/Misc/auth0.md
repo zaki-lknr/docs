@@ -22,3 +22,12 @@
 - Social Connections
     - google-oauth2
 
+## API
+
+### 認証トークン
+
+Applications > APIs > Auth0 Management API > API Explorer tabから。  
+初期状態ではAPI Explorerを使うためのテストアプリケーションが存在しないため、作成ボタンを押下する。  
+(作成すると、「API Explorer Application」がApplications以下へ作成される)
+
+デフォルトのトークン期限は86400秒
