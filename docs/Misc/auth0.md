@@ -66,11 +66,34 @@ curl -H 'content-type: application/x-www-form-urlencoded' \
 }
 ```
 
-### Application作成
-
-[Create a client | Auth0 Management API v2](https://auth0.com/docs/api/management/v2/clients/post-clients)
+### Application
 
 endpointは`/api/v2/clients`
+
+#### get
+
+[Get clients | Auth0 Management API v2](https://auth0.com/docs/api/management/v2/clients/get-clients)
+
+```console
+curl -X GET \
+  -H 'Accept: application/json' \
+  -H "Authorization: Bearer ${AUTH0_TOKEN}" \
+  'https://YOUR-DOMAIN/api/v2/clients'
+```
+
+これで全てのApplicationをリスト形式で取得できる。  
+Application名の一覧であれば例えば`jq`を使って以下。
+
+```console
+curl -X GET \
+  -H 'Accept: application/json' \
+  -H "Authorization: Bearer ${AUTH0_TOKEN}" \
+  'https://YOUR-DOMAIN/api/v2/clients' | jq '.[].name'
+```
+
+#### create
+
+[Create a client | Auth0 Management API v2](https://auth0.com/docs/api/management/v2/clients/post-clients)
 
 ```command
 curl -X POST \
