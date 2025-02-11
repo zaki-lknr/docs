@@ -65,3 +65,18 @@ curl -H 'content-type: application/x-www-form-urlencoded' \
     "token_type": "Bearer"
 }
 ```
+
+### Application作成
+
+[Create a client | Auth0 Management API v2](https://auth0.com/docs/api/management/v2/clients/post-clients)
+
+endpointは`/api/v2/clients`
+
+```command
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer ${AUTH0_TOKEN}" \
+  -d '{"name":"rest-sample-02", "app_type": "regular_web"}' \
+  'https://YOUR-DOMAIN/api/v2/clients'
+```
