@@ -103,3 +103,15 @@ curl -X POST \
   -d '{"name":"rest-sample-02", "app_type": "regular_web"}' \
   'https://YOUR-DOMAIN/api/v2/clients'
 ```
+
+#### delete
+
+[Delete a client | Auth0 Management API v2](https://auth0.com/docs/api/management/v2/clients/delete-clients-by-id)
+
+```command
+curl -X DELETE \
+  -H "Authorization: Bearer ${AUTH0_TOKEN}" \
+  'https://YOUR-DOMAIN/api/v2/clients/CLIENT-ID'
+```
+
+成功すればレスポンスは204でボディは空
