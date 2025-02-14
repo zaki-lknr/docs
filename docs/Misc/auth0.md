@@ -91,6 +91,15 @@ curl -X GET \
   'https://YOUR-DOMAIN/api/v2/clients' | jq '.[].name'
 ```
 
+ページング処理はqueryで指定。
+
+```console
+curl -X GET \
+  -H 'Accept: application/json' \
+  -H "Authorization: Bearer ${AUTH0_TOKEN}" \
+  'https://YOUR-DOMAIN/api/v2/clients?page=1&per_page=4' | jq '.[].name'
+```
+
 #### create
 
 [Create a client | Auth0 Management API v2](https://auth0.com/docs/api/management/v2/clients/post-clients)
