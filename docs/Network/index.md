@@ -159,6 +159,11 @@ NW機器のコンソールポートへアクセスするためのコンソール
 
 ## VyOS
 
+### 初期パスワード
+
+- username: vyos
+- password: vyos
+
 ### 設定モード
 
 ```console
