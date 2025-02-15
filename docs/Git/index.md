@@ -597,7 +597,7 @@ $ git log --oneline --graph
 ### 別ブランチのログ
 
 ```
-$ git log --oneline <branch-name>
+$ git log <branch-name>
 ```
 
 ### マージ元のブランチのコミットは非表示
