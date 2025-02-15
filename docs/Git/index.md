@@ -298,6 +298,22 @@ $ git branch
 * master
 ```
 
+### 今いるブランチにマージ済み(未マージ)のブランチは？
+
+```console
+$ git branch 
+* devel
+  init_container_description
+$ git branch --merged 
+* devel
+```
+
+この結果は、現在のローカルリポジトリの`devel`ブランチに`init_container_description`はマージされてない状態を示す。  
+(リモートリポジトリではマージ済みで未だpullされてない場合を含む)
+
+未マージは`--no-merged`を付与。  
+あくまで「カレントのブランチにマージされてるか？」をリストする。
+
 ### ブランチ作成
 
 ```
