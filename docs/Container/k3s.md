@@ -103,6 +103,17 @@ $ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --resolv-co
 
 systemdユニットファイルに記載のアドレス指定部分を変更しても、クラスターには反映されず動作が不安定になる
 
+### コンポーネントの無効化
+
+基本的にデフォルトon  
+リソース節約など使用しないものはoffにできる。
+
+Traefik Ingress Controllerとlocal storageをオフにする場合のインストールオプションは以下。
+
+```console
+curl -sfL https://get.k3s.io | sh -s - --disable traefik --disable local-storage
+```
+
 ### インストールパラメタの設定ファイル化
 
 `/etc/rancher/k3s/config.yaml`ファイルに定義する。
