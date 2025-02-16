@@ -63,6 +63,13 @@ root@pve:/# file /dev/dm-15
 
 ## ネットワーク
 
+### OVS Bridge作成
+
+openvswitch-switchパッケージが必要なので、事前にノードで`apt-get install openvswitch-switch`を実行しておく。  
+ネットワークメニューの「作成」で「OVS Bridge」を選択し、名前はデフォルト、コメントとIPv4/CIDRを入力して「作成」押下する。
+
+差分が表示されるのでOKであれば画面上部の「設定を適用」押下
+
 ### ブリッジポート無しで作成したブリッジに物理ポートを追加
 
 UIでLinux Bridgeの「ブリッジポート」にポート名を追加し「OK」押下。  
