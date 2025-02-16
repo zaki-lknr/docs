@@ -1,5 +1,18 @@
 # ディスク
 
+## ブロックデバイスをツリー表示
+
+```console
+$ lsblk 
+NAME            MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda               8:0    0   120G  0 disk 
+├─sda1            8:1    0     1G  0 part /boot
+└─sda2            8:2    0   119G  0 part 
+  ├─centos-root 253:0    0 115.5G  0 lvm  /
+  └─centos-swap 253:1    0   3.5G  0 lvm  [SWAP]
+zram0           252:0    0   7.5G  0 disk [SWAP]
+```
+
 ## フォーマット確認
 
 `df -T`を実行
