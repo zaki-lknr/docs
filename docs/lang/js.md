@@ -840,10 +840,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 ```
 
-## html関連
+## window関連
 
 ### 画面遷移(同画面)
 
 ```javascript
 window.location.href = url;
 ```
+
+### 先頭へスクロール
+
+```js
+const scroll_to_top = () => {
+    window.scroll({
+        top: 0,
+        behavior: "smooth",
+    });
+}
+```
+
+[add: タイトルバータップで先頭に移動お試し #71 by zaki-lknr · Pull Request #75 · zaki-lknr/swarm-sgbt](https://github.com/zaki-lknr/swarm-sgbt/pull/75)
