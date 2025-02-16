@@ -29,3 +29,8 @@ CIFS共有時のコメントを設定するには「コントロールパネル�
 コントロールパネルの「ネットワークとファイルサービス」→「Win/Mac/NFS/WebDAV」でまずNFSサービスを有効化。  
 サービスを有効化したら共有フォルダ毎にNFSアクセス権を「権限設定」→「共有フォルダー」で「共有フォルダー権限の設定」押下して設定する。  
 NFSの権限の編集画面は上部の権限タイプの「NFSホストのアクセス」から。
+
+## コンテナ
+
+AppCenterで「Container Station」をインストール  
+[Container Station | LXC、Docker、Kataコンテナに対応 | QNAP](https://www.qnap.com/ja-jp/software/container-station)
