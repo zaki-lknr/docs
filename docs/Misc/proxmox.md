@@ -90,16 +90,7 @@ UIでLinux Bridgeの「ブリッジポート」にポート名を追加し「OK�
  #private-network-1
 ```
 
-シェルを起動し
-
-```console
-root@pve:~# ifdown vmbr1 
-root@pve:~# ifup vmbr1 
-```
-
-…だけだと反映されてなさそうだったので(`ifup enp3s0`も実施したが変化なし)rebootした。
-
-※ `ifupdown2`というコマンドを別途インストールすれば良かったかも
+変更を適用するには画面上部の「設定を適用」押下
 
 ## ストレージ
 
