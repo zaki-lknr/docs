@@ -73,7 +73,11 @@ Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で�
 
 ### suggested change
 
-その場で修正コミットを送るには、対象行を選択して「Commit suggestion」押下、テキストフィールドに`suggestion`というコードブロックが入るので、その内容を正しいものに修正して
+その場で修正コミットを送るには、対象行を選択して「Commit suggestion」押下、テキストフィールドに`suggestion`というコードブロックが入るので、その内容を正しいものに修正する
+
+[プルリクエストへのコメント - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request)
+
+修正を取り込む側は「Commit Suggestion」押下してコミットメッセージを入力して反映する。
 
 [プルリクエストでのフィードバックを取り込む - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request)
 
