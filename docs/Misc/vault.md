@@ -98,3 +98,28 @@ curl -H "X-Vault-Token: ${token}" http://server:port/v1/<secret-engine-name>/dat
 
 `curl -H "X-Vault-Token: ${token}" http://192.168.0.75:8200/v1/kv/data/zzz?version=1`とか。  
 [KV - Secrets Engines - HTTP API | Vault | HashiCorp Developer](https://developer.hashicorp.com/vault/api-docs/secret/kv/kv-v2)
+
+## hvac
+
+Hashicorp Vault用Pythonライブラリ
+
+- [hvac documentation](https://python-hvac.org/en/latest/overview.html)
+- [hvac/hvac: :lock: Python 3.X client for HashiCorp Vault](https://github.com/hvac/hvac)
+
+### コンストラクタ
+
+証明書検証オフは`verify=False`を加えればOK
+
+```py
+import urllib3
+import os
+import hvac
+
+urllib3.disable_warnings()
+
+client = hvac.Client(
+    url='https://vault.example.org',
+    token=os.environ['VAULT_TOKEN'],
+    verify=False
+)
+```
