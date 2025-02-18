@@ -176,3 +176,22 @@ vyos@vyos#
 反映せずに破棄するには`discard`を実行。
 
 設定モードを抜けるには`exit`
+
+### リブート
+
+saveされていない設定がなくてもなぜか警告がでる。
+
+```console
+vyos@vyos:~$ reboot 
+Warning: there are unsaved configuration changes!
+Run 'save' command if you do not want to lose those changes after reboot/shutdown.
+Are you sure you want to reboot this system (vyos)? [y/N] y
+
+Broadcast message from root@vyos on pts/1 (Fri 2025-02-14 07:09:44 UTC):
+
+The system will reboot now!
+
+
+Connection to vyos closed by remote host.
+Connection to vyos closed.
+```
