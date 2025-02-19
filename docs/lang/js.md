@@ -198,6 +198,12 @@ console.log(str.slice(3, 1).length);
 // 0
 ```
 
+##### substr (非推奨)
+
+[String.prototype.substr() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substr)
+
+> この機能は非推奨になりました。まだ対応しているブラウザーがあるかもしれませんが、すでに関連するウェブ標準から削除されているか、削除の手続き中であるか、互換性のためだけに残されている可能性があります。
+
 #### 先頭が指定の文字列で始まっているか
 
 ```js
