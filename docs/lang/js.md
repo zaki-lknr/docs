@@ -470,6 +470,18 @@ function func(arg) {
 func('njgk');
 ```
 
+#### アロー関数
+
+↑の`func(arg){}`定義は以下のように書ける
+
+```js
+const func = (arg) => {
+    console.log(arg);
+}
+
+func('njgk');
+```
+
 ### 型の確認
 
 `typeof`を使う。
