@@ -124,3 +124,18 @@ curl -X DELETE \
 ```
 
 成功すればレスポンスは204でボディは空
+
+## Python Library
+
+- [auth0/auth0-python: Auth0 SDK for Python](https://github.com/auth0/auth0-python)
+- [Auth0-Python documentation — auth0-python 4.4.0 documentation](https://auth0-python.readthedocs.io/en/latest/)
+
+### 認証トークン
+
+```python
+from auth0.authentication import GetToken
+
+GetToken = GetToken(auth_domain, auth_client_id, client_secret=auth_client_secret)
+token = GetToken.client_credentials('https://{}/api/v2/'.format(auth_domain))
+print(token['access_token'])
+```
