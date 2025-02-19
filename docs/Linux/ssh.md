@@ -77,7 +77,13 @@ $ ssh rhel8 -L 25080:10.88.250.10:80
 #### パスワード認証をバッチ処理
 
 ```console
-sshpass -p $(cat password.txt) ssh user@hostname
+sshpass -p ${PASSWORD} ssh user@hostname
+```
+
+パスワードが書かれてるファイルがあれば`-f`が使える。
+
+```console
+sshpass -f password.txt ssh user@hostname
 ```
 
 ## sshd
