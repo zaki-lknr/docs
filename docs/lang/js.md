@@ -174,12 +174,28 @@ console.log(str.slice(3));
 // "lo world"
 ```
 
+第1引数が負数の場合は末尾から。
+
+```js
+str = 'hello world';
+console.log(str.slice(-3));
+// "rld"
+```
+
 第2引数に負数を指定すると末尾から数える。
 
 ```js
 str = 'hello world';
 console.log(str.slice(3, -2));
 // "lo wor"
+```
+
+第2引数が第1引数より小さい場合は空文字になる
+
+```js
+str = 'hello world';
+console.log(str.slice(3, 1).length);
+// 0
 ```
 
 #### 先頭が指定の文字列で始まっているか
