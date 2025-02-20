@@ -86,6 +86,14 @@ sshpass -p ${PASSWORD} ssh user@hostname
 sshpass -f password.txt ssh user@hostname
 ```
 
+#### パスフレーズ付き公開鍵認証をバッチ処理
+
+```console
+sshpass -p ${PASSPHRASE} -P "Enter passphrase" ssh user@hostname -i ~/.ssh/my_ssh_key
+```
+
+`-p`(あるいは`-f`)でパスワードでなくパスフレーズを指定するのは同様だが、入力のプロンプトをパスフレーズ用にカスタムする`-P`を指定することで、パスフレーズの対話処理を`sshpass`でさばく。
+
 ## sshd
 
 ### 設定ファイルsyntax check
