@@ -20,6 +20,11 @@
 
 `certmgr.msc`で起動。
 
+### PrintScreenでSnippingToolを無効
+
+win11でデフォルトSnippingToolが起動するのを抑止するには、設定->アクセシビリティ->キーボード->「PrintScreenキーを使用して画面キャプチャを開く」をオフ  
+(Win+Shift+Sでは引き続き起動する)
+
 ## 評価版 Windows10
 
 必要事項を入力してダウンロードしたISOは、ライセンスキー入力がなく90日検証に使用できる。
