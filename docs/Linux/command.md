@@ -261,6 +261,16 @@ ps aux | awk '{if($1 == "root"){print $11}}'
 ps aux | awk '{if($1 ~ /[0-9]+/){print $0}}'
 ```
 
+## touch
+
+### タイムスタンプ変更
+
+FILENAMEのタイムスタンプを2025-01-01 23:59:00に更新する。
+
+```console
+touch -t 202501012359 FILENAME
+```
+
 ## envsubst
 
 ```console
