@@ -814,6 +814,15 @@ let image_item = document.createElement("img");
 image_item.src = image_url;
 ```
 
+#### anchor
+
+```js
+const a = document.createElement('a');
+a.href = 'https://lovelive-anime.jp/nijigasaki/story.php';
+a.textContent = '虹ヶ咲';
+a.target = '_blank';
+```
+
 #### textfield
 
 ```javascript
