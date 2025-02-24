@@ -1,5 +1,9 @@
 # Galaxy
 
+## document
+
+- [Galaxy User Guide — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html)
+
 ## ansible-galaxyコマンド
 
 ### -r | --requirements-file
