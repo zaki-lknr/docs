@@ -308,6 +308,19 @@ dict2 = dict(key1="value1", key2="value2")
 この場合、`dict1`と`dict2`の中身は同じ。  
 `dict1 == dict2`の結果もtrueになる。
 
+#### キーを使った値へのアクセス
+
+```py
+dict1['key1']
+```
+
+ただしキーが無い場合は`KeyError`例外になる。  
+`get()`を使えばキーが存在しない場合は`None`が返る。
+
+```py
+dict1.get('key1')
+```
+
 #### 辞書要素のループ(キーと値の組み合わせを取得)
 
 ```python
