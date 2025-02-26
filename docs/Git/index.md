@@ -682,6 +682,14 @@ git diff HEAD^
 git diff <branch1-name> <branch2-name>
 ```
 
+### 指定コミットの変更点
+
+コミットAとコミットBの差分は`git diff A B`で見れるが、「コミットAによる変更点」はコミットAのSHA1値だけで`^`を付与する
+
+```console
+git diff AのID^ AのID
+```
+
 ### whitespace無視
 
 ```console
