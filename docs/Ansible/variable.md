@@ -54,6 +54,27 @@
         ...
 ```
 
+### コネクションプラグイン
+
+変数の場合
+
+```ini
+[all]
+local ansible_host=localhost ansible_connection=local
+```
+
+playで指定  
+<https://docs.ansible.com/ansible/latest/reference_appendices/playbooks_keywords.html>
+
+```yaml
+---
+- hosts: all
+  connection: local
+
+  tasks:
+  - ...
+```
+
 ## マジック変数
 
 [Special Variables — Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
