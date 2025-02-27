@@ -755,6 +755,14 @@ git reset --hard '対象のコミットID'
 
 `reset --hard`は[コミットの取り消し](trouble/#_6)にも使用する
 
+## リモートリポジトリ情報
+
+`git ls-remote リポジトリURL`でcloneしていなくてもリモートリポジトリの情報を参照できる
+
+```console
+git ls-remote https://github.com/zaki-lknr/swarm-sgbt.git
+```
+
 ## その他
 
 ### HEAD
