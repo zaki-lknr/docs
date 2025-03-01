@@ -6,6 +6,8 @@
     - [VRRPとは](https://www.infraexpert.com/study/fhrpz06.html)
 - アドバタイズ
     - 広告・広報するの意味
+- DHCPスヌーピング
+    - 対応したスイッチで「信頼できるポート」以外のDHCPトラフィックを遮断することで、不正なDHCPサーバーのなりすまし等を防ぐ
 
 ## Cisco
 
