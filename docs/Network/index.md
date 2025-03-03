@@ -21,6 +21,8 @@ rt-center#
 
 `show interfaces`とか実行するには昇格する。
 
+元のユーザーモードに戻るには`disable`を実行。
+
 ### インタフェースの情報を見る
 
 ```console
