@@ -11,3 +11,10 @@
 ## Cloud Shell
 
 [Azure Cloud Shell に関してよくあるご質問 (FAQ) | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/cloud-shell/faq-troubleshooting)
+
+## AKS
+
+### 監視設定
+
+- [Azure Kubernetes Service (AKS) クラスターの監視を有効にする - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli)
+- [Kubernetes クラスターの監視を無効にする - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/kubernetes-monitoring-disable)
