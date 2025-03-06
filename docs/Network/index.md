@@ -57,6 +57,13 @@ ios(config)#hostname router1
 router1(config)#
 ```
 
+### インタフェース設定モード
+
+```console
+router(config)#interface Ethernet 0/1
+router(config-if)#
+```
+
 ### 再起動
 
 ```console
