@@ -13,7 +13,9 @@
 
 ### CLI
 
-#### 昇格
+#### 管理系
+
+##### 昇格
 
 ```console
 ios>enable
@@ -24,6 +26,19 @@ rt-center#
 `show interfaces`とか実行するには昇格する。
 
 元のユーザーモードに戻るには`disable`を実行。
+
+##### 再起動
+
+```console
+router1#reload 
+
+System configuration has been modified. Save? [yes/no]: yes
+Building configuration...
+[OK]
+Proceed with reload? [confirm]
+Connection to 10.1.1.254 closed by remote host.
+Connection to 10.1.1.254 closed.
+```
 
 #### インタフェースの情報を見る
 
@@ -64,19 +79,6 @@ router1(config)#
 ```console
 router(config)#interface Ethernet 0/1
 router(config-if)#
-```
-
-#### 再起動
-
-```console
-router1#reload 
-
-System configuration has been modified. Save? [yes/no]: yes
-Building configuration...
-[OK]
-Proceed with reload? [confirm]
-Connection to 10.1.1.254 closed by remote host.
-Connection to 10.1.1.254 closed.
 ```
 
 #### インタフェース設定モード
