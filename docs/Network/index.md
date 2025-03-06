@@ -11,7 +11,9 @@
 
 ## Cisco
 
-### 昇格
+### CLI
+
+#### 昇格
 
 ```console
 ios>enable
@@ -23,7 +25,7 @@ rt-center#
 
 元のユーザーモードに戻るには`disable`を実行。
 
-### インタフェースの情報を見る
+#### インタフェースの情報を見る
 
 ```console
 show interfaces
@@ -42,7 +44,7 @@ VirtualPortGroup0      192.168.35.101  YES TFTP   up                    up
 
 とか。
 
-### コンフィギュレーションモードへ移行
+#### コンフィギュレーションモードへ移行
 
 ```console
 ios#configure terminal 
@@ -50,21 +52,21 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 ios(config)#
 ```
 
-### ホスト名変更
+#### ホスト名変更
 
 ```console
 ios(config)#hostname router1
 router1(config)#
 ```
 
-### インタフェース設定モード
+#### インタフェース設定モード
 
 ```console
 router(config)#interface Ethernet 0/1
 router(config-if)#
 ```
 
-### 再起動
+#### 再起動
 
 ```console
 router1#reload 
@@ -77,7 +79,7 @@ Connection to 10.1.1.254 closed by remote host.
 Connection to 10.1.1.254 closed.
 ```
 
-### インタフェース設定モード
+#### インタフェース設定モード
 
 コンフィギュレーションモードからさらにインタフェースを指定
 
@@ -86,7 +88,7 @@ router1#configure terminal
 router1(config)#interface GigabitEthernet 2
 ```
 
-### インタフェースの無効化
+#### インタフェースの無効化
 
 `shutdown`を使う。元に戻すのは`no shutdown`  
 以下はGigabitEthernet 2を無効化する場合。
