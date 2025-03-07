@@ -78,6 +78,8 @@ ios(config)#hostname router1
 router1(config)#
 ```
 
+#### インタフェース設定
+
 ##### インタフェース設定モードへ移行
 
 コンフィギュレーションモードからさらにインタフェースを指定
@@ -95,9 +97,28 @@ router1#configure terminal
 router1(config)#interface GigabitEthernet 2
 ```
 
+##### IPアドレスの設定と有効化
+
+無効化は`shutdown`されているので、元に戻すのは`no shutdown`する。
+
+```console
+router(config)#interface Ethernet0/2 
+router(config-if)#ip address 10.0.0.1 255.255.255.0
+router(config-if)#no shutdown
+router(config-if)#end
+router#
+router#show ip interface brief 
+Interface              IP-Address      OK? Method Status                Protocol
+Ethernet0/0            192.168.10.1    YES NVRAM  up                    up      
+Ethernet0/1            unassigned      YES NVRAM  administratively down down    
+Ethernet0/2            10.0.0.1        YES manual up                    up      
+Ethernet0/3            192.168.0.35    YES manual up                    up      
+router#
+```
+
 ##### インタフェースの無効化
 
-`shutdown`を使う。元に戻すのは`no shutdown`  
+`shutdown`を使う。
 以下はGigabitEthernet 2を無効化する場合。
 
 ```console
