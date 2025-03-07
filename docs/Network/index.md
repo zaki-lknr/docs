@@ -127,6 +127,21 @@ router1(config-if)#shutdown
 router1(config-if)#
 ```
 
+#### その他
+
+##### 文字列検索(grep)
+
+`include`コマンドを使う。正規表現可
+
+```console
+router#show interfaces | include [Ee]th 
+Ethernet0/0 is up, line protocol is up 
+Ethernet0/1 is administratively down, line protocol is down 
+Ethernet0/2 is up, line protocol is up 
+Ethernet0/3 is up, line protocol is up 
+router#
+```
+
 ### DevNetのCSR1000v (Always-On)
 
 [DevNet Sandbox - Lab Catalog - Dashboard](https://devnetsandbox.cisco.com/RM/Topology)  
