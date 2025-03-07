@@ -40,7 +40,9 @@ Connection to 10.1.1.254 closed by remote host.
 Connection to 10.1.1.254 closed.
 ```
 
-#### インタフェースの情報を見る
+#### 参照
+
+##### インタフェースの情報を見る
 
 ```console
 show interfaces
@@ -59,7 +61,9 @@ VirtualPortGroup0      192.168.35.101  YES TFTP   up                    up
 
 とか。
 
-#### コンフィギュレーションモードへ移行
+#### 設定
+
+##### コンフィギュレーションモードへ移行
 
 ```console
 ios#configure terminal 
@@ -67,30 +71,31 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 ios(config)#
 ```
 
-#### ホスト名変更
+##### ホスト名変更
 
 ```console
 ios(config)#hostname router1
 router1(config)#
 ```
 
-#### インタフェース設定モード
+##### インタフェース設定モードへ移行
+
+コンフィギュレーションモードからさらにインタフェースを指定
 
 ```console
-router(config)#interface Ethernet 0/1
+router#configure terminal
+router(config)#interface Ethernet0/1
 router(config-if)#
 ```
 
-#### インタフェース設定モード
-
-コンフィギュレーションモードからさらにインタフェースを指定
+とか
 
 ```console
 router1#configure terminal
 router1(config)#interface GigabitEthernet 2
 ```
 
-#### インタフェースの無効化
+##### インタフェースの無効化
 
 `shutdown`を使う。元に戻すのは`no shutdown`  
 以下はGigabitEthernet 2を無効化する場合。
