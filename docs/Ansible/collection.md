@@ -6,6 +6,12 @@
 ansible-galaxy collection install amazon.aws
 ```
 
+バージョン指定
+
+```console
+ansible-galaxy collection install ansible.netcommon:2.1.0
+```
+
 `requirements.yml`使用時は以下。
 
 ```console
