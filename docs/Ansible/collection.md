@@ -12,6 +12,12 @@ ansible-galaxy collection install amazon.aws
 ansible-galaxy collection install ansible.netcommon:2.1.0
 ```
 
+複数
+
+```console
+ansible-galaxy collection install ansible.netcommon:2.1.0 ansible.utils:2.2.0 seiko.smartcs:1.3.0
+```
+
 `requirements.yml`使用時は以下。
 
 ```console
