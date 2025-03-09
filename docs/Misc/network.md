@@ -78,6 +78,17 @@ ios(config)#hostname router1
 router1(config)#
 ```
 
+##### 設定の保存
+
+`write`で、`running-config`が`startup-config`へコピーされる。
+
+```console
+router#write
+Building configuration...
+[OK]
+router#
+```
+
 #### インタフェース設定
 
 ##### インタフェース設定モードへ移行
