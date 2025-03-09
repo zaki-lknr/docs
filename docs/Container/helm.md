@@ -136,7 +136,7 @@ fullnameOverride: ""
 ### チャートのインストール
 
 ```console
-helm install stable/mysql --generate-name --create-namespace -n mysql
+helm install stable/mysql --generate-name --create-namespace -n mysql -f values.yaml
 ```
 
 ### アップグレード
