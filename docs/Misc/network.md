@@ -100,6 +100,16 @@ router(config)#username cisco password curry_tabetai
 router(config)#
 ```
 
+##### 特権パスワードの設定
+
+`enable`実行時のパスワードを`cisco`に設定。  
+SSH接続時はこれをセットしておかないと昇格できない。
+
+```console
+router(config)#enable secret cisco
+router(config)#
+```
+
 #### インタフェース設定
 
 ##### インタフェース設定モードへ移行
