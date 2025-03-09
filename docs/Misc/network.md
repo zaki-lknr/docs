@@ -89,6 +89,17 @@ Building configuration...
 router#
 ```
 
+##### ユーザー名とパスワードを設定
+
+SSH接続するには必要。  
+以下は`cisco`ユーザーにパスワード`curry_tabetai`をセット
+
+```console
+router(config)#username cisco password curry_tabetai
+ WARNING: Command has been added to the configuration using a type 0 password. However, recommended to migrate to strong type-6 encryption
+router(config)#
+```
+
 #### インタフェース設定
 
 ##### インタフェース設定モードへ移行
