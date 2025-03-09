@@ -110,6 +110,15 @@ router(config)#enable secret cisco
 router(config)#
 ```
 
+##### SSH接続時の認証設定
+
+```console
+router(config)#line vty 0 4
+router(config-line)#login local
+```
+
+`login local`が必要。
+
 #### インタフェース設定
 
 ##### インタフェース設定モードへ移行
