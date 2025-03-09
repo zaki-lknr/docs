@@ -99,7 +99,7 @@ router1(config)#interface GigabitEthernet 2
 
 ##### IPアドレスの設定と有効化
 
-無効化は`shutdown`されているので、元に戻すのは`no shutdown`する。
+`shutdown`されているインタフェースは、`no shutdown`で有効化される。
 
 ```console
 router(config)#interface Ethernet0/2 
@@ -115,6 +115,8 @@ Ethernet0/2            10.0.0.1        YES manual up                    up
 Ethernet0/3            192.168.0.35    YES manual up                    up      
 router#
 ```
+
+コマンド投入した時点で有効になるが、設定が保存されてるわけではないのでこのまま再起動すると設定は消える。
 
 ##### インタフェースの無効化
 
