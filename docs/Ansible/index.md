@@ -48,42 +48,6 @@ Release and maintenanceの中の[ansible-core support matrix](https://docs.ansib
 - [Network Debug and Troubleshooting Guide — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html)
 - [Platform Options — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/user_guide/platform_index.html)
 
-## venv作るタスク
-
-venvにopenshiftパッケージ入れる
-
-```yaml
-    - name: install openshift
-      ansible.builtin.pip:
-        name: openshift
-        virtualenv: /root/venv
-        virtualenv_command: python3 -m venv
-```
-
-このターゲットノードのvenvを使ってAnsible実行するには以下。
-
-[[Ansible] ターゲットノードのvenvのPythonを指定して実行する (interpreter_python / ansible_python_interpreter / PYTHONPATH) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/05/26/230432)
-
-この辺の設定をどこかに入れればOK
-
-```yaml
-ansible_python_interpreter: /root/venv/bin/python
-```
-
-pipは最新にしつつ、バージョン指定のパッケージも入れるならこんな感じ。  
-最新だと`ansible==4.2.0`が入る場合でも、`4.1.0`がインストールされる。
-
-```yaml
-    - name: create venv
-      ansible.builtin.pip:
-        name:
-          - pip
-          - ansible==4.1.0
-        state: latest
-        virtualenv: ~/venv/ansible4.1.0
-        virtualenv_command: python3 -m venv
-```
-
 # ドキュメント
 
 ## 索引

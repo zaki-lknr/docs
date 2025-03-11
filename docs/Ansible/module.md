@@ -566,6 +566,32 @@ ssh key pair作成
     run_once: true
 ```
 
+## pip
+
+venvを作り指定のPythonパッケージ入れる。  
+pipは最新にしつつ、バージョン指定のパッケージも入れるならこんな感じ。
+
+```yaml
+    - name: create venv
+      ansible.builtin.pip:
+        name:
+          - pip
+          - ansible-core==2.18.0
+        state: latest
+        virtualenv: /path/to/venv/ansible
+        virtualenv_command: python3 -m venv
+```
+
+ターゲットノードのこのvenvを使ってAnsible実行するには以下。
+
+[[Ansible] ターゲットノードのvenvのPythonを指定して実行する (interpreter_python / ansible_python_interpreter / PYTHONPATH) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/05/26/230432)
+
+この辺の設定をどこかに入れればOK
+
+```yaml
+ansible_python_interpreter: /path/to/venv/ansible/bin/python
+```
+
 ## pause
 
 sleepする
