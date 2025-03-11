@@ -4,15 +4,7 @@
 
 - [Galaxy User Guide — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html)
 
-## ansible-galaxyコマンド
-
-### -r | --requirements-file
-
-`requirements.yml`ファイルの指定。
-
-```console
-ansible-galaxy collection install -r collections/requirements.yml 
-```
+## requirements.yml
 
 `requirements.yml`の中身は以下のような感じ。
 

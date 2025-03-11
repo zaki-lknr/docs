@@ -463,6 +463,16 @@ $ ansible-inventory -i inventory.ini --graph --vars
   |--{use_cri = containerd}
 ```
 
+## ansible-galaxyコマンド
+
+### -r | --requirements-file
+
+`requirements.yml`ファイルの指定。
+
+```console
+ansible-galaxy collection install -r collections/requirements.yml
+```
+
 # sample
 
 ## playbook
