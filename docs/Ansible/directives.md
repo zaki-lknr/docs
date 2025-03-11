@@ -4,6 +4,19 @@
 
 ## ループ
 
+### range()を使って指定回数ループ
+
+`host0`から`host9`まで作りたい場合。
+
+```yaml
+- name: loop
+  awx.awx.host:
+    name: "host{{ item }}"
+    inventory: inventory
+    enable: true
+  loop: "{{ range(0, 10) }}"
+```
+
 ### ループとblockは併用不可
 
 ```yaml
