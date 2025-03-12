@@ -152,7 +152,7 @@ if __name__ == "__main__":
 assert(a == 10)
 ```
 
-### リスト処理
+### 配列
 
 #### リストの定義
 
@@ -204,6 +204,24 @@ print(len(array))
 ```
 
 3になる。
+
+#### 空判定
+
+空の配列変数はそれ自体がFalseになる。
+
+```python
+empty_array = []
+
+if not empty_array:
+    print("blank")
+```
+
+あるいは`[]`との一致でも判定できる。
+
+```python
+if empty_array == []:
+    print("blank")
+```
 
 #### 要素のindex
 
