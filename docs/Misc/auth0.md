@@ -100,6 +100,9 @@ curl -X GET \
   'https://YOUR-DOMAIN/api/v2/clients?page=1&per_page=4' | jq '.[].name'
 ```
 
+`page`の指定は`per_page`もセットしておく必要がある。(無い場合は無視される)  
+`per_page`で指定可能なのは100が最大値。101件以上ある場合はページング処理が必須。
+
 #### create
 
 [Create a client | Auth0 Management API v2](https://auth0.com/docs/api/management/v2/clients/post-clients)
