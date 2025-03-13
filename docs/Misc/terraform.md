@@ -236,6 +236,40 @@ tags = {
 curl -k https://localhost:6443 -w '%%{http_code}\n' -sS -o /dev/null 2>/dev/null
 ```
 
+### 関数
+
+#### file
+
+[file - Functions - Configuration Language | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/language/functions/file)
+
+引数のファイルの内容を取り込む。  
+EC2のユーザーデータ/Cloud-initのファイルや、ポリシーのJSON等を外部ファイルに定義できる。
+
+```tf
+resource "aws_instance" "dev-vm" {
+  ami                         = ...
+  instance_type               = "t2.medium"
+  key_name                    = aws_key_pair.key.id
+  subnet_id                   = aws_subnet.subnet.id
+  vpc_security_group_ids      = [aws_security_group.sg.id]
+  associate_public_ip_address = true
+
+  user_data = file("${path.module}/cloud-config.yaml")
+
+  ...
+}
+```
+
+```yaml
+#cloud-config
+
+chpasswd: { expire: false }
+ssh_pwauth: true
+
+packages:
+- python3.12
+```
+
 ## resource
 
 ### デフォルトのルートテーブル
