@@ -266,7 +266,7 @@ $ git add -p
 ### 追加の取り消し
 
 ```
-$ git reset HEAD <path>
+$ git restore --staged <path>
 ```
 
 ### ステージングのファイルの確認
