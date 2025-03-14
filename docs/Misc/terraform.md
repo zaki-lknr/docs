@@ -270,6 +270,25 @@ packages:
 - python3.12
 ```
 
+#### templatefile
+
+`file()`は外部ファイルを固定値として読み込むのみだが、`templatefile()`ならテンプレートとして変数を展開する。
+
+```tf
+  user_data = templatefile("${path.module}/user-data.sh", {
+    git_username = var.git_username
+    git_password = var.git_password
+  })
+```
+
+user-data.sh
+
+```sh
+#!/bin/bash -ex
+
+git clone https://${git_username}:${git_password}@git.example.org/repos/apps /root/apps
+```
+
 ## resource
 
 ### デフォルトのルートテーブル
