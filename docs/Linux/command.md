@@ -277,6 +277,14 @@ touch FILENAME
 touch -t 202501012359 FILENAME
 ```
 
+## ヒアドキュメント
+
+```console
+cat > /path/to/file <<__EOL__
+てきすと
+__EOL__
+```
+
 ## envsubst
 
 ```console
