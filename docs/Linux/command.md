@@ -285,6 +285,14 @@ cat > /path/to/file <<__EOL__
 __EOL__
 ```
 
+root権限が必要で`sudo`と組み合わせる場合であればリダイレクトでなく`tee`を使うと簡単
+
+```console
+cat | sudo tee /etc/file <<__EOL__
+config: foobar
+__EOL__
+```
+
 ## envsubst
 
 ```console
