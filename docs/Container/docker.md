@@ -116,6 +116,15 @@ $ docker inspect <container name or ID> --format '{{ .NetworkSettings.Networks.<
 172.18.0.2
 ```
 
+#### Logのパス
+
+Logging Driverがjson-fileの場合
+
+```console
+docker inspect <container name or ID> --format '{{ .LogPath }}'
+/var/lib/docker/containers/.../...-json.log
+```
+
 ### save
 
 ```console
