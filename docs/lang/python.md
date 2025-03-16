@@ -81,6 +81,16 @@ print(links)
 
 次のループへ飛ぶには`continue`
 
+#### exit
+
+Pythonのexitは組み込みでなく`sys`をimportする必要がある。
+
+```python
+import sys
+
+sys.exit(1)
+```
+
 ### 変数
 
 #### 環境変数の参照
