@@ -109,6 +109,37 @@ if aws_access_key is None:
 type(value)
 ```
 
+#### isinstance()で型判定
+
+```python
+bool_val = True
+if (isinstance(bool_val, bool)):
+    print("bool_val is bool")
+
+int_val = 123
+if (isinstance(int_val, int)):
+    print("int_val is int")
+
+list_val = [1, 2, 3]
+if (isinstance(list_val, list)):
+    print("list_val is list")
+
+dict_val = {"key1": "value1", "key2": "value2"}
+if (isinstance(dict_val, dict)):
+    print("dict_val is dict")
+```
+
+実行結果は以下
+
+```console
+bool_val is bool
+int_val is int
+list_val is list
+dict_val is dict
+```
+
+`list`型でもスカラー値でも引数に取れる関数の実装などで実行時に判定、などで使える。
+
 #### None判定
 
 ```python
@@ -756,35 +787,6 @@ context = ssl._create_univerified_context()
 r = urllib.request.Request(url, headers=headers)
 while urllib.request.urlopen(req, context=context) as res:
     ...
-```
-
-### isinstance()で型チェック
-
-```python
-bool_val = True
-if (isinstance(bool_val, bool)):
-    print("bool_val is bool")
-
-int_val = 123
-if (isinstance(int_val, int)):
-    print("int_val is int")
-
-list_val = [1, 2, 3]
-if (isinstance(list_val, list)):
-    print("list_val is list")
-
-dict_val = {"key1": "value1", "key2": "value2"}
-if (isinstance(dict_val, dict)):
-    print("dict_val is dict")
-```
-
-実行結果は以下
-
-```console
-bool_val is bool
-int_val is int
-list_val is list
-dict_val is dict
 ```
 
 ### 例外
