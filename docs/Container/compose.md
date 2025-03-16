@@ -105,3 +105,21 @@ services:
     volumes:
     - ./registries.yaml:/etc/rancher/k3s/registries.yaml
 ```
+
+### リソース制限
+
+OSのリソースを使いつくさないようにCPUとメモリを制限
+
+```yaml
+services:
+
+  apps:
+    image: ...
+    command: ...
+
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512m
+```
