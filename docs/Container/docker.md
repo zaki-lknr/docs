@@ -91,6 +91,16 @@ docker run --rm -e APP_VAL=foobar image:tag
 docker build -f my-dockerfile . -t image:tag
 ```
 
+### stats
+
+リソース使用状況を確認。
+
+```console
+CONTAINER ID   NAME                            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O        PIDS 
+f5948afa8097   gitlab-ce-gitlab-runner-1       0.00%     10.82MiB / 7.752GiB   0.14%     2.59kB / 126B     885kB / 0B       9 
+31ba18fa3004   gitlab-ce-gitlab-ce-1           1.33%     3.169GiB / 7.752GiB   40.88%    31.5kB / 1.75MB   107MB / 2.07GB   252 
+```
+
 ### inspect
 
 コンテナの状態を確認する
