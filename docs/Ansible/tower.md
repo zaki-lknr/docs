@@ -68,6 +68,8 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 API一覧は以下。  
 [11. Controller API Reference Guide — Automation Controller API Guide v4.2.1](https://docs.ansible.com/automation-controller/latest/html/controllerapi/api_ref.html)
 
+稼働中のAAP/AWXのAPI・エンドポイントを確認するには、ブラウザで`/api/`にアクセスすれば確認できる。
+
 ### 認証
 
 #### ユーザー名とパスワード
