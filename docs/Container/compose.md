@@ -123,3 +123,25 @@ services:
           cpus: '0.5'
           memory: 512m
 ```
+
+[[Docker] コンテナで動かすプロセスのCPU使用率を--cpusで、メモリ使用量を--memoryで制限する - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/08/213857)
+
+### ログファイルサイズ制限
+
+__デフォルト無制限のためストレージを使い切ってしまうので制限する__
+
+```yaml
+services:
+
+  apps:
+    image: ...
+    command: ...
+
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: 3
+```
+
+[[Docker]コンテナ実行時にlog-optsでログサイズ上限とローテート数を設定してホストのストレージが溢れないようにする - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/09/211117)
