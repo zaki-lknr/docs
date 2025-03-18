@@ -63,6 +63,12 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 - /var/lib/pgsql/data/pg_log/
 - /var/log/redis/
 
+## 設定
+
+### TOWER_URL_BASE
+
+通知時のホスト名
+
 ## API
 
 API一覧は以下。  
