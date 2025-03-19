@@ -124,6 +124,12 @@ $ curl -sk "https://192.168.0.27/api/v2/jobs/?page_size=200&order_by=-created"
 
 `page_size`に指定できるのはMAX200？(オーバー時は無視されて200扱い)
 
+#### 詳細
+
+```console
+curl -sk https://192.168.0.27/api/v2/jobs/{JOB_ID}
+```
+
 ### ジョブテンプレート
 
 #### 一覧
