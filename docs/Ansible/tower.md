@@ -130,6 +130,12 @@ $ curl -sk "https://192.168.0.27/api/v2/jobs/?page_size=200&order_by=-created"
 curl -sk https://192.168.0.27/api/v2/jobs/{JOB_ID}
 ```
 
+#### 削除
+
+```console
+curl -XDELETE -sk https://192.168.0.27/api/v2/jobs/{JOB_ID}
+```
+
 ### ジョブテンプレート
 
 #### 一覧
