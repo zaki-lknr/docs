@@ -94,6 +94,30 @@ regions:
   - ap-northeast-1
 ```
 
+デフォルトで`aws_ec2`グループに全EC2が所属する。
+
+#### tagを使ったホストのグルーピング
+
+```yaml
+---
+plugin: amazon.aws.aws_ec2
+regions:
+  - ap-northeast-1
+keyed_groups:
+  - key: tags.Type
+```
+
+`keyed_groups`配下にリストで`key: tags.<タグ名>`をセットすると、対象のタグの値でグループが作成される。  
+例えば上記の定義の場合、`Type`キーがセットされているEC2のグループができる。
+
+| EC2   | Typeタグの値    |
+| ----- | ----------- |
+| host1 | Type=server |
+| host2 | Type=client |
+| host3 | Type=client |
+
+このような構成だった場合、`_server`グループにhost1、`_client`グループにhost2,host3がセットされる。
+
 ### netbox
 
 [[NetBox / Ansible] ダイナミックインベントリを使ってNetBoxに登録されたホスト情報をターゲットノードにAnsibleを実行 - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/01/29/002540)
