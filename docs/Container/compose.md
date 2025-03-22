@@ -106,6 +106,15 @@ services:
     - ./registries.yaml:/etc/rancher/k3s/registries.yaml
 ```
 
+long syntaxだと以下
+
+```yaml
+    volumes:
+    - type: bind
+      source: ./registries.yaml
+      target: /etc/rancher/k3s/registries.yaml
+```
+
 ### リソース制限
 
 OSのリソースを使いつくさないようにCPUとメモリを制限
