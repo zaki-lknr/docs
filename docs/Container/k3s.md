@@ -129,6 +129,8 @@ kubelet-arg:
   - max-pods=200
   - kube-reserved=cpu=100m,memory=100Mi
   - system-reserved=cpu=100m,memory=100Mi
+disable:
+  - metrics-server
 ```
 
 ## アップグレード
