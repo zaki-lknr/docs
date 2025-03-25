@@ -114,6 +114,8 @@ Traefik Ingress Controllerとlocal storageをオフにする場合のインス�
 curl -sfL https://get.k3s.io | sh -s - --disable traefik --disable local-storage
 ```
 
+構築済みのK3sに対してコンポーネントを無効化/有効化したい場合は、`/etc/systemd/system/k3s.service`へ起動パラメタを編集し、`systemctl daemon-reload`して`systemctl restart k3s`すればOK
+
 ### インストールパラメタの設定ファイル化
 
 `/etc/rancher/k3s/config.yaml`ファイルに定義する。
