@@ -1,5 +1,9 @@
 # Podman
 
+## docs
+
+[podman/troubleshooting.md at main · containers/podman](https://github.com/containers/podman/blob/main/troubleshooting.md)
+
 ## podmanコマンド
 
 ### save
