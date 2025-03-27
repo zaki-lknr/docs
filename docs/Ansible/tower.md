@@ -162,6 +162,16 @@ curl https://server/api/v2/job_templates/?search=Demo+Job+Template
 curl -XPost https://server/api/v2/job_templates/${TEMPLATE_ID}/launch/
 ```
 
+### ワークフジョブローテンプレート
+
+ジョブテンプレートとは別
+
+#### 一覧
+
+```console
+curl https://tower.example.org/api/v2/workflow_job_templates/
+```
+
 ### チーム
 
 #### チーム一覧
