@@ -43,6 +43,12 @@ GitHubのアカウントでは認証できないので、個人用アクセス�
 Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で、「Generate new token (classic)」押下し、Scopeの`repo`にチェックを入れて作成したトークンをパスワードとして使用する。  
 ユーザー名はGitHubアカウント名を使用する。
 
+## 書式
+
+### 自動リンク
+
+[自動リンクされた参照と URL - GitHub Docs](https://docs.github.com/ja/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls)
+
 ## PR
 
 ### issueとの関連付け
