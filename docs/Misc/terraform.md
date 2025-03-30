@@ -94,6 +94,14 @@ TF_LOG=DEBUG terraform command
 
 [Debugging | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/internals/debugging)
 
+### 指定モジュールのみ処理
+
+`-module=module.モジュール名`で指定可能
+
+```console
+terraform plan -module=.module.my-module
+```
+
 ## backend設定
 
 ### S3
