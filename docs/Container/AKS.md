@@ -29,3 +29,16 @@ kubectl delete pod node-debugger-aks-********
 
 監視->分析情報で、Container insightsを有効（収集データに「ログとイベント」を選択）にする。  
 これでLog Analyticsワークスペースの画面から収集情報を検索できる。
+
+## ストレージの拡張
+
+defaultのAzure DiskのStorage Class定義の内容は`allowVolumeExpansion`が`true`になっており、拡張に対応していることが確認できる。  
+拡張するにはPVCの定義を変更する。
+
+以下コマンドで10Giサイズに拡張する。
+
+```console
+kubectl patch -n namespace pvc pvc-resource -p '{"spec":{"resources":{"requests":{"storage": "10Gi"}}}}'
+```
+
+縮小は不可
