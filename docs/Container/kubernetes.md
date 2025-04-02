@@ -107,6 +107,12 @@ CronJobリソースの`.spec.successfulJobsHistoryLimit`と`.spec.failedJobsHist
 
 podからは`<service-name>.<namespace-name>.svc.cluster.local`で名前解決できる。
 
+## ストレージ
+
+### PV拡張
+
+[Resizing Persistent Volumes using Kubernetes | Kubernetes](https://kubernetes.io/blog/2018/07/12/resizing-persistent-volumes-using-kubernetes/)
+
 ## 消えないnamespace
 
 `kubectl delete ns hoge`が応答無くなりstatusがTerminatingのままになった場合の対処。
