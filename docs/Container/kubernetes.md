@@ -151,6 +151,25 @@ kubectl get ns ${namespace} -o json | grep -v -- '"kubernetes"' | kubectl replac
 - [Initコンテナ | Kubernetes](https://kubernetes.io/ja/docs/concepts/workloads/pods/init-containers/)
 - [Initコンテナのデバッグ | Kubernetes](https://kubernetes.io/ja/docs/tasks/debug/debug-application/debug-init-containers/)
 
+## RBAC
+
+[Authorization | Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/authorization/)
+
+### verbs
+
+| request          | HTTP       |       |
+| ---------------- | ---------- | ----- |
+| create           | POST       |       |
+| get              | GET / HEAD |       |
+| list             | GET / HEAD | 一覧の参照 |
+| watch            | GET / HEAD | 変更の監視 |
+| update           | PUT        |       |
+| patch            | PATCH      |       |
+| delete           | DELETE     |       |
+| deletecollection | DELETE     |       |
+
+[get vs. list in Kubernetes RBAC - Stack Overflow](https://stackoverflow.com/questions/58159866/get-vs-list-in-kubernetes-rbac)
+
 ## REST
 
 ### namespace一覧
