@@ -7,6 +7,7 @@
 - 設定関連
     - [Set Kubelet Parameters Via A Configuration File | Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/)
     - [kube-controller-manager | Kubernetes](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/)
+- [永続ボリューム | Kubernetes](https://kubernetes.io/ja/docs/concepts/storage/persistent-volumes/)
 
 ## ヘルスチェック
 
