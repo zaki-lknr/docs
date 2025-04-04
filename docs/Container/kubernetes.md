@@ -170,6 +170,8 @@ kubectl get ns ${namespace} -o json | grep -v -- '"kubernetes"' | kubectl replac
 
 [get vs. list in Kubernetes RBAC - Stack Overflow](https://stackoverflow.com/questions/58159866/get-vs-list-in-kubernetes-rbac)
 
+リソース単位で操作に必要なverbsは`kubectl api-resources -o wide`で確認できる。
+
 ## REST
 
 ### namespace一覧
