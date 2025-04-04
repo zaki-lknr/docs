@@ -67,10 +67,14 @@ $ helm repo remove stable
 
 ### ローカルのリポジトリ情報を更新
 
-多分`apt-get update`的な動作。
+```console
+helm repo update
+```
+
+特定のリポジトリのみ更新するには引数を追加する。
 
 ```console
-$ helm repo update
+helm repo update prometheus-community
 ```
 
 ### チャート一覧
