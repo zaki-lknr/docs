@@ -104,6 +104,14 @@ IsPublic IsSerial Name                                     BaseType
 True     True     Byte[]                                   System.Array
 ```
 
+### ファイル情報
+
+```ps1
+Get-ItemProperty <FILE_PATH>
+```
+
+[Get-ItemProperty (Microsoft.PowerShell.Management) - PowerShell | Microsoft Learn](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.management/get-itemproperty?view=powershell-7.5)
+
 ## Azure PowerShell
 
 ### Azure Az PowerShellインストール
