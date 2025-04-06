@@ -112,6 +112,39 @@ Get-ItemProperty <FILE_PATH>
 
 [Get-ItemProperty (Microsoft.PowerShell.Management) - PowerShell | Microsoft Learn](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.management/get-itemproperty?view=powershell-7.5)
 
+#### 一覧表示
+
+```ps1
+PS C:\Users\zakih\Desktop> Get-ItemProperty .\P1490954.jpg | Format-List
+
+
+    ディレクトリ: C:\Users\zakih\Desktop
+
+
+
+Name           : P1490954.jpg
+Length         : 110922
+CreationTime   : 2025/01/23 17:39:18
+LastWriteTime  : 2025/01/23 17:39:18
+LastAccessTime : 2025/04/06 12:00:01
+Mode           : -a----
+LinkType       :
+Target         : {}
+VersionInfo    : File:             C:\Users\zakih\Desktop\P1490954.jpg
+                 InternalName:
+                 OriginalFilename:
+                 FileVersion:
+                 FileDescription:
+                 Product:
+                 ProductVersion:
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:
+```
+
 ## Azure PowerShell
 
 ### Azure Az PowerShellインストール
