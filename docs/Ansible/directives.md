@@ -307,6 +307,21 @@ when: cond == "foobar" or cond == "bazqux"
 when: foobar_value is not defined
 ```
 
+## become
+
+特権ユーザーへの昇格に使う場合が多いが、基本的には「別ユーザー権限でタスクを実行」するためのもの。  
+`become_user`を使えば`su - <USER_NAME>`の動作になる。  
+ただしパスワードを指定するディレクティブはないため、認証のためのパスワードは`ansible_become_password`変数を併用する。
+
+```yaml
+- name: exec by other user
+  module:
+  become: true
+  become_user: other-user-name
+  vars:
+    ansible_become_password: other-user-password
+```
+
 ## includeとimport
 
 - [Re-using Ansible artifacts — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
