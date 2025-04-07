@@ -327,6 +327,28 @@ $ diff -u <(command1) <(command2)
 termcapinfo xterm* ti@:te@
 ```
 
+## tmux
+
+### 起動とセッション
+
+新規セッション作成
+
+```console
+tmux
+```
+
+既存セッションにアタッチ
+
+```console
+tmux a
+```
+
+セッション一覧
+
+```console
+tmux ls
+```
+
 ## gzip
 
 ### .gzファイルを展開してstdoutへ出力
