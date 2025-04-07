@@ -145,6 +145,30 @@ VersionInfo    : File:             C:\Users\zakih\Desktop\P1490954.jpg
                  Language:
 ```
 
+#### 指定プロパティのみ
+
+`-Name`を使用。
+
+```ps1
+PS C:\Users\zakih\Desktop> Get-ItemProperty .\P1490954.jpg -Name LastWriteTime
+
+
+LastWriteTime : 2025/01/23 17:39:18
+PSPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users\zakih\Desktop\P1490954.jpg
+PSParentPath  : Microsoft.PowerShell.Core\FileSystem::C:\Users\zakih\Desktop
+PSChildName   : P1490954.jpg
+PSDrive       : C
+PSProvider    : Microsoft.PowerShell.Core\FileSystem
+```
+
+あるいは直接参照。
+
+```ps1
+PS C:\Users\zakih\Desktop> (Get-ItemProperty .\P1490954.jpg).LastWriteTime
+
+2025年1月23日 17:39:18
+```
+
 ## Azure PowerShell
 
 ### Azure Az PowerShellインストール
