@@ -349,6 +349,16 @@ tmux a
 tmux ls
 ```
 
+### 設定
+
+#### マウスホイールでスクロール
+
+デフォルトだとコマンド履歴表示になってる
+
+```text
+set-option -g mouse on
+```
+
 ## gzip
 
 ### .gzファイルを展開してstdoutへ出力
