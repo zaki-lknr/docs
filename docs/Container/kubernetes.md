@@ -184,6 +184,22 @@ crictl pods
 crictl pods --namespace <NAMESPACE> --name <POD_NAME>
 ```
 
+### コンテナ一覧
+
+```console
+crictl ps
+```
+
+```console
+crictl ps --name <CONTAINER_NAME>
+```
+
+`--name`は正規表現可能
+
+```console
+crictl ps --name 'awx-.*'
+```
+
 ## REST
 
 ### namespace一覧
