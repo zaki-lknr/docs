@@ -12,6 +12,14 @@
 
 [Azure Cloud Shell に関してよくあるご質問 (FAQ) | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/cloud-shell/faq-troubleshooting)
 
+### ストレージアカウントの確認
+
+環境変数にセットされている。
+
+```console
+echo $ACC_STORAGE_PROFILE
+```
+
 ## AKS
 
 ### 監視設定
