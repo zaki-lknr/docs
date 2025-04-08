@@ -172,6 +172,18 @@ kubectl get ns ${namespace} -o json | grep -v -- '"kubernetes"' | kubectl replac
 
 リソース単位で操作に必要なverbsは`kubectl api-resources -o wide`で確認できる。
 
+## crictl
+
+### pod一覧
+
+```console
+crictl pods
+```
+
+```console
+crictl pods --namespace <NAMESPACE> --name <POD_NAME>
+```
+
 ## REST
 
 ### namespace一覧
