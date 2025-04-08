@@ -140,6 +140,10 @@ fullnameOverride: ""
 ### チャートのインストール
 
 ```console
+helm install my-app repo/chart -n namespace -f values.yaml
+```
+
+```console
 helm install stable/mysql --generate-name --create-namespace -n mysql -f values.yaml
 ```
 
