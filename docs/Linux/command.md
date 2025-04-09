@@ -359,6 +359,16 @@ tmux ls
 set-option -g mouse on
 ```
 
+#### キーバインド変更
+
+デフォルトの`Ctrl-b`はshellのbackを上書きしているので、`Ctrl-g`に変更する。
+
+```text
+set-option -g prefix C-g
+unbind-key C-b
+bind-key C-g send-prefix
+```
+
 ## gzip
 
 ### .gzファイルを展開してstdoutへ出力
