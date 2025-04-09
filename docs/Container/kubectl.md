@@ -498,6 +498,14 @@ awx         awx-task-dc97f74f7-fmbbn                           redis,awx-task,aw
 awx         awx-web-769f8f749f-s4qkz                           redis,awx-web,awx-rsyslog
 ```
 
+### rolebindings / clusterrolebindings
+
+紐付いてるServiceAccountを確認する
+
+```console
+kubectl get rolebindings,clusterrolebindings -A -o custom-columns='KIND:kind,NAMESPACE:metadata.namespace,NAME:metadata.name,SERVICE_ACCOUNTS:subjects[?(@.kind=="ServiceAccount")].name' | grep <SERVICE_ACCOUNT_NAME>
+```
+
 ## rollout
 
 ### restart
