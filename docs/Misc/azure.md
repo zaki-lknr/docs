@@ -26,3 +26,17 @@ echo $ACC_STORAGE_PROFILE
 
 - [Azure Kubernetes Service (AKS) クラスターの監視を有効にする - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli)
 - [Kubernetes クラスターの監視を無効にする - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/kubernetes-monitoring-disable)
+
+## Log Analytics
+
+### クエリ
+
+#### 使用可能なCounterNameの一覧
+
+```kusto
+Perf
+| where ObjectName == "K8SContainer"
+| summarize count() by CounterName
+```
+
+CounterNameの一覧とそれぞれの件数が出力される
