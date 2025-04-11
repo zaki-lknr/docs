@@ -169,6 +169,24 @@ PS C:\Users\zakih\Desktop> (Get-ItemProperty .\P1490954.jpg).LastWriteTime
 2025年1月23日 17:39:18
 ```
 
+#### 更新
+
+[Set-ItemProperty (Microsoft.PowerShell.Management) - PowerShell | Microsoft Learn](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.management/set-itemproperty?view=powershell-7.5)
+
+```ps1
+PS C:\Users\zakih\Desktop> Set-ItemProperty .\P1490954.jpg -Name LastWriteTime -Value '2025/4/6 15:10:32'
+PS C:\Users\zakih\Desktop> Get-ItemProperty .\P1490954.jpg -Name LastWriteTime
+
+
+LastWriteTime : 2025/04/06 15:10:32
+PSPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users\zakih\Desktop\P1490954.jpg
+PSParentPath  : Microsoft.PowerShell.Core\FileSystem::C:\Users\zakih\Desktop
+PSChildName   : P1490954.jpg
+PSDrive       : C
+PSProvider    : Microsoft.PowerShell.Core\FileSystem
+
+```
+
 ## Azure PowerShell
 
 ### Azure Az PowerShellインストール
