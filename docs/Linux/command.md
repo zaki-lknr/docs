@@ -10,6 +10,12 @@ ls !(*.txt)
 
 `*.txt`以外を展開
 
+### while無限ループワンライナー
+
+```console
+while :; do date; sleep1; done
+```
+
 ### forループワンライナー
 
 ```console
