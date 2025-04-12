@@ -973,6 +973,12 @@ route1=172.29.0.0/24,172.16.1.3
 systemctl list-unit-files
 ```
 
+### ユーザー権限のユニットファイル一覧
+
+```console
+systemctl list-unit-files --user
+```
+
 ## ホスト名
 
 ### 変更
