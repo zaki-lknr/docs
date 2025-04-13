@@ -27,7 +27,15 @@ echo $ACC_STORAGE_PROFILE
 - [Azure Kubernetes Service (AKS) クラスターの監視を有効にする - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli)
 - [Kubernetes クラスターの監視を無効にする - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/kubernetes-monitoring-disable)
 
-## Log Analytics
+## Monitor / Log Analytics
+
+### AKS/Monitor
+
+#### 収集するコンテナーログの設定変更
+
+AKSクラスターのメニューの「監視」から、上部の「モニターの設定」押下。  
+これでデプロイ時に選択するPrometheus/Grafanaやコンテナーログの設定画面が表示される。  
+収集頻度や対象ネームスペースなどをここから選択。
 
 ### クエリ
 
