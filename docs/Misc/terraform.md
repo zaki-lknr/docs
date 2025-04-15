@@ -96,10 +96,10 @@ TF_LOG=DEBUG terraform command
 
 ### 指定モジュールのみ処理
 
-`-module=module.モジュール名`で指定可能
+`-target=module.モジュール名`で指定可能
 
 ```console
-terraform plan -module=.module.my-module
+terraform plan -target=module.my-module
 ```
 
 ## backend設定
