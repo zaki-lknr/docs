@@ -69,6 +69,18 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 
 通知時のホスト名
 
+## Tools
+
+### awx-manage
+
+#### ジョブ削除
+
+```console
+awx-manage cleanup_jobs [--help]
+```
+
+`--dry-run`で実行すれば削除対象を確認できる。
+
 ## API
 
 API一覧は以下。  
