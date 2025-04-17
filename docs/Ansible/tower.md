@@ -79,7 +79,14 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 awx-manage cleanup_jobs [--help]
 ```
 
-`--dry-run`で実行すれば削除対象を確認できる。
+`--dry-run`で実行すれば削除対象を確認できる。  
+デフォルト90日以前が削除対象。
+
+日付指定は`--days`で指定。
+
+```console
+awx-manage cleanup_jobs --days 3
+```
 
 ## API
 
