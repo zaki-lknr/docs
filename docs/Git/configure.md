@@ -75,6 +75,15 @@ Host <space>.git.backlog.com
 export GIT_SSH_COMMAND="ssh -F /path/to/myconf/ssh/config"
 ```
 
+### 接続不調時などにSSHのログを確認する
+
+`-vvv`のように数を増やせばログ量は増える。  
+要は内部で使用する`ssh`コマンドを明示的に指定しつつverboseオプションを追加する。
+
+```console
+GIT_SSH_COMMAND="ssh -v" git push
+```
+
 ## リモートリポジトリ
 
 ### 現在の設定
