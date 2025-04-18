@@ -91,9 +91,11 @@ awx-manage cleanup_jobs --days 3
 ## API
 
 API一覧は以下。  
-[11. Controller API Reference Guide — Automation Controller API Guide v4.2.1](https://docs.ansible.com/automation-controller/latest/html/controllerapi/api_ref.html)
+~~[11. Controller API Reference Guide — Automation Controller API Guide v4.2.1](https://docs.ansible.com/automation-controller/latest/html/controllerapi/api_ref.html)~~
 
-稼働中のAAP/AWXのAPI・エンドポイントを確認するには、ブラウザで`/api/`にアクセスすれば確認できる。
+- [12. AWX API Reference Guide — Ansible AWX community documentation](https://ansible.readthedocs.io/projects/awx/en/latest/rest_api/api_ref.html)
+
+稼働中のAAP/AWXのAPI・エンドポイントを確認するには、ブラウザで`/api/v2/`にアクセスすれば確認できる。
 
 ### 認証
 
