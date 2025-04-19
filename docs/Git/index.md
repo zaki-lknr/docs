@@ -806,6 +806,28 @@ bc5eb56 add: git/configure: git-prompt設定後のPS1環境変数
 >
 > [ブランチの切り替え｜サル先生のGit入門【プロジェクト管理ツールBacklog】](https://backlog.com/ja/git-tutorial/stepup/03/)
 
+### トレースログ出力
+
+`GIT_TRACE`など有効にするとログが表示される。
+
+```console
+GIT_TRACE=true git push
+```
+
+```console
+GIT_TRACE_CURL=true git clone https://github.com/zaki-lknr/r2tokimeki.git
+```
+
+複数指定も可能
+
+```console
+GIT_TRACE=true GIT_TRACE_PACKET=true git clone https://github.com/zaki-lknr/r2tokimeki.git
+```
+
+sshのデバッグログを出したい場合は`GIT_SSH_COMMAND="ssh -v"`を使う。
+
+[Git - 環境変数](https://git-scm.com/book/ja/v2/Git%E3%81%AE%E5%86%85%E5%81%B4-%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0)
+
 ## .gitignore
 
 [空のディレクトリを維持するための、 .gitkeep と .gitignore の使い分け - Qiita](https://qiita.com/ndxbn/items/f124d2b183b60cb074e2)
