@@ -69,6 +69,17 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 
 通知時のホスト名
 
+### EVENT_STDOUT_MAX_BYTES_DISPLAY
+
+ジョブストリームに表示されるログのバイト数。超過分は省略表示される。
+
+### MAX_EVENT_RES_DATA
+
+大きなサイズのイベントデータの上限値。超過分は保存時に切り捨てられる。
+
+- [3.7. Automation Controller のチューニング | Red Hat Product Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html/configuring_automation_execution/controller-tuning)
+- [Returned JSON is empty when standard output is large · Issue #1789 · ansible/awx](https://github.com/ansible/awx/issues/1789)
+
 ## Tools
 
 ### awx-manage
