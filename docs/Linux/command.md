@@ -175,6 +175,15 @@ curl --resolve ansible.example.org:443:192.168.0.41 https://ansible.example.org/
 curl -u username:password http://example.org/
 ```
 
+### HTTP 0.9
+
+```console
+$ curl http://old.example.org/
+curl: (1) Received HTTP/0.9 when not allowed
+```
+
+HTTP/0.9のレスポンスは`curl`はデフォルトで処理しないが、`--http0.9`をオプションに加えるとOK
+
 ### ステータスコードのみ取得
 
 ```console
