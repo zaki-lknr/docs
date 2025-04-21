@@ -58,6 +58,23 @@ podman run --rm -it -v ~/.aws:/root/.aws public.ecr.aws/aws-cli/aws-cli ecr get-
 
 ### 各操作
 
+#### EC2
+
+##### VMリストアップ
+
+```console
+aws ec2 describe-instances \
+  --region <リージョン>
+```
+
+##### 指定タグのVM
+
+```console
+aws ec2 describe-instances \
+  --region <リージョン> \
+  --query "Reservations[].Instances[?Tags[?Key=='Name' && Value=='nameタグの名前']]"
+```
+
 #### ネットワーク
 
 ##### ゲートウェイIDの取得
