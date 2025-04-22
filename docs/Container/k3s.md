@@ -70,6 +70,16 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=latest sh -
 | Service IPs | 10.43.0.0/16 |
 | cluster dns | 10.43.0.10   |
 
+### kubelet
+
+#### 最大pod数
+
+IPアドレスをカスタマイズしても使えるpod数は連動しないので明確に指定する。
+
+```console
+server --kubelet-arg=max-pods=200
+```
+
 ### ネットワーク
 
 #### IPアドレス
