@@ -41,6 +41,12 @@ chpasswd: { expire: false }
 ssh_pwauth: true
 ```
 
+### タイムゾーン設定
+
+```yaml
+timezone: Asia/Tokyo
+```
+
 ### コマンドの実行
 
 ```yaml
