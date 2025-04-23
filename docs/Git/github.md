@@ -70,12 +70,16 @@ Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で�
 ### レビュー
 
 - [プルリクエストで提案された変更をレビューする - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+- [必須レビューでのプルリクエストの承認 - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/approving-a-pull-request-with-required-reviews)
 
 コメント入力のあとに[Submit review]を忘れないこと。
 
-- Request changes / 追加修正がある場合
+- Request changes / 追加修正してほしい場合
 - Approve / 問題ない場合
 - Comment / その他
+
+`Approve`の時点で「PRのマージ」を行うのではなく、「PRをマージしてもいいよ」という状態に移行する。  
+(マージは別途マージボタンを押下する)
 
 ### suggested change
 
