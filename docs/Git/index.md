@@ -492,6 +492,18 @@ git stash show stash@{0} -p
 git diff stash@{0}
 ```
 
+### 退避データの削除
+
+ワークを退避してたけど不要になったとか。
+
+```console
+git stash drop [stash]
+```
+
+```console
+git stash drop stash@{0} 
+```
+
 ## tag操作
 
 タグ操作は基本的にブランチと同じ。
