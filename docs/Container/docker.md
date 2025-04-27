@@ -225,6 +225,26 @@ $ docker image prune
 デフォルトは、タグが設定されずに`<none>`になっているイメージが削除される。  
 `<none>`のイメージをリストアップするだけであれば `docker image ls -f "dangling=true"` でリストアップできる。
 
+### network
+
+#### ls
+
+Dockerネットワークのリスト表示
+
+```console
+$ docker network ls
+NETWORK ID     NAME                        DRIVER    SCOPE
+34ef60dd22b5   ansible-semaphore_default   bridge    local
+69fdc4f1b801   bridge                      bridge    local
+5a51254c9202   compose-sample_default      bridge    local
+0ee332b7e247   guacamole-network           bridge    local
+a3434bde2af6   host                        host      local
+d2561ec39f0b   kind                        bridge    local
+11eb1e17b151   metrics_default             bridge    local
+75cd64743a98   minikube                    bridge    local
+550454724fbf   none                        null      local
+```
+
 ## 実行サンプル
 
 ### ローカルのwebコンテンツをhttpdに持たせる
