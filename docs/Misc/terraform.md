@@ -47,6 +47,14 @@ terraform init -upgrade
 terraform state list
 ```
 
+### tfstateの確認
+
+```console
+terraform state pull
+```
+
+stdoutへtfstateの内容が出力されるので、ファイルへ保存すればクラウドに配置している場合のtfstateも1コマンドで取得できる。
+
 ### workspace
 
 #### 現在のworkspace
