@@ -93,6 +93,24 @@ services:
         network_mode: service:app
 ```
 
+### 依存
+
+#### 単純な依存設定
+
+depends_onで依存を設定することで起動・終了の順序を制御できる。
+
+```yaml
+services:
+    db:
+        image: postgres
+    app:
+        image: app
+        depends_on:
+            - db
+```
+
+順序が制御できるのみなので、コンテナ内プロセスの状態までは感知しない。
+
 ### ファイルのbindマウント
 
 ```yaml
