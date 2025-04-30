@@ -613,6 +613,14 @@ userdel zaki -r
 | ----- | ------------------ |
 | `-r`  | ホームディレクトリなどのデータを削除 |
 
+## グループ作成
+
+### 作成する
+
+```console
+groupadd nijigasaki [-g GID]
+```
+
 ## timedatectl
 
 ### NTPの無効・有効
