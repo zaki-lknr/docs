@@ -1097,6 +1097,14 @@ iptables -D INPUT 12
 # iptables -t nat -D PREROUTING 1
 ```
 
+#### 全削除
+
+`-F`(または`--flush`)ですべてのルールがクリアされる。
+
+```console
+iptables -F
+```
+
 ### firewall-cmd
 
 [[コマンドメモ] firewall-cmd備忘録 (firewalld) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/26/230958)
