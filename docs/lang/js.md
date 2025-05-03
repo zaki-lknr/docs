@@ -856,6 +856,19 @@ label_item.textContent = '設定';
 `id`の指定は`for`でなく`htmlFor`であることに注意。  
 [JSでlabel要素にfor属性が追加できない](https://teratail.com/questions/140944)
 
+### メソッド
+
+#### textContent
+
+テキストをセットする。  
+書いたとおりに表現されるため、htmlを書いてもタグがそのまま表示される。
+
+以下のように書いても、アンカーとしては機能せず、そのまま`<a href='...'>not anchor text</a>`と表示される。
+
+```javascript
+v.textContent = "<a href='...'>not anchor text</a>";
+```
+
 ### 複数の子要素を全て削除する
 
 ```javascript
