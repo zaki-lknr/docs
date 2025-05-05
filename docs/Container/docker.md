@@ -245,6 +245,15 @@ d2561ec39f0b   kind                        bridge    local
 550454724fbf   none                        null      local
 ```
 
+#### create
+
+Dockerネットワークの作成
+
+```console
+$ docker network create memoapp-network
+308817de4a7fd68fdf811af09ac00eceb20a20ac7b522d1b89bc16db8130d288
+```
+
 ## 実行サンプル
 
 ### ローカルのwebコンテンツをhttpdに持たせる
