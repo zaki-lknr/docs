@@ -53,3 +53,13 @@
 
 選択可能なプロパティ一覧は以下  
 [CSS3で使える35+α種類のカーソルの一覧表。（CSS おれおれ Advent Calendar 2012 – 07日目） | Ginpen.com](https://ginpen.com/2012/12/08/css-cursors/)
+
+### テキスト装飾 (text-decoration)
+
+下線
+
+```css
+.text_decoration {
+    text-decoration:underline;
+}
+```
