@@ -780,6 +780,20 @@ with urllib.request.urlopen(req) as res:
     j = json.load(res)
 ```
 
+##### POST
+
+Requestオブジェクト作成時に送信するデータを指定すればPOSTメソッドになる。
+
+```python
+auth_data = {
+    'Username': username,
+    'Password': password,
+}
+auth_req = urllib.request.Request(auth_page, urllib.parse.urlencode(auth_data).encode('ascii'))
+with urllib.request.urlopen(auth_req) as auth_resp:
+    print(auth_resp.read())
+```
+
 ##### SSL検証無視
 
 ```python
