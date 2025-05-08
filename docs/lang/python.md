@@ -24,6 +24,18 @@ $ python2 -m SimpleHTTPServer 8080
 
 ### 演算子
 
+#### セイウチ演算子(:=)
+
+代入と評価を同時に行う。
+
+```python
+while (items := get_items()):
+    :
+    :
+```
+
+`items`がtrueである間(リストを返す関数であれば空でない限り)はループする。
+
 #### 比較(==)
 
 Pythonは文字列も`==`を使う。  
