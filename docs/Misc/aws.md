@@ -67,6 +67,26 @@ aws ec2 describe-instances \
   --region <リージョン>
 ```
 
+###### インスタンスIDのみ一覧
+
+```console
+$ aws ec2 describe-instances --region ap-southeast-2 --query 'Reservations[].Instances[].InstanceId'
+[
+    "i-002bfe31881b20e07",
+    "i-0d33f288e35835170"
+]
+```
+
+###### Nameタグのみ一覧
+
+```console
+$ aws ec2 describe-instances --region ap-southeast-2 --query 'Reservations[].Instances[].Tags[?Key==`Name`].Value[]'
+[
+    "server-1",
+    "server-2"
+]
+```
+
 ##### 指定タグのVM
 
 ```console
