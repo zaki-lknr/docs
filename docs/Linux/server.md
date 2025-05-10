@@ -95,6 +95,10 @@ backend servers
 dhcp-host=00:00:5E:00:53:00,raclette,192.168.0.129
 ```
 
+#### リース状態
+
+ファイルはデフォルトで `/var/lib/misc/dnsmasq.leases` にある。
+
 ### DNS
 
 #### ワイルドカード
