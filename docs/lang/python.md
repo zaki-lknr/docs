@@ -900,6 +900,16 @@ raise RuntimeError('application error: ' + error_value)
 
 - [[Ansible] そのtag設定、想定通りに動いてますか？ (継承機能とその実装を確認する) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/03/24/100317)
 
+### クラス
+
+#### コンストラクタ(__init__)
+
+```py
+class Animal:
+    def __init__(self, a):
+        self.__nakigoe = a
+```
+
 ## 環境
 
 ### pip
