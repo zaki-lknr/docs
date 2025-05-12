@@ -184,3 +184,15 @@ OS情報程度であれば`min`で取れる。
 ```
 
 昇格前のユーザー情報は`SUDO_USER`と`PWD`を見るしか無いかな？
+
+## ホスト変数
+
+### ホストを指定した参照
+
+自ホスト変数だけでなく、他のホストのホスト変数を参照できる。
+
+```yaml
+vars:
+  hostname: other-host-name
+  other_host_value: "{{ hostvars[hostname].private_ip_address }}
+```
