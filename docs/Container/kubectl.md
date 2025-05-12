@@ -498,6 +498,39 @@ awx         awx-task-dc97f74f7-fmbbn                           redis,awx-task,aw
 awx         awx-web-769f8f749f-s4qkz                           redis,awx-web,awx-rsyslog
 ```
 
+#### podとIPアドレス (custom-columns)
+
+```console
+$ kubectl get pod -o custom-columns=NAME:.metadata.name,IP:.status.podIP --no-headers
+NAME                           IP
+demo-server-67dcd86d64-7hfck   10.42.0.14
+demo-server-67dcd86d64-82h8j   10.42.0.9
+demo-server-67dcd86d64-frcs6   10.42.0.11
+demo-server-67dcd86d64-fvl9p   10.42.0.15
+demo-server-67dcd86d64-hf6l2   10.42.0.13
+demo-server-67dcd86d64-jv7sq   10.42.0.12
+demo-server-67dcd86d64-lr7dw   10.42.0.8
+demo-server-67dcd86d64-pt7s9   10.42.0.7
+demo-server-67dcd86d64-vs25p   10.42.0.10
+demo-server-67dcd86d64-xlnnv   10.42.0.6
+```
+
+#### podとIPアドレス (jsonpath)
+
+```console
+$ kubectl get pod -o jsonpath='{range .items[*]}{.metadata.name}{","}{.status.podIP}{"\n"}{end}'
+demo-server-67dcd86d64-5fg4r,10.42.0.5
+demo-server-67dcd86d64-cqh5t,10.42.0.11
+demo-server-67dcd86d64-gclqc,10.42.0.15
+demo-server-67dcd86d64-hr9nw,10.42.0.7
+demo-server-67dcd86d64-htgfs,10.42.0.14
+demo-server-67dcd86d64-jxkbp,10.42.0.16
+demo-server-67dcd86d64-ngc6t,10.42.0.13
+demo-server-67dcd86d64-nwhpd,10.42.0.12
+demo-server-67dcd86d64-tg672,10.42.0.4
+demo-server-67dcd86d64-wzhs9,10.42.0.8
+```
+
 ### rolebindings / clusterrolebindings
 
 紐付いてるServiceAccountを確認する
