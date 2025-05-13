@@ -558,6 +558,25 @@ $ python replace.py
 /(p)_(t)h/(t)o/s_m(p)le
 ```
 
+#### バイト列との変換
+
+バイト列 -> 文字列
+
+```py
+byte = b'nijigasaki'
+str = byte.decode()
+
+print(byte)
+print(str)
+```
+
+出力は
+
+```console
+b'nijigasaki'
+nijigasaki
+```
+
 ### 出力
 
 #### 標準エラー出力
