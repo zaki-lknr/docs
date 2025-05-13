@@ -269,6 +269,39 @@ Local Volumes   251       1         51.49GB   51.34GB (99%)
 Build Cache     111       0         770.7MB   770.7MB
 ```
 
+`-v`付与で全項目ごとにサイズを出力する。
+
+```console
+$ docker system df -v
+Images space usage:
+
+REPOSITORY                                              TAG                    IMAGE ID       CREATED         SIZE      SHARED SIZE   UNIQUE SIZE   CONTAINERS
+lscr.io/linuxserver/openssh-server                      latest                 8f57469f6bb9   4 weeks ago     35MB      0B            34.99MB       0
+:
+:
+Containers space usage:
+
+CONTAINER ID   IMAGE                                     COMMAND                   LOCAL VOLUMES   SIZE      CREATED         STATUS                     NAMES
+e744ed9323d6   quay.io/prometheus/node-exporter:v1.9.0   "/bin/node_exporter …"   0               0B        8 weeks ago     Up 6 days                  node_exporter
+529c27ccf88a   registry:2                                "/entrypoint.sh /etc…"   1               0B        14 months ago   Exited (2) 14 months ago   registry
+
+Local Volumes space usage:
+
+VOLUME NAME                                                        LINKS     SIZE
+04ae90cb44468f08913852bff0427b82c2c3ef4339d3457dbbffc693900b39b3   0         17.72MB
+c2c40bf44e4e08fff8d8cad68df82b849710f31c16e2a71b6c217284a218d58d   0         2.759kB
+:
+:
+
+Build cache usage: 770.7MB
+
+CACHE ID       CACHE TYPE     SIZE      CREATED         LAST USED       USAGE     SHARED
+dzty9gukiwho   regular        87.7MB    16 months ago   16 months ago   1         false
+p8kz9o4lxuyj   regular        115MB     16 months ago   16 months ago   1         false
+:
+:
+```
+
 ## 実行サンプル
 
 ### 何もしないコンテナ
