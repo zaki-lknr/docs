@@ -254,6 +254,21 @@ $ docker network create memoapp-network
 308817de4a7fd68fdf811af09ac00eceb20a20ac7b522d1b89bc16db8130d288
 ```
 
+### system
+
+#### ストレージ使用状況
+
+コンテナ・イメージ・ボリューム・ビルドキャッシュ毎のサイズをサマライズする。
+
+```console
+$ docker system df
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          63        2         11.71GB   11.66GB (99%)
+Containers      2         1         0B        0B
+Local Volumes   251       1         51.49GB   51.34GB (99%)
+Build Cache     111       0         770.7MB   770.7MB
+```
+
 ## 実行サンプル
 
 ### 何もしないコンテナ
