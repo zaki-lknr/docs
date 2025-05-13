@@ -256,6 +256,12 @@ $ docker network create memoapp-network
 
 ## 実行サンプル
 
+### 何もしないコンテナ
+
+```console
+docker run -d <image> tail -f /dev/null
+```
+
 ### ローカルのwebコンテンツをhttpdに持たせる
 
 ```console
