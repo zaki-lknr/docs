@@ -159,7 +159,23 @@ vars:
 
 ## 検索 (select / selectattr)
 
+`grep`的な動作。
+
 [[Ansible / Jinja2] select / selectattr を使った配列と辞書のフィルタリング - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/02/18/000228)
+
+入れ子の場合もそのまま書けばOK
+
+```yaml
+    summary_fields:
+      inventory:
+        name: netbox-demo-inventory
+```
+
+という構造に対しては、以下のように書く。
+
+```jinja2
+selectattr('summary_fields.inventory.name', 'eq', 'netbox-demo-inventory')
+```
 
 ## リスト要素への一律処理 (map)
 
