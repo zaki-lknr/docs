@@ -19,6 +19,9 @@
 - 設定系
     - [Modelines - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=chrislajoie.vscode-modelines)
         - ソースの先頭部分に `# -*- mode: hogehoeg -*-` って書いた内容が有効になる
+- Draw.io
+    - [Draw.io Integration - Visual Studio Marketplace](https://marketplace.visualstudio.com/items/?itemName=hediet.vscode-drawio)
+        - `.drawio`を開いたときにDraw.ioエディタを起動する
 - 補助
     - [Bracket Pair Colorizer 2 - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
         - 括弧の開始終了間の補助線表示
