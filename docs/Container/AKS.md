@@ -25,6 +25,16 @@ chroot /host
 kubectl delete pod node-debugger-aks-********
 ```
 
+## ノードのNotReady
+
+5分間の異常状態を認識し、自動修復機能が起動し、以下の処理を最大3回試行する。
+
+- ノードの再起動
+- ノードの再イメージ化
+- ノードの再デプロイ
+
+[Azure Kubernetes Service (AKS) ノードの自動修復 - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/node-auto-repair)
+
 ## ログとイベントを記録する
 
 監視->分析情報で、Container insightsを有効（収集データに「ログとイベント」を選択）にする。  
