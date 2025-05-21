@@ -362,6 +362,21 @@ e5c366cb3bba   slowstart_httpd   "sh -c 'sleep 30; ht…"   32 seconds ago   Up 
 
 ## 設定
 
+### コンテナログのサイズ・ローテート設定(システムワイド)
+
+```console
+$ cat /etc/docker/daemon.json
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100k",
+    "max-file": "3"
+  }
+}
+```
+
+[[Docker]コンテナ実行時にlog-optsでログサイズ上限とローテート数を設定してホストのストレージが溢れないようにする - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/09/211117)
+
 ### insecureなレジストリ設定
 
 ```console
