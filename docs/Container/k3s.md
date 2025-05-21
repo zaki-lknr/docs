@@ -80,6 +80,15 @@ IPアドレスをカスタマイズしても使えるpod数は連動しないの
 server --kubelet-arg=max-pods=200
 ```
 
+#### ログファイルのローテート設定
+
+```console
+server --kubelet-arg=container-log-max-files=5 \
+       --kubelet-arg=container-log-max-size=10Mi
+```
+
+<https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/>
+
 ### ネットワーク
 
 #### IPアドレス
