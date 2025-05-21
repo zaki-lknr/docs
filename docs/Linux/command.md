@@ -595,6 +595,22 @@ KiB Swap:  3670012 total,  3670012 free,        0 used.  5663308 avail Mem
  385441 root      20   0 1130612  62204  26536 S   0.0  0.8   0:10.18 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock      
 ```
 
+### バッチ処理
+
+ファイル出力したい場合など。  
+`-b`を加えるとstdoutへ追記し続ける方式になる。
+
+他に組み合わせるオプションは以下
+
+- `-n COUNT`: 実行回数
+- `-d INTERVAL`: 実行間隔
+
+```console
+top -b -d 1 -n 60 | tee log
+```
+
+これで1分間の間1秒ごとにtopの出力をlogファイルへ保存する
+
 ## ユーザー作成
 
 ### 作成する
