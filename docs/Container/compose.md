@@ -95,7 +95,7 @@ services:
 
 ### 依存
 
-#### 単純な依存設定
+#### 単純な依存設定 (depends_on)
 
 depends_onで依存を設定することで起動・終了の順序を制御できる。
 
@@ -110,6 +110,34 @@ services:
 ```
 
 順序が制御できるのみなので、コンテナ内プロセスの状態までは感知しない。
+
+#### ヘルスチェックとの併用 (healthcheck + condition: service_healthy)
+
+postgresで自身にアクセスできるまで待つ設定を`healthcheck`で定義し、`depends_on`の`condition`パラメタに`service_healthy`を指定することでヘルスチェックが完了するまで待つ構成。
+
+```yaml
+    db:
+        image: postgres:12
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U user || exit 1"]
+            interval: 1s
+            timeout: 1s
+            retries: 10
+            start_period: 1s
+    app:
+        image: app
+        depends_on:
+            db:
+                condition: service_healthy
+```
+
+`condition`には以下が指定できる。
+
+- `service_started`: 依存したコンテナが起動している
+- `service_healthy`: 依存したコンテナのヘルスチェックが正常
+- `service_completed_successfully`: 依存したコンテナが正常に終了
+
+<https://docs.docker.jp/compose/compose-file/compose-file-v3.html#depends-on>
 
 ### ファイルのbindマウント
 
