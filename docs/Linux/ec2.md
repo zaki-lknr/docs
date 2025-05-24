@@ -24,6 +24,20 @@ HOME_URL="https://amazonlinux.com/"
 
 ## cloud-init
 
+### ホスト名設定
+
+```yaml
+hostname: example-host-name
+```
+
+<https://cloudinit.readthedocs.io/en/latest/reference/modules.html#set-hostname>
+
+OSによっては`hostname`では効果がなく、その場合は`fqdn`で指定する。(RHEL9は効かなかった)
+
+```yaml
+fqdn: controller.example.org
+```
+
 ### パスワード設定
 
 ```yaml
