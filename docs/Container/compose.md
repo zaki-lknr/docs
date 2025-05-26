@@ -74,6 +74,23 @@ docker compose cp app:/path/to/file ./file
 
 - [Compose file version 3 reference | Docker Documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/)
 
+### restartポリシー
+
+サービス名直下に記載する。
+
+```yaml
+services:
+  prometheus:
+    image: quay.io/prometheus/prometheus:v3.2.1
+    :
+    restart: always
+```
+
+- no: デフォルト。再起動なし
+- on-failure: 終了コードがエラー時に再起動する
+- always: 終了コードにかかわらず再起動する(OSリブート後など含む)
+- unless-stopped: 手動停止した場合は起動しない。
+
 ### network_mode
 
 `"service:[service name]"`と記述すると、対象サービスのネットワーク設定を使用する。  
