@@ -200,6 +200,12 @@ crictl ps --name <CONTAINER_NAME>
 crictl ps --name 'awx-.*'
 ```
 
+### コンテナ毎のリソース消費状況
+
+```console
+crictl stats
+```
+
 ## REST
 
 ### namespace一覧
