@@ -539,6 +539,27 @@ demo-server-67dcd86d64-wzhs9,10.42.0.8
 kubectl get rolebindings,clusterrolebindings -A -o custom-columns='KIND:kind,NAMESPACE:metadata.namespace,NAME:metadata.name,SERVICE_ACCOUNTS:subjects[?(@.kind=="ServiceAccount")].name' | grep <SERVICE_ACCOUNT_NAME>
 ```
 
+### jsonpathでドットを含むキー
+
+キーに使うドットは`\`でエスケープする。
+
+```console
+kubectl get secret credential -o jsonpath='{.data.\.dockerconfigjson}'
+```
+
+あるいは
+
+```console
+kubectl get secret credential -o jsonpath="{.data['\.dockerconfigjson']}"
+```
+
+シングルクォートとダブルクォートは逆だとダメ(辞書のアクセスはシングルクォートを使う)
+
+```console
+kubectl get secret credential -o jsonpath='{.data["\.dockerconfigjson"]}'
+error: error parsing jsonpath {.data["\.dockerconfigjson"]}, invalid array index "\.dockerconfigjson"
+```
+
 ## rollout
 
 ### restart
