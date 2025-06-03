@@ -12,7 +12,7 @@
 # ノードを確認
 kubectl get node -o wide
 # 特権コンテナを起動し接続
-kubectl debug node/aks-******** -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
+kubectl debug node/aks-******** -it --image=mcr.microsoft.com/cbl-mariner/busybox:2.0
 # 特権コンテナのシェルでchroot
 chroot /host
 ```
