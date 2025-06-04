@@ -33,6 +33,7 @@ echo $ACC_STORAGE_PROFILE
 
 - [コンテナー分析情報からのクエリ ログ - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/container-insights-log-query)
 - [Container insights を使用して Kubernetes クラスターのパフォーマンスを監視する - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/container-insights-analyze)
+- [Container insights を使用してメトリックをリアルタイムで表示する - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/container-insights-livedata-metrics)
 
 #### 収集するコンテナーログの設定変更
 
