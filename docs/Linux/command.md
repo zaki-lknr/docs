@@ -260,6 +260,14 @@ $ ps aux | awk '{print $3, "\t", $4}'
 $ ps aux | awk 'BEGIN { OFS="\t" } {print $3, $4}'
 ```
 
+### 正規表現置換 (sub)
+
+`ps aux`の行頭(`/^/`)に3桁0埋めの連番(行番号)を付与する。
+
+```console
+ps aux | awk '{sub(/^/, sprintf("%03d: ", ++i)); print}'
+```
+
 ### if文
 
 1カラム目が`root`の場合の11カラム目を出力
