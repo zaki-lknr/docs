@@ -44,7 +44,11 @@ $ ansible-playbook ... -l host1
 
 こうすると、playbookで例えば`hosts: servers`と指定されており、serversグループに `host1`, `host2`, `host3` が有ったとしても、この`ansible-playbook`実行のタスクは `host1` のみが処理対象で実行される。
 
-開発やデバッグのお供に。
+複数の場合は`,`区切りで指定。(`-l`を複数並べるのは無効)
+
+```console
+$ ansible-playbook ... -l host1,host2       # -l host1 -l host2 はNG
+```
 
 ### --connection-password-file
 
