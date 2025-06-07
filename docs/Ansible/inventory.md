@@ -81,6 +81,25 @@ task path: /home/zaki/src/ansible-sample/inventory/localhost.yml:6
 
 このようにssh接続となる。
 
+## YAML形式
+
+YAML形式のインベントリファイルの構造は基本的に以下の通り。
+
+```yaml
+foobar:
+  # "foobar" グループ定義 / "all"使用可
+  hosts:
+    # ホスト定義
+    host1.example.org:
+      # ホスト配下はホスト変数
+      key: value
+      ansible_host: 10.0.0.3
+    host2.example.org:
+  vars:
+    # 以下、グループ変数
+    key: value
+```
+
 ## ダイナミックインベントリ
 
 ### EC2
