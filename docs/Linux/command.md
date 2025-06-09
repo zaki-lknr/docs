@@ -598,6 +598,15 @@ KiB Mem :  7990048 total,   717480 free,  1974248 used,  5298320 buff/cache
 KiB Swap:  3670012 total,  3670012 free,        0 used.  5665228 avail Mem 
 ```
 
+### スレッド表示
+
+実行中に`H`押下
+
+```console
+top - 11:51:50 up 32 days, 20:47,  4 users,  load average: 0.06, 0.08, 0.02
+Threads: 441 total,   1 running, 440 sleeping,   0 stopped,   0 zombie
+```
+
 ### コマンドフルパス・引数表示
 
 実行中に`c`押下
