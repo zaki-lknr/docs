@@ -191,6 +191,10 @@ vzdump-qemu-116-2023_09_05-23_58_49.vma.zst.notes
 
 ## CLI
 
+### VM操作
+
+[qm(1)](https://pve.proxmox.com/pve-docs/qm.1.html)
+
 ### VM一覧
 
 ```console
