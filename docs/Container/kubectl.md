@@ -174,6 +174,17 @@ metadata:
 type: kubernetes.io/tls
 ```
 
+#### コンテナレジストリ認証情報のsecret
+
+ECRアクセスの認証情報なら以下。
+
+```console
+kubectl create secret docker-registry credential \
+  --docker-server=****.dkr.ecr.ap-northeast-1.amazonaws.com \
+  --docker-username=AWS \
+  --docker-password=$(aws ecr get-login-password --region ap-northeast-1)
+```
+
 #### マニフェストでsecret
 
 マニュフェストから作成する場合は、base64エンコード済みであること。
