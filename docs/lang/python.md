@@ -458,6 +458,15 @@ YAMLと違ってメソッド名は`dumps()`で`s`が付与される。
 
 #### JSONファイル->オブジェクト
 
+上記の`json.loads()`をファイルreadしたデータに入れればOK
+
+```python
+import json
+
+with open('./sample.json') as f:
+    obj = json.load(f)
+```
+
 STDINの場合は
 
 ```python
