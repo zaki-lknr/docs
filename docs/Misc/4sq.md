@@ -64,6 +64,8 @@ curl --request GET \
 
 ### Get User Checkins
 
+[Get User Checkins](https://docs.foursquare.com/developer/reference/get-user-checkins)
+
 ```console
 curl --request GET \
      --url "https://api.foursquare.com/v2/users/self/checkins?v=20231010&limit=5&offset=0&oauth_token=$FSQ_OAUTH_TOKEN" \
@@ -71,6 +73,9 @@ curl --request GET \
 ```
 
 `offset`から`limit`件数分のチェックイン一覧。  
+`offset`はデフォルト`0`で制限無し(初回チェックインを超過するとどうなるかは不明)、`limit`はデフォルト`20`で最大`250`まで指定可。  
+`limit: 20`の場合の2ページ目は、`offset: 20`を指定する(ページ番号ではなく"limit * ページ番号"になる)。
+
 レスポンスの基本的な構造は以下の通り。(`shout`はコメントが無ければキーも無い)
 
 ```json
