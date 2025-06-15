@@ -458,7 +458,7 @@ YAMLと違ってメソッド名は`dumps()`で`s`が付与される。
 
 #### JSONファイル->オブジェクト
 
-上記の`json.loads()`をファイルreadしたデータに入れればOK
+上記の`json.loads()`と異なり、`json.load()`を使う。
 
 ```python
 import json
