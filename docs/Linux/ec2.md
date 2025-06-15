@@ -22,6 +22,19 @@ CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2"
 HOME_URL="https://amazonlinux.com/"
 ```
 
+## ディスク拡張
+
+- [Amazon EBS ボリュームのサイズ変更後にファイルシステムを拡張 - Amazon EBS](https://docs.aws.amazon.com/ja_jp/ebs/latest/userguide/recognize-expanded-volume-linux.html)
+- [[AWS] EC2のストレージ(EBS)を手動で拡張する手順 (RHEL) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2025/05/09/222749)
+
+流れは以下
+
+1. UIやAWS CLIなどでブロックデバイスを拡張
+1. `lsblk`でディスクとパーティション番号を確認し`growpart <ディスク> <パーティション番号>`でパーティション拡張 (`sudo growpart /dev/xvda 4`など)
+1. `df -hT`でファイルシステムを確認し`xfs_growfs -d <マウントポイント>`でサイズ拡張
+    - xfsの場合は`xfs_growfs`コマンド
+    - ext4の場合は`resize2fs`コマンド
+
 ## cloud-init
 
 ### ホスト名設定
