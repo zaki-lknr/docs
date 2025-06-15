@@ -476,6 +476,23 @@ with sys.stdin as f:
     obj = json.load(f)
 ```
 
+### 数値
+
+#### 乱数
+
+> ランダムな浮動小数点数（範囲は 0.0 <= X < 1.0）を返します
+>
+> <https://docs.python.org/ja/3/library/random.html#random.random>
+
+```python
+import random
+
+r = random.random()
+print(r)
+```
+
+出力は`0.5230624471209939`など
+
 ### 文字列
 
 #### 指定文字で始まるか
