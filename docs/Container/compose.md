@@ -156,7 +156,9 @@ postgresで自身にアクセスできるまで待つ設定を`healthcheck`で�
 
 <https://docs.docker.jp/compose/compose-file/compose-file-v3.html#depends-on>
 
-### ファイルのbindマウント
+### マウント
+
+#### bindマウント
 
 ```yaml
 services:
@@ -176,6 +178,22 @@ long syntaxだと以下
     - type: bind
       source: ./registries.yaml
       target: /etc/rancher/k3s/registries.yaml
+```
+
+#### volumeマウント
+
+long syntaxだと以下
+
+```yaml
+services:
+  prometheus:
+    volumes:
+    - type: volume
+      source: prometheus-data
+      target: /prometheus
+
+volumes:
+  prometheus-data: {}
 ```
 
 ### リソース制限
