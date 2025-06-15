@@ -836,6 +836,15 @@ with urllib.request.urlopen(auth_req) as auth_resp:
     print(auth_resp.read())
 ```
 
+##### レスポンスヘッダ
+
+```python
+req = urllib.request.Request(url, headers=headers)
+with urllib.request.urlopen(req) as res:
+    body = res.read()
+    headers = res.getheaders()    # dict形式で取れる
+```
+
 ##### SSL検証無視
 
 ```python
