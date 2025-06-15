@@ -663,6 +663,37 @@ print(type(byte_data))
 
 これで出力は`<class 'bytes'>`
 
+### ハッシュ関数
+
+#### MD5
+
+```python
+import hashlib
+
+m = hashlib.md5()
+m.update(b'aaa')
+d = m.hexdigest()
+print(d)
+```
+
+出力は`47bce5c74f589f4867dbd57e9ca9f808`になる。  
+以下と同値。
+
+```console
+$ printf aaa | md5sum 
+47bce5c74f589f4867dbd57e9ca9f808  -
+```
+
+```python
+d = m.digest()
+```
+
+この場合の値はバイナリとなり、出力は以下の通り。
+
+```console
+b'G\xbc\xe5\xc7OX\x9fHg\xdb\xd5~\x9c\xa9\xf8\x08'
+```
+
 ### path
 
 #### ユーザーディレクトリを展開
