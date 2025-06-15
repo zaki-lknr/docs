@@ -316,6 +316,17 @@ config: foobar
 __EOL__
 ```
 
+### 変数展開しない
+
+デフォルトはヒアドキュメント内に変数・環境変数が参照できる文字列を含む場合に変数展開される。  
+抑止するには終了識別子をクォートする。
+
+```console
+cat > /path/to/file <<'__EOL__'
+$foobar
+__EOL__
+```
+
 ## envsubst
 
 ```console
