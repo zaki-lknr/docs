@@ -416,6 +416,15 @@ key: key2, value: value2
 key: key3, value: value3
 ```
 
+#### 辞書のリストから指定キーの値の一致判定
+
+リスト内包表記を使って辞書から指定キーのみのリストを作り、それに対して`in`で判定する。
+
+```python
+if data in (i.get('name') for i in items):
+    print(data + ' is exists')
+```
+
 #### 辞書->YAML化
 
 ```python
