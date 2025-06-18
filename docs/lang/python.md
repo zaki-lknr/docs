@@ -568,6 +568,29 @@ r = re.match(r'aaa(\d{5})bbb', string)
 `r`には`re.Match`オブジェクトが返る。マッチしなかったら`None`  
 マッチした場合、`\d{5}`は`r.group(1)`で参照できる。
 
+##### 名前付きキャプチャ
+
+括弧のみだとインデックス番号でのアクセスになるが、パターン側に名前を付与しておけば名前でアクセスできる。  
+書式は `(?P<name>regexp)`
+
+```python
+import re
+
+string = '/path/to/sample.txt'
+
+result = re.match(r'(?P<path>.*)/(?P<file>[^\.]*)\.(?P<ext>.*)', string)
+if result:
+    print("path: " + result.group(1))
+    print("file: " + result.group(2))
+    print("ext: " + result.group(3))
+    print("---")
+    print("path: " + result.group('path'))
+    print("file: " + result.group('file'))
+    print("ext: " + result.group('ext'))
+```
+
+出力はグループ番号・グループ名どちらもpathは`/path/to`、fileは`sample`、extは`txt`になる。
+
 ##### re.sub()で置換
 
 ```python
