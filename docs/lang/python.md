@@ -559,6 +559,15 @@ if re.search(regexp, string):
 
 `re.match()`は先頭からマッチを行うため、文字列の途中にはマッチしない。
 
+##### 正規表現検索とキャプチャ
+
+```python
+r = re.match(r'aaa(\d{5})bbb', string)
+```
+
+`r`には`re.Match`オブジェクトが返る。マッチしなかったら`None`  
+マッチした場合、`\d{5}`は`r.group(1)`で参照できる。
+
 ##### re.sub()で置換
 
 ```python
