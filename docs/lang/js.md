@@ -878,6 +878,15 @@ label_item.textContent = '設定';
 v.textContent = "<a href='...'>not anchor text</a>";
 ```
 
+#### innerHTML
+
+要素内のHTMLを解釈してテキストをセットする。  
+以下のように書けば、アンカーリンクは有効になる。
+
+```javascript
+v.innerHTML = "<a href='https://lovelive-anime.jp/nijigasaki/story.php'>link</a>";
+```
+
 ### 複数の子要素を全て削除する
 
 ```javascript
