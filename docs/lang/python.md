@@ -546,6 +546,25 @@ print(str_sample.zfill(8))
 00000foo
 ```
 
+#### 文字列置換
+
+正規表現を使わないなら`replace()`で置換する。
+
+```py
+string = '2025/06/22'
+d = string.replace('/', '-')
+
+print(string)
+print(d)
+```
+
+出力は以下の通り。
+
+```console
+2025/06/22
+2025-06-22
+```
+
 #### 正規表現処理
 
 ##### re.search()で文字列判定
