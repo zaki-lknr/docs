@@ -454,6 +454,12 @@ import json
 print(json.dumps(dict_data))
 ```
 
+日本語が`\u****`になるのを抑止するには非ASCII文字のエスケープ処理を無効化するオプションを追加。(デフォルトはon)
+
+```python
+json.dump(obj, ensure_ascii=False)
+```
+
 #### JSON文字列->辞書(オブジェクト)
 
 ```python
