@@ -401,6 +401,36 @@ dict1['key1']
 dict1.get('key1')
 ```
 
+#### キーの追加
+
+`dict[key] = value`で足してやればOK
+
+```py
+>>> dict1 = {"key1": "value1", "key2": "value2"}
+>>> print(dict1)
+{'key1': 'value1', 'key2': 'value2'}
+>>> dict1['key3'] = "value3"
+>>> print(dict1)
+{'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+>>> 
+```
+
+新規キーの追加をサブキーまで左辺で指定すると KeyErrorになる。その場合は辞書型データを代入すればOK
+
+```py
+>>> dict1['key4']['foo'] = "bar"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'key4'
+```
+
+```py
+>>> dict1['key4'] = {'foo': "bar" }
+>>> print(dict1)
+{'key1': 'value1', 'key2': 'value2', 'key3': 'value3', 'key4': {'foo': 'bar'}}
+>>> 
+```
+
 #### 辞書要素のループ(キーと値の組み合わせを取得)
 
 ```python
