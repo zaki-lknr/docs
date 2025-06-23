@@ -708,6 +708,19 @@ b'nijigasaki'
 nijigasaki
 ```
 
+### 日付型(datetime)
+
+#### 現在時刻のUNIXエポック
+
+```py
+import datetime
+
+date_now = datetime.datetime.now()
+print(date_now)
+```
+
+出力は `2025-06-23 23:05:55.796387` など。
+
 ### byte型
 
 変数出力すると`b'....'`と表記され出力される。
