@@ -742,6 +742,27 @@ print(custom)
 2025-06-25 20:56:20.140227
 ```
 
+#### UNIX Epoch -> datetime
+
+`fromtimestamp()`を使えばOK
+
+```py
+import datetime
+
+dt = datetime.datetime.fromtimestamp(0)
+print(dt)
+
+dt = datetime.datetime.fromtimestamp(1750763540)
+print(dt)
+```
+
+出力は以下
+
+```console
+1970-01-01 09:00:00
+2025-06-24 20:12:20
+```
+
 ### byte型
 
 変数出力すると`b'....'`と表記され出力される。
