@@ -763,6 +763,16 @@ print(dt)
 2025-06-24 20:12:20
 ```
 
+#### datetime -> UNIX Epoch
+
+`timestamp()`を使う。  
+float型なので必要に応じて`int()`を併用する。
+
+```py
+# 30日前のUNIX時刻
+sec = int((datetime.datetime.now() + datetime.timedelta(days=-30)).timestamp())
+```
+
 ### byte型
 
 変数出力すると`b'....'`と表記され出力される。
