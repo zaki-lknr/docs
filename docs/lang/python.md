@@ -710,7 +710,7 @@ nijigasaki
 
 ### 日付型(datetime)
 
-#### 現在時刻のUNIXエポック
+#### 現在時刻
 
 ```py
 import datetime
@@ -720,6 +720,27 @@ print(date_now)
 ```
 
 出力は `2025-06-23 23:05:55.796387` など。
+
+#### 時刻加減算
+
+datetime型の変数に任意の加減算を行うには`datetime.timedelta`を使う。
+
+```py
+import datetime
+
+date_now = datetime.datetime.now()
+print(date_now)
+
+custom = date_now + datetime.timedelta(days=1, hours=-1, minutes=5)
+print(custom)
+```
+
+出力は以下の通り、「+1日、-1時間、+5分」となる。
+
+```console
+2025-06-24 21:51:20.140227
+2025-06-25 20:56:20.140227
+```
 
 ### byte型
 
