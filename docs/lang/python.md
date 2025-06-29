@@ -751,6 +751,35 @@ print(custom)
 2025-06-25 20:56:20.140227
 ```
 
+#### 時刻差分
+
+datetime型変数同士の差分は`datetime.timedelta`となる。
+
+```py
+import datetime
+
+date_now = datetime.datetime.now()
+custom = date_now + datetime.timedelta(days=2, hours=-1, minutes=5)
+
+diff = custom - date_now
+print(type(diff))
+print(diff)
+
+print(str(diff.days) + " days")
+print(str(diff.seconds) + " seconds")
+```
+
+出力は以下の通り。
+
+```console
+<class 'datetime.timedelta'>
+1 day, 23:05:00
+1 days
+83100 seconds
+```
+
+<https://docs.python.org/ja/3/library/datetime.html#datetime.timedelta>
+
 #### UNIX Epoch -> datetime
 
 `fromtimestamp()`を使えばOK
