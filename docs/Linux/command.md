@@ -203,6 +203,15 @@ $ curl --connect-timeout 2 http://192.168.0.249
 curl: (28) Failed to connect to 192.168.0.249 port 80 after 2000 ms: Timeout was reached
 ```
 
+### cookie処理
+
+`-c filename`でレスポンスのcookie情報を保存、`-b filename`で保存済みcookie情報をリクエストする。
+
+```console
+### https://www.example.org とのcookie情報をfilenameに保存しつつHTTPアクセス
+curl -c filename -b filename https://www.example.org
+```
+
 ## wget
 
 リソースの内容をstdoutへ出力
