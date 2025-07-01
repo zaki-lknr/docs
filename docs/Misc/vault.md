@@ -107,6 +107,20 @@ curl -H "X-Vault-Token: ${token}" http://server:port/v1/<secret-engine-name>/dat
 vault token lookup
 ```
 
+### role
+
+#### リスト
+
+```console
+vault list auth/path/role
+```
+
+#### 削除
+
+```console
+vault delete auth/path/role/key
+```
+
 ## hvac
 
 Hashicorp Vault用Pythonライブラリ
