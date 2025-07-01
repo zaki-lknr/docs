@@ -964,6 +964,25 @@ print("""
 
 この場合、「開始の`"""`」のあとの改行と、「終了の`"""`」の手前の改行も含まれる。
 
+### ファイルI/O
+
+`with`ブロックを抜けると自動的にcloseされる。  
+また、`with`の内側の変数は外側でも使える。
+
+#### 文字列としてread
+
+```python
+with open(file_path) as f:
+    data = f.read()
+```
+
+#### 文字列としてwrite
+
+```python
+with open(file_path, mode='w') as f:
+    f.write(data)
+```
+
 ### 通信
 
 #### HTTP(requests)
