@@ -99,6 +99,14 @@ curl -H "X-Vault-Token: ${token}" http://server:port/v1/<secret-engine-name>/dat
 `curl -H "X-Vault-Token: ${token}" http://192.168.0.75:8200/v1/kv/data/zzz?version=1`とか。  
 [KV - Secrets Engines - HTTP API | Vault | HashiCorp Developer](https://developer.hashicorp.com/vault/api-docs/secret/kv/kv-v2)
 
+## auth
+
+### token確認
+
+```console
+vault token lookup
+```
+
 ## hvac
 
 Hashicorp Vault用Pythonライブラリ
