@@ -142,3 +142,13 @@ GetToken = GetToken(auth_domain, auth_client_id, client_secret=auth_client_secre
 token = GetToken.client_credentials('https://{}/api/v2/'.format(auth_domain))
 print(token['access_token'])
 ```
+
+### Auth0オブジェクト
+
+↑で取得したトークンを使って以下
+
+```py
+from auth0.management import Auth0
+
+auth0 = Auth0(auth_domain, token['access_token'])
+```
