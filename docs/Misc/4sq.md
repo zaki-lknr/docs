@@ -30,6 +30,8 @@
 
 ### Place Search
 
+[Place Search](https://docs.foursquare.com/developer/reference/place-search)
+
 ```console
 curl --request GET \
      --url https://api.foursquare.com/v3/places/search \
@@ -47,6 +49,8 @@ curl --request GET \
 ```
 
 ### Get User Detail
+
+[Get User Details](https://docs.foursquare.com/developer/reference/get-user-details)
 
 ```console
 curl --request GET \
