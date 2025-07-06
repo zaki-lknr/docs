@@ -1123,7 +1123,9 @@ with urllib.request.urlopen(req) as res:
 ##### SSL検証無視
 
 ```python
-context = ssl._create_univerified_context()
+import ssl
+context = ssl._create_unverified_context()
+
 r = urllib.request.Request(url, headers=headers)
 while urllib.request.urlopen(req, context=context) as res:
     ...
