@@ -780,6 +780,8 @@ print(str(diff.seconds) + " seconds")
 
 <https://docs.python.org/ja/3/library/datetime.html#datetime.timedelta>
 
+`seconds`は`days`の余りのような位置づけの値のため、全秒数を得たい場合は`total_seconds()`を使う。これはメソッド。
+
 #### UNIX Epoch -> datetime
 
 `fromtimestamp()`を使えばOK
