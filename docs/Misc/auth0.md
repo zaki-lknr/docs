@@ -152,3 +152,16 @@ from auth0.management import Auth0
 
 auth0 = Auth0(auth_domain, token['access_token'])
 ```
+
+### アプリケーション情報取得
+
+auth0オブジェクトのメソッドの`get()`を使用。
+
+```py
+auth0 = Auth0(auth_domain, token['access_token'])
+app_info = auth0.clients.get(application_id)
+```
+
+`app_info`には辞書型で[clients情報](https://auth0.com/docs/api/management/v2/clients/get-clients)がセットされる。
+
+<https://auth0-python.readthedocs.io/en/latest/management.html#auth0.management.clients.Clients.get>
