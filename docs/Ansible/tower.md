@@ -65,6 +65,12 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 
 ## 設定
 
+### キーとデフォルト値のコード
+
+AWXの`defaults.py`である程度確認できる。
+
+[awx/awx/settings/defaults.py at devel · ansible/awx](https://github.com/ansible/awx/blob/devel/awx/settings/defaults.py)
+
 ### TOWER_URL_BASE
 
 通知時のホスト名
