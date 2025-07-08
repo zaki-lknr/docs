@@ -1226,6 +1226,14 @@ class Animal:
         self.__nakigoe = a
 ```
 
+#### インスタンス作成(呼び出し側)
+
+```py
+import animal
+
+a = animal.Animal('piyo')
+```
+
 ## 環境
 
 ### pip
