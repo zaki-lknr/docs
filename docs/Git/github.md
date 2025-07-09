@@ -101,6 +101,12 @@ Settings -> Developer settings -> Personal access tokens -> Tokens(classic)で�
 
 PRがopenのままリジェクトとかされてないなら、追いpushすれば自動的に反映される。
 
+### PRのキャンセルクローズ
+
+不要になった場合にマージせずにクローズする。
+
+[プルリクエストのクローズ - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/closing-a-pull-request)
+
 ## Release
 
 [リポジトリのリリースを管理する - GitHub Docs](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
