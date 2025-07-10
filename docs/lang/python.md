@@ -440,7 +440,9 @@ KeyError: 'key4'
 >>> 
 ```
 
-#### 辞書要素のループ(キーと値の組み合わせを取得)
+#### 辞書要素のループ
+
+##### キーと値の組み合わせを取得
 
 ```python
 sample_dict = {
@@ -460,6 +462,23 @@ for k, v in sample_dict.items():
 key: key1, value: value1
 key: key2, value: value2
 key: key3, value: value3
+```
+
+##### 辞書の値のみをループ
+
+`values()`を使う
+
+```python
+for v in sample_dict.items():
+    print(v)
+```
+
+実行結果は以下の通り。
+
+```console
+value1
+value2
+value3
 ```
 
 #### 辞書のリストから指定キーの値の一致判定
