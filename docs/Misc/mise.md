@@ -36,6 +36,14 @@ mise usage@2.0.3 ✓ installed                                                  
 
 <https://github.com/jdx/mise/issues/1710>
 
+## パッケージ検索
+
+### 指定パッケージ(コマンド)のバージョン一覧
+
+```console
+mise ls-remote <command>
+```
+
 ## パッケージセットアップ
 
 ### (例) Python 3.12.8のインストール
