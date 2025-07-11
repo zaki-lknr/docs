@@ -61,6 +61,17 @@ if obj_list == [1, 2, 3, "abc"]:
 
 ### 制御構文
 
+#### if-elseはelif
+
+```py
+if (cond1):
+    :::
+elif (cond2):
+    :::
+else
+    :::
+```
+
 #### for
 
 foreach式のループ処理は以下。
