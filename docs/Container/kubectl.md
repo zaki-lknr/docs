@@ -378,6 +378,15 @@ CURRENT   NAME                    CLUSTER                 AUTHINFO              
 $ kubectl delete pvc -n zzz --all
 ```
 
+## diff
+
+既存リソースとマニフェストファイルの差分を表示する。  
+変更時に`--dry-run=server`より詳細を確認したい場合などに使う。
+
+```console
+kubectl diff -f manifest.yaml
+```
+
 ## wait
 
 リソースが指定の条件になるまで待つ。  
