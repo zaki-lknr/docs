@@ -1104,6 +1104,16 @@ systemctl list-unit-files
 systemctl list-unit-files --user
 ```
 
+### UNITファイルの位置
+
+`man systemd.unit`で確認可能。  
+主に以下
+
+- /usr/lib/systemd/system
+- /usr/local/lib/systemd/system
+- ~/.config/systemd/user.control
+- ~/.config/systemd/user
+
 ## ホスト名
 
 ### 変更
