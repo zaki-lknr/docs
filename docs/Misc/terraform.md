@@ -323,6 +323,19 @@ EventBridge Schedulerにcount定義されたEC2インスタンスを複数セッ
   }
 ```
 
+#### element (配列要素取得)
+
+`element(list, index)` で、list内のindex番目の要素を取得する。  
+以下はEC2を作成しつつ、それぞれのインスタンスにEIPをセットする場合
+
+```tf
+resource "aws_eip" "eip" {
+  count      = var.count
+  instance   = element(aws_instance.ec2.*.id, count.index)
+  domain     = "vpc"
+  depends_on = [aws_internet_gateway.igw]
+```
+
 ## resource
 
 ### デフォルトのルートテーブル
