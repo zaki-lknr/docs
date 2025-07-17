@@ -305,6 +305,24 @@ user-data.sh
 git clone https://${git_username}:${git_password}@git.example.org/repos/apps /root/apps
 ```
 
+#### concat (配列結合)
+
+`concat(list1, list2, list3)`
+
+EventBridge Schedulerにcount定義されたEC2インスタンスを複数セットするような場合
+
+```tf
+  target {
+    arn      = "arn:aws:scheduler:::aws-sdk:ec2:stopInstances"
+    role_arn = aws_iam_role.stopstart_role.arn
+    input = jsonencode({
+      InstanceIds = concat("${aws_instance.ec2_app1.*.id}",
+        "${aws_instance.ec2_app2.*.id}",
+      )
+    })
+  }
+```
+
 ## resource
 
 ### デフォルトのルートテーブル
