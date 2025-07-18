@@ -239,6 +239,16 @@ oci-l-a1-ubuntu            : ok=33   changed=5    unreachable=0    failed=1    s
 $ ansible-playbook -i inventory-oci-l-dev.ini playbook.yml -v --start-at "build_awx/awx-ee : create working directory"
 ```
 
+### --tags
+
+指定tagが付与されたタスクのみを実行する
+
+```console
+$ ansible-playbook setup.yml --tags initial
+```
+
+`initial`タグが付与されたタスクのみが実行される。`--list-tasks`もつけると事前にどのタスクのみが実行されるか確認できる。
+
 ## ansible-inventoryコマンド
 
 `ansible-inventory`コマンドを使用すると、ターゲットノード一覧やそのホストに紐づく変数を確認できる。  
