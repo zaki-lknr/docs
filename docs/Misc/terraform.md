@@ -336,6 +336,15 @@ resource "aws_eip" "eip" {
   depends_on = [aws_internet_gateway.igw]
 ```
 
+#### join (文字結合)
+
+`join(char, list)` list各要素をcharを区切り文字で繋げる。  
+countで複数デプロイするEC2のNameタグで`--host tag.Name`の形式で全て連結する
+
+```tf
+${join(" ", [for h in aws_instance.ec.*.tags.Name : "--host ${h}"])}
+```
+
 ## resource
 
 ### デフォルトのルートテーブル
