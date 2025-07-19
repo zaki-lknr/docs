@@ -77,6 +77,25 @@ basic認証+HTTPSでSSL検証無効の設定で、レスポンスコードが`20
     status_code: [200, 201, 202]
 ```
 
+### リクエストBODY
+
+JSON形式のリクエストBODYを投げたい場合は以下。  
+`body_format`で指定した形式で、`body`に指定した値が送信される。
+
+```yaml
+  ansible.builtin.uri:
+    method: PUT
+    url: "https://{{ server_addr }}/api/gateway/v1/settings/all/"
+    url_username: "{{ username }}"
+    url_password: "{{ password }}"
+    validate_certs: false
+    force_basic_auth: true
+    body_format: json
+    body:
+      SESSION_COOKIE_AGE: "{{ session_timeout_sec }}"
+    status_code: [200]
+```
+
 ## lineinfile
 
 [ansible.builtin.lineinfile – Manage lines in text files — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
