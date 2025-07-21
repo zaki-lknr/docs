@@ -269,3 +269,13 @@ HELM_CONFIG_HOME="/var/tmp"
 HELM_REGISTRY_CONFIG="/var/tmp/registry.json"
 HELM_REPOSITORY_CONFIG="/var/tmp/repositories.yaml"
 ```
+
+## チャート作成
+
+### 変数
+
+| 変数                 | 内容                  |
+| ------------------ | ------------------- |
+| .Release.Name      | リリース名               |
+| .Release.Namespace | デプロイ先ネームスペース        |
+| .Values.*          | values.yamlファイル定義変数 |
