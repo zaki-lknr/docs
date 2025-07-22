@@ -1025,6 +1025,8 @@ with open(file_path, mode='w') as f:
     f.write(data)
 ```
 
+`mode='w'`は単に`'w'`とも書ける
+
 ### 通信
 
 #### HTTP(requests)
