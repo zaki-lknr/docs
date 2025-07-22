@@ -306,3 +306,19 @@ mychart/charts
 | .Release.Name      | リリース名               |
 | .Release.Namespace | デプロイ先ネームスペース        |
 | .Values.*          | values.yamlファイル定義変数 |
+
+## プラグイン
+
+### diff
+
+install
+
+```console
+helm plugin install https://github.com/databus23/helm-diff
+```
+
+更新時のdiffを確認するには、`helm diff upgrade`に実際のupgrade時のすべての引数を指定する。
+
+```console
+helm diff upgrade ...
+```
