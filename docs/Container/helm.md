@@ -309,6 +309,14 @@ mychart/charts
 
 ## プラグイン
 
+### 一覧
+
+```console
+$ helm plugin ls
+NAME    VERSION DESCRIPTION                           
+diff    3.12.3  Preview helm upgrade changes as a diff
+```
+
 ### diff
 
 install
