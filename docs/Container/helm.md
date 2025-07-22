@@ -272,6 +272,33 @@ HELM_REPOSITORY_CONFIG="/var/tmp/repositories.yaml"
 
 ## チャート作成
 
+### テンプレート作成
+
+```console
+helm create mychart
+```
+
+以下のファイルが生成される。不要なファイルは削除して作りこめばOK
+
+```console
+$ find mychart/
+mychart/
+mychart/Chart.yaml
+mychart/values.yaml
+mychart/.helmignore
+mychart/templates
+mychart/templates/ingress.yaml
+mychart/templates/deployment.yaml
+mychart/templates/service.yaml
+mychart/templates/serviceaccount.yaml
+mychart/templates/hpa.yaml
+mychart/templates/NOTES.txt
+mychart/templates/_helpers.tpl
+mychart/templates/tests
+mychart/templates/tests/test-connection.yaml
+mychart/charts
+```
+
 ### 変数
 
 | 変数                 | 内容                  |
