@@ -171,3 +171,12 @@ $ curl https://api.github.com/repos/netbox-community/ansible_modules
 ### ワークフローとジョブの再実行
 
 ワークフロー実行結果一覧から指定のワークフローを開き、画面右上の「Re-run all jobs」ボタンを押下ｋ
+
+### Runners
+
+- GitHubのランナーを利用する
+    - [About GitHub-hosted runners - GitHub Docs](https://docs.github.com/ja/actions/concepts/runners/about-github-hosted-runners)
+    - [GitHub ホステッド ランナーの使用 - GitHub Docs](https://docs.github.com/ja/actions/how-tos/using-github-hosted-runners)
+- 自前でランナーを用意する
+    - [自己ホスト ランナーの概要 - GitHub Docs](https://docs.github.com/ja/actions/concepts/runners/about-self-hosted-runners)
+    - [セルフホステッド ランナーの管理 - GitHub Docs](https://docs.github.com/ja/actions/how-tos/hosting-your-own-runners/managing-self-hosted-runners)
