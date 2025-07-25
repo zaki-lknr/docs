@@ -335,8 +335,21 @@ scp -pr 192.168.1.10:"/path/to/file*" .
 
 ## その他
 
+### パスワード未設定ユーザーの公開鍵認証
+
 - [パスワードを設定していないユーザで ssh ログインしようとすると公開鍵認証でもログインに失敗する - tkuchikiの日記](https://tkuchiki.hatenablog.com/entry/2013/05/27/211051)
     - `/etc/shadow`の`USERNAME`の次に`!!`と書かれている場合はアカウントがロックされている
     - パスワードを設定すればロックは解除される
     - ロック中の認証失敗は`/var/log/secure`にログが出力される
     - `/etc/ssh/sshd_config`に`UsePam yes`を設定すれば制限緩和されるがセキュリティは落ちるらしい
+
+### set_sock_tos: set socket 3 IP_TOS 0x48
+
+- `-vvv`で接続状態を見ると上記エラーで停止し接続できない場合、`-o IPQoS=none`を追加
+- `.ssh/config`に設定するなら`IPQoS none`を追記
+
+```
+Host servername
+    hostname 192.168.0.0
+    IPQoS none
+```
