@@ -98,6 +98,25 @@ links = [li.find('a').get('href') for li in s.find_all('li', class_='toctree-l2'
 print(links)
 ```
 
+##### enumerate()でインデックス参照
+
+配列要素のインデックスにアクセスしたければ`enumerate`を使うと楽
+
+```python
+items = ['foo', 'bar', 'baz']
+
+for index, item in enumerate(items):
+    print(str(index) + ': ' + item)
+```
+
+出力は以下
+
+```console
+0: foo
+1: bar
+2: baz
+```
+
 #### break
 
 ループを途中で抜けるには`break`
