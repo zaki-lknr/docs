@@ -1376,6 +1376,13 @@ Required-by: ansible
 
 Required-byの`ansible`によってインストールされ、このパッケージによって`cryptography`, `jinja2`, `packaging`, `PyYAML`, `resolvelib`がインストールされる。
 
+#### pip実行時のインストールパス確認
+
+```console
+$ python -c "import site;print(site.getsitepackages())"
+['/home/zaki/.local/share/mise/installs/python/3.13.5/lib/python3.13/site-packages']
+```
+
 ### pyenv
 
 [pyenv/pyenv: Simple Python version management](https://github.com/pyenv/pyenv)
