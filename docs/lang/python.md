@@ -61,7 +61,9 @@ if obj_list == [1, 2, 3, "abc"]:
 
 ### 制御構文
 
-#### if-elseはelif
+#### if
+
+「else if」は`elif`
 
 ```py
 if (cond1):
