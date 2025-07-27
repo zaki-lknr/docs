@@ -1114,6 +1114,25 @@ systemctl list-unit-files --user
 - ~/.config/systemd/user.control
 - ~/.config/systemd/user
 
+### UNITファイル
+
+#### 指定子
+
+`man systemd.unit`で確認できる。  
+主な指定子は以下。
+
+| specifier | description   |
+| --------- | ------------- |
+| %C        | キャッシュ用ディレクトリ  |
+| %E        | 設定ファイル用ディレクトリ |
+| %h        | ユーザーホームディレクトリ |
+| %H        | ホスト名          |
+| %n        | ユニット名         |
+| %u        | ユーザー名         |
+| %y        | ユニットファイルパス    |
+
+`%`自身を出力したい場合は`%%`と書く。
+
 ## ホスト名
 
 ### 変更
