@@ -1116,6 +1116,12 @@ systemctl list-unit-files --user
 
 ### UNITファイル
 
+#### UNITファイルの内容を確認
+
+```console
+systemctl cat [--user] service-name
+```
+
 #### 指定子
 
 `man systemd.unit`で確認できる。  
