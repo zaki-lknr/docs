@@ -95,3 +95,9 @@ root@cloud-dev2:~# which python
 /usr/bin/python
 root@cloud-dev2:~# 
 ```
+
+### 使用中パッケージ一覧
+
+```console
+mise ls
+```
