@@ -149,6 +149,8 @@ if aws_access_key is None:
     print("AWS_ACCESS_KEY_ID not defined")
 ```
 
+`os.getenv('key')`も同じように動作する。コード量的にはこっちが便利。
+
 #### 型の確認
 
 ```python
