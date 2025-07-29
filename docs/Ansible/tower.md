@@ -110,6 +110,7 @@ awx-manage cleanup_jobs --days 3
 API一覧は以下。  
 ~~[11. Controller API Reference Guide — Automation Controller API Guide v4.2.1](https://docs.ansible.com/automation-controller/latest/html/controllerapi/api_ref.html)~~
 
+- [Ansible Automation Platform controller API](https://developers.redhat.com/api-catalog/api/ansible-automation-controller)
 - [11. Controller API Reference Guide — Automation Controller API Guide v4.5](https://docs.ansible.com/automation-controller/4.5/html/towerapi/api_ref.html)
 - [12. AWX API Reference Guide — Ansible AWX community documentation](https://ansible.readthedocs.io/projects/awx/en/latest/rest_api/api_ref.html)
 
