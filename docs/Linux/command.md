@@ -1139,6 +1139,19 @@ systemctl cat [--user] service-name
 
 `%`自身を出力したい場合は`%%`と書く。
 
+#### 環境変数の定義
+
+起動するプログラムに環境変数を渡すには`Environment`で指定する。
+
+```ini
+[Service]
+Environment=KEY=value
+Type=simple
+ExecStart=/path/to/script.sh
+```
+
+環境変数`KEY=value`がセットされた状態でスクリプトは実行される。
+
 ## ホスト名
 
 ### 変更
