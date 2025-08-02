@@ -61,6 +61,20 @@ export -n EDITOR
 
 シェル変数に残るので`echo $EDITOR`の出力は変化しないが環境変数としては消える。
 
+### 未定義時にエラーにする
+
+`${環境変数名:?エラーメッセージ}`を参照する。(空文字を許容する場合は`:`は外して`?`のみ)
+
+```console
+$ echo $EDITOR2
+
+$ echo ${EDITOR2:?not defined}
+bash: EDITOR2: not defined
+$ export EDITOR2=zzz
+$ echo ${EDITOR2:?not defined}
+zzz
+```
+
 ## エラー番号
 
 [付録B Solaris/Linux ERRNO テーブル](https://software.fujitsu.com/jp/manual/manualfiles/m210011/j2x14260/25z200/j4260-b-00-00.html)
