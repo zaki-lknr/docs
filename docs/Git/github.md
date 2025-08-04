@@ -164,9 +164,13 @@ $ curl https://api.github.com/repos/netbox-community/ansible_modules
 
 ## GitHub Actions
 
+### ワークフローのトリガー
+
+[ワークフローをトリガーするイベント - GitHub Docs](https://docs.github.com/ja/actions/reference/workflows-and-actions/events-that-trigger-workflows)
+
 ### ワークフローの手動実行
 
-<https://docs.github.com/ja/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow>
+[ワークフローの手動実行 - GitHub Docs](https://docs.github.com/ja/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)
 
 ### ワークフローとジョブの再実行
 
