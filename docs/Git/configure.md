@@ -116,8 +116,16 @@ $ git remote set-url origin git@github.com:zaki-lknr/ansible-sample.git
 
 ### 別のリポジトリを別名で追加
 
+普段は慣例的に`origin`を使ってるところに別の名前を付けて追加する。
+
 ```
 $ git remote add hoge <other repository>
+```
+
+pushする場合は以下の通り
+
+```console
+git push -u hoge <branch-name>
 ```
 
 ## gitconfig
