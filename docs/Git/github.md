@@ -164,6 +164,11 @@ $ curl https://api.github.com/repos/netbox-community/ansible_modules
 
 ## GitHub Actions
 
+### Action
+
+以下から探す。  
+[Marketplace](https://github.com/marketplace?type=actions)
+
 ### ワークフローのトリガー
 
 [ワークフローをトリガーするイベント - GitHub Docs](https://docs.github.com/ja/actions/reference/workflows-and-actions/events-that-trigger-workflows)
