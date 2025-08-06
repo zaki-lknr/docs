@@ -663,6 +663,30 @@ print(str_sample.zfill(8))
 00000foo
 ```
 
+#### フォーマット文字列
+
+##### スペース埋め
+
+```python
+>>> print("string:「{: >5}」".format(10))
+string:「   10」
+>>> print("string:「{: >5}」".format(1))
+string:「    1」
+>>> print("string:「{: >5}」".format(1234))
+string:「 1234」
+>>> 
+```
+
+左詰めなら`<`を指定
+
+```python
+>>> print("string:「{: <5}」".format(1234))
+string:「1234 」
+>>> print("string:「{: <5}」".format(1))
+string:「1    」
+>>> 
+```
+
 #### 文字列置換
 
 正規表現を使わないなら`replace()`で置換する。
