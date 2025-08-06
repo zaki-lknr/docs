@@ -1013,6 +1013,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 print(__file__)
 ```
 
+#### 実行時のカレントディレクトリ
+
+`os.getcwd()`で取得できる。
+
 ### 外部コマンド実行
 
 `subprocess.run()`を使う。(`os.system`はもう使わない)
