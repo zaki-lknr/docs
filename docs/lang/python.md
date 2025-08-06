@@ -1004,6 +1004,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
+#### スクリプトのパス
+
+`__file__`を参照する。  
+以下は実行時のカレントディレクトリにかかわらず、スクリプトファイルのパスが出力される。
+
+```python
+print(__file__)
+```
+
 ### 外部コマンド実行
 
 `subprocess.run()`を使う。(`os.system`はもう使わない)
