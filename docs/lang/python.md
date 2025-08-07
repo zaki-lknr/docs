@@ -1017,6 +1017,39 @@ print(__file__)
 
 `os.getcwd()`で取得できる。
 
+#### パスの結合
+
+末尾のディレクトリセパレータの有無に関係なく、パスを結合する。
+
+```python
+>>> import os
+>>> os.path.join("aaa", "bbb", "ccc")
+'aaa/bbb/ccc'
+>>> os.path.join("aaa", "bbb/", "ccc/")
+'aaa/bbb/ccc/'
+```
+
+冒頭のディレクトリセパレータはルート扱いで、上書きになる。
+
+```python
+>>> os.path.join("/aaa", "bbb", "/ccc", "ddd")
+'/ccc/ddd'
+>>> 
+```
+
+リストを渡す場合は`*`でアンパックする。
+
+```python
+>>> dir_list = ["aaa", "bbb", "ccc"]
+>>> os.path.join(dir_list)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<frozen posixpath>", line 76, in join
+TypeError: expected str, bytes or os.PathLike object, not list
+>>> os.path.join(*dir_list)
+'aaa/bbb/ccc'
+```
+
 ### 外部コマンド実行
 
 `subprocess.run()`を使う。(`os.system`はもう使わない)
