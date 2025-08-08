@@ -101,3 +101,15 @@ root@cloud-dev2:~#
 ```console
 mise ls
 ```
+
+## mise.toml
+
+### テンプレート
+
+[Templates | mise-en-place](https://mise.jdx.dev/templates.html)
+
+#### コマンド実行結果を変数にセット (exec)
+
+```toml
+description = "カウント設定: {{ exec(command=\"grep count -A2 path/to/file | awk -F'=' '{print $2}'\") }}"
+```
