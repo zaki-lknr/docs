@@ -1371,6 +1371,22 @@ import animal
 a = animal.Animal('piyo')
 ```
 
+### パッケージ
+
+#### ディレクトリ構成
+
+パッケージは `my_package` 配下。
+`zzz.py` から参照する構成。
+
+```
+package-sample/
+├── my_package
+│   ├── __init__.py
+│   ├── setup.py
+│   └── source.py
+└── zzz.py
+```
+
 ## 環境
 
 ### pip
