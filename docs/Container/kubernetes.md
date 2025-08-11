@@ -110,6 +110,14 @@ podからは`<service-name>.<namespace-name>.svc.cluster.local`で名前解決�
 
 ## ストレージ
 
+### PVC
+
+PVCリソースのネームスペースは、使用するPodと同一であること。
+
+> Claims must exist in the same namespace as the Pod using the claim.
+>
+> [Claims As Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#claims-as-volumes)
+
 ### PV拡張
 
 [Resizing Persistent Volumes using Kubernetes | Kubernetes](https://kubernetes.io/blog/2018/07/12/resizing-persistent-volumes-using-kubernetes/)
