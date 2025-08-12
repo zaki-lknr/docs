@@ -232,6 +232,19 @@ if __name__ == "__main__":
     func()
 ```
 
+#### 関数名を取得する
+
+```python
+import inspect
+
+def zzzz():
+    print(inspect.currentframe().f_code.co_name)
+```
+
+zzz()をコールすると、`zzz`がprintされる
+
+[inspect --- 活動中のオブジェクトを調査する — Python 3.13.6 ドキュメント](https://docs.python.org/ja/3/library/inspect.html)
+
 ### assert
 
 特に`import`は不要で使用可能
