@@ -122,6 +122,19 @@ PVCリソースのネームスペースは、使用するPodと同一である�
 
 [Resizing Persistent Volumes using Kubernetes | Kubernetes](https://kubernetes.io/blog/2018/07/12/resizing-persistent-volumes-using-kubernetes/)
 
+### PVリソース削除時のデータ削除
+
+`persistentVolumeReclaimPolicy`で指定する。  
+`Retain`であれば残る。`Recycle`は削除されるが現在非推奨(替わりに動的プロビジョニングを使用する)
+
+```yaml
+persistentVolumeReclaimPolicy: Retain
+```
+
+`Delete`の場合は、(削除に対応していれば)ボリューム自体も消える。
+
+[Reclaiming](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)
+
 ## 消えないnamespace
 
 `kubectl delete ns hoge`が応答無くなりstatusがTerminatingのままになった場合の対処。
