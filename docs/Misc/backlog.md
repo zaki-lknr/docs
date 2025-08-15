@@ -28,3 +28,11 @@ https://${BACKLOG_SPACE}.backlog.com/api/v2/projects/${PROJECT_KEY}/users?apiKey
 ```console
 curl -LO "https://${BACKLOG_SPACE}.backlog.com/api/v2/issues?count=${COUNT}&startDateUntil=${YYYY_mm_dd}&projectId[]=${PROJECT_ID}&statusId[]=1&statusId[]=2&apiKey=${BACKLOG_APIKEY}"
 ```
+
+### メンション
+
+ユーザーID`12345678`であれば`<@U12345678>`のように記述する。
+
+```js
+"(<@U" + user + ">)"
+```
