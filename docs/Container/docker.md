@@ -441,3 +441,11 @@ $ sudo systemctl restart docker
 ```
 
 これで2375/TCPでListenする。
+
+## その他
+
+### Fedora 42でDockerサービスが起動しない
+
+[Docker stopped working after update to Fedora 42 - Docker Engine / General - Docker Community Forums](https://forums.docker.com/t/docker-stopped-working-after-update-to-fedora-42/147915)
+
+> sudo dnf install -y iptables-legacy
