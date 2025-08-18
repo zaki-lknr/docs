@@ -155,7 +155,8 @@ auth0 = Auth0(auth_domain, token['access_token'])
 
 ### アプリケーション情報取得
 
-auth0オブジェクトのメソッドの`get()`を使用。
+auth0オブジェクトのメソッドの`get()`を使用。  
+引数はアプリケーションIDが必要(アプリケーション名不可)
 
 ```py
 auth0 = Auth0(auth_domain, token['access_token'])
