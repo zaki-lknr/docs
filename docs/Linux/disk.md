@@ -41,6 +41,25 @@ tmpfs                     tmpfs    804648       148    804500   1% /run/user/100
 /dev/sdb2                 ext4  479594152 178667716 276490880  40% /media/zaki/376b22ca-a013-11e8-81fd-000180792463
 ```
 
+## 型番の確認
+
+### SCSI(SATA)接続
+
+```console
+# cat /proc/scsi/scsi 
+Attached devices:
+Host: scsi0 Channel: 00 Id: 00 Lun: 00
+  Vendor: ATA      Model: Samsung SSD 870  Rev: 2B6Q
+  Type:   Direct-Access                    ANSI  SCSI revision: 05
+```
+
+### NVMe接続
+
+```console
+# lspci | grep -i ssd
+01:00.0 Non-Volatile memory controller: Kingston Technology Company, Inc. NV2 NVMe SSD [SM2267XT] (DRAM-less) (rev 03)
+```
+
 ## ディスク追加
 
 USB接続の外付けHDDが死にかけてたので交換してデータ移行。
