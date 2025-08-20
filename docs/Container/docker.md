@@ -225,6 +225,12 @@ $ docker image prune
 デフォルトは、タグが設定されずに`<none>`になっているイメージが削除される。  
 `<none>`のイメージをリストアップするだけであれば `docker image ls -f "dangling=true"` でリストアップできる。
 
+#### ボリュームのprune
+
+```console
+$ docker volume prune
+```
+
 ### network
 
 #### ls
