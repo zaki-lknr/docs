@@ -99,6 +99,17 @@ AWXの`defaults.py`である程度確認できる。
 
 システムの高負荷など様々な原因が考えられる。
 
+下記でリソース制限できるかもしれない
+
+- `SYSTEM_TASK_ABS_MEM`
+- `SYSTEM_TASK_ABS_CPU`
+
+参考情報
+
+- [2.3. Automation Controller 設定を使用した代替方法での容量制限 | Operator 環境のパフォーマンスに関する考慮事項 | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html/performance_considerations_for_operator_environments/con-alternative-capacity-limits_performance-considerations)
+- [Unable to run 200 concurrent jobs in AWX with HA enabled. Observing one AWX instance crashes. · Issue #13657 · ansible/awx](https://github.com/ansible/awx/issues/13657)
+- [Set default capacity_adjustment instance value. - Archives / AWX Project - Ansible](https://forum.ansible.com/t/set-default-capacity-adjustment-instance-value/37305/3)
+
 ## Tools
 
 ### awx-manage
