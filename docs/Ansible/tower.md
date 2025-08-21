@@ -86,6 +86,19 @@ AWXの`defaults.py`である程度確認できる。
 - [3.7. Automation Controller のチューニング | Red Hat Product Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html/configuring_automation_execution/controller-tuning)
 - [Returned JSON is empty when standard output is large · Issue #1789 · ansible/awx](https://github.com/ansible/awx/issues/1789)
 
+## エラー
+
+### ジョブ
+
+#### `Task was marked as running but was not present in the job queue, so it has been marked as failed.`
+
+ジョブを起動したがキューになく処理できずに失敗。
+
+- [Task was marked as running but was not present in the job queue, so it has been marked as failed. · Issue #14277 · ansible/awx](https://github.com/ansible/awx/issues/14277)
+- [Task was marked as running in Tower but was not present in the job queue, so it has been marked as failed · Issue #9594 · ansible/awx](https://github.com/ansible/awx/issues/9594)
+
+システムの高負荷など様々な原因が考えられる。
+
 ## Tools
 
 ### awx-manage
