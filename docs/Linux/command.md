@@ -1104,6 +1104,14 @@ systemctl list-unit-files
 systemctl list-unit-files --user
 ```
 
+### ターゲット(ランレベル)の確認
+
+```console
+systemctl get-default
+```
+
+`multi-user.target`ならCLIの通常起動(3)、`graphical.target`ならGUIの通常起動(5)
+
 ### UNITファイルを作成すべきパス
 
 `man systemd.unit`で確認可能。  
