@@ -1104,7 +1104,7 @@ systemctl list-unit-files
 systemctl list-unit-files --user
 ```
 
-### UNITファイルの位置
+### UNITファイルを作成すべきパス
 
 `man systemd.unit`で確認可能。  
 主に以下
