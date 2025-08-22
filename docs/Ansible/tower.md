@@ -88,6 +88,8 @@ AWXの`defaults.py`である程度確認できる。
 
 ## エラー
 
+- [Ansible Automation Platform のトラブルシューティング | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html/troubleshooting_ansible_automation_platform/index)
+
 ### ジョブ
 
 #### `Task was marked as running but was not present in the job queue, so it has been marked as failed.`
