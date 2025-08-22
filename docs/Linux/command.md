@@ -1112,6 +1112,8 @@ systemctl get-default
 
 `multi-user.target`ならCLIの通常起動(3)、`graphical.target`ならGUIの通常起動(5)
 
+[10.3. systemd ターゲットでの作業 | システム管理者のガイド | Red Hat Enterprise Linux | 7 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-Managing_Services_with_systemd-Targets)
+
 ### UNITファイルを作成すべきパス
 
 `man systemd.unit`で確認可能。  
