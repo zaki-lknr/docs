@@ -1114,6 +1114,16 @@ systemctl get-default
 
 [10.3. systemd ターゲットでの作業 | システム管理者のガイド | Red Hat Enterprise Linux | 7 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-Managing_Services_with_systemd-Targets)
 
+### ターゲット(ランレベル)の変更
+
+`multi-user.target`(ランレベル3)に設定するには`set-default`で指定する。
+
+```console
+$ sudo systemctl set-default multi-user.target
+Removed "/etc/systemd/system/default.target".
+Created symlink /etc/systemd/system/default.target → /lib/systemd/system/multi-user.target.
+```
+
 ### UNITファイルを作成すべきパス
 
 `man systemd.unit`で確認可能。  
