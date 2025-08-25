@@ -432,6 +432,18 @@ base64エンコードされているのででコードして使用する。
         ssh_key_data: "{{ ssh_private_key.content | b64decode }}"
 ```
 
+## unarchive
+
+アーカイブファイル展開
+
+```yaml
+- name: unarchive aap installer
+  ansible.builtin.unarchive:
+    remote_src: yes
+    src: /usr/local/src/ansible-automation-platform-containerized-setup-bundle-2.5-6-x86_64.tar.gz
+    dest: /usr/local/src
+```
+
 ## make
 
 `/path/to/awx-operator`ディレクトリ上で`make deploy IMG=zakihmkc/awx-operator:0.17.0`を実行するタスクであれば以下の通り。
