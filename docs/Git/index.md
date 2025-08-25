@@ -761,8 +761,8 @@ git submodule add https://github.com/zaki-lknr/bsky-client.git bsky-client
 
 ### サブモジュールを更新する
 
-対象ディレクトリで`git pull`を実行する。  
-親リポジトリで`git diff`すれば更新されていることを確認できる。
+サブモジュールのディレクトリで`git pull`を実行する。  
+元の親リポジトリで`git diff`すればサブモジュールの情報が更新されていることを確認できる。
 
 ```diff
 $ git diff
