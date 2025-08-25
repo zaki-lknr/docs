@@ -558,6 +558,22 @@ localhost                  : ok=2    changed=0    unreachable=0    failed=0    s
 destのディレクトリは事前に作成しておく。  
 GitモジュールはCLIの`git clone`と異なり、上の例でいうと`awx_build_and_deploy`サブディレクトリは作成されない。
 
+### URLへのhttp認証込み
+
+URLへユーザー名とパスワードを埋め込めばOK  
+その際URLエンコードを行う。
+
+```yaml
+- name: clone terraform source
+  ansible.builtin.git:
+    repo: https://{{ git_user | urlencode() }}:{{ git_password | urlencode() }}@{{ git_url }}
+    version: main
+    dest: "/var/tmp/work-dir"
+  vars:
+    git_user: '{{ lookup("env", "GIT_USERNAME") }}'
+    git_password: '{{ lookup("env", "GIT_PASSWORD") }}'
+```
+
 ## ssh
 
 ### openssh_keypair
