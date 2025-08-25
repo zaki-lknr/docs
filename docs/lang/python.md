@@ -287,6 +287,29 @@ items.append('qux')
 items.insert(0, item)
 ```
 
+#### 要素の削除
+
+```python
+items = [ 'aaa', 'bbb', 'ccc', 'ddd', 'eee' ]
+
+del items[1]
+
+print(items)
+# ['aaa', 'ccc', 'ddd', 'eee']
+
+a = items.pop(2)
+print(items)
+# ['aaa', 'ccc', 'eee']
+print(a)
+# ddd
+```
+
+`del`で指定インデックスの要素が削除される。  
+上記はまず'bbb'が削除される。
+
+`pop()`メソッドは指定インデックスの要素を取り出したうえで削除する。  
+上記は`ddd`を返したうえで要素から消える。
+
 #### リストの結合
 
 複数のリストを結合(1つのリストに全要素をまとめる)するには`+`を使う
