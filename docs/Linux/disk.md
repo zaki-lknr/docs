@@ -60,6 +60,34 @@ Host: scsi0 Channel: 00 Id: 00 Lun: 00
 01:00.0 Non-Volatile memory controller: Kingston Technology Company, Inc. NV2 NVMe SSD [SM2267XT] (DRAM-less) (rev 03)
 ```
 
+### smartctlコマンド
+
+```console
+smartctl -a /dev/sda
+smartctl 7.4 2024-10-15 r5620 [x86_64-linux-6.14.8-2-pve] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Samsung based SSDs
+Device Model:     Samsung SSD 870 QVO 2TB
+Serial Number:    ....
+LU WWN Device Id: ....
+Firmware Version: SVQ02B6Q
+User Capacity:    2,000,398,934,016 bytes [2.00 TB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic, zeroed
+Device is:        In smartctl database 7.3/5528
+ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
+SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Tue Aug 26 09:45:49 2025 JST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+
+[...]
+```
+
 ## ディスク追加
 
 USB接続の外付けHDDが死にかけてたので交換してデータ移行。
