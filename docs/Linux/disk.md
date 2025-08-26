@@ -299,12 +299,16 @@ shutdown -F -r now
 
 ### CIFS
 
+see mount.cifs, mount.smb3(8)
+
 ```console
-[root@cloud-dev2 ~]# mount -t cifs -o username=zaki,uid=***,gid=*** //pecorino/HD-LDS-A /mnt/
+[root@cloud-dev2 ~]# mount -t cifs -o user=zaki,uid=***,gid=*** //pecorino/HD-LDS-A /mnt/
 Password for zaki@//pecorino/HD-LDS-A: 
 ```
 
-`uid`と`gid`も指定しないとownerの設定ができない(mountした時のもので固定される)
+`uid`と`gid`も指定しないとownerの設定ができない(mountした時のもので固定される) 要はマウントしたファイル類のオーナーを制御するなら指定する。  
+`user`は`username`も可  
+パスワード省略時は上記の通り対話的に聞いてくるが、`password=<password>`で指定も可能(ただしパスワードはtext/plainで記述)
 
 ### NFS
 
