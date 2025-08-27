@@ -164,6 +164,59 @@ $ curl https://api.github.com/repos/netbox-community/ansible_modules
 
 ## GitHub Actions
 
+### ファイル構造
+
+[GitHub Actions　のワークフロー構文 - GitHub Docs](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-syntax)
+
+```yaml
+# ワークフロー名
+name: github pages
+
+# トリガー定義
+on:
+  push:
+    branches:
+      - main
+
+# ジョブ定義
+jobs:
+  # ジョブID
+  deploy:
+    runs-on: ubuntu-22.04
+    # タスク定義(リスト)
+    steps:
+      - uses: actions/checkout@v3
+        # usesはアクションの使用
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+        # withはアクションのパラメタ
+
+      - name: Upgrade pip
+        run: |
+          # install pip=>20.1 to use "pip cache dir"
+          python3 -m pip install --upgrade pip
+      - name: Install dependencies
+        run: python3 -m pip install -r ./requirements.txt
+        # run:シェルでコマンド実行
+
+      - run: mkdocs build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        # if:条件
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: zaki-lknr/zaki-lknr.github.io
+          publish_branch: main
+          publish_dir: ./site
+
+# <https://github.com/zaki-lknr/docs/blob/main/.github/workflows/main.yml>
+```
+
 ### Action
 
 以下から探す。  
