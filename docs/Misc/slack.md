@@ -22,3 +22,9 @@ Windows基準
 > これらのメンションでは、通知が一時停止されている場合や、スレッドで使用された場合はメンバーに通知しません。
 
 `@here`等はスレッド内で使うことはできない。
+
+## アプリ連携
+
+### Google Calendar
+
+[Google Calendar と Slack を連携させる | Slack](https://slack.com/intl/ja-jp/help/articles/206329808-Google-Calendar-%E3%81%A8-Slack-%E3%82%92%E9%80%A3%E6%90%BA%E3%81%95%E3%81%9B%E3%82%8B)
