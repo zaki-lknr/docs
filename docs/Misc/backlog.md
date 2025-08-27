@@ -19,6 +19,8 @@ https://${BACKLOG_SPACE}.backlog.com/api/v2/projects?apiKey=${BACKLOG_APIKEY}
 https://${BACKLOG_SPACE}.backlog.com/api/v2/projects/${PROJECT_KEY}/users?apiKey=${BACKLOG_APIKEY} 
 ```
 
+[プロジェクトユーザー一覧の取得 | Backlog Developer API | Nulab](https://developer.nulab.com/ja/docs/backlog/api/2/get-project-user-list/)
+
 `${PROJECT_KEY}`はIDでも可
 
 ### 課題一覧
