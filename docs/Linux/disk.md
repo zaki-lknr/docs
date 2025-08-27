@@ -310,6 +310,19 @@ Password for zaki@//pecorino/HD-LDS-A:
 `user`は`username`も可  
 パスワード省略時は上記の通り対話的に聞いてくるが、`password=<password>`で指定も可能(ただしパスワードはtext/plainで記述)
 
+パスワードをコマンド引数や`/etc/fstab`に書きたくない場合は外部ファイルに書いてオプション指定も可能
+
+```console
+mount -t cifs -o credentials=/opt/cred/smb,uid=1000 //pecorino/HD-LDS-A /mnt/
+```
+
+このとき`/opt/cred/smb`の中はこの通りで、読み取り権限はrootだけあれば良い。
+
+```text
+username=ユーザー名
+password=パスワード
+```
+
 ### NFS
 
 ```console
