@@ -1,5 +1,13 @@
 # Azure CLI
 
+## extension
+
+### 一覧
+
+```console
+az extension list
+```
+
 ## 結果のquery
 
 [Azure CLI での JMESPath クエリ コマンドの結果 | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/query-azure-cli?tabs=concepts%2Cbash)
