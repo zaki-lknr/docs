@@ -8,6 +8,14 @@
 az extension list
 ```
 
+### インストール済み拡張の更新
+
+`aks-preview`を更新する
+
+```console
+az extension update --name aks-preview
+```
+
 ## 結果のquery
 
 [Azure CLI での JMESPath クエリ コマンドの結果 | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/query-azure-cli?tabs=concepts%2Cbash)
