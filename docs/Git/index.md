@@ -41,6 +41,12 @@ $ git add README.md
 $ git commit -m "first commit"
 ```
 
+### デフォルトブランチ名指定でinit
+
+```console
+git init --initial-branch=main
+```
+
 ## リモートリポジトリ作成
 
 ### ssh
