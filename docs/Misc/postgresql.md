@@ -2,6 +2,12 @@
 
 ## CLI
 
+### バージョン確認
+
+```console
+psql --version
+```
+
 ### DBに接続
 
 ```console
