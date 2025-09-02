@@ -242,3 +242,9 @@ jobs:
 - 自前でランナーを用意する
     - [自己ホスト ランナーの概要 - GitHub Docs](https://docs.github.com/ja/actions/concepts/runners/about-self-hosted-runners)
     - [セルフホステッド ランナーの管理 - GitHub Docs](https://docs.github.com/ja/actions/how-tos/hosting-your-own-runners/managing-self-hosted-runners)
+
+### Azure
+
+#### AKS
+
+[GitHub Actions を使った Azure Kubernetes Service (AKS) へのコンテナーのビルド、テスト、デプロイ - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/kubernetes-action)
