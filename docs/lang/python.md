@@ -828,11 +828,11 @@ $ python replace.py
 バイト列 -> 文字列
 
 ```py
-byte = b'nijigasaki'
-str = byte.decode()
+b = b'nijigasaki'
+s = b.decode()
 
-print(byte)
-print(str)
+print(b)
+print(s)
 ```
 
 出力は
@@ -840,6 +840,19 @@ print(str)
 ```console
 b'nijigasaki'
 nijigasaki
+```
+
+文字列 -> バイト列
+
+```py
+b2 = s.encode()
+print(b2)
+```
+
+出力は以下
+
+```console
+b'nijigasaki'
 ```
 
 ### 日付型(datetime)
