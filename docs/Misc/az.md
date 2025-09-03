@@ -374,7 +374,7 @@ az storage account network-rule add \
 
 ```console
 az storage account keys list \
-  --resoure-group ${resource_group} \
+  --resource-group ${resource_group} \
   --account-name ${storage_account_name}
 ```
 
