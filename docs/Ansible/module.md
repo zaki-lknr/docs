@@ -586,6 +586,26 @@ URLへユーザー名とパスワードを埋め込めばOK
     git_password: '{{ lookup("env", "GIT_PASSWORD") }}'
 ```
 
+## GitLab
+
+`community.general.gitlab_***` を使う
+
+### 接続
+
+ユーザー名・パスワード認証なら以下の通り。各モジュール共通
+
+```yaml
+  tasks:
+  - name: create user
+    community.general.gitlab_user:
+      api_url: https://gitlab.exmaple.org/
+      api_username: "{{ account_name }}"
+      api_password: "{{ account_password }}"
+      validate_certs: false
+
+      name: ...
+```
+
 ## ssh
 
 ### openssh_keypair
