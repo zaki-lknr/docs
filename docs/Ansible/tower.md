@@ -1,5 +1,10 @@
 # Ansible Tower / AAP
 
+## インストーラー
+
+たぶんこの辺  
+[Red Hat Ansible Automation Platform 2.5 for RHEL 10 - Red Hat カスタマーポータル](https://access.redhat.com/downloads/content/480/ver=2.5/rhel---10/2.5/x86_64/product-software)
+
 ## docs
 
 - 旧ドキュメント
