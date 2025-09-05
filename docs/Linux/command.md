@@ -1172,6 +1172,16 @@ ExecStart=/path/to/script.sh
 
 環境変数`KEY=value`がセットされた状態でスクリプトは実行される。
 
+### journalログ
+
+#### 全量を見るa
+
+オプション無しで実行
+
+```console
+journalctl
+```
+
 ## ホスト名
 
 ### 変更
