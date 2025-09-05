@@ -606,6 +606,19 @@ URLへユーザー名とパスワードを埋め込めばOK
       name: ...
 ```
 
+アクセストークン使用時はトークンだけでよい。
+
+```yaml
+  tasks:
+  - name: create user
+    community.general.gitlab_user:
+      api_url: https://gitlab.exmaple.org/
+      api_token: "{{ account_token }}"
+      validate_certs: false
+
+      name: ...
+```
+
 ## ssh
 
 ### openssh_keypair
