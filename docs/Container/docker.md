@@ -159,6 +159,16 @@ $ docker load -i image.tar
 $ docker load < image.tar
 ```
 
+### ps
+
+コンテナ一覧
+
+```console
+docker ps [-a]
+```
+
+`-a`付与で終了済み未削除のコンテナもリストアップ
+
 ### pull
 
 sha256ハッシュ値指定
