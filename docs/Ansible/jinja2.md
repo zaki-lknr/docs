@@ -134,3 +134,31 @@ playbook等で書くときと同じ要領で記述可能
       return 0;
     }
 ```
+
+## 現在時刻の取得
+
+[The now function: get the current time — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_templating_now.html)
+
+Jinja2関数の`now()`を使う。(Jinja2の関数と書かれてるが、Jinja2のドキュメントに見当たらなくてよくわからん)  
+`pipe`で`date`を実行する必要はない。
+
+```yaml
+- name: print current date
+  debug:
+    msg:
+    - "current(local): {{ now() }}"
+    - "current(utc):   {{ now(true) }}"
+    - "formatted:      {{ now(false, '%Y-%m-%d %H-%M-%S') }}"
+```
+
+出力は以下の通り。
+
+```console
+ok: [localhost] => 
+    msg:
+    - 'current(local): 2025-09-06 12:05:13.671003'
+    - 'current(utc):   2025-09-06 03:05:13.671557'
+    - 'formatted:      2025-09-06 12-05-13'
+```
+
+引数のbooleanはUTCフラグ。書式をフォーマットする場合は第2引数。
