@@ -1,5 +1,11 @@
 # jq
 
+## 全ての値の取得
+
+```console
+command | jq '.[]'
+```
+
 ## 特定の値を取得
 
 ```console
