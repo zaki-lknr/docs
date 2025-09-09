@@ -1,5 +1,18 @@
 # jq
 
+## 全てのキーの取得
+
+```console
+command | jq keys
+```
+
+ただし元の順序は保持されずにソートされる。  
+順序を保持するには以下
+
+```console
+command | jq keys_unsorted
+```
+
 ## 全ての値の取得
 
 ```console
