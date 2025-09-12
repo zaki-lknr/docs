@@ -75,6 +75,12 @@ playで指定
   - ...
 ```
 
+CLIコマンドラインオプションであれば`-c | --connection`で指定。
+
+```console
+ansible-playbook ... -c local ...
+```
+
 ## マジック変数
 
 [Special Variables — Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
