@@ -159,6 +159,14 @@ helm upgrade <release> <chart> [-n <namespace>] [-f values.yaml]
 helm upgrade --install sample-logstash elastic/logstash -f values.yaml --create-namespace -n logging
 ```
 
+### チャートインストール時のコマンドライン引数でパラメタ指定(--set)
+
+values.yaml以外にコマンドラインオプションからもパラメタ指定できる。
+
+```console
+helm upgrade ... --set key=value --set config.server.port=8443
+```
+
 ### チャートのバージョン指定インストール
 
 インストール時にチャートのバージョンを指定するには`--version`を使う
