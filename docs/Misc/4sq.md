@@ -48,6 +48,12 @@ curl --request GET \
      --header "accept: application/json"
 ```
 
+検索結果件数の指定(デフォルト10 / MAX 50)
+
+```console
+--url "https://api.foursquare.com/v3/places/search?query=${query}&ll=${position}&limit=50"
+```
+
 ### Get User Detail
 
 [Get User Details](https://docs.foursquare.com/developer/reference/get-user-details)
