@@ -247,11 +247,16 @@ jobs:
     echo "VALUE=$value" >> "$GITHUB_ENV"
 
 - name: exec next
-  if: env.VALUE.length > 0
+  if: ${{ env.VALUE != '' }}
   uses: ...
 ```
 
-"exec command"の出力結果を変数保持しているが、文字列長がゼロの場合は次のタスク"exec next"は実行されない
+"exec command"の出力結果を変数保持しているが、文字列長がゼロの場合は次のタスク"exec next"は実行されない。
+
+##### 空文字判定
+
+前述の通り `${{ value != '' }}` と記述。  
+ダブルクォート不可
 
 ### 変数
 
