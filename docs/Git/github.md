@@ -271,6 +271,23 @@ jobs:
 
 ### Azure
 
+#### login
+
+az loginを行うアクション  
+[Azure Login · Actions · GitHub Marketplace](https://github.com/marketplace/actions/azure-login)
+
+`subscription-id`/`client-id`/`tenant-id`のセットか、`creds`にクレデンシャル情報を指定する。  
+`creds`の場合は以下の形式の文字列
+
+```json
+{
+  "clientSecret": ...,
+  "subscriptionId": ...,
+  "tenantId": ...,
+  "clientId": ...
+}
+```
+
 #### AKS
 
 [GitHub Actions を使った Azure Kubernetes Service (AKS) へのコンテナーのビルド、テスト、デプロイ - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/kubernetes-action)
