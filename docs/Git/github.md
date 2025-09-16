@@ -234,6 +234,25 @@ jobs:
 
 ワークフロー実行結果一覧から指定のワークフローを開き、画面右上の「Re-run all jobs」ボタンを押下
 
+### タスク(steps)
+
+#### if
+
+条件によってタスクを処理せずスキップする
+
+```yaml
+- name: exec command
+  run: |
+    value=$(command)
+    echo "VALUE=$value" >> "$GITHUB_ENV"
+
+- name: exec next
+  if: env.VALUE.length > 0
+  uses: ...
+```
+
+"exec command"の出力結果を変数保持しているが、文字列長がゼロの場合は次のタスク"exec next"は実行されない
+
 ### 変数
 
 #### タスクの結果を次のタスクで参照する($GITHUB_ENV)
