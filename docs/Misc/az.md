@@ -172,6 +172,16 @@ az network nsg rule create \
 | `*-address-prefixes` | IPアドレス(`192.168.0.0/24`など)や`VirtualNetwork`などサービスタグ |
 | `*-port-ranges`      | ポート番号(値のみ、範囲指定`1024-4096`など)、`*`                    |
 
+#### ルール削除
+
+```console
+az network nsg rule delete \
+  --nsg-name ${nsg_name} \
+  --resource-group ${resoure_group} \
+  --name ${nsg_rule_name} \
+  --no-wait
+```
+
 ### public ip
 
 #### アドレス一覧
