@@ -227,7 +227,7 @@ az network private-dns record-set a add-record \
 ```console
 az network private-dns record-set a delete \
   --resoure-group ${resource_group} \
-  --zone-name "private.example.org"
+  --zone-name "private.example.org" \
   --name hostname
 ```
 
