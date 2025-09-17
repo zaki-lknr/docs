@@ -265,6 +265,24 @@ jobs:
 `$GITHUB_ENV`ファイルを使った環境変数定義を行う。  
 具体的には上記変数で参照できるファイルに「`KEY=VALUE`」形式で文字列を書き込めば、後続のタスクは`${{ env.KEY }}`で`VALUE`を参照できる。
 
+##### 複数行の$GITHUB_ENV
+
+ヒアドキュメント形式で書き込む。
+
+```yaml
+steps:
+  - name: Set the value in bash
+    id: step_one
+    run: |
+      {
+        echo 'JSON_RESPONSE<<EOF'
+        curl https://example.com
+        echo EOF
+      } >> "$GITHUB_ENV"
+```
+
+[GitHub Actions のワークフロー コマンド - GitHub Docs](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-commands#multiline-strings)
+
 ### Runners
 
 - GitHubのランナーを利用する
