@@ -182,6 +182,8 @@ az network nsg rule delete \
   --no-wait
 ```
 
+<https://learn.microsoft.com/ja-jp/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-delete>
+
 ### public ip
 
 #### アドレス一覧
