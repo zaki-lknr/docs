@@ -104,6 +104,15 @@ mise ls
 
 ## mise.toml
 
+### 使用中設定ファイルの確認
+
+```console
+$ mise cfg
+Path                                         Tools              
+~/.config/mise/config.toml                   aws, python, usage 
+~/local/src/ansible-sample/become/mise.toml  python            
+```
+
 ### テンプレート
 
 [Templates | mise-en-place](https://mise.jdx.dev/templates.html)
