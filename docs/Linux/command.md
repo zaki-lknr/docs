@@ -1148,6 +1148,14 @@ Created symlink /etc/systemd/system/default.target → /lib/systemd/system/multi
 systemctl cat [--user] service-name
 ```
 
+#### UNITファイルの編集
+
+```console
+systemctl edit --full [--user] service-name
+```
+
+`--full`がない場合はドロップインファイルの編集になる。
+
 #### 指定子
 
 `man systemd.unit`で確認できる。  
