@@ -1092,7 +1092,7 @@ route1=172.29.0.0/24,172.16.1.3
 
 ## systemd
 
-### 一覧
+### ユニットファイル一覧
 
 ```console
 systemctl list-unit-files
@@ -1102,6 +1102,12 @@ systemctl list-unit-files
 
 ```console
 systemctl list-unit-files --user
+```
+
+### タイマー一覧
+
+```console
+systemctl list-timers [--user]
 ```
 
 ### ターゲット(ランレベル)の確認
