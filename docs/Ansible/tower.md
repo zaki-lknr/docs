@@ -69,6 +69,14 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 - システム管理者
     - 全部見れる
 
+### ホスト
+
+- ホストリソースはすべてインベントリに紐づいている
+- ホストが紐づけられるインベントリは一つのみ
+    - 複数のインベントリで同じホスト定義を使いたい場合は、インベントリ毎に同じ内容のホスト情報を作る必要がある
+- ホストリソースを作成するにはまずインベントリを作成しておく必要がある
+- インベントリが削除されると紐づいているホスト情報もすべて削除される
+
 ## ログ
 
 [第11章 Automation Controller ログファイル | Red Hat Product Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.4/html/automation_controller_administration_guide/assembly-controller-log-files)
