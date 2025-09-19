@@ -50,13 +50,24 @@ Towerは実行中で良い。
 
 [How to uninstall Red Hat Ansible Controller(Ansible Automation Platform 2.x)? - Red Hat Customer Portal](https://access.redhat.com/solutions/6733721)
 
-## プロジェクト設定
+## リソースmemo
 
-### SCMを使わない場合
+### プロジェクト設定
+
+#### SCMを使わない場合
 
 Gitとか使わずTowerのホストのファイルシステム上のplaybookを使う場合は `/var/lib/awx/projects` 以下にプロジェクトのディレクトリを作り、その配下にplaybook類を配置する。
 
 たとえば `/var/lib/awx/projects/sample-demo/playbook.yml` など。
+
+### ユーザー
+
+#### ユーザータイプ
+
+- 標準ユーザー
+    - プロジェクト参照
+- システム管理者
+    - 全部見れる
 
 ## ログ
 
