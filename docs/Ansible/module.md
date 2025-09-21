@@ -619,6 +619,22 @@ URLへユーザー名とパスワードを埋め込めばOK
       name: ...
 ```
 
+## AWX
+
+### ユーザー作成
+
+```yaml
+- name: create user
+  awx.awx.user:
+    username: "{{ username }}"
+    password: "{{ password }}"
+    organization: "{{ organization }}"
+    is_superuser: false
+    is_system_auditor: false
+```
+
+[awx.awx.user module – create, update, or destroy Automation Platform Controller users. — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/collections/awx/awx/user_module.html)
+
 ## ssh
 
 ### openssh_keypair
