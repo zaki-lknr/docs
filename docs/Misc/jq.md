@@ -19,6 +19,12 @@ command | jq keys_unsorted
 command | jq '.[]'
 ```
 
+## 全ての値の中から指定キーの値を全て出力
+
+```console
+command | jq '.[] | [.name, .count]'
+```
+
 ## 特定の値を取得
 
 ```console
