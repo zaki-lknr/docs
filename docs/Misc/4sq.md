@@ -28,6 +28,12 @@
 
 ## API
 
+### Places API
+
+- [Upcoming Changes](https://docs.foursquare.com/developer/reference/upcoming-changes)
+- [Pricing](https://foursquare.com/pricing/#places_api)
+- [Migration Guide](https://docs.foursquare.com/fsq-developers-places/reference/migration-guide)
+
 ### Place Search
 
 [Place Search](https://docs.foursquare.com/developer/reference/place-search)
@@ -197,7 +203,7 @@ Twitterなどのシェアを有効にしていると`shares`フィールドが�
 }
 ```
 
-### Get Place Details
+### Get Place Details (depr)
 
 APIはv2がすでに無くなりv3を使う必要がある。  
 [Get Place Details](https://docs.foursquare.com/developer/reference/place-details)
@@ -217,5 +223,37 @@ TwitterIDなどのソーシャルメディア情報であれば`?fields=social_m
   "social_media": {
     "twitter": "3rdhakatadaruma"
   }
+}
+```
+
+### Get Place Details
+
+"places-api"の場合は以下。  
+[Get Place Details](https://docs.foursquare.com/fsq-developers-places/reference/place-details)
+
+```console
+curl --request GET \
+    --url "https://places-api.foursquare.com/places/${FSQ_PLACE_ID}" \
+    --header "Authorization: Bearer ${OAUTH_TOKEN}" \
+    --header "accept: application/json" \
+    --header "X-Places-Api-Version: 2025-06-17"
+```
+
+socislのIDも取れる。
+
+```json
+{
+  "fsq_place_id": "5d8da873009e7000071be88b",
+  "latitude": 35.62968,
+  "longitude": 139.77664,
+  "name": "ODAIBAゲーマーズ",
+
+  ...
+
+  "social_media": {
+    "twitter": "odaiba_gema"
+  },
+  "tel": "...",
+  "website": "https://www.gamers.co.jp/shop/shop_detail/113216/"
 }
 ```
