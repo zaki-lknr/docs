@@ -260,6 +260,15 @@ jobs:
 
 ### 変数
 
+#### フォーマット文字列(format)
+
+```yaml
+env:
+  VALUE: ${{ format('foo-{0}-bar', vars.INPUT_VALUE) }}
+```
+
+`VALUE`の値は、入力変数`INPUT_VALUE`の内容に従って`"foo-***-bar"`となる。
+
 #### タスクの結果を次のタスクで参照する($GITHUB_ENV)
 
 `$GITHUB_ENV`ファイルを使った環境変数定義を行う。  
