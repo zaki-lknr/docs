@@ -44,6 +44,14 @@ if [ $value == "fobar" ]; then command_a; else commandb; fi
 less -X
 ```
 
+### 短いファイルは表示後即終了
+
+1画面に収まる分量の場合は`-E`付与で`cat`と同じ動作になる
+
+```console
+less -E
+```
+
 ### 制御文字を認識させる
 
 `ESC[32m`とか大量に表示されたときは、表示中に`-r`押下して`enter`
