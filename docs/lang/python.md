@@ -676,6 +676,12 @@ sample_str[-1]
 sample_str[:-1]
 ```
 
+#### join()
+
+```python
+print("\n".join(line_items))
+```
+
 #### splitlines()
 
 テキストの末尾に改行がある場合、`split('\n')`を使うと末尾の改行もデリミタと認識し、リストの最終要素は空文字になるが、`splitlines()`であれば末尾の改行分は無視される。行ごとに処理したい場合はこちらが便利。
