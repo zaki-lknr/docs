@@ -701,6 +701,10 @@ print(str_sample.zfill(8))
 
 #### フォーマット文字列
 
+```python
+print("{},{},{}".format(name, count, expire))
+```
+
 ##### スペース埋め
 
 ```python
