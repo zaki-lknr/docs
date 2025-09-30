@@ -16,6 +16,12 @@ vault token lookup
 
 トークンを省略すれば対話的に聞いてくる
 
+### OIDCでCLIログイン
+
+```console
+vault login -method=oidc [-path=***] roke=****
+```
+
 ## 初期処理
 
 ### init
