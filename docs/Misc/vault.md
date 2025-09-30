@@ -121,6 +121,12 @@ vault token lookup
 vault list auth/path/role
 ```
 
+#### 内容確認(policyなど)
+
+```console
+vault read auth/path/role/key
+```
+
 #### 削除
 
 ```console
