@@ -76,6 +76,12 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
     - 複数のインベントリで同じホスト定義を使いたい場合は、インベントリ毎に同じ内容のホスト情報を作る必要がある
 - ホストリソースを作成するにはまずインベントリを作成しておく必要がある
 - インベントリが削除されると紐づいているホスト情報もすべて削除される
+- (ユーザーに対して)作成可能なホスト数を制限したい場合は「organization」から
+
+### 組織
+
+- [7. 組織 — Automation Controller User Guide v4.1.1](https://docs.ansible.com/automation-controller/4.1.1/html_ja/userguide/organizations.html)
+- [第5章 ロールベースのアクセス制御によるアクセス管理 | アクセス管理と認証 | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html/access_management_and_authentication/gw-managing-access)
 
 ## ログ
 
