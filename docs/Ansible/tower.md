@@ -5,6 +5,12 @@
 たぶんこの辺  
 [Red Hat Ansible Automation Platform 2.5 for RHEL 10 - Red Hat カスタマーポータル](https://access.redhat.com/downloads/content/480/ver=2.5/rhel---10/2.5/x86_64/product-software)
 
+## アップグレード
+
+### 2.4.x to 2.4.y
+
+同じインベントリで`setup.sh`を追加実行
+
 ## docs
 
 - 旧ドキュメント
