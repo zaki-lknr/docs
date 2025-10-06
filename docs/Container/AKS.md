@@ -52,3 +52,10 @@ kubectl patch -n namespace pvc pvc-resource -p '{"spec":{"resources":{"requests"
 ```
 
 縮小は不可
+
+## アップグレード
+
+### ノードの個別アップグレード
+
+PDB設定などでノードがロックされアップグレードできなかった場合、あとから手動で個別にアップグレードできる。  
+[Azure Kubernetes Service (AKS) ノード イメージのアップグレード - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/node-image-upgrade)
