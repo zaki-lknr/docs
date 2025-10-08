@@ -133,6 +133,18 @@ vault read auth/path/role/key
 vault delete auth/path/role/key
 ```
 
+## identity/entity
+
+### ID一覧
+
+```console
+vault list identity/entity/id
+```
+
+```console
+vault list identity/entity-alias/id
+```
+
 ## hvac
 
 Hashicorp Vault用Pythonライブラリ
@@ -157,3 +169,7 @@ client = hvac.Client(
     verify=False
 )
 ```
+
+### OIDC
+
+[JWT/OIDC — hvac 2.3.0 documentation](https://python-hvac.org/en/stable/usage/auth_methods/jwt-oidc.html)
