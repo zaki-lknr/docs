@@ -107,6 +107,12 @@ curl -H "X-Vault-Token: ${token}" http://server:port/v1/<secret-engine-name>/dat
 
 ## auth
 
+### 一覧
+
+```console
+vault auth list
+```
+
 ### token確認
 
 ```console
@@ -116,6 +122,8 @@ vault token lookup
 ### role
 
 #### リスト
+
+`path`は`vault auth list`の出力で確認できる。
 
 ```console
 vault list auth/path/role
