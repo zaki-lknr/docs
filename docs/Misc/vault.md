@@ -19,7 +19,7 @@ vault token lookup
 ### OIDCでCLIログイン
 
 ```console
-vault login -method=oidc [-path=***] roke=****
+vault login -method=oidc [-path=***] role=****
 ```
 
 ## 初期処理
