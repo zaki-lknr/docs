@@ -153,6 +153,14 @@ vault list identity/entity/id
 vault list identity/entity-alias/id
 ```
 
+## policy
+
+### 一覧
+
+```console
+vault policy list
+```
+
 ## hvac
 
 Hashicorp Vault用Pythonライブラリ
