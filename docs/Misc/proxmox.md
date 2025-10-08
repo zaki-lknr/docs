@@ -27,6 +27,18 @@ transferred 20.0 GiB of 20.0 GiB (100.00%)
 root@pve:~# 
 ```
 
+## ユーザー作成と権限付与
+
+- 「Datacenter」メニューで、「Users」「Groups」「Pools」リソースを作成する
+    - グループは任意(グループにユーザーを所属させられる)
+- 作成した「pool」は「Resource Pool」で管理
+    - 「Members」で権限を紐づけたいVMやストレージを指定
+    - 「Permissions」でユーザー/グループ/APIトークンに付与する権限を指定
+
+作成するユーザーのRealmは「Proxmox VE authentication server」を指定する
+
+[User Management - Proxmox VE](https://pve.proxmox.com/wiki/User_Management)
+
 ## VM定義ファイル関連
 
 ```console
