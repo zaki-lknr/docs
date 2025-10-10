@@ -659,6 +659,14 @@ kubectl drain k3s-node2 --force --ignore-daemonsets
 
 ノードを完全にクラスタから除外するにはさらに`kubectl delete node <node-name>`する。
 
+## uncordon
+
+drain等で `SchedulingDisabled` になったノードは、`uncordon`でスケジュール可能にする。
+
+```console
+kubectl uncordon <node-name>
+```
+
 ## KUBECONFIG
 
 ### 証明書検証無視
