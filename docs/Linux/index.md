@@ -180,5 +180,8 @@ If you continue, an additional ssh daemon will be started at port '1022'.
 Do you want to continue? 
 ```
 
-SSH経由だと上記警告が出るが続けるなら続ける。
+SSH経由だと上記警告が出るが続けるなら続ける。  
 あとは進めていくと確認が出るので都度進める。
+
+aptラインの編集は不要。(`do-release-upgrade`を叩けば勝手にやってくれる)  
+ただしサードパーティのaptラインを追加してる場合はアップグレードに対応してない場合もあるので注意。
