@@ -236,3 +236,11 @@ curl https://k8s.example.org:6443/api/v1/namespaces
 ```
 
 `NamespaceList`が返る。
+
+## Python
+
+`pip install kubernetes` でK8s APIを処理するスクリプトのためのパッケージが利用できる。
+
+- [kubernetes-client/python: Official Python client library for kubernetes](https://github.com/kubernetes-client/python)
+- [example](https://github.com/kubernetes-client/python/tree/master/examples)
+- [API毎の実装例](https://github.com/kubernetes-client/python/blob/master/kubernetes/docs/CoreV1Api.md)
