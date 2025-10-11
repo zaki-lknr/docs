@@ -169,6 +169,8 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=vX.Y.Z+k3s1 <EXISTING_K3S_ENV
 
 > Ensure that your plan does not skip intermediate minor versions when upgrading.
 
+[バージョン情報](https://update.k3s.io/v1-release/channels)
+
 ## 停止
 
 k3sサービス自体は`systemctl`で停止できAPIエンドポイントなどは停止されるが実はコンテナは動作したまま。
