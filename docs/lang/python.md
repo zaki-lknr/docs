@@ -1675,6 +1675,43 @@ ethtool (0.14)
 [Installation - pipx](https://pipx.pypa.io/stable/installation/)  
 `dnf`や`apt`で。
 
+#### アプリケーションインストール
+
+例: `ansible-core`
+
+```console
+pipx install ansible-core
+```
+
+バージョン指定も可能
+
+```console
+$ pipx install ansible-core==2.18.0
+  installed package ansible-core 2.18.0, installed using Python 3.13.7
+  These apps are now globally available
+    - ansible
+    - ansible-config
+    - ansible-console
+    - ansible-doc
+    - ansible-galaxy
+    - ansible-inventory
+    - ansible-playbook
+    - ansible-pull
+    - ansible-test
+    - ansible-vault
+done! ✨ 🌟 ✨
+$ ansible --version
+ansible [core 2.18.0]
+  config file = None
+  configured module search path = ['/home/zaki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/zaki/.local/share/pipx/venvs/ansible-core/lib64/python3.13/site-packages/ansible
+  ansible collection location = /home/zaki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/zaki/.local/bin/ansible
+  python version = 3.13.7 (main, Aug 14 2025, 00:00:00) [GCC 15.2.1 20250808 (Red Hat 15.2.1-1)] (/home/zaki/.local/share/pipx/venvs/ansible-core/bin/python)
+  jinja version = 3.1.6
+  libyaml = True
+```
+
 ## RHEL / Ansible
 
 [Ansible が利用する Python 実行環境 - 赤帽エンジニアブログ](https://rheb.hatenablog.com/entry/ansible_python_environment)
