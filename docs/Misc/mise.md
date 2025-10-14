@@ -38,6 +38,18 @@ mise usage@2.0.3 ✓ installed                                                  
 
 ## パッケージ検索
 
+### パッケージ一覧
+
+```console
+mise ls-remote --all
+```
+
+あるいは
+
+```console
+mise plugins ls-remote
+```
+
 ### 指定パッケージ(コマンド)のバージョン一覧
 
 ```console
