@@ -15,3 +15,22 @@ docker run -d -p 9090:9090 quay.io/prometheus/prometheus:v3.2.1
 デフォルト(サンプル)は以下
 
 [prometheus/documentation/examples/prometheus.yml at main · prometheus/prometheus](https://github.com/prometheus/prometheus/blob/main/documentation/examples/prometheus.yml)
+
+## Exporter
+
+### Node Exporter
+
+[prometheus/node_exporter: Exporter for machine metrics](https://github.com/prometheus/node_exporter)
+
+これもDockerでデプロイできる
+
+```console
+docker run -d \
+  --name=node_exporter \
+  --publish 9100:9100 \
+  --pid="host" \
+  -v "/:/host:ro,rslave" \
+  --restart=always \
+  quay.io/prometheus/node-exporter:latest \
+  --path.rootfs=/host
+```
