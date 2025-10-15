@@ -34,3 +34,11 @@ docker run -d \
   quay.io/prometheus/node-exporter:latest \
   --path.rootfs=/host
 ```
+
+このNode ExporterをPrometheusから監視するには以下の設定
+
+```yaml
+  - job_name: 'node'
+    static_configs:
+    - targets: ['192.168.0.16:9100']
+```
