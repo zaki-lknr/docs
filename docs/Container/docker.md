@@ -90,6 +90,16 @@ docker run -it --entrypoint sh image:tag
 docker run --rm -e APP_VAL=foobar image:tag
 ```
 
+#### 再起動設定(--restart)
+
+エラーや停止・サービス再起動時の動作を指定。デフォルトは`no`でコンテナの再起動はなし。
+
+```console
+docker run --restart always ...
+```
+
+[コンテナを自動的に開始 — Docker-docs-ja 19.03 ドキュメント](https://docs.docker.jp/config/container/start-containers-automatically.html)
+
 ### build
 
 #### Dockerfile指定
