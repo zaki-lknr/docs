@@ -477,6 +477,19 @@ ok: [localhost] => {
 }
 ```
 
+## 文字列長(length)
+
+そのまんま
+
+```yaml
+  - debug:
+      msg: "{{ string_value | length }}"
+    vars:
+      string_value: abcde
+```
+
+出力は`5`
+
 ## パス処理
 
 ### パスの合成 (path_join)
