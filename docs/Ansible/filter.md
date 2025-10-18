@@ -177,6 +177,15 @@ vars:
 selectattr('summary_fields.inventory.name', 'eq', 'netbox-demo-inventory')
 ```
 
+## 否定検索 (reject / rejectattr)
+
+それぞれ`select`と`selectattr`の真偽が逆になるフィルタ。  
+「リスト内の空文字を除外」であれば以下の通り。
+
+```yaml
+"{{ items | reject('eq', '') }}"
+```
+
 ## リスト要素への一律処理 (map)
 
 ### 別フィルタの適用
