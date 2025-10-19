@@ -2,13 +2,8 @@
 
 ## いろいろメモ
 
-[Rufus - 起動可能なUSBドライブを簡単に作成できます](https://rufus.ie/ja/)
-
-Rufus使用  
-[WindowsでUbuntuのUSBブートメディアを作成する手順 | 机上の自論](https://kijonojiron.com/ubuntu_usb_boot_media_create)
-
-Universal USB Installer  
-[Linux UbuntuのブータブルUSBドライブを作成する手順 | 俺の開発研究所](https://itlogs.net/ubuntu-bootable-usb/)
+- [Rufus - 起動可能なUSBドライブを簡単に作成できます](https://rufus.ie/ja/)
+- [[Windows] Rufusを使ってUSBブートできるメディアを作る - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2023/05/17/054856)
 
 ## sudo
 
