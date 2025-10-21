@@ -161,6 +161,16 @@ vault list identity/entity-alias/id
 vault policy list
 ```
 
+### 作成/更新
+
+```console
+vault policy write my-policy-name <<__EOL__
+path ... {
+    ...
+}
+__EOL__
+```
+
 ## hvac
 
 Hashicorp Vault用Pythonライブラリ
