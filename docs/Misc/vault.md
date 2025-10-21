@@ -171,6 +171,12 @@ path ... {
 __EOL__
 ```
 
+### 参照
+
+```console
+vault policy read my-policy-name
+```
+
 ## hvac
 
 Hashicorp Vault用Pythonライブラリ
