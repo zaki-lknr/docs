@@ -155,6 +155,21 @@ disable:
   - metrics-server
 ```
 
+## バックアップとリストア
+
+[Backup and Restore | K3s](https://docs.k3s.io/datastore/backup-restore)
+
+デフォルトのSQLite構成であれば下記
+
+| 項目       | パス                                  |
+| -------- | ----------------------------------- |
+| データストア   | `/var/lib/rancher/k3s/server/db/`   |
+| サーバートークン | `/var/lib/rancher/k3s/server/token` |
+| local PV | `/var/lib/rancher/k3s/storage/`     |
+
+上記パスのファイル群をコピーしておき、「k3sアンインストール→上記ファイルを事前配置→k3s新規インストール」でリストア元の構成になるのを確認。  
+(その他追加の設定ファイルがある場合はそれも追加)
+
 ## アップグレード
 
 [Manual Upgrades | K3s](https://docs.k3s.io/upgrades/manual)
