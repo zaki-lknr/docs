@@ -205,3 +205,7 @@ client = hvac.Client(
 ### OIDC
 
 [JWT/OIDC — hvac 2.3.0 documentation](https://python-hvac.org/en/stable/usage/auth_methods/jwt-oidc.html)
+
+### policy
+
+[Policy — hvac 2.3.0 documentation](https://python-hvac.org/en/stable/usage/system_backend/policy.html)
