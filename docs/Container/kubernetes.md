@@ -135,7 +135,9 @@ persistentVolumeReclaimPolicy: Retain
 
 [Reclaiming](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)
 
-## 消えないnamespace
+## トラブルシューティング
+
+### 消えないnamespace
 
 `kubectl delete ns hoge`が応答無くなりstatusがTerminatingのままになった場合の対処。
 
@@ -166,6 +168,10 @@ kubectl get ns ${namespace} -o json | grep -v -- '"kubernetes"' | kubectl replac
 ```
 
 ※ `kubectl get ns hoge -o json | grep -2 -- '"kubernetes"'`を実行して、1か所しかヒットしない場合
+
+### 大量のError/ContainerStatusUnknownコンテナが発生しEvictも動作せずフリーズ状態
+
+メモリ不足などで動作不備に陥ってる場合はメモリ増強や不要pod停止などでpodを起動可能状態にし、不正終了したpodは`kubectl delete pod`で削除する
 
 ## Initコンテナ
 
