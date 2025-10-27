@@ -143,6 +143,8 @@ vault delete auth/path/role/key
 
 ## identity/entity
 
+[Implement identity entities and groups | Vault | HashiCorp Developer](https://developer.hashicorp.com/vault/tutorials/auth-methods/identity)
+
 ### ID一覧
 
 ```console
