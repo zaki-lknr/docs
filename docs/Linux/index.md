@@ -115,6 +115,16 @@ setparams 'Ubuntu'
 の`linux`で始まる行の末尾に`single`を追記して`Ctrl-x`で起動する。  
 ルートファイルシステムをmountしたくない場合は`single`でなく`break`を追記。
 
+## キーボード
+
+### capsをctrlに変更(GNOME)
+
+`/etc/default/keyboard`ファイルの以下の行、空設定になっている箇所に`ctrl:nocaps`を追加してリブートする
+
+```
+XKBOPTIONS="ctrl:nocaps"
+```
+
 ## GRUB
 
 ブートローダーが壊れてgrub rescueモードになった場合。  
