@@ -463,3 +463,13 @@ az aks scale \
   --nodepool-name ${nodepool_name} \
   --node-count 3
 ```
+
+### ノードプールのアップグレード
+
+```console
+az aks nodepool upgrade \
+  --resource-group ${resource_group} \
+  --cluster-name ${cluster_name} \
+  --name ${nodepool_name} \
+  --kubernetes-version ${k8s_version}
+```
