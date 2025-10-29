@@ -739,6 +739,12 @@ groupadd nijigasaki [-g GID]
 
 ## timedatectl
 
+### 設定確認
+
+```console
+timedatectl status
+```
+
 ### NTPの無効・有効
 
 ```console
