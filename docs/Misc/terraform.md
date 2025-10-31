@@ -15,6 +15,12 @@ $ sudo apt-get update && sudo apt-get install terraform
 
 ## CLI
 
+### 出力をファイルへリダイレクトする際のカラー無効化
+
+```console
+terraform plan -no-color > plan.txt
+```
+
 ### フォーマッタ
 
 standard styleへ変換する。
