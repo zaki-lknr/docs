@@ -46,7 +46,7 @@ sh-5.1#
 
 [ボリュームの利用 | Docker ドキュメント](https://matsuand.github.io/docs.docker.jp.onthefly/storage/volumes/)
 
-ボリュームマウント
+##### ボリュームマウント
 
 ```console
 $ docker run --name httpd --rm -d -v webvolume:/var/tmp httpd
@@ -54,6 +54,16 @@ $ docker run --name httpd --rm -d -v webvolume:/var/tmp httpd
 
 `webvolume`ボリュームを(無ければ自動作成して)`/var/tmp`にマウントしてコンテナ起動。  
 コンテナを停止・削除してもボリュームは残るので、このボリュームを別コンテナでマウントすればデータを保持できる。
+
+##### バインドマウント
+
+ホストのディレクトリをマウントする
+
+```console
+$ docker run --name sample --rm -d -v /path/to:/mnt ubuntu tail -f /dev/null
+```
+
+コンテナ内の`/mnt`にホストOSの`/path/to`をマウントする。
 
 #### ホストのアドレス(--add-host)
 
