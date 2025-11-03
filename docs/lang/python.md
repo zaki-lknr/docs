@@ -74,6 +74,14 @@ else
     :::
 ```
 
+##### 三項演算子
+
+以下のように1行で記述できる。
+
+```py
+value = True if (condition) else False
+```
+
 #### for
 
 foreach式のループ処理は以下。
