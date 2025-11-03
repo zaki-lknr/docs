@@ -854,6 +854,22 @@ checkbox_item.checked = true;
 
 チェックボックスのチェック状態を参照するには`.checked`を見ればOK
 
+#### select / option
+
+項目1番目の値を参照する。  
+(`ver_list.options`の型は`HTMLOptionsCollection`)
+
+```javascript
+const select_list = document.getElementById('select_list');
+const value = ver_list.options[0].value;
+```
+
+項目をリストとしてループ処理するには`Array.from()`を使ってHTMLOptionsCollectionを配列に変換する。
+
+```javascript
+Array.from(select_list.options).find(elem => ... );
+```
+
 #### label
 
 ```javascript
