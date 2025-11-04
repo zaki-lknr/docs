@@ -235,3 +235,25 @@ services:
 ```
 
 [[Docker]コンテナ実行時にlog-optsでログサイズ上限とローテート数を設定してホストのストレージが溢れないようにする - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/09/09/211117)
+
+### 環境変数の参照
+
+デフォルトでは`.env`ファイルの環境変数を参照する。
+Composeファイルはシェルの変数参照と同じ書式で環境変数をセット(投入)できる。
+
+```yaml
+services:
+
+  server:
+    image: "rancher/k3s:${K3S_VERSION:-latest}"
+    command: server
+    environment:
+    - K3S_TOKEN=${K3S_TOKEN:?err}
+```
+
+こんなcomposeファイルに、以下`.env`ファイルを同じディレクトリに用意しておけば、そのまま環境変数としてセットされてコンテナ起動できる。
+
+```
+K3S_VERSION=v1.33.5-k3s1
+K3S_TOKEN=298143103216182
+```
