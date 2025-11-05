@@ -20,6 +20,19 @@ az extension update --name aks-preview
 
 [Azure CLI での JMESPath クエリ コマンドの結果 | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/query-azure-cli?tabs=concepts%2Cbash)
 
+### 非リストの辞書1件分だけの場合に特定キー取り出し
+
+キー名そのまま指定する。
+
+```console
+az keyvault secret show \
+  --vault-name $az_keyvault_name \
+  --name $item_name \
+  --query "value" -o tsv
+```
+
+`-o tsv` でクォート削除
+
 ### 辞書型データのリストから指定キーの値一覧
 
 AKSのクラスター名一覧を取得
