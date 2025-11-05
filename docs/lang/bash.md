@@ -259,6 +259,17 @@ do
 done < "/path/to/file.txt"
 ```
 
+#### stdinから1行ずつ
+
+上記ファイルの場合がベース
+
+```bash
+while read line
+do
+    # ${line}に行が入っている
+done
+```
+
 #### コマンドの結果を1行ずつ
 
 ```bash
