@@ -48,13 +48,13 @@ Release and maintenanceの中の[ansible-core support matrix](https://docs.ansib
 - [Network Debug and Troubleshooting Guide — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html)
 - [Platform Options — Ansible Documentation](https://docs.ansible.com/ansible/latest/network/user_guide/platform_index.html)
 
-# ドキュメント
+## ドキュメント
 
-## 索引
+### 索引
 
 [Index — Ansible Documentation](https://docs.ansible.com/ansible/latest/genindex.html)
 
-## ansible-doc
+### ansible-doc
 
 ```console
 $ ansible-doc <module-name>
@@ -72,8 +72,8 @@ $ ansible-doc -M /path/to/collection-path/ansible_collections/namespace/collecti
 
 パスが合わない場合は、エラーメッセージに「これらのパスにそんなモジュールないんだが？」とパス一覧が表示されるので、そこから調整する。
 
-# Automation Hub
+## Automation Hub
 
-## トークンの作成
+### トークンの作成
 
 [Hub への接続](https://console.redhat.com/ansible/automation-hub/token/)
