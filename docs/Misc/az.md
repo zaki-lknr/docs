@@ -400,6 +400,25 @@ az storage account keys list \
 
 2つヒットするはずなので、`--query '[0].value' -o tsv` とかやれば取り出せる。
 
+## key vault
+
+### 保存
+
+```console
+az keyvault secret set \
+  --vault-name $az_keyvault_name \
+  --name $item_name \
+  --value $item_value
+```
+
+### 参照
+
+```console
+az keyvault secret show \
+  --vault-name $az_keyvault_name \
+  --name $item_name
+```
+
 ## AKS
 
 ### クラスター一覧
