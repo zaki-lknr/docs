@@ -259,9 +259,14 @@ ok: [localhost] =>
 
 ## リストから要素の除外(difference)
 
+[ansible.builtin.difference filter – the difference of one list from another — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/difference_filter.html)
+
 リストから特定要素を除外するには`difference`フィルタを使う。  
 入力のリストの要素から、`difference`フィルタの引数に指定したリストの要素を除外したリストを返す。  
 `difference`にもリストを指定する必要がある(iterableな変数でなければエラーとなる)
+
+言い換えると、2つのリストから重複要素を除いたものを返す機能を持つ。  
+なお、順序は保持されない。
 
 ```yaml
 ---
