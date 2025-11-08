@@ -205,8 +205,11 @@ Twitterなどのシェアを有効にしていると`shares`フィールドが�
 
 ### Get Place Details (depr)
 
-APIはv2がすでに無くなりv3を使う必要がある。  
-[Get Place Details](https://docs.foursquare.com/developer/reference/place-details)
+使用不可になった。後述の"places-api"を使う。  
+[Migration Guide](https://docs.foursquare.com/fsq-developers-places/reference/migration-guide)
+
+~~APIはv2がすでに無くなりv3を使う必要がある。  
+[Get Place Details](https://docs.foursquare.com/developer/reference/place-details)~~
 
 ```console
 curl --request GET \
