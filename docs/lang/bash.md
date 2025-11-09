@@ -48,6 +48,16 @@ bin  dev   home  lib64  mnt    proc  run   srv   tmp  var
 
 `set -u`を解除するには`set +u`
 
+## 引数
+
+### 引数の有無
+
+```sh
+if [ "$#" -eq 0 ]; then
+    echo "no argument"
+fi
+```
+
 ## 算術演算
 
 ```console
