@@ -437,6 +437,18 @@ tmux ls
 
 ### 設定
 
+#### (alias)セッションがあればアタッチ・なければ新規セッション
+
+```console
+tmux a || tmux
+```
+
+名前付きでalias設定しておくと良い
+
+```bash
+alias ta='tmux attach -t main || tmux new -s main'
+```
+
 #### マウスホイールでスクロール
 
 デフォルトだとコマンド履歴表示になってる
