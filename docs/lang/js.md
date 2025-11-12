@@ -864,10 +864,16 @@ const select_list = document.getElementById('select_list');
 const value = ver_list.options[0].value;
 ```
 
-項目をリストとしてループ処理するには`Array.from()`を使ってHTMLOptionsCollectionを配列に変換する。
+全項目をリストとしてループ処理するには`Array.from()`を使ってHTMLOptionsCollectionを配列に変換する。
 
 ```javascript
 Array.from(select_list.options).find(elem => ... );
+```
+
+具体的には、例えば項目内から数値型になってるものをピックアップするには以下
+
+```javascript
+Array.from(ver_list.options).find((elem) => Number(elem.value))
 ```
 
 #### label
