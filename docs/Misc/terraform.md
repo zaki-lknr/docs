@@ -351,6 +351,38 @@ countで複数デプロイするEC2のNameタグで`--host tag.Name`の形式で
 ${join(" ", [for h in aws_instance.ec.*.tags.Name : "--host ${h}"])}
 ```
 
+## import
+
+### importブロック
+
+- [Import existing resources into Terraform state | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/language/import)
+- [Import - Generating Configuration | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/language/import/generating-configuration)
+
+```terraform
+import {
+  to = TYPE.LABEL
+  id = "<import対象のリソースID>"
+}
+```
+
+[Telmate/proxmoxであれば、リソースIDの書式は`<node>/<type>/<ID>`]([proxmox_vm_qemu | Resources | Telmate/proxmox | Terraform | Terraform Registry](https://registry.terraform.io/providers/Telmate/proxmox/latest/docs/resources/vm_qemu#import)になる。
+
+```terraform
+import {
+  id = "pve01/qemu/255"
+  to = proxmox_vm_qemu.my-vm
+}
+```
+
+この状態で以下を実行すると、対象リソースのtfコードが`imported_resource.tf`に生成される。
+
+```console
+terraform plan -generate-config-out="imported_resource.tf"
+```
+
+出力されたtfコードを手直ししたり元のtfファイルへマージするなどし、`terraform apply`を実行するとtfstateへインポートされる。  
+最後にimportブロックを削除しても良いが残しても良い。
+
 ## resource
 
 ### デフォルトのルートテーブル
