@@ -155,6 +155,17 @@ vault list identity/entity/id
 vault list identity/entity-alias/id
 ```
 
+### ID詳細
+
+`vault list identity/entity/id`の一覧の一つに対して
+
+```console
+vault read identity/entity/id/<ENTITY-ID>
+```
+
+で出力する。  
+Entity Aliasについても同様。
+
 ## policy
 
 ### 一覧
