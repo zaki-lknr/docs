@@ -1,5 +1,7 @@
 # コレクション
 
+- [Installing collections — Ansible Community Documentation](https://docs.ansible.com/projects/ansible/latest/collections_guide/collections_installing.html)
+
 ## インストール
 
 ```console
