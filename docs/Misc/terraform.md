@@ -351,6 +351,24 @@ countで複数デプロイするEC2のNameタグで`--host tag.Name`の形式で
 ${join(" ", [for h in aws_instance.ec.*.tags.Name : "--host ${h}"])}
 ```
 
+## output
+
+### for_eachで作成したリソースの出力
+
+```terraform
+output "all_items" {
+  value = { for k,v in resource.name : k => v.key }
+}
+```
+
+あるいは
+
+```terraform
+output "all_items" {
+  value = values(resource.name)[*].key
+}
+```
+
 ## import
 
 ### importブロック
