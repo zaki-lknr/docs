@@ -26,6 +26,14 @@ podman push localhost/image:tag docker://remote.example.org/image:tag
 
 push先を第2引数で指定できるのでtag(FQDN)の追加を行っておく必要はない。
 
+#### TLS検証無視
+
+`--tls-verify=false`を付与する。
+
+```console
+podman push registry.example.org/path/to/image:latest --tls-verify=false
+```
+
 ### ps --external
 
 Podman外(buildahビルドなど)のコンテナもリストアップする
