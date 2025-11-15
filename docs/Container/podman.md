@@ -72,3 +72,26 @@ systemctl enable --now podman-restart.service
 ```
 
 これでrootユーザーのコンテナは`--restart=always`が有効(OS起動時にコンテナ起動)になる。
+
+## 設定
+
+### insecureなレジストリ設定
+
+ユーザー単位であれば`$HOME/.config/containers/registries.conf`に以下作成
+
+```ini
+[registries.insecure]
+registries = ['my-registry.example.org:5000']
+```
+
+システムワイドであれば`/etc/containers/registries.conf`または`/etc/containers/registries.conf.d/insecure-registries.conf`などに作成してもよい。
+
+> Error: loading drop-in registries configuration "/etc/containers/registries.conf.d/insecure-registries.conf": registry must be in v2 format but is in v1
+
+エラーが出る場合、v2の書式で作成する。
+
+```toml
+[[registry]]
+location = "my-registry.example.org:5000"
+insecure = true
+```
