@@ -379,6 +379,14 @@ output "all_items" {
 
 ## import
 
+### CLI (terraform import)
+
+```console
+terraform import module.foobar.aws_instance.cloud-dev <リソースID>
+```
+
+これでtfstateに取り込める。1コマンド1つ
+
 ### importブロック
 
 - [Import existing resources into Terraform state | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/language/import)
