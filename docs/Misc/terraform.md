@@ -108,7 +108,15 @@ TF_LOG=DEBUG terraform command
 
 [Debugging | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/internals/debugging)
 
-### 指定モジュールのみ処理
+### 部分実行
+
+#### 指定リソースのみ
+
+```console
+terraform plan -target=awx_instance.my_server
+```
+
+#### 指定モジュールのみ
 
 `-target=module.モジュール名`で指定可能
 
