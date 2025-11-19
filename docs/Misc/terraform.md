@@ -387,6 +387,12 @@ terraform import module.foobar.aws_instance.cloud-dev <リソースID>
 
 これでtfstateに取り込める。1コマンド1つ
 
+`for_each`内のリソースをゼロパディングの文字でキー指定で個別指定する場合、クォートの使い方に注意
+
+```console
+terraform import 'module.foobar.aws_instance.cloud-dev["0001"]' <リソースID>
+```
+
 ### importブロック
 
 - [Import existing resources into Terraform state | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/language/import)
