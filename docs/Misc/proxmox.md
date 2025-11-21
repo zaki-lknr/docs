@@ -335,3 +335,19 @@ root@pve01:~# ls /etc/pve/nodes/pve01/qemu-server/
 111.conf  119.conf  202.conf  301.conf  310.conf  313.conf  707.conf  710.conf  9000.conf  9003.conf  9020.conf
 114.conf  121.conf  203.conf  302.conf  311.conf  702.conf  708.conf  711.conf  9001.conf  9010.conf
 ```
+
+## Ansible
+
+### VM一覧
+
+[community.proxmox.proxmox_vm_info module – Retrieve information about one or more Proxmox VE virtual machines — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/collections/community/proxmox/proxmox_vm_info_module.html)
+
+```yaml
+- name: listup vm
+  community.proxmox.proxmox_vm_info:
+    type: qemu
+  register: vm_info
+```
+
+`node`の指定は任意。`type`もなくても良い。  
+`vm_info.proxmox_vms`にVM情報の辞書型データがリストでセットされる。
