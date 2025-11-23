@@ -426,6 +426,16 @@ console.log(sample_array.join());
 const new_array = current_array.map(item => item += ".");
 ```
 
+#### Array.from()
+
+[Array.from() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+
+配列風のオブジェクトからArrayインスタンスを返す。要は配列処理できるようにする。
+
+```js
+const item_array = Array.from(objects);
+```
+
 ### 辞書
 
 #### 辞書の定義
