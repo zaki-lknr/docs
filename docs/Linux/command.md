@@ -1214,7 +1214,7 @@ ExecStart=/path/to/script.sh
 
 ### journalログ
 
-#### 全量を見るa
+#### 全量を見る
 
 オプション無しで実行
 
