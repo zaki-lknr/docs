@@ -9,3 +9,11 @@
 ```yaml
 ssh_pwauth: true
 ```
+
+## パッケージインストール
+
+```yaml
+packages:
+- podman
+- qemu-guest-agent
+```
