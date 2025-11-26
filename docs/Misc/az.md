@@ -229,6 +229,9 @@ az network dns record-set a add-record \
 
 ### Private DNS
 
+- [az network private-dns record-set a | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/private-dns/record-set/a?view=azure-cli-latest)
+- [az network private-dns zone | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/network/private-dns/zone?view=azure-cli-latest)
+
 #### ゾーン作成
 
 ```console
