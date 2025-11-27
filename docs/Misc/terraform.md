@@ -21,6 +21,15 @@ $ sudo apt-get update && sudo apt-get install terraform
 terraform plan -no-color > plan.txt
 ```
 
+### planの結果をファイル保存し、それを使ってapply時に即処理実行
+
+`plan`の結果を`-out`でファイル出力し、そのファイルを引数に`apply`を実行すると、`apply`実行前の`plan`は省略される。
+
+```console
+terraform plan -out plan.out
+terraform apply -auto-approve plan.out
+```
+
 ### フォーマッタ
 
 standard styleへ変換する。
