@@ -1222,6 +1222,18 @@ ExecStart=/path/to/script.sh
 journalctl
 ```
 
+#### ユニット名指定
+
+```console
+journalctl -u sshd.service
+```
+
+ワイルドカードも使用可能
+
+```console
+journalctl -u "cron*"
+```
+
 ## ホスト名
 
 ### 変更
