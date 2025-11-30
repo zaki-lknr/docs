@@ -65,6 +65,18 @@ $ docker run --name sample --rm -d -v /path/to:/mnt ubuntu tail -f /dev/null
 
 コンテナ内の`/mnt`にホストOSの`/path/to`をマウントする。
 
+#### マウント(--mount)
+
+##### ボリュームマウント
+
+```console
+docker run -d \
+  --name volume-sample \
+  --rm \
+  --mount source=samplevol,target=/mnt \
+  ubuntu:latest tail -f /dev/null
+```
+
 #### ホストのアドレス(--add-host)
 
 `host.docker.internal`をホストOSのアドレスに設定するには`host-gateway`を指定する。
