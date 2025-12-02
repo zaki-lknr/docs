@@ -8,6 +8,9 @@
 
 [[YAML] 複数行テキストの行頭にインデントを設定するには (Ansible/Kubernetes) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/07/17/220311)
 
+- `|`: 記述そのまま。ただし末尾に改行が複数ある場合は1つにまとめられる
+- `>`: 各行の末尾は改行でなくスペースに変換される
+
 ### インデント
 
 ```yaml
