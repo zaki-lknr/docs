@@ -736,6 +736,14 @@ $ git diff -w
 >            Ignore whitespace when comparing lines. This ignores differences
 >            even if one line has whitespace where the other line has none.
 
+### ファイル一覧と分量のみ
+
+`git log --stat`のように差分のあるファイル名とその分量が出力される
+
+```console
+git diff --stat
+```
+
 ### この行をコミットしたのは誰 (git blame)
 
 これで行ごとの最終コミットのID、ユーザー名、コミット日時が出力される
