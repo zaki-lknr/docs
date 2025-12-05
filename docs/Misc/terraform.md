@@ -368,6 +368,12 @@ countで複数デプロイするEC2のNameタグで`--host tag.Name`の形式で
 ${join(" ", [for h in aws_instance.ec.*.tags.Name : "--host ${h}"])}
 ```
 
+### 実装
+
+#### sleepする
+
+[time_sleep](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/sleep)プロバイダを使用する。
+
 ## output
 
 ### for_eachで作成したリソースの出力
