@@ -736,12 +736,31 @@ $ git diff -w
 >            Ignore whitespace when comparing lines. This ignores differences
 >            even if one line has whitespace where the other line has none.
 
-### ファイル一覧と分量のみ
+### ファイル一覧と分量 (--stat)
 
 `git log --stat`のように差分のあるファイル名とその分量が出力される
 
 ```console
-git diff --stat
+$ git diff 6b75 --stat
+ index.html       | 10 ++++++++--
+ style/common.css | 16 ++++++++++++++++
+ style/njgk.css   |  2 +-
+ style/sgbt.css   |  2 +-
+ swarm.js         | 76 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---
+ 5 files changed, 99 insertions(+), 7 deletions(-)
+```
+
+### ファイル一覧と分量の統計のみ (--numstat)
+
+`--stat`より簡易出力
+
+```console
+$ git diff 6b75 --numstat
+8       2       index.html
+16      0       style/common.css
+1       1       style/njgk.css
+1       1       style/sgbt.css
+73      3       swarm.js
 ```
 
 ### この行をコミットしたのは誰 (git blame)
