@@ -1,0 +1,17 @@
+[tools]
+python = "3.10"
+
+[env]
+_.python.venv = { path = ".venv", create = true, python_create_args = ["--upgrade-deps"] }
+PROJECT_NAME = "{{ config_root | basename }}"
+
+[tasks.install]
+description = "install prerequisites"
+alias = "i"
+run = "pip install -r requirements.txt"
+
+
+[tasks.run]
+description = "run mkdocs server"
+alias = "r"
+run = "mkdocs serve"

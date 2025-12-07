@@ -27,6 +27,17 @@ markdown_extensions:
         pygments_style: emacs
         linenums: false
     - pymdownx.tilde
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_css:
+  - https://unpkg.com/mermaid@8.0.0/dist/mermaid.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js
 
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
 google_analytics:
