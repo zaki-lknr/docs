@@ -28,3 +28,12 @@ sheet.getRange("B10").setValue("ここはB10")
 ```javascript
 const resp = UrlFetchApp.fetch(url);
 ```
+
+## UI
+
+### ダイアログ
+
+```javascript
+const ui = SpreadsheetApp.getUi();
+const result = ui.alert(message_string);
+```
