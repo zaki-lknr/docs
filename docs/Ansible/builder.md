@@ -59,3 +59,7 @@ builderイメージは [Certified container images](https://catalog.redhat.com/s
 TagでAnsibleバージョンを選択する。最新はlatest
 
 大まかなバージョン(RHEL8かRHEL9か、など)はマウスオーバーしたときのURLで判断できる。(rhel8やrhel9がパスに入っている)
+
+## execution environment
+
+[Execution environment definition — Ansible Builder Documentation](https://docs.ansible.com/projects/builder/en/latest/definition/)
