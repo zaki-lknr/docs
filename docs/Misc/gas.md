@@ -38,6 +38,20 @@ const ui = SpreadsheetApp.getUi();
 const result = ui.alert(message_string);
 ```
 
+### テキスト入力 (prompt)
+
+```javascript
+const ui = SpreadsheetApp.getUi();
+const result = ui.prompt(title, msg, ui.ButtonSet.YES_NO);
+const button = result.getSelectedButton();
+const input = result.getResponseText();
+
+if (button == ui.Button.YES) {
+    // OK押下の処理
+    Logger.log("input text: " + input);
+}
+```
+
 ## プロパティ
 
 [プロパティ サービス  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/guides/properties?hl=ja)
