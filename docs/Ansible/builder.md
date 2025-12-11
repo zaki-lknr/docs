@@ -63,3 +63,7 @@ TagでAnsibleバージョンを選択する。最新はlatest
 ## execution environment
 
 [Execution environment definition — Ansible Builder Documentation](https://docs.ansible.com/projects/builder/en/latest/definition/)
+
+### 他Galaxyへの接続 (Automation Hub)
+
+[Building EEs with environment variables for Galaxy configuration — Ansible Builder Documentation](https://docs.ansible.com/projects/builder/en/latest/scenario_guides/scenario_custom/)
