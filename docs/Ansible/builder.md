@@ -1,5 +1,8 @@
 # Ansible Builder
 
+- [Introduction to Ansible Builder — Ansible Builder Documentation](https://docs.ansible.com/projects/builder/en/latest/)
+- [第3章 Ansible Builder の使用 | 実行環境の作成と使用 | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html/creating_and_using_execution_environments/assembly-using-builder)
+
 ## ansible-builder
 
 ### タグ指定
