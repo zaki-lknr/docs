@@ -77,3 +77,7 @@ $ ansible-doc -M /path/to/collection-path/ansible_collections/namespace/collecti
 ### トークンの作成
 
 [Hub への接続](https://console.redhat.com/ansible/automation-hub/token/)
+
+## 他プロダクトとの連携
+
+- [HashiCorp と Ansible Automation Platform を使い始める | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index)
