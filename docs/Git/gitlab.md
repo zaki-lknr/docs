@@ -15,3 +15,8 @@
 ### コンテナ版のアップグレード
 
 [Upgrade | GitLab Docs](https://docs.gitlab.com/install/docker/upgrade/)
+
+## CI/CD
+
+- [GitHub Actionsから移行する | GitLab Docs](https://docs.gitlab.com/ja-jp/ci/migration/github_actions/)
+- [GitLab CI/CD から GitHub Actions への移行 - GitHub Enterprise Cloud Docs](https://docs.github.com/ja/enterprise-cloud@latest/actions/tutorials/migrate-to-github-actions/manual-migrations/migrate-from-gitlab-cicd)
