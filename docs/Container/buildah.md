@@ -6,6 +6,12 @@
 buildah build -t my-registry.example.org:5000/repo/app:latest .
 ```
 
+### Containerfile指定
+
+```console
+buildah build -f path/to/Containerfile -t my-registry.example.org:5000/repo/app:latest .
+```
+
 ## dind
 
 DockerコンテナとしてデプロイしたBuildahコンテナ内でビルドするには、`--privileged`オプション付与して起動する。
