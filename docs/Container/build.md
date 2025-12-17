@@ -26,3 +26,16 @@ CMD python /usr/local/src/script.py
 ```
 
 ビルドするホストのカレントにある`script.py`をコンテナの`/usr/local/src/script.py`へコピーする
+
+## 環境変数(ENV / ARG)
+
+`ENV`と`ARG`はどちらも環境変数を定義する。
+
+```Dockerfile
+ENV APP_ID=1234567890
+```
+
+`ENV`と`ARG`の違いは、
+
+- ビルドされたイメージにも`ENV`で指定した環境変数は残る。`ARG`はビルド中のみ
+- `ARG`はビルド時に`--build-arg`で上書きできる
