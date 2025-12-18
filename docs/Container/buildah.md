@@ -20,6 +20,12 @@ buildah build -f path/to/Containerfile -t my-registry.example.org:5000/repo/app:
 buildah push my-registry.example.org:5000/repo/image:latest
 ```
 
+src dst形式でも実行できるため、ビルド時にFQDNを付けていなくても直接pushできる。
+
+```console
+buildah push localhost/image:latest my-registry.example.org:5000/repo/image:latest
+```
+
 ## dind
 
 DockerコンテナとしてデプロイしたBuildahコンテナ内でビルドするには、`--privileged`オプション付与して起動する。
