@@ -76,6 +76,16 @@ docker compose cp app:/path/to/file ./file
 - [Compose ファイル リファレンス ドキュメント](https://docs.docker.jp/reference/compose-file/toc.html)
 - ~~[Compose file version 3 reference | Docker Documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/)~~
 
+### command
+
+`CMD`を上書きする
+
+```yaml
+  command:
+    image: ubuntu:latest
+    command: tail -f /dev/null
+```
+
 ### restartポリシー
 
 サービス名直下に記載する。
