@@ -72,7 +72,9 @@ docker compose cp app:/path/to/file ./file
 
 ## Composeファイル
 
-- [Compose file version 3 reference | Docker Documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/)
+- [Compose file reference | Docker Docs](https://docs.docker.com/reference/compose-file)
+- [Compose ファイル リファレンス ドキュメント](https://docs.docker.jp/reference/compose-file/toc.html)
+- ~~[Compose file version 3 reference | Docker Documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/)~~
 
 ### restartポリシー
 
