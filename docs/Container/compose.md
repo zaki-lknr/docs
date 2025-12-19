@@ -86,6 +86,14 @@ docker compose cp app:/path/to/file ./file
     command: tail -f /dev/null
 ```
 
+ファイルへリダイレクトする場合は`sh -c`をかます
+
+```yaml
+  command:
+    image: ubuntu:latest
+    command: sh -c "command >> /mnt/log.txt"
+```
+
 ### restartポリシー
 
 サービス名直下に記載する。
