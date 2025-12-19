@@ -180,6 +180,35 @@ $ ls ~/.ssh/
 id_rsa  id_rsa.pub  id_rsa_nopass  id_rsa_nopass.pub  known_hosts
 ```
 
+### 鍵サイズ指定
+
+`-b`で指定する。
+
+```console
+$ ssh-keygen -t rsa -b 4096
+```
+
+### 鍵形式の指定
+
+デフォルトでは以下で始まるOpenSSH形式で作成される。
+
+```text
+-----BEGIN OPENSSH PRIVATE KEY-----
+```
+
+`-m`を使うと、形式を指定できる。  
+PEM形式であれば以下の通り。
+
+```console
+$ ssh-keygen -m PEM
+```
+
+出力される鍵は以下で始まる。
+
+```text
+-----BEGIN RSA PRIVATE KEY-----
+```
+
 ### リモートへ公開鍵コピー
 
 ```console
@@ -233,27 +262,6 @@ Your identification has been saved with the new passphrase.
 
 空入力すればパスフレーズを解除できる
 
-### 鍵形式の指定
-
-デフォルトでは以下で始まるOpenSSH形式で作成される。
-
-```text
------BEGIN OPENSSH PRIVATE KEY-----
-```
-
-`-m`を使うと、形式を指定できる。  
-PEM形式であれば以下の通り。
-
-```console
-$ ssh-keygen -m PEM
-```
-
-出力される鍵は以下で始まる。
-
-```text
------BEGIN RSA PRIVATE KEY-----
-```
-
 ### 鍵形式の変更
 
 #### 秘密鍵
@@ -283,14 +291,6 @@ $ ssh-keygen -f ~/.ssh/id_rsa.pub -i -m PKCS8
 ```
 
 「OpenSSH形式と〇〇の変換」で、出力(`-e`export)や入力(`-i`import)の鍵形式を`-m`で指定するっぽい。(片方は指定できるがもう片方はOpenSSH形式固定)
-
-### 鍵サイズ指定
-
-`-b`で指定する。
-
-```console
-$ ssh-keygen -t rsa -b 4096
-```
 
 ### ssh-copy-id
 
