@@ -81,7 +81,7 @@ docker compose cp app:/path/to/file ./file
 `CMD`を上書きする
 
 ```yaml
-  command:
+  my_container:
     image: ubuntu:latest
     command: tail -f /dev/null
 ```
@@ -89,7 +89,7 @@ docker compose cp app:/path/to/file ./file
 ファイルへリダイレクトする場合は`sh -c`をかます
 
 ```yaml
-  command:
+  my_container:
     image: ubuntu:latest
     command: sh -c "command >> /mnt/log.txt"
 ```
