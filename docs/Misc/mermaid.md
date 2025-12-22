@@ -64,6 +64,30 @@ sequenceDiagram
 また、冒頭部分に記述することで描画の順序を記述準に固定できる。  
 `actor`同様、`as`で表示用文言を設定可能。
 
+### 実行仕様 (activate / deactivate)
+
+処理の実行中の長方形を描画するには、開始に`+`、終了に`-`を付与する。
+
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> +server: request
+    server -->> -client: response
+```
+
+`activate`と`deactivate`で明記もできる。
+
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> server: request
+    activate server
+    server -->> client: response
+    deactivate server
+```
+
 ### 同期・非同期
 
 同期処理
