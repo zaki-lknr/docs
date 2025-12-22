@@ -68,6 +68,17 @@ sequenceDiagram
 
 処理の実行中の長方形を描画するには、開始に`+`、終了に`-`を付与する。
 
+````text
+
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> +server: request
+    server -->> -client: response
+```
+````
+
 ```mermaid
 sequenceDiagram
     participant client
@@ -77,6 +88,18 @@ sequenceDiagram
 ```
 
 `activate`と`deactivate`で明記もできる。
+
+````text
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> server: request
+    activate server
+    server -->> client: response
+    deactivate server
+```
+````
 
 ```mermaid
 sequenceDiagram
