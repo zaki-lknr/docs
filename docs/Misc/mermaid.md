@@ -7,8 +7,10 @@
 ````text
 ```mermaid
 sequenceDiagram
+    actor user
     participant client
     participant server
+    user ->> client: press button
     client ->> server: request
     server -->> client: response
 ```
