@@ -63,3 +63,49 @@ sequenceDiagram
 省略可能。箱型のライフラインを定義。  
 また、冒頭部分に記述することで描画の順序を記述準に固定できる。  
 `actor`同様、`as`で表示用文言を設定可能。
+
+### 同期・非同期
+
+同期処理
+
+````text
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> +server: request
+    server --) -client: response
+```
+````
+
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> +server: request
+    server --) -client: response
+```
+
+非同期処理
+
+````text
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client -) server: request
+    activate  server
+    note right of server: 非同期処理
+    deactivate server
+```
+````
+
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client -) server: request
+    activate  server
+    note right of server: 非同期処理
+    deactivate server
+```
