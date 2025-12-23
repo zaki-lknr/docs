@@ -2,6 +2,8 @@
 
 ## シーケンス図
 
+[Sequence diagrams | Mermaid](https://mermaid.js.org/syntax/sequenceDiagram.html)
+
 コード
 
 ````text
