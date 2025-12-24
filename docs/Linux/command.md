@@ -209,6 +209,14 @@ curl --resolve ansible.example.org:443:192.168.0.41 https://ansible.example.org/
 curl -u username:password http://example.org/
 ```
 
+### proxy
+
+`http://proxy:8080`をプロキシサーバーとして設定してHTTPアクセスする
+
+```command
+curl -x http://proxy:8080 https://target.example.org
+```
+
 ### HTTP 0.9
 
 ```console
