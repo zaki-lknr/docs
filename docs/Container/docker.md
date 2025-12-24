@@ -77,9 +77,19 @@ docker run -d \
   ubuntu:latest tail -f /dev/null
 ```
 
-#### ホストのアドレス(--add-host)
+#### /etc/hosts編集(--add-host)
 
-`host.docker.internal`をホストOSのアドレスに設定するには`host-gateway`を指定する。
+`--add-host <ホスト名/FQCN>:IPアドレス`の書式でコンテナ内の`/etc/hosts`に設定追加できる。
+
+```console
+docker run -d --rm --add-host myapp:10.0.0.10 alpine:latest tail -f /dev/null
+```
+
+これでコンテナ内の`/etc/hosts`に`10.0.0.10       myapp`が追記される。
+
+##### ホストのアドレス
+
+`host.docker.internal`をホストOSのアドレスに設定するには`host-gateway`を指定して`--add-host`する。
 
 ```console
 docker run --add-host host.docker.internal:host-gateway --rm -it centos bash
