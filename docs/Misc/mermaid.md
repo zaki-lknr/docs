@@ -66,12 +66,41 @@ sequenceDiagram
 また、冒頭部分に記述することで描画の順序を記述準に固定できる。  
 `actor`同様、`as`で表示用文言を設定可能。
 
+### ライフラインの作成
+
+`create`を宣言して開始の矢印、`destroy`を宣言して終了の矢印、の順に記載。
+
+````text
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> server: request
+    create participant thread
+    server ->> thread: new
+    destroy thread
+    thread -->> server: delete
+    server -->> client: response
+```
+````
+
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> server: request
+    create participant thread
+    server ->> thread: new
+    destroy thread
+    thread -->> server: delete
+    server -->> client: response
+```
+
 ### 実行仕様 (activate / deactivate)
 
 処理の実行中の長方形を描画するには、開始に`+`、終了に`-`を付与する。
 
 ````text
-
 ```mermaid
 sequenceDiagram
     participant client
