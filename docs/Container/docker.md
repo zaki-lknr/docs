@@ -85,7 +85,8 @@ docker run -d \
 docker run --add-host host.docker.internal:host-gateway --rm -it centos bash
 ```
 
-これでコンテナ内の`/etc/hosts`に`host.docker.internal`のエントリが追加され、ホストOSへのアドレスが設定される。
+これでコンテナ内の`/etc/hosts`に`host.docker.internal`のエントリが追加され、ホストOSへのアドレスが設定される。  
+[Support host.docker.internal in dockerd on Linux by arkodg · Pull Request #40007 · moby/moby](https://github.com/moby/moby/pull/40007)
 
 #### ENTRYPOINTの上書き(--entrypoint)
 
