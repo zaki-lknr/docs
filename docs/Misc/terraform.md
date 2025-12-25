@@ -15,6 +15,19 @@ $ sudo apt-get update && sudo apt-get install terraform
 
 ## CLI
 
+### consoleでコードの確認
+
+引数無し`python`のように、CLIで関数などの実行を確認できる。
+
+```console
+zaki@cloud-dev2:~$ terraform console
+>
+> join("-", ["foo", "bar", "baz"])
+"foo-bar-baz"
+>
+> exit
+```
+
 ### 出力をファイルへリダイレクトする際のカラー無効化
 
 ```console
