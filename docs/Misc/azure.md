@@ -8,6 +8,13 @@
     - [クイック スタート: Azure Communication Services でメール通信サービスのリソースを作成して管理する - An Azure Communication Services quickstart | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/communication-services/quickstarts/email/create-email-communication-resource?pivots=platform-azp)
 - [Azure のサーバーレス コンテナー - Azure Container Instances | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/container-instances/container-instances-overview)
 
+## アカウント
+
+### サブスクリプションの確認
+
+Azureサービスの「サブスクリプション」から確認できる。  
+CLIであれば`az account show --query id`
+
 ## Cloud Shell
 
 [Azure Cloud Shell に関してよくあるご質問 (FAQ) | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/cloud-shell/faq-troubleshooting)

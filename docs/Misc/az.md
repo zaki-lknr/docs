@@ -71,6 +71,12 @@ az aks list --query "[?contains(name,'dev')].name"
 az account list
 ```
 
+### サブスクリプションIDの確認
+
+```console
+az account show --query id
+```
+
 ### テナントID一覧
 
 ```console
