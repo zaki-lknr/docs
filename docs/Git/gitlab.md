@@ -27,3 +27,24 @@
 
 - [GitHub Actionsから移行する | GitLab Docs](https://docs.gitlab.com/ja-jp/ci/migration/github_actions/)
 - [GitLab CI/CD から GitHub Actions への移行 - GitHub Enterprise Cloud Docs](https://docs.github.com/ja/enterprise-cloud@latest/actions/tutorials/migrate-to-github-actions/manual-migrations/migrate-from-gitlab-cicd)
+
+### Runner登録
+
+executor dockerの場合  
+
+```console
+gitlab-runner register -n \
+  --url ${gitlab_url} \
+  --token ${token} \
+  --name container-executor \
+  --executor docker \
+  --docker-image ${container_image} \
+  --docker-network-mode ${container_network} \
+  --docker-privileged
+```
+
+最後の`--docker-privileged`がないと、dindでイメージビルドなどが失敗する。(dockerコマンドが使用不能)
+
+```console
+failed to connect to the docker API at tcp://docker:2375: lookup docker on 127.0.0.11:53: server misbehaving
+```
