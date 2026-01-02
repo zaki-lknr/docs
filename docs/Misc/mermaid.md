@@ -187,3 +187,39 @@ sequenceDiagram
     note right of server: 非同期処理
     deactivate server
 ```
+
+### 条件分岐 (alt)
+
+````text
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> server: 認証リクエスト
+    activate server
+    alt 認証成功
+    server -->> client: メイン画面を表示
+    else 認証失敗
+    server -->> client: ログイン画面とエラーメッセージを表示
+    else 例外
+    server -->> client: エラー画面を表示
+    end
+    deactivate server
+```
+````
+
+```mermaid
+sequenceDiagram
+    participant client
+    participant server
+    client ->> server: 認証リクエスト
+    activate server
+    alt 認証成功
+    server -->> client: メイン画面を表示
+    else 認証失敗
+    server -->> client: ログイン画面とエラーメッセージを表示
+    else 例外
+    server -->> client: エラー画面を表示
+    end
+    deactivate server
+```
