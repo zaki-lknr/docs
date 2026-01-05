@@ -240,6 +240,10 @@ jobs:
 
 ### タスク(steps)
 
+#### 式の評価
+
+[ワークフローとアクションで式を評価する - GitHub ドキュメント](https://docs.github.com/ja/actions/reference/workflows-and-actions/expressions)
+
 #### if
 
 条件によってタスクを処理せずスキップする
