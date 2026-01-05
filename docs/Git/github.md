@@ -318,7 +318,7 @@ steps:
 az loginを行うアクション  
 [Azure Login · Actions · GitHub Marketplace](https://github.com/marketplace/actions/azure-login)
 
-`subscription-id`/`client-id`/`tenant-id`のセットか、`creds`にクレデンシャル情報を指定する。  
+`subscription-id`/`client-id`/`tenant-id`のセット(OpenID Connect(OIDC))か、`creds`にクレデンシャル情報を指定(サービスプリンシパル)する。  
 `creds`の場合は以下の形式の文字列
 
 ```json
