@@ -296,6 +296,12 @@ steps:
 
 [GitHub Actions のワークフロー コマンド - GitHub Docs](https://docs.github.com/ja/actions/reference/workflows-and-actions/workflow-commands#multiline-strings)
 
+### GITHUB_TOKENとpermissions
+
+- [ワークフローでの認証に GITHUB_TOKEN を使用する - GitHub ドキュメント](https://docs.github.com/ja/actions/tutorials/authenticate-with-github_token)
+- [GitHub ActionsでGITHUB_TOKENの権限が足りないエラーが送出されたとき、私は長いこと設定から権限をread/writeに変えて対応してきました。このたびpermissionsを知りました - nikkie-ftnextの日記](https://nikkie-ftnext.hatenablog.com/entry/recognize-github-actions-yaml-permissions-granularity)
+- [[GitHub Actions]GITHUB_TOKENの権限とPermissions設定](https://zenn.dev/nofi/articles/988359c950de4f)
+
 ### Runners
 
 - GitHubのランナーを利用する
