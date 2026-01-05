@@ -330,6 +330,18 @@ az loginを行うアクション
 }
 ```
 
+#### Azure CLI
+
+Azure CLIコマンドを実行するためのAction
+
+[Azure/cli: Automate your GitHub workflows using Azure CLI scripts](https://github.com/Azure/CLI)
+
+```yaml
+- uses: azure/cli@v2
+  with:
+    az ...
+```
+
 #### AKS
 
 [GitHub Actions を使った Azure Kubernetes Service (AKS) へのコンテナーのビルド、テスト、デプロイ - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/kubernetes-action)
