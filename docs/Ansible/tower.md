@@ -218,6 +218,21 @@ $ curl -sk https://192.168.0.27/api/v2/job_templates/ -H "Authorization: Bearer 
 
 [19.2. パーソナルアクセストークン (PAT) 向けの OAuth2 トークンシステムの使用](https://docs.ansible.com/ansible-tower/latest/html_ja/administration/oauth2_token_auth.html#using-oauth-2-token-system-for-personal-access-tokens-pat)
 
+### 認証トークン
+
+にわとり・たまごな感じだけど、APIでトークンを作成する。  
+(処理のための認証情報は予め必要)
+
+```console
+curl -H "Authorization: Bearer $TOWER_TOKEN" -H "Content-Type: application/json" -sk https://server/api/v2/tokens/ -XPOST -d '{"description": "test", "scope": "write"}'
+```
+
+レスポンスは以下の通り、トークン文字列を含む。
+
+```json
+{"id":25,"type":"o_auth2_access_token","url":"/api/v2/tokens/25/","related":{"user":"/api/v2/users/1/","activity_stream":"/api/v2/tokens/25/activity_stream/"},"summary_fields":{"user":{"id":1,"username":"admin","first_name":"","last_name":""}},"created":"2026-01-05T06:25:10.874771Z","modified":"2026-01-05T06:25:10.885774Z","description":"test","user":1,"token":"H17XHP2GAGubYrYsQv77u7hcacUHLT","refresh_token":null,"application":null,"expires":"3025-05-08T06:25:10.867732Z","scope":"write"}
+```
+
 ### ping
 
 ```console
