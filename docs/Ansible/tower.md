@@ -182,6 +182,11 @@ awx-manage cleanup_jobs [--help]
 awx-manage cleanup_jobs --days 3
 ```
 
+`awx-manage cleanup_jobs`であれば、ジョブ履歴に加えてイベント情報も消える。  
+UIのジョブ一覧からの削除の場合、ジョブは消えるがイベント情報は残るので注意。
+
+[PG size keeps growing even after continuously deleting job history · Issue #14590 · ansible/awx](https://github.com/ansible/awx/issues/14590)
+
 ## API
 
 API一覧は以下。  
