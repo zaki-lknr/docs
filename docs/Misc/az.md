@@ -514,3 +514,7 @@ az aks nodepool upgrade \
   --name ${nodepool_name} \
   --kubernetes-version ${k8s_version}
 ```
+
+## App Service
+
+[App Services | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/service-page/app%20services?view=azure-cli-latest)
