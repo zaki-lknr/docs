@@ -2,6 +2,13 @@
 
 分類変えるかも…
 
+## install
+
+[Linux上でのkubectlのインストールおよびセットアップ | Kubernetes](https://kubernetes.io/ja/docs/tasks/tools/install-kubectl-linux/)
+
+パッケージマネージャ形式でインストールする場合、リポジトリのパスにバージョンが含まれているため、`dnf`/`apt`だけではアップグレードできないので注意。  
+(アップグレード時にはリポジトリ設定の更新が必要)
+
 ## オプション
 
 ### kubeconfigファイル指定
