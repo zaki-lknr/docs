@@ -37,6 +37,20 @@ src dst形式でも実行できるため、ビルド時にFQDNを付けていな
 buildah push localhost/image:latest my-registry.example.org:5000/repo/image:latest
 ```
 
+## working container
+
+### リスト
+
+```console
+buildah containers
+```
+
+### 削除
+
+```console
+buildah rm containerID1 containerID2 containerID3 ...
+```
+
 ## dind
 
 DockerコンテナとしてデプロイしたBuildahコンテナ内でビルドするには、`--privileged`オプション付与して起動する。

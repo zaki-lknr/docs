@@ -51,6 +51,8 @@ CONTAINER ID  IMAGE                                                             
 :
 ```
 
+これらのコンテナを削除するには`buildah`の削除コマンド(`buildah rm <containerID>`)を使う。
+
 ### stats
 
 リソース使用状況を確認。  
