@@ -51,6 +51,16 @@ CONTAINER ID  IMAGE                                                             
 :
 ```
 
+### stats
+
+リソース使用状況を確認。  
+`docker stats`とだいたい同じ。
+
+```console
+ID            NAME         CPU %       MEM USAGE / LIMIT  MEM %       NET IO             BLOCK IO    PIDS        CPU TIME    AVG CPU %
+e73ceb58e96c  jolly_morse  0.00%       397.3kB / 8.045GB  0.00%       1.098kB / 9.082kB  0B / 0B     1           6.895138s   0.00%
+```
+
 ## volume
 
 ### permission denied
