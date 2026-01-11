@@ -971,6 +971,39 @@ float型なので必要に応じて`int()`を併用する。
 sec = int((datetime.datetime.now() + datetime.timedelta(days=-30)).timestamp())
 ```
 
+#### 文字列 -> datetime
+
+`datetime.strptime`を使う。
+
+```py
+import datetime
+date_str = "2026/01/10 08:26:34"
+date_strptime = datetime.datetime.strptime(date_str, '%Y/%m/%d %H:%M:%S')
+```
+
+| 指定子 | 意味 |
+| ---- | ------------ |
+| `%Y` | 西暦 (4桁)      |
+| `%m` | 月 (`01`オリジン) |
+| `%d` | 日            |
+| `%H` | 時            |
+| `%M` | 分            |
+| `%S` | 秒            |
+
+その他
+
+| 指定子  | 意味                                    |
+| ---- | ------------------------------------- |
+| `%a` | 曜日の英語表記(`Mon.`とか`fri`とか)              |
+| `%b` | 月の英語表記(`Feb`とか`may`とか)                |
+| `%f` | マイクロ秒(秒の小数点未満6桁)                      |
+| `%I` | 12時間表記のhour (↓とセットで使う)                |
+| `%p` | AM/PM (↑とセットで使う)                      |
+| `%Z` | タイムゾーン名 (`UTC`とか`GMT`とか`JST`とか。本記事参照) |
+| `%z` | UTCオフセット                              |
+
+[[Python] datetime.strptime()を使った文字列からdatetimeオブジェクトへの変換とタイムゾーン - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/02/11/225358)
+
 ### byte型
 
 変数出力すると`b'....'`と表記され出力される。
