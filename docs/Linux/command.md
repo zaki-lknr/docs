@@ -953,6 +953,15 @@ ip route add default via 172.16.1.0 dev eth1 metric 1000
 ip route delete default dev eth0
 ```
 
+### json形式出力
+
+最初に`-j`追加  
+(optionsは最初に付与する必要がある)
+
+```console
+ip -j a
+```
+
 ## NetworkManager
 
 ### インタフェース一覧
