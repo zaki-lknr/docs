@@ -83,6 +83,12 @@ backend servers
   server host1 192.168.0.68:6443 ssl verify none check
 ```
 
+### 統計情報
+
+```console
+echo "show stat" | socat stdio /var/lib/haproxy/stats
+```
+
 ## dnsmasq
 
 ### 起動オプション
