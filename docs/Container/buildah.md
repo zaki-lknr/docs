@@ -20,7 +20,29 @@ buildah build -f path/to/Containerfile -t my-registry.example.org:5000/repo/app:
 amd64のマシン上でも`--arch arm64`を付与すれば、arm64版イメージビルドできる。
 
 ```console
-buildah build -f Dockerfile --arch arm64 -t buildah:arm64
+### for arm64
+buildah build -f Dockerfile --arch arm64 -t sample-image:arm64
+
+### for amd64
+buildah build -f Dockerfile --arch amd64 -t sample-image:amd64
+```
+
+### マルチアーキテクチャイメージ
+
+上記でビルドした2つのアーキテクチャ用イメージのマニフェストを作成し、それに`add`する。  
+`push`する場合は`manifest`を付け忘れないこと。
+
+```console
+## create manifest
+buildah manifest create sample-image:multi
+
+## add image
+buildah manifest add sample-image:multi localhost/sample-image:amd64
+buildah manifest add sample-image:multi localhost/sample-image:arm64
+
+## push image
+buildah manifest push --all localhost/sample-image:multi docker.io/username/sample-image:multi
+buildah manifest push --all localhost/sample-image:multi docker://registry.example.org/zaki/images/sample-image:multi
 ```
 
 ## push
