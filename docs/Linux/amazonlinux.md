@@ -25,3 +25,5 @@ dnf check-release-update
 ```console
 dnf upgrade --releasever=latest
 ```
+
+- [AL2023 のパッケージとオペレーティングシステムとの更新を管理する - Amazon Linux 2023](https://docs.aws.amazon.com/ja_jp/linux/al2023/ug/managing-repos-os-updates.html)
