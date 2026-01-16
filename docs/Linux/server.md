@@ -85,8 +85,20 @@ backend servers
 
 ### 統計情報
 
+CLIの場合
+
 ```console
 echo "show stat" | socat stdio /var/lib/haproxy/stats
+```
+
+web UIの場合は`haproxy.cfg`に以下設定を追加し、ブラウザで`http://server:8080/stats`にアクセスする。
+
+```cfg
+listen haproxy-stats
+  bind *:8080
+  mode http
+  stats enable
+  stats uri /stats
 ```
 
 ## dnsmasq
