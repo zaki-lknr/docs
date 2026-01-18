@@ -349,3 +349,10 @@ Azure CLIコマンドを実行するためのAction
 #### AKS
 
 [GitHub Actions を使った Azure Kubernetes Service (AKS) へのコンテナーのビルド、テスト、デプロイ - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/kubernetes-action)
+
+##### k8s-bake
+
+[Azure/k8s-bake: GitHub Action creating Kubernetes manifest files with Helm, Kustomize, or Kompose](https://github.com/Azure/k8s-bake)
+
+Helmやkustomizeを使ってデプロイする。  
+ただHelmについてはHelmチャートからマニフェストファイルを生成し、それをデプロイする形となるため、クラスター上にHelmとしての情報は残らない。
