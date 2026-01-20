@@ -111,6 +111,12 @@ PRがopenのままリジェクトとかされてないなら、追いpushすれ�
 
 [プルリクエストのクローズ - GitHub Docs](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/closing-a-pull-request)
 
+### マージ済みPRの打消し
+
+[Pull Request を打ち消す - GitHub ドキュメント](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/reverting-a-pull-request)
+
+PRの画面内にRevertボタンがある。
+
 ## Release
 
 [リポジトリのリリースを管理する - GitHub Docs](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
