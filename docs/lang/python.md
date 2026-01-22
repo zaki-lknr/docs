@@ -1169,6 +1169,20 @@ print(ret.stdout)
 subprocess.run("ls -l", shell=True)
 ```
 
+### sleep
+
+指定の秒数停止する。
+
+```python
+import time
+
+time.sleep(5)
+```
+
+[time --- 時刻データへのアクセスと変換 — Python 3.14.2 ドキュメント](https://docs.python.org/ja/3/library/time.html#time.sleep)
+
+浮動小数点の指定も可能。
+
 ### 出力
 
 #### 標準エラー出力
