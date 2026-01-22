@@ -1247,6 +1247,20 @@ with open(file_path, mode='w') as f:
 | `a+` | read/write | 削除しない   | 作成する   | 末尾       |
 | `x+` | read/write | 存在すると例外 | 作成のみ   | 先頭       |
 
+#### readしてwrite (ただしファイルが無い場合は新規作成する)
+
+`a+`で開いて`seek(0)`で先頭に移動して処理する。
+
+```python
+with open(file_path, 'a+') as f:
+    f.seek(0)
+    data = f.read()
+    print(data)
+
+    f.truncate(0)
+    f.write(new_data)
+```
+
 ### 通信
 
 #### HTTP(requests)
