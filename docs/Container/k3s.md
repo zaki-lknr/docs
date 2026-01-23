@@ -270,6 +270,13 @@ NAME           STATUS   ROLES                  AGE   VERSION
 b513c8231aad   Ready    <none>                 11s   v1.29.1+k3s2
 ```
 
+### down/upでノードがNotReadyになるためdeleteが必要
+
+ノードコンテナ再作成によって旧ノードが消え新ノードが追加されるため、旧ノードはNotReadyになる。  
+`kubectl delete node`で削除すれば良い。
+
+[アーキテクチャ | K3s](https://docs.k3s.io/ja/architecture)
+
 ## Always FreeのOCI(A1.Flex 2cpu/12gb ram)にシングルノードクラスタ作る
 
 標準のE2.1.Microの場合↓  
