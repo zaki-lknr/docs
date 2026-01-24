@@ -635,6 +635,20 @@ URLへユーザー名とパスワードを埋め込めばOK
 
 [awx.awx.user module – create, update, or destroy Automation Platform Controller users. — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/collections/awx/awx/user_module.html)
 
+### トークン作成
+
+「指定ユーザーのトークンを作成」という機能はない(接続に使用するユーザーのトークンが作成される)ため、特定のユーザーでのトークンを作成したければ、そのユーザーの認証情報を使ってこのタスクのみ接続情報を変更する。  
+ユーザー作成直後などであれば認証情報も作成に使ったものがあるはずなので、そのまま`controller_username`などで情報を上書きする。
+
+```yaml
+  - name: create token
+    awx.awx.token:
+      description: test_token
+      scope: write
+      # controller_username: "{{ username }}"
+      # controller_password: "{{ password }}" 
+```
+
 ## ssh
 
 ### openssh_keypair

@@ -238,6 +238,14 @@ curl -H "Authorization: Bearer $TOWER_TOKEN" -H "Content-Type: application/json"
 {"id":25,"type":"o_auth2_access_token","url":"/api/v2/tokens/25/","related":{"user":"/api/v2/users/1/","activity_stream":"/api/v2/tokens/25/activity_stream/"},"summary_fields":{"user":{"id":1,"username":"admin","first_name":"","last_name":""}},"created":"2026-01-05T06:25:10.874771Z","modified":"2026-01-05T06:25:10.885774Z","description":"test","user":1,"token":"H17XHP2GAGubYrYsQv77u7hcacUHLT","refresh_token":null,"application":null,"expires":"3025-05-08T06:25:10.867732Z","scope":"write"}
 ```
 
+エンドポイント名とその説明的に「指定ユーザーのトークンを作成する」という機能がありそうに見えるが、実際には指定したユーザーIDは無視され実行時の認証に使ったアカウント権限でトークンが作成される。
+
+- `/api/v2/users/{id}/tokens/` Create an Access Token for a User
+
+<https://docs.ansible.com/projects/awx/en/latest/rest_api/api_ref.html#/Users/Users_users_tokens_create>
+
+[Allow Token Creation for other Users in the REST API · Issue #1653 · ansible/awx](https://github.com/ansible/awx/issues/1653)
+
 ### ping
 
 ```console
