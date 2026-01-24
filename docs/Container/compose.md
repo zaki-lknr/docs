@@ -282,3 +282,19 @@ K3S_TOKEN=298143103216182
 
 `environment`で指定する。  
 前述`.env`による設定はComposeファイル上の変数参照に使用するものであり、コンテナ内の環境変数定義は別。
+
+### 常駐型でないワンショット処理の起動
+
+そのまま`services`に定義すればよい。
+
+```yaml
+services:
+  server:
+    image: httpd
+
+  command:
+    image: fedora:latest
+    command: ....
+```
+
+この場合httpdは動作し続けるが、fedoraコンテナで実行するコマンドは終了すればコンテナも停止(正常終了)する。
