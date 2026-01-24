@@ -1,5 +1,13 @@
 # イメージビルド
 
+## ベースイメージ
+
+```Dockerfile
+FROM debian:bookworm-slim
+```
+
+- Debian Slim: `stable-slim`, `13.3-slim`, `trixie-slim` など
+
 ## ロケールの追加
 
 Debian系の場合はこんな感じ。
