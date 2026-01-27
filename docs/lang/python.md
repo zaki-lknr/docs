@@ -1261,6 +1261,30 @@ with open(file_path, 'a+') as f:
     f.write(new_data)
 ```
 
+#### flockでロック
+
+```python
+import fcntl
+import os
+
+with open(file_path, 'a+') as f:
+    try:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        f.seek(0)
+        data = f.read()
+        print(data)
+
+        f.truncate(0)
+        f.write(output)
+
+        f.flush()
+        os.fsync(f.fileno())
+    finally:
+        fcntl.flock(f, fcntl.LOCK_UN)
+```
+
+unlockはwith句を抜ければ自動で行われるため、finally節で明示的に実行する必要は厳密には無い。
+
 ### 通信
 
 #### HTTP(requests)
