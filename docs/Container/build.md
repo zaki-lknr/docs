@@ -8,6 +8,11 @@ FROM debian:bookworm-slim
 
 - Debian Slim: `stable-slim`, `13.3-slim`, `trixie-slim` など
 
+軽量化を目的だけにAlpineを使うのは注意。
+
+- [軽量Dockerイメージに安易にAlpineを使うのはやめたほうがいいという話 - inductor's blog](https://blog.inductor.me/entry/alpine-not-recommended)
+- [とりあえずでDockerイメージにAlpine Linuxを選択するのはやめましょうという話 - NIFTY engineering](https://engineering.nifty.co.jp/blog/26586)
+
 ## ロケールの追加
 
 Debian系の場合はこんな感じ。
