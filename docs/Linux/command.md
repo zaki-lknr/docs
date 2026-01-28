@@ -646,6 +646,17 @@ $ ps --ppid 1961 --no-headers
 
 [linux - kill -0 <PID> は何をするのでしょうか？ - スタック・オーバーフロー](https://ja.stackoverflow.com/questions/53077/kill-0-pid-%E3%81%AF%E4%BD%95%E3%82%92%E3%81%99%E3%82%8B%E3%81%AE%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B)
 
+### pkill
+
+プロセス名を指定してシグナルを送るコマンド。  
+プロセス名は正規表現で指定する。
+
+```console
+pkill httpd
+```
+
+[【 pkill 】コマンド――名前を指定してプロセスを終了させる：Linux基本コマンドTips（132） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1708/03/news014.html)
+
 ## top
 
 ### サマリ項目
