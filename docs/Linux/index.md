@@ -174,6 +174,8 @@ sudo grub-install /dev/sda
 
 ### Ubuntu
 
+次のLTSへのアップグレードは以下
+
 - `sudo apt-get update`
 - `sudo apt-get upgrade`
 - `sudo apt-get dist-upgrade`
@@ -190,3 +192,19 @@ SSH経由だと上記警告が出るが続けるなら続ける。
 
 aptラインの編集は不要。(`do-release-upgrade`を叩けば勝手にやってくれる)  
 ただしサードパーティのaptラインを追加してる場合はアップグレードに対応してない場合もあるので注意。
+
+最新LTSから非LTS(24.04から24.10など)へのアップグレードの場合、普通に実行すると以下の通りの出力になる。
+
+```console
+$ sudo do-release-upgrade 
+Checking for a new Ubuntu release
+There is no development version of an LTS available.
+To upgrade to the latest non-LTS development release 
+set Prompt=normal in /etc/update-manager/release-upgrades.
+```
+
+メッセージの通り、`/etc/update-manager/release-upgrades`ファイルの`Prompt=lts`となっている箇所を`Prompt=normal`に編集して `do-release-upgrade` を実行すれば良い。
+
+```console
+$ sudo sed -i -e 's/Prompt=lts/Prompt=normal/' /etc/update-manager/release-upgrades
+```
