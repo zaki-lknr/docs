@@ -667,6 +667,15 @@ print(r)
 
 ### 文字列
 
+#### 空文字判定
+
+空文字がセットされた変数は、それ自体が`False`となるので、比較等は不要。
+
+```python
+if not blank_string:
+    print("blank")
+```
+
 #### 指定文字で始まるか
 
 ```python
