@@ -37,6 +37,14 @@ docker compose --project-directory /path/to/dir ps
 
 デフォルトは`-f`で指定したcomposeファイルのパスなので、`-f`を使えば基本的に不要(な気がする)
 
+### composeファイル指定
+
+`-f`で指定する。
+
+```console
+docker compose -f /path/to/compose-v1.2.3.yml up -d
+```
+
 ### 停止と削除
 
 ```console
@@ -56,14 +64,6 @@ docker compose down -v
 ```console
 docker compose stop myapp
 docker compose rm myapp
-```
-
-### composeファイル指定
-
-`-f`で指定する。
-
-```console
-docker compose -f compose-v1.2.3.yml up -d
 ```
 
 ### コマンド起動
