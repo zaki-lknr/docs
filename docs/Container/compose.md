@@ -94,6 +94,17 @@ docker compose cp app:/path/to/file ./file
     command: sh -c "command >> /mnt/log.txt"
 ```
 
+### ホスト名
+
+コンテナ内におけるホスト名はデフォルトではコンテナIDになる。  
+ホスト名を明示するには`hostname`で指定する。
+
+```yaml
+  app:
+    hostname: appserver
+    image: "appserver:latest"
+```
+
 ### restartポリシー
 
 サービス名直下に記載する。
