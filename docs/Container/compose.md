@@ -24,8 +24,18 @@ docker compose up -d
 ```console
 docker compose -p project-name up -d
 docker compose -p project-name ps
-
 ```
+
+### プロジェクトディレクトリ指定
+
+composeファイルのあるディレクトリを指定。
+
+```console
+docker compose --project-directory /path/to/dir up -d
+docker compose --project-directory /path/to/dir ps
+```
+
+デフォルトは`-f`で指定したcomposeファイルのパスなので、`-f`を使えば基本的に不要(な気がする)
 
 ### 停止と削除
 
