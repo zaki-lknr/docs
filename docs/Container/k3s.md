@@ -277,6 +277,10 @@ b513c8231aad   Ready    <none>                 11s   v1.29.1+k3s2
 
 [アーキテクチャ | K3s](https://docs.k3s.io/ja/architecture)
 
+ノード名を固定しdeleteを回避したい場合は、ノードパスワードも維持するように設定する(`/etc/rancher`のファイルをボリュームを使って維持する)。
+
+[Docker版K3s(Compose使用)でdown/upした際の動作とノード名固定 - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2026/01/23/171358)
+
 ## Always FreeのOCI(A1.Flex 2cpu/12gb ram)にシングルノードクラスタ作る
 
 標準のE2.1.Microの場合↓  
