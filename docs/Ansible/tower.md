@@ -11,6 +11,12 @@
 
 同じインベントリで`setup.sh`を追加実行
 
+## Platform Gateway
+
+### (RPM版)同一ホスト構築は不可
+
+[Is Platform Gateway Possible to Install with Automation Controller in the Same Node? - Red Hat Customer Portal](https://access.redhat.com/solutions/7109618)
+
 ## docs
 
 - 旧ドキュメント
