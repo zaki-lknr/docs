@@ -299,6 +299,14 @@ $ sed -i -e 's/regexp/string/' file
 sed -e 's#foo#bar#' file
 ```
 
+### 行の挿入
+
+正規表現にマッチした次の行にテキストを挿入する
+
+```console
+sed -e '/pattern/a INSERT_TEXT' file
+```
+
 ## awk
 
 `ps aux`の結果の3カラム目を抜き出す。
