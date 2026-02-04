@@ -566,6 +566,16 @@ demo-server-67dcd86d64-wzhs9,10.42.0.8
 kubectl get rolebindings,clusterrolebindings -A -o custom-columns='KIND:kind,NAMESPACE:metadata.namespace,NAME:metadata.name,SERVICE_ACCOUNTS:subjects[?(@.kind=="ServiceAccount")].name' | grep <SERVICE_ACCOUNT_NAME>
 ```
 
+### ラベルでフィルタ(-l)
+
+labelに`app=server`がついているpodをリストする。
+
+```console
+kubectl get pod -l app=server
+```
+
+`-l`は`get`だけでなく`delete`とかでも使用可能。
+
 ### jsonpathでドットを含むキー
 
 キーに使うドットは`\`でエスケープする。
