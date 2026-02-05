@@ -307,6 +307,14 @@ sed -e 's#foo#bar#' file
 sed -e '/pattern/a INSERT_TEXT' file
 ```
 
+上記の場合、行頭から`INSERT_TEXT`が書き込まれるが、インデントを設定したい場合はバックスラッシュがデリミタとなるので以下のように実行する。
+
+```console
+sed -e '/pattern/a \  INSERT_TEXT' file
+```
+
+この場合、行頭にスペース2つ分のインデントが追加される。
+
 ## awk
 
 `ps aux`の結果の3カラム目を抜き出す。
