@@ -304,16 +304,21 @@ sed -e 's#foo#bar#' file
 正規表現にマッチした次の行にテキストを挿入する
 
 ```console
-sed -e '/pattern/a INSERT_TEXT' file
+sed -e '/pattern/a APPEND_TEXT' file
 ```
 
-上記の場合、行頭から`INSERT_TEXT`が書き込まれるが、インデントを設定したい場合はバックスラッシュがデリミタとなるので以下のように実行する。
+上記の場合、行頭から`APPEND_TEXT`が書き込まれるが、インデントを設定したい場合はバックスラッシュがデリミタとなるので以下のように実行する。  
+この場合、行頭にスペース2つ分のインデントが追加される。
 
 ```console
-sed -e '/pattern/a \  INSERT_TEXT' file
+sed -e '/pattern/a \  APPEND_TEXT' file
 ```
 
-この場合、行頭にスペース2つ分のインデントが追加される。
+前の行に挿入するには`a`でなく`i`を指定する。
+
+```console
+sed -e '/pattern/i INSERT_TEXT' file
+```
 
 ## awk
 
