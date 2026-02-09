@@ -301,6 +301,8 @@ sed -e 's#foo#bar#' file
 
 ### 行の挿入
 
+#### 正規表現パターン
+
 正規表現にマッチした次の行にテキストを挿入する
 
 ```console
@@ -318,6 +320,20 @@ sed -e '/pattern/a \  APPEND_TEXT' file
 
 ```console
 sed -e '/pattern/i INSERT_TEXT' file
+```
+
+#### 指定行番号
+
+```console
+sed -e '10a APPEND_TEXT' file
+sed -e '10i INSERT_TEXT' file
+```
+
+正規表現パターンではなく単に数字を指定すれば行番号指定になる。`a`でappend(次行)、`i`でinsert(前行)へ挿入。  
+`a`や`i`のあとに`\`を入れればデリミタ扱いとなるので、スペースも認識する。
+
+```console
+sed -e '10a\    APPEND_TEXT(4spaces indent)' file
 ```
 
 ## awk
