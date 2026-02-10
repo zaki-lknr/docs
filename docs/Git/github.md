@@ -33,9 +33,9 @@ GitHub上でブランチを作成するには「View all branches」画面で「
 
 [2 要素認証クレデンシャルをなくした際のアカウントの回復 - GitHub ドキュメント](https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials)
 
-### git cloneの認証
+### 認証設定
 
-#### HTTPS
+#### HTTPSでgit clone
 
 GitHubのアカウントでは認証できないので、個人用アクセストークンを作成する。
 
