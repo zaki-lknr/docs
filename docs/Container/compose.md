@@ -17,6 +17,12 @@ docker compose up
 docker compose up -d
 ```
 
+特定コンテナのみ起動する場合はサービス名を指定。(複数指定可)
+
+```console
+docker compose up -d <service-name> <service-name> <service-name>
+```
+
 ### プロジェクト名を指定
 
 デフォルトではディレクトリ名が使用されるが、そのままだと異なるコンテナ環境でもディレクトリ名がたまたまでも同一だと競合してしまう。その場合はプロジェクト名を指定する。
