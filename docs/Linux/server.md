@@ -45,6 +45,19 @@ restorecon -R /share/
 
 <https://docs.haproxy.org/2.9/configuration.html#4.2-timeout>
 
+### チェックインターバル
+
+死活監視の間隔の指定は`inter n`を記述。以下は5秒間隔での実行。(デフォルト2000ms)
+
+```
+backend app
+  balance roundrobin
+  server app1 httpd1:80 check inter 5s
+  server app2 httpd2:80 check inter 5s
+```
+
+<https://docs.haproxy.org/3.2/configuration.html#inter>
+
 ### タイムアウト
 
 | 設定      | 機能                            |
