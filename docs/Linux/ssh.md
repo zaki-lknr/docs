@@ -237,6 +237,18 @@ $ ssh-keygen -l -f ~/.ssh/id_rsa.pub
 4096 SHA256:6Qt0+Nikcx/NpgM4xu/4WnDpqhj8L+OjtDEP5O2a7lw no comment (RSA)
 ```
 
+サーバーへアクセスしたときに表示されるフィンガープリントはサーバーの公開鍵を見れば良い。
+
+```console
+$ ssh localhost
+The authenticity of host 'localhost (::1)' can't be established.
+ED25519 key fingerprint is SHA256:wMt6BsdrtBNFa6bCZwA97ZFckU1HsoK5wsEW5dqHPe0.
+:
+:
+$ ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub 
+256 SHA256:wMt6BsdrtBNFa6bCZwA97ZFckU1HsoK5wsEW5dqHPe0 no comment (ED25519)
+```
+
 ### 秘密鍵から公開鍵を作成
 
 ```console
