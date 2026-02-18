@@ -23,6 +23,14 @@ docker compose up -d
 docker compose up -d <service-name> <service-name> <service-name>
 ```
 
+### ビルド
+
+```console
+docker compose build [service-name]
+```
+
+composeファイルに`build`定義があればイメージビルドを行う。
+
 ### プロジェクト名を指定
 
 デフォルトではディレクトリ名が使用されるが、そのままだと異なるコンテナ環境でもディレクトリ名がたまたまでも同一だと競合してしまう。その場合はプロジェクト名を指定する。

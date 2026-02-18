@@ -34,3 +34,16 @@ NFSの権限の編集画面は上部の権限タイプの「NFSホストのア�
 
 AppCenterで「Container Station」をインストール  
 [Container Station | LXC、Docker、Kataコンテナに対応 | QNAP](https://www.qnap.com/ja-jp/software/container-station)
+
+### 外部接続用ネットワーク設定
+
+例: `httpd:latest`
+
+- イメージの種類: Dockerイメージ
+- イメージ: `httpd:latest`
+- 名前: 任意
+- 再起動ポリシー: 任意
+- ネットワーク設定
+    - デフォルトのWeb URLポート: オフ
+    - ネットワークポートの公開:
+        - ホストとコンテナの値が`--publish`オプションに相当
