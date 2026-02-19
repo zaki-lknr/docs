@@ -52,3 +52,9 @@ ENV APP_ID=1234567890
 
 - ビルドされたイメージにも`ENV`で指定した環境変数は残る。`ARG`はビルド中のみ
 - `ARG`はビルド時に`--build-arg`で上書きできる
+
+## ビルドキャッシュの削除
+
+```console
+docker builder prune
+```
