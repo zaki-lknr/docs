@@ -34,3 +34,10 @@ PS > start microsoft-edge:https://www.google.com
 ```
 
 [Windows 10ミニTips(86) Microsoft Edgeをコマンドラインから起動する | マイナビニュース](https://news.mynavi.jp/article/win10tips-86/)
+
+## 機種変更時のAuthenticatorアプリ
+
+- 旧端末のAuthenticatorアプリでメニューの「サインインしてバックアップを更新する」を実行
+- 「設定」のバックアップの詳細で、バックアップされているか日付を確認
+- 新端末にAuthenticatorをインストール、初期セットアップ内で「バックアップから復元」実行
+- 認証時に旧端末で承認操作があるので続行
