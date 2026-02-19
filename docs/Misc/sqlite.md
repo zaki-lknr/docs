@@ -14,3 +14,10 @@ file /path/to/data.db: SQLite 3.x database, last written using SQLite version 30
 ```console
 sqlite3 /path/to/data.db
 ```
+
+## テーブル一覧
+
+```console
+sqlite> .table
+```
+
