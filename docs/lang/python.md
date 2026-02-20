@@ -683,6 +683,13 @@ if string_value.startswith("kube"):
     # 文字列が"kube"で始まる場合
 ```
 
+#### 部分文字列
+
+`in`を使う
+
+```python
+```
+
 #### 末尾1文字
 
 ```python
