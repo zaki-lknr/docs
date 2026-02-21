@@ -282,6 +282,22 @@ command | base64 -d
 base64 -d FILENAME
 ```
 
+## printf
+
+### URLデコード
+
+エンコード文字列が`$str`に入っているとして、
+
+```console
+: "${str//+/ }"; printf '%b\n' "${_//%/\\x}"
+```
+
+`+`のデコードが不要なら以下でも可。
+
+```console
+printf '%b\n' "${str//%/\\x}"
+```
+
 ## sed
 
 ```console
