@@ -135,6 +135,20 @@ for index, item in enumerate(items):
 
 次のループへ飛ぶには`continue`
 
+#### pass
+
+何もしない。  
+他言語だと空ブレースにするケースで替わりに`pass`と書く。
+
+```python
+if ...:
+    functionA()
+elif ...:
+    pass
+else
+    functionB()
+```
+
 #### exit
 
 Pythonのexitは組み込みでなく`sys`をimportする必要がある。
