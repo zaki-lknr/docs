@@ -29,7 +29,8 @@ docker compose up -d <service-name> <service-name> <service-name>
 docker compose build [service-name]
 ```
 
-composeファイルに`build`定義があればイメージビルドを行う。
+composeファイルに`build`定義があればイメージビルドを行う。  
+(定義が無ければ`WARN[0000] No services to build`となり何も行われない)
 
 ### プロジェクト名を指定
 
