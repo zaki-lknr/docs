@@ -141,6 +141,10 @@ AviUtl使用
 - 指定ディレクトリをカレントで起動するには`wt -d c:/path/to`
 - エクスプローラーから指定パスで起動するには`wt -d .`
 
+#### 設定
+
+- [Windows ターミナルの外観プロファイル設定 | Microsoft Learn](https://learn.microsoft.com/ja-jp/windows/terminal/customize-settings/profile-appearance)
+
 ## リモートデスクトップ
 
 ### RDPファイルからの起動で全画面表示
