@@ -135,6 +135,9 @@ persistentVolumeReclaimPolicy: Retain
 
 [Reclaiming](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)
 
+ポリシーの変更については下記参照。  
+[Change the Reclaim Policy of a PersistentVolume | Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
+
 ## トラブルシューティング
 
 ### 消えないnamespace
