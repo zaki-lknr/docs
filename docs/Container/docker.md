@@ -384,6 +384,16 @@ docker run -d <image> tail -f /dev/null
 docker run --name http_sample --rm -p 8081:80 -d -v $PWD:/usr/local/apache2/htdocs httpd:latest 
 ```
 
+### ローカルwebコンテンツのHTTPS公開
+
+Caddyを使用し`localhost`でアクセスする構成
+
+```console
+docker run --rm -d -v $PWD:/srv -p 443:443 --name web caddy caddy file-server --domain localhost --root /srv --browse
+```
+
+[Caddyコンテナでローカルに自己署名の検証用途などのHTTPSサーバーをｼｭｯとたてる - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2024/08/08/173921)
+
 ### centos:stream8
 
 [quayにあるイメージ](https://quay.io/repository/centos/centos?tab=tags)を使う
