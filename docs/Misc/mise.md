@@ -125,6 +125,14 @@ Path                                         Tools
 ~/local/src/ansible-sample/become/mise.toml  python            
 ```
 
+### mise.tomlファイルの有効化
+
+`mise`コマンド実行の外で作成した`mise.toml`ファイルは、信頼済み設定が必要。
+
+```console
+mise trust /path/to/mise.toml
+```
+
 ### テンプレート
 
 [Templates | mise-en-place](https://mise.jdx.dev/templates.html)
