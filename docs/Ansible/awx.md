@@ -10,7 +10,15 @@
 
 [Upgrading - Ansible AWX Operator Documentation](https://docs.ansible.com/projects/awx-operator/en/latest/upgrade/upgrading.html)
 
-## helmインストール版
+## install
+
+### kustomize
+
+#### イメージカスタマイズ
+
+[Using images from private registries - Ansible AWX Operator Documentation](https://docs.ansible.com/projects/awx-operator/en/latest/user-guide/advanced-configuration/deploying-a-specific-version-of-awx.html)
+
+### helmインストール版
 
 基本的に情報が少ない。  
 細かいパラメタはGitHubのREADMEに記載あり。
