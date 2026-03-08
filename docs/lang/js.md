@@ -966,3 +966,12 @@ const scroll_to_top = () => {
 ```
 
 [add: タイトルバータップで先頭に移動お試し #71 by zaki-lknr · Pull Request #75 · zaki-lknr/swarm-sgbt](https://github.com/zaki-lknr/swarm-sgbt/pull/75)
+
+### 指定オブジェクトの位置へスクロール
+
+```js
+const target = document.getElementById(item);
+target.scrollIntoView({
+    behavior: 'smooth'
+})
+```
