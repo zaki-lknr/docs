@@ -27,6 +27,30 @@
 - [awx-operator Helm charts | awx-operator-helm](https://ansible-community.github.io/awx-operator-helm/)
 - [ansible-community/awx-operator-helm: Helm chart for the AWX operator.](https://github.com/ansible-community/awx-operator-helm/tree/main)
 
+## backup & restore
+
+### awxbackup
+
+[awx-operator/roles/backup/README.md at devel · ansible/awx-operator · GitHub](https://github.com/ansible/awx-operator/blob/devel/roles/backup/README.md)
+
+`deployment_name`にバックアップ対象のAWXリソース名を指定
+
+```yaml
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWXBackup
+metadata:
+  name: awxbackup-1
+  namespace: awx
+spec:
+  deployment_name: awx
+  # backup_pvc: volume-claim
+```
+
+### awxrestore
+
+[awx-operator/roles/restore/README.md at devel · ansible/awx-operator · GitHub](https://github.com/ansible/awx-operator/blob/devel/roles/restore/README.md)
+
 ## arm64版ビルド
 
 arm64版はイメージが公開されてないのでビルドする必要がある。  
