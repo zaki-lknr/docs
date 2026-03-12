@@ -558,10 +558,16 @@ $ git tag -n
 $ git checkout <tag-name>
 ```
 
-switchの場合はオプションが必要？
+switchの場合はオプションが必要
 
 ```console
 $ git switch --detach <tag-name>
+```
+
+`-d`も可
+
+```console
+git switch -d <tag-name>
 ```
 
 ## 移動
