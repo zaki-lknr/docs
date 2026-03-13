@@ -51,6 +51,20 @@ spec:
 
 [awx-operator/roles/restore/README.md at devel · ansible/awx-operator · GitHub](https://github.com/ansible/awx-operator/blob/devel/roles/restore/README.md)
 
+リストアは、`AWXBackup`リソースがある場合は、リストア対象の`AWXBackup`リソース名を指定する。
+
+```yaml
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWXRestore
+metadata:
+  name: awxrestore-1
+  namespace: awx
+spec:
+  deployment_name: awx
+  backup_name: awxbackup-1
+```
+
 ## arm64版ビルド
 
 arm64版はイメージが公開されてないのでビルドする必要がある。  
