@@ -120,6 +120,10 @@ Extra Packages for Enterprise Linux 8 - x86_64                          7.2 MB/s
 sshpass.x86_64 : Non-interactive SSH authentication utility
 ```
 
+### DVD/ISOマウントしたファイル群をリポジトリ設定
+
+[Configure Local DVD Repository for RHEL 8 and later - Red Hat Customer Portal](https://access.redhat.com/solutions/6913101)
+
 ## Simple Content Access設定
 
 <https://access.redhat.com/management>
