@@ -260,3 +260,5 @@ socislのIDも取れる。
   "website": "https://www.gamers.co.jp/shop/shop_detail/113216/"
 }
 ```
+
+1リクエストでPro EndpointのAPIカウントを1消費する。
