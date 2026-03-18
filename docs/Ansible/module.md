@@ -726,7 +726,9 @@ fatal: [localhost]: FAILED! =>
 
 ## wait_for
 
-処理対象ホストの80/TCPがAnsible実行ホストから接続可能になるまで最大300秒waitするタスク
+### TCP接続
+
+処理対象ホスト(`ansible_host`)の80/TCPがAnsible実行ホスト(`delegate_to: localhost`)から接続可能になるまで最大300秒waitするタスク
 
 ```yaml
 - ansible.builtin.wait_for:
