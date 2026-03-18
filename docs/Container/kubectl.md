@@ -251,6 +251,14 @@ $ kubectl patch -n namespace awx awx-demo -p '{"spec":{"init_container_image":"q
 error: application/strategic-merge-patch+json is not supported by awx.ansible.com/v1beta1, Kind=AWX: the body of the request was in an unknown format - accepted media types include: application/json-patch+json, application/merge-patch+json, application/apply-patch+yaml
 ```
 
+### 変更内容をファイル定義
+
+差分のみを記述したマニフェストを別途用意し、`-p`(`--patch`)でなく、`--patch-file`でファイルを指定する。
+
+```console
+kubectl patch -n namespace deploy awx-operator-controller-manager --patch-file patch-file.yaml
+```
+
 ## run
 
 ### ワーク用のpodをデプロイする
