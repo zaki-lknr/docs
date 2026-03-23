@@ -1225,6 +1225,12 @@ systemctl list-unit-files --user
 systemctl list-timers [--user]
 ```
 
+### ユニットの依存関係一覧
+
+```console
+systemctl list-dependencies [--user]
+```
+
 ### ターゲット(ランレベル)の確認
 
 ```console
