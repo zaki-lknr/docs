@@ -97,6 +97,15 @@ aws ec2 describe-instances \
 
 #### ネットワーク
 
+##### 指定サブネットに紐づいているEC2一覧
+
+```console
+aws ec2 describe-instances \
+  --region <リージョン> \
+  --filters Name=subnet-id,Values=<サブネットID> \
+  --query 'Reservations[].Instances[].InstanceId'
+```
+
 ##### ゲートウェイIDの取得
 
 ```console
