@@ -65,6 +65,20 @@ spec:
   backup_name: awxbackup-1
 ```
 
+`AWXBackup`リソースが無い場合は、PVにあるバックアップデータが`/backups`にマウントされるので、PVCの指定とどのディレクトリのデータを使うかを`backup_dir`で指定する。
+
+```yaml
+apiVersion: awx.ansible.com/v1beta1
+kind: AWXRestore
+metadata:
+  name: awxrestore-2026-3
+  namespace: awx
+spec:
+  deployment_name: awx
+  backup_pvc: awx-backup-claim
+  backup_dir: /backups/tower-openshift-backup-2026-03-01-134803
+```
+
 ## arm64版ビルド
 
 arm64版はイメージが公開されてないのでビルドする必要がある。  
