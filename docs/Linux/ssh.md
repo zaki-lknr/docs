@@ -94,6 +94,20 @@ sshpass -p ${PASSPHRASE} -P "Enter passphrase" ssh user@hostname -i ~/.ssh/my_ss
 
 `-p`(あるいは`-f`)でパスワードでなくパスフレーズを指定するのは同様だが、入力のプロンプトをパスフレーズ用にカスタムする`-P`を指定することで、パスフレーズの対話処理を`sshpass`でさばく。
 
+### ssh_config
+
+#### ポートフォワード
+
+sshクライアントのlocalhost:18080を`remote_host`から見た`localhost:8080`へフォワード
+
+```text
+host remote_host
+    hostname remote_host
+    user user
+    IdentityFile ~/.ssh/id_rsa
+    LocalForward 18080 localhost:8080
+```
+
 ## sshd
 
 ### 設定ファイルsyntax check
