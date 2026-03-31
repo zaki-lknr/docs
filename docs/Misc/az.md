@@ -369,6 +369,19 @@ az storage blob download \
 
 `container_name`はコンテナーの名称、`blob_filepath`はコンテナー内におけるファイルのパス、`output_dir_name`は出力先(ダウンロード先のファイル名)
 
+### Blobコンテナー
+
+[az storage container | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/storage/container?view=azure-cli-latest)
+
+#### コンテナーの作成
+
+```console
+az storage container create \
+  --name ${container_name} \
+  --account-name ${storage_account_name} \
+  --auth-mode ...
+```
+
 ### セキュリティ
 
 [Azure Storage ファイアウォールおよび仮想ネットワークを構成する | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-network-security?tabs=azure-cli)
