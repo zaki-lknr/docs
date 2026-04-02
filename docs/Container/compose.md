@@ -236,6 +236,23 @@ long syntaxだと以下
       target: /etc/rancher/k3s/registries.yaml
 ```
 
+##### read only
+
+```yaml
+    volumes:
+      - /path/to/dir:/usr/local/data:ro
+```
+
+あるいは
+
+```yaml
+    volumes:
+      - type: bind
+        source: /path/to/dir
+        target: /usr/local/data
+        read_only: true
+```
+
 #### volumeマウント
 
 long syntaxだと以下
