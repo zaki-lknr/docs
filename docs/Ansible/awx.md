@@ -86,6 +86,13 @@ arm64版はイメージが公開されてないのでビルドする必要があ
 
 ### awx-operator
 
+`Makefile`を使ってビルドできる。targetは`docker-build`を指定。  
+
+- `IMAGE_TAG_BASE`でベースイメージを上書き (デフォルト`quay.io/ansible/awx-operator`)
+- `VERSION`でイメージバージョン(tag)を上書き (デフォルトはGitのローカルリポジトリのtagから取得)
+- 標準はDockerを使用するが`CONTAINER_CMD=podman`を追加すれば`podman`コマンドでビルド
+- `IMG`でビルドするイメージのタグを指定 (`IMG=awx-operator:custom`など)
+
 0.16.1 (devel)で実施
 
 ```console
