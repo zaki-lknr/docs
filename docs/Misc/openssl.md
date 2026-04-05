@@ -20,7 +20,7 @@ Private-Key: (4096 bit, 2 primes)
 
 ## 証明書作成
 
-### プライベートCA作成と署名
+### プライベートCA作成と署名付きサーバー証明書
 
 ※ ~~OpenSSL 3 では `openssl genrsa`はdeprecatedになっている~~  
 なってなかった  
