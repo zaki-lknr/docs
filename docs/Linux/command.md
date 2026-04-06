@@ -463,6 +463,16 @@ hello zaki
 $ diff -u <(command1) <(command2)
 ```
 
+## script
+
+### シェルを指定して起動
+
+デフォルトだと`sh`が起動するが、`-c <command>`を使用すれば`bash`で起動したりできる。
+
+```console
+script -c bash work.log
+```
+
 ## screen
 
 ### マウススクロールで表示をスクロールする
