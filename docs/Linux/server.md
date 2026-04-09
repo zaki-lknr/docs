@@ -114,6 +114,9 @@ listen haproxy-stats
   stats uri /stats
 ```
 
+- [show stat | HAProxy Runtime API](https://www.haproxy.com/documentation/haproxy-runtime-api/reference/show-stat/)
+- [Statistics dashboard | HAProxy config tutorials](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/alerts-and-monitoring/statistics/)
+
 ## dnsmasq
 
 ### 起動オプション
