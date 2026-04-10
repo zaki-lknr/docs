@@ -742,6 +742,20 @@ fatal: [localhost]: FAILED! =>
 
 逆に終了処理の確認などで接続不可になるまでwaitするのであれば、`state: stopped`を指定する。
 
+### ファイル有無
+
+指定パスにファイルがある状態になるまでwaitする。
+
+```yaml
+  - ansible.builtin.wait_for:
+      path: /var/tmp/zzz
+      state: present
+      delay: 5
+      timeout: 30
+```
+
+逆に消えるまで待つ場合は`state: absent`を指定。
+
 ## debug
 
 `msg`を使えば(変数を含め)任意の文字列をプリントする。  
