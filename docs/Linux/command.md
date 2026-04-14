@@ -412,6 +412,14 @@ touch FILENAME
 touch -t 202501012359 FILENAME
 ```
 
+## chmod
+
+### ベースとなるファイルと同じパーミッションに設定する
+
+```console
+chmod <変更対象ファイル> --reference=<パーミッション設定の元のファイル>
+```
+
 ## ヒアドキュメント
 
 ```console
