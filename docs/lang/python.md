@@ -918,6 +918,26 @@ print(date_now)
 
 出力は `2025-06-23 23:05:55.796387` など。
 
+#### 日時の部分情報
+
+##### 年月日
+
+```py
+date_now = datetime.datetime.now()
+print(date_now.date())
+```
+
+出力は`2026-04-11`など。
+
+##### 時分秒
+
+```py
+date_now = datetime.datetime.now()
+print(date_now.time())
+```
+
+出力は`11:37:37.083080`など。
+
 #### 時刻加減算
 
 datetime型の変数に任意の加減算を行うには`datetime.timedelta`を使う。
