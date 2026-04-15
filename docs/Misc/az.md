@@ -63,6 +63,14 @@ az aks list --query "[?contains(name,'dev')]"
 az aks list --query "[?contains(name,'dev')].name"
 ```
 
+### 正規表現は現状使用不可 / jqやgrepと組み合わせる
+
+`/dev-[0-9]+/`にマッチするものをリストアップするには。
+
+```console
+az aks list --query "[].name" | grep dev-[0-9]\\+
+```
+
 ## アカウント
 
 ### アカウント情報
