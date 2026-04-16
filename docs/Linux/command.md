@@ -564,6 +564,14 @@ gz圧縮されたログファイルの中身を見たいときなど
 gzip -dc /var/log/syslog.10.gz | less
 ```
 
+## gunzip
+
+### stdoutへ出力
+
+```console
+gunzip -c /var/log/messags-20260301.gz | less
+```
+
 ## tar
 
 ### ファイルの追加
