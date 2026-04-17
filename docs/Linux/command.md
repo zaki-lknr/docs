@@ -906,6 +906,33 @@ gmail.com.              180     IN      A       142.251.42.197
 ;; MSG SIZE  rcvd: 54
 ```
 
+### TXTレコード
+
+`-t type`で`txt`を指定する。
+
+```console
+$ dig -t txt _atproto.jp-z.jp
+
+; <<>> DiG 9.18.47 <<>> -t txt _atproto.jp-z.jp
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2237
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;_atproto.jp-z.jp.              IN      TXT
+
+;; ANSWER SECTION:
+_atproto.jp-z.jp.       3600    IN      TXT     "did=did:plc:e3zjb4ne6avmlsifau3nconz"
+
+;; Query time: 380 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Thu Apr 16 10:55:51 JST 2026
+;; MSG SIZE  rcvd: 94
+```
+
 ### 逆引き
 
 `-x`オプションを使う
