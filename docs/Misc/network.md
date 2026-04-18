@@ -324,3 +324,20 @@ The system will reboot now!
 Connection to vyos closed by remote host.
 Connection to vyos closed.
 ```
+
+### シャットダウン
+
+```console
+vyos@vyos:~$ poweroff 
+Warning: there are unsaved configuration changes!
+Run 'save' command if you do not want to lose those changes after reboot/shutdown.
+Are you sure you want to poweroff this system (vyos)? [y/N] yes
+
+Broadcast message from root@vyos on pts/1 (Sat 2026-04-18 06:52:44 UTC):
+
+The system will power off now!
+
+
+Connection to vyos closed by remote host.
+Connection to vyos closed.
+```
