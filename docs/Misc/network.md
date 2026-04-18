@@ -263,6 +263,34 @@ NW機器のコンソールポートへアクセスするためのコンソール
 - username: vyos
 - password: vyos
 
+### show
+
+#### バージョン確認
+
+```console
+vyos@vyos:~$ show version 
+Version:          VyOS 1.5-rolling-202411070006
+Release train:    current
+Release flavor:   generic
+
+Built by:         autobuild@vyos.net
+Built on:         Thu 07 Nov 2024 00:06 UTC
+Build UUID:       db676e72-c851-4935-80f7-7cec46ab47a4
+Build commit ID:  33f15da7d481f7
+
+Architecture:     x86_64
+Boot via:         installed image
+System type:      KVM guest
+Secure Boot:      n/a (BIOS)
+
+Hardware vendor:  QEMU
+Hardware model:   Standard PC (i440FX + PIIX, 1996)
+Hardware S/N:     
+Hardware UUID:    
+
+Copyright:        VyOS maintainers and contributors
+```
+
 ### 設定モード
 
 ```console
