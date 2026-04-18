@@ -293,6 +293,8 @@ Copyright:        VyOS maintainers and contributors
 
 ### 設定モード
 
+<https://docs.vyos.io/en/latest/cli.html#configuration-overview>
+
 ```console
 vyos@vyos:~$ configure 
 [edit]
