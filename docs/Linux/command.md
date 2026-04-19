@@ -1258,6 +1258,10 @@ route1=172.29.0.0/24,172.16.1.3
 # nmcli c m ens224 -ipv4.routes "172.29.0.0/24 172.16.1.3"
 ```
 
+### 設定ファイル
+
+Fedora 43だと `/etc/NetworkManager/system-connections/<I/F name>.nmconnection`にある。
+
 ## systemd
 
 ### ユニットファイル一覧
