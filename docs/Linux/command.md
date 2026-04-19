@@ -1079,6 +1079,16 @@ ip route delete default dev eth0
 ip -j a
 ```
 
+### 仮想IPアドレス追加
+
+```console
+ip a add 192.168.0.30 dev eth0
+```
+
+この設定はリブートで消える。
+
+永続設定は`nmcli c m "eth0" +ipv4.addresses 192.168.0.30/24`
+
 ## NetworkManager
 
 ### インタフェース一覧
