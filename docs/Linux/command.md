@@ -1406,12 +1406,18 @@ sudo hostnamectl set-hostname rhel8
 
 ## resolvectl
 
-Fedoraなど。
+最近のUbuntuやFedoraなどは`/etc/resolv.conf`は`/run/systemd/resolve/stub-resolv.conf`へのsymlinkになっており、`systemd-resolved`で管理されている。
 
 ### DNS設定確認
 
 ```console
 resolvectl status
+```
+
+インタフェースを指定
+
+```console
+resolvectl status eth0
 ```
 
 ## ファイアウォール
