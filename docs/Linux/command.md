@@ -1420,6 +1420,14 @@ resolvectl status
 resolvectl status eth0
 ```
 
+### DNS設定変更
+
+```console
+resolvectl dns eth0 192.168.0.1
+```
+
+リブートすれば消える。永続設定はNetworkManagerやnetplanの設定を更新する。
+
 ## ファイアウォール
 
 ### iptables
