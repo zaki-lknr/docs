@@ -133,6 +133,61 @@ docker run --restart always ...
 
 [コンテナを自動的に開始 — Docker-docs-ja 19.03 ドキュメント](https://docs.docker.jp/config/container/start-containers-automatically.html)
 
+#### --init
+
+`--init`なしはそのまま
+
+```console
+$ docker run -d --name sample fedora:latest tail -f /dev/null
+$ docker exec -it sample bash
+[root@6087d04c8d99 /]# ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   2616  1692 ?        Ss   12:40   0:00 tail -f /dev/null
+root          13  0.0  0.0   4892  4228 pts/0    Ss   12:40   0:00 bash
+root          53  0.0  0.0   6968  4196 pts/0    R+   12:41   0:00 ps aux
+```
+
+`--init`有りだと内部で`init`プロセスが起動する。
+
+```console
+$ docker run -d --name sample2 --init fedora:latest tail -f /dev/null
+$ docker exec -it sample2 bash
+[root@4202a1a5c820 /]# ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   1064   772 ?        Ss   12:42   0:00 /sbin/docker-init -- tail -f /dev/null
+root           7  0.0  0.0   2616  1760 ?        S    12:42   0:00 tail -f /dev/null
+root           8  0.0  0.0   4892  4232 pts/0    Ss   12:42   0:00 bash
+root          46  0.0  0.0   6968  4096 pts/0    R+   12:44   0:00 ps aux
+```
+
+この場合、`init`プロセスがシグナルハンドリングをしてくれるので、生`tail`より終了処理が早い。
+
+```console
+$ time docker stop sample
+sample
+
+real    0m17.301s
+user    0m0.008s
+sys     0m0.006s
+$ time docker stop sample2
+sample2
+
+real    0m0.205s
+user    0m0.006s
+sys     0m0.010s
+```
+
+終了コードも異なる。
+
+```console
+$ docker ps -a
+CONTAINER ID   IMAGE                                     COMMAND                   CREATED              STATUS                        PORTS           NAMES
+6087d04c8d99   fedora:latest                             "tail -f /dev/null"       56 seconds ago       Exited (137) 13 seconds ago                   sample
+4202a1a5c820   fedora:latest                             "tail -f /dev/null"       About a minute ago   Exited (143) 7 seconds ago                    sample2
+```
+
+(そもそも`--init`無い場合に`tail`がkill TERMで停止しないのが微妙な気がするけど)
+
 ### build
 
 #### Dockerfile指定
