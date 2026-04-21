@@ -59,3 +59,7 @@ kubectl patch -n namespace pvc pvc-resource -p '{"spec":{"resources":{"requests"
 
 PDB設定などでノードがロックされアップグレードできなかった場合、あとから手動で個別にアップグレードできる。  
 [Azure Kubernetes Service (AKS) ノード イメージのアップグレード - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/node-image-upgrade)
+
+## Azure Blob Storageの利用
+
+[Azure Kubernetes Service (AKS) で Azure Blob Storage を使用して永続ボリュームを作成および管理する - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/create-volume-azure-blob-storage?tabs=Blobfuse%2Cnfs)
