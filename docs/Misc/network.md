@@ -315,6 +315,15 @@ vyos@vyos#
 vyos@vyos# set protocols static route 0.0.0.0/0 next-hop 192.168.0.1
 ```
 
+#### DNS
+
+VyOSホスト自身が名前解決するためのネームサーバーを設定
+
+```console
+[edit]
+vyos@vyos# set system name-server 8.8.8.8
+```
+
 ### リブート
 
 saveされていない設定がなくてもなぜか警告がでる。
