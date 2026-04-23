@@ -186,6 +186,12 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=vX.Y.Z+k3s1 <EXISTING_K3S_ENV
 
 [バージョン情報](https://update.k3s.io/v1-release/channels)
 
+インストール時の環境変数・パラメタの再指定が難しい場合等は、`/usr/local/bin/k3s`を更新して`k3s.service`サービスの再起動でもアップグレードされる。
+
+[Releases · k3s-io/k3s](https://github.com/k3s-io/k3s/releases)
+
+クラスターアップグレードを行うと、`kube-system`ネームスペースで使用しているシステム系podはバージョンに対応したイメージに入れ替えが発生する。
+
 ## 停止
 
 k3sサービス自体は`systemctl`で停止できAPIエンドポイントなどは停止されるが実はコンテナは動作したまま。
