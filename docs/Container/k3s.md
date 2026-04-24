@@ -38,6 +38,26 @@ curl -sfL https://get.k3s.io | K3S_URL=https://server:6443 K3S_TOKEN=${token} sh
 
 tokenはserverの `/var/lib/rancher/k3s/server/agent-token` にある。
 
+### その他のサーバーロール
+
+[サーバーロールの管理 | K3s](https://docs.k3s.io/ja/installation/server-roles)
+
+#### 専用etcdノードの作成
+
+etcd専用ノードは最初の1ノードとして作成。control-planeノードが追加されるまではクラスターとしては使用できない。
+
+```console
+curl -fL https://get.k3s.io | sh -s - server --cluster-init --disable-apiserver --disable-controller-manager --disable-scheduler
+```
+
+#### 専用control-planeノードの追加
+
+専用etcdノードへ追加する。
+
+```console
+curl -fL https://get.k3s.io | sh -s - server --token $token --disable-etcd --server https://<etcd-node>:6443 
+```
+
 ### バージョン指定
 
 バージョン番号を指定する場合
