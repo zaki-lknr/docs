@@ -158,3 +158,9 @@ address=/exmaple.org/192.168.0.15
 ```
 
 これで`example.org`だけでなく、`foo.example.org`も`foo.bar.baz.example.org`も`192.168.0.15`となる。
+
+#### TXTレコード
+
+```
+txt-record=host.example.org,"msg=sample_text"
+```
