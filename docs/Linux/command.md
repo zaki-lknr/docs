@@ -396,6 +396,14 @@ ps aux | awk '{if($1 == "root"){print $11}}'
 ps aux | awk '{if($1 ~ /[0-9]+/){print $0}}'
 ```
 
+## tr
+
+### CR削除
+
+```console
+command | tr -d '\r' > output
+```
+
 ## touch
 
 ### タイムスタンプ変更
