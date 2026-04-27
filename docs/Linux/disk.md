@@ -267,6 +267,57 @@ root@zaki-CF-J10YYBHR:~# e2label /dev/sdb1
 HD-LDS-A
 ```
 
+## ディスク拡張
+
+主にハイパーバイザーで動作するVMでの操作。
+
+[[AWS] EC2のストレージ(EBS)を手動で拡張する手順 (RHEL) - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2025/05/09/222749)
+
+### ブロックデバイスの拡張
+
+これはハイパーバイザーの操作を実施。EC2でEBSを拡張したり、Proxmoxでディスク増加したり。
+拡張後は`lsblk`でデバイスのサイズ増加を確認できる。
+
+### パーティションを拡張
+
+ブロックデバイス拡張しても`lsblk`で見れる各パーティションは変化しないので、パーティションを拡張する。
+
+```console
+# growpart /dev/sda 1
+CHANGED: partition=1 start=2099200 old: size=24115167 end=26214366 new: size=49280991 end=51380190
+```
+
+### ファイルシステムの拡張
+
+この時点では`df`の結果は変化していないので、パーティション拡張後はファイルシステムを拡張する。
+
+ext4であれば`resize2fs`
+
+```console
+# resize2fs /dev/sda1
+resize2fs 1.47.0 (5-Feb-2023)
+Filesystem at /dev/sda1 is mounted on /; on-line resizing required
+old_desc_blocks = 2, new_desc_blocks = 3
+The filesystem on /dev/sda1 is now 6160123 (4k) blocks long.
+```
+
+xfsであれば`xfs_growfs`
+
+```console
+# xfs_growfs -d /
+meta-data=/dev/xvda4             isize=512    agcount=9, agsize=576895 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1    bigtime=1 inobtcount=1 nrext64=0
+data     =                       bsize=4096   blocks=4929019, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=16384, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 4929019 to 7550459
+```
+
 ## LVM
 
 ### LVの論理ボリュームのリサイズ
