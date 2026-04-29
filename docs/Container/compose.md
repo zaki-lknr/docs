@@ -74,11 +74,19 @@ docker compose down -v
 ```
 
 特定のコンテナのみ停止・削除するには、引数にCompose Fileで指定している名称を指定する。  
-ただし`down`ではこの指定はできない。
+ただし`down`ではこの指定はできないので`stop`と`rm`を実行する。
 
 ```console
 docker compose stop myapp
 docker compose rm myapp
+```
+
+特定コンテナのみを再作成したい場合は、`stop`,`rm`に続けて`up -d`を実行する。
+
+```console
+docker compose stop myapp
+docker compose rm myapp
+docker compose up -d myapp
 ```
 
 ### コマンド起動
