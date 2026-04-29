@@ -64,7 +64,8 @@ $ ansible -i inventory.ini all -m setup
 
 HTTPをしゃべる。  
 以下はAWX/AAPで通知テストをkickするRESTを叩くタスク。  
-basic認証+HTTPSでSSL検証無効の設定で、レスポンスコードが`200`or`201`or`202`を期待している。
+basic認証+HTTPSでSSL検証無効の設定で、レスポンスコードが`200`or`201`or`202`を期待している。  
+ファイルのHTTPダウンロードであれば`get_url`を使う。
 
 ```yaml
   ansible.builtin.uri:
@@ -94,6 +95,19 @@ JSON形式のリクエストBODYを投げたい場合は以下。
     body:
       SESSION_COOKIE_AGE: "{{ session_timeout_sec }}"
     status_code: [200]
+```
+
+## get_url
+
+ファイルをHTTPなどからダウンロードする
+
+```yaml
+ansible.builtin.get_url:
+  url: https://github.com/k3s-io/k3s/releases/download/v1.35.3%2Bk3s1/k3s
+  dest: /usr/local/bin/k3s
+  mode: '0755'
+  owner: root
+  group: root
 ```
 
 ## lineinfile
