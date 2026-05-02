@@ -6,6 +6,7 @@
 
 - [zaki work log](https://zaki-hmkc.hatenablog.com/)
 - [zaki-lknr - Qiita](https://qiita.com/zaki-lknr)
+- [zaki - mochott](https://mochott.site/jp-z.jp)
 
 ## develop
 
