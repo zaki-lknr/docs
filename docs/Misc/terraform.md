@@ -451,6 +451,28 @@ terraform plan -generate-config-out="imported_resource.tf"
 出力されたtfコードを手直ししたり元のtfファイルへマージするなどし、`terraform apply`を実行するとtfstateへインポートされる。  
 最後にimportブロックを削除しても良いが残しても良い。
 
+## provider
+
+### Azure
+
+手動の場合、`terraform apply`を実行する環境で事前に`az login`しておけば実行可能
+
+```hcl
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "...."
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+  subscription_id = "********"
+}
+```
+
 ## resource
 
 ### デフォルトのルートテーブル
