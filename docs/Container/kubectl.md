@@ -261,6 +261,20 @@ error: application/strategic-merge-patch+json is not supported by awx.ansible.co
 kubectl patch -n namespace deploy awx-operator-controller-manager --patch-file patch-file.yaml
 ```
 
+### StorageClassのデフォルト設定
+
+デフォルトに設定
+
+```console
+kubectl patch storageclass zzz -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+```
+
+デフォルト設定を解除
+
+```console
+kubectl patch storageclass zzz -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
+```
+
 ## run
 
 ### ワーク用のpodをデプロイする
