@@ -32,6 +32,7 @@ Release and maintenanceの中の[ansible-core support matrix](https://docs.ansib
 
 ## Playbook書き方
 
+- [Working with playbooks — Ansible Community Documentation](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks.html)
 - [Good Practices for Ansible - GPA](https://redhat-cop.github.io/automation-good-practices/)
 - [Tips and tricks — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html) 旧「ベストプラクティス」のページ。
 - [Conditionals — Ansible Documentation](https://terryhowe.github.io/ansible-modules-hashivault/user_guide/playbooks_conditionals.html) 条件分
