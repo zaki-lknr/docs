@@ -4,6 +4,11 @@
 
 [Azure Kubernetes Service (AKS) についてよく寄せられる質問 - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/faq)
 
+## サポートバージョン
+
+- [Azure Kubernetes Service (AKS) でサポートされている Kubernetes バージョン - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/supported-kubernetes-versions?tabs=azure-cli)
+- [Azure Kubernetes Service (AKS) バージョンの長期サポート - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/long-term-support)
+
 ## ノードに接続する
 
 [Azure Kubernetes Service (AKS) クラスター ノードへの接続 - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/aks/node-access)
