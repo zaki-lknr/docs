@@ -61,3 +61,5 @@ $ podman login <registry URL> -u AWS -p $(aws ecr get-login-password)
 ポータルからの場合は、レジストリメニューの「トークン」から、「追加」でトークンを作成する。スコープマップに権限を入力。  
 作成したトークンの「詳細」からパスワードを生成できる。  
 生成されるのはj`docker login`で指定するパスワード、およびDockerコマンド列全体(`docker login -u ... -p ...`)も得られる。(ユーザー名はトークン名になる)
+
+[Azure Container Registry | Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/container-registry/container-registry-faq)
