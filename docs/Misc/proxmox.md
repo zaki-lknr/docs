@@ -1,5 +1,9 @@
 # Proxmox (PVE)
 
+## docs
+
+- [Hardware Requirements - Proxmox Virtual Environment](https://www.proxmox.com/en/products/proxmox-virtual-environment/requirements)
+
 ## UIでVMのIPアドレス確認
 
 VMの「サマリー」でIPアドレスを確認するには、以下実行する
