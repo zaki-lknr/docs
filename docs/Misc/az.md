@@ -445,6 +445,13 @@ az storage account keys list \
 
 ## key vault
 
+### コンテナーの一覧
+
+```console
+az keyvault list \
+  --resource-group ${resource_group}
+```
+
 ### 保存
 
 ```console
