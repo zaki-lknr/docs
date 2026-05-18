@@ -452,7 +452,16 @@ az keyvault list \
   --resource-group ${resource_group}
 ```
 
-### 保存
+### secret一覧
+
+```console
+az keyvault secret list \
+  --vault-name $az_keyvault_name
+```
+
+`--id <vaultUri>`でも可能(IDでない点に注意)
+
+### secret保存
 
 ```console
 az keyvault secret set \
@@ -461,7 +470,7 @@ az keyvault secret set \
   --value $item_value
 ```
 
-### 参照
+### secret参照
 
 ```console
 az keyvault secret show \
