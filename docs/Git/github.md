@@ -2,6 +2,8 @@
 
 ## リポジトリ
 
+- [リポジトリの制限 - GitHubドキュメント](https://docs.github.com/ja/repositories/creating-and-managing-repositories/repository-limits)
+
 ### デフォルトブランチの変更
 
 リポジトリの「Settings」->「Default branch」で対象を選択する。
