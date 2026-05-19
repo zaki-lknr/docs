@@ -150,6 +150,20 @@ vault read auth/path/role/key
 vault delete auth/path/role/key
 ```
 
+## token
+
+### token作成
+
+```console
+vault token create
+```
+
+policy指定なら
+
+```console
+vault token create -policy=foobar
+```
+
 ## identity/entity
 
 [Implement identity entities and groups | Vault | HashiCorp Developer](https://developer.hashicorp.com/vault/tutorials/auth-methods/identity)
