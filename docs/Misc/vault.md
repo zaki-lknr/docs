@@ -8,13 +8,13 @@
 vault login [認証トークン]
 ```
 
+トークンを省略すれば対話的に聞いてくる
+
 ### ログイン中のtoken情の報等
 
 ```console
 vault token lookup
 ```
-
-トークンを省略すれば対話的に聞いてくる
 
 ### OIDCでCLIログイン
 
