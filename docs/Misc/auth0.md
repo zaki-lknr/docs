@@ -22,6 +22,11 @@
 - Social Connections
     - google-oauth2
 
+## プロトコル
+
+- [OpenID Connectのプロトコル - Auth0 Docs](https://auth0.com/docs/ja-jp/authenticate/protocols/openid-connect-protocol)
+- [SAML - Auth0 Docs](https://auth0.com/docs/ja-jp/authenticate/protocols/saml)
+
 ## Application
 
 ### 作成済みアプリケーションのPermission(scope)変更
