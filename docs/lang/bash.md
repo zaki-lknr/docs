@@ -140,6 +140,18 @@ myfunc a b
 echo $?
 ```
 
+### 任意の文字列等を返す
+
+```bash
+function get_str() {
+    echo "foobar $1"
+}
+
+val=$(get_str arg)
+```
+
+末尾の改行が維持されないのとサブシェル実行によるforkが発生するので注意。
+
 ## 制御構文
 
 ### test/評価
