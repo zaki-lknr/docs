@@ -164,6 +164,26 @@ policy指定なら
 vault token create -policy=foobar
 ```
 
+### tokenの情報
+
+作成時に得られるトークンを引数に実行すればpolicyやttlを確認できる
+
+```console
+vault token lookup <token>
+```
+
+あるいは`-accessor`を指定
+
+```console
+vault token lookup -accessor <accessor>
+```
+
+### accessor一覧の取得
+
+```console
+vault list auth/token/accessors
+```
+
 ## identity/entity
 
 [Implement identity entities and groups | Vault | HashiCorp Developer](https://developer.hashicorp.com/vault/tutorials/auth-methods/identity)
