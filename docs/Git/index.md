@@ -898,4 +898,5 @@ sshのデバッグログを出したい場合は`GIT_SSH_COMMAND="ssh -v"`を使
 
 ## .gitignore
 
-[空のディレクトリを維持するための、 .gitkeep と .gitignore の使い分け - Qiita](https://qiita.com/ndxbn/items/f124d2b183b60cb074e2)
+- [ファイルを無視する - GitHubドキュメント](https://docs.github.com/ja/get-started/git-basics/ignoring-files)
+- [空のディレクトリを維持するための、 .gitkeep と .gitignore の使い分け - Qiita](https://qiita.com/ndxbn/items/f124d2b183b60cb074e2)
