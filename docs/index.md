@@ -4,9 +4,9 @@
 
 ## link
 
-- [zaki work log](https://zaki-hmkc.hatenablog.com/)
-- [zaki-lknr - Qiita](https://qiita.com/zaki-lknr)
-- [zaki - mochott](https://mochott.site/jp-z.jp)
+- [zaki work log (テック系)](https://zaki-hmkc.hatenablog.com/)
+- [zaki-lknr - Qiita (旧テック系)](https://qiita.com/zaki-lknr)
+- [zaki - mochott (日常系ブログ)](https://mochott.site/jp-z.jp)
 
 ## develop
 
