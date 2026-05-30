@@ -267,6 +267,12 @@ root@zaki-CF-J10YYBHR:~# e2label /dev/sdb1
 HD-LDS-A
 ```
 
+### ディスクラベルの削除
+
+```console
+sudo wipefs -a /dev/sdb
+```
+
 ## ディスク拡張
 
 主にハイパーバイザーで動作するVMでの操作。
