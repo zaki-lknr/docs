@@ -396,6 +396,18 @@ ps aux | awk '{if($1 == "root"){print $11}}'
 ps aux | awk '{if($1 ~ /[0-9]+/){print $0}}'
 ```
 
+### 3カラム目以降全てを出力
+
+`substr()`と`index()`を併用する。
+
+```console
+awk '{ print substr($0, index($0, $3)) }'
+```
+
+- `$0`: 行全体
+- `substr(s, p)`: 文字列j`s`内における`p`以降の部分文字列
+- `index(s, p)`: 文字列`s`内における`p`の位置
+
 ## tr
 
 ### CR削除
