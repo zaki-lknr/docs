@@ -275,6 +275,8 @@ kubectl patch storageclass zzz -p '{"metadata": {"annotations":{"storageclass.ku
 kubectl patch storageclass zzz -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
 ```
 
+[デフォルトのStorageClassを変更する | Kubernetes](https://kubernetes.io/ja/docs/tasks/administer-cluster/change-default-storage-class/)
+
 ## run
 
 ### ワーク用のpodをデプロイする
