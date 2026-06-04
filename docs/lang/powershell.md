@@ -41,6 +41,20 @@ Get-Help 〇〇
 
 ## コマンドレット
 
+### sleep
+
+`Start-Sleep`を使う
+
+```ps1
+PS C:\Users\zakih> get-date; start-sleep 3; get-date
+
+2026年6月5日 5:57:28
+2026年6月5日 5:57:31
+
+```
+
+`sleep`同様`Start-Sleep 1.5`のように小数指定可能。
+
 ### ファイルのハッシュ値
 
 `Get-FileHash`で取れる。
