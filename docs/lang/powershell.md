@@ -54,6 +54,16 @@ SHA256          04B71F5099FDBC96A8497AD88D16C4169F978E931F0D59B7AAE3E2DC8B383CE1
 
 ```
 
+MD5ハッシュの場合`-Algorithm`で指定する
+
+```ps1
+PS C:\Users\zakih\Downloads> Get-FileHash -Algorithm MD5 .\harvester-v1.7.1-amd64.iso
+
+Algorithm       Hash                                                                   Path
+---------           ----                                                                   ----
+MD5             9BB6EA484F6A798ADB853884854A04D2                                       C:\Users\zakih\Downloads\...
+```
+
 ## コーディング
 
 ### 型
