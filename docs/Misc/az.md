@@ -1,5 +1,15 @@
 # Azure CLI
 
+## install
+
+### windows
+
+```ps1
+winget install --exact --id Microsoft.AzureCLI
+```
+
+<https://learn.microsoft.com/ja-jp/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=winget#winget-windows-package-manager>
+
 ## extension
 
 ### 一覧
