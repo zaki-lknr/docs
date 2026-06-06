@@ -429,6 +429,27 @@ podがrunningになるまで待つには以下。
 kubectl wait --for=jsonpath='{.status.phase}'=Running pod/*****
 ```
 
+## cp
+
+podとホスト間でファイル転送する。
+
+```console
+$ kubectl get pod
+NAME        READY   STATUS    RESTARTS   AGE
+work-pod    1/1     Running   0          15m
+work-pod2   1/1     Running   0          17m
+$ kubectl cp README.md work-pod:/tmp
+$ kubectl exec work-pod -- cat /tmp/README.md
+# pages(github-pages) 
+```
+
+ただしコンテナ内に`tar`が必要。無い場合(distrolessベースなど)はエラーとなる。
+
+```console
+$ kubectl cp sample.txt work-pod2:/tmp
+error: Internal error occurred: Internal error occurred: error executing command in container: failed to exec in container: failed to start exec "f44fd2283fa42be5dcb8787db48b4e551c223d295a65fa14da32cf8a46ba416a": OCI runtime exec failed: exec failed: unable to start container process: exec: "tar": executable file not found in $PATH
+```
+
 ## get
 
 ### 全てのリソース
