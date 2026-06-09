@@ -55,6 +55,14 @@ PS C:\Users\zakih> get-date; start-sleep 3; get-date
 
 `sleep`同様`Start-Sleep 1.5`のように小数指定可能。
 
+### tee
+
+`Tee-Object`を使う
+
+```ps1
+PS C:\Users\zakih> (何かコマンド) | Tee-Object -FilePath .\program.log
+```
+
 ### ファイルのハッシュ値
 
 `Get-FileHash`で取れる。
