@@ -897,6 +897,12 @@ timedatectl set-ntp false
 timedatectl set-timezone Asia/Tokyo
 ```
 
+### 日時の設定
+
+```console
+timedatectl set-time "2026-06-09 19:30:24"
+```
+
 ## dig
 
 ### Aレコード
