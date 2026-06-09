@@ -136,6 +136,16 @@ IsPublic IsSerial Name                                     BaseType
 True     True     Byte[]                                   System.Array
 ```
 
+### 制御構文
+
+#### 無限ループ
+
+```ps1
+while ($true) {
+    # [...]
+}
+```
+
 ### ファイル情報
 
 ```ps1
