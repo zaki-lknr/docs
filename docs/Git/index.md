@@ -160,6 +160,18 @@ $ git stash pop
 
 origin/mainから取り込むときに`pull`するとmergeになってしまうので、rebaseしたい場合は`fetch`する。(たぶん)
 
+## cherry-pick
+
+特定のコミット単体(あるいは範囲)を取り込みたい
+
+```console
+git cherry-pick <コミットID>
+```
+
+```console
+git cherry-pick <開始ID>^...<終了ID>
+```
+
 ## conflictした場合
 
 ### 修正する場合は普通に
