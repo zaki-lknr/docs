@@ -41,6 +41,12 @@ Get-Help 〇〇
 
 ## コマンドレット
 
+### zipファイル展開
+
+```ps1
+Expand-Archive -Path c:\work\sample.zip -DestinationPath d:\share\
+```
+
 ### sleep
 
 `Start-Sleep`を使う
