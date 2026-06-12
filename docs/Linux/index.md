@@ -171,6 +171,8 @@ sudo grub-install /dev/sda
 - `sudo reboot`
 - `sudo dnf system-upgrade download --releasever=41` # 41はターゲットバージョン。飛び級がサポートされるのは2段階(39 -> 41)
 - `sudo dnf system-upgrade reboot`
+    - 44ではコマンドが変わっている: `sudo dnf offline reboot`
+- アップグレード後のタスクもあるので公式ドキュメントを確認する
 
 ### Ubuntu
 
