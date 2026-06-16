@@ -1,5 +1,14 @@
 # cloud-init
 
+## アカウント
+
+ユーザー名とパスワード
+
+```yaml
+user: yutakasaki
+password: hitoridakenanteerabenaiyo
+```
+
 ## SSH
 
 ### パスワード認証
