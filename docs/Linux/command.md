@@ -491,6 +491,14 @@ hello zaki
 $ diff -u <(command1) <(command2)
 ```
 
+## nohup
+
+```console
+nohup command &
+```
+
+起動元シェルが終了しても`command`は動作し続ける。stdout/stderrは実行時のディレクトリ直下に`nohup.out`ファイルに出力される。
+
 ## script
 
 ### シェルを指定して起動
