@@ -16,3 +16,9 @@ SNO
 |role|CPU|memory|storage|
 |---|---|---|---|
 |node|8|16GB|100GB|
+
+## ストレージ
+
+### hostPath
+
+[5.3. hostPath を使用した永続ストレージ | Storage | OpenShift Container Platform | 4.22 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/openshift_container_platform/4.22/html/storage/persistent-storage-using-hostpath)
