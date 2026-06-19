@@ -31,12 +31,16 @@ const resp = UrlFetchApp.fetch(url);
 
 ## UI
 
-### ダイアログ
+[Class Browser、`inputBox()`、`msgBox()`はdeprecated](https://developers.google.com/apps-script/reference/base/browser?hl=ja)
+
+### アラートダイアログ
 
 ```javascript
 const ui = SpreadsheetApp.getUi();
 const result = ui.alert(message_string);
 ```
+
+[Google Workspace ドキュメントのダイアログとサイドバー  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/guides/dialogs?hl=ja#alert_dialogs)
 
 ### テキスト入力 (prompt)
 
@@ -51,6 +55,8 @@ if (button == ui.Button.YES) {
     Logger.log("input text: " + input);
 }
 ```
+
+[Google Workspace ドキュメントのダイアログとサイドバー  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/guides/dialogs?hl=ja#prompt_dialogs)
 
 ## プロパティ
 
