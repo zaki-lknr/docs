@@ -110,6 +110,8 @@ ansible.builtin.get_url:
   group: root
 ```
 
+`force: true`が無い場合、異なるファイルでもすでにダウンロード済み(ローカルにファイルがある状態)だとダウンロードしない。`force: true`があればリモートのファイルが変更されていればローカルのファイルを上書きする。`force: true`があってもリモートとローカルが同一のファイルであれば`changed`ではなく`ok`と処理される。
+
 ## lineinfile
 
 [ansible.builtin.lineinfile – Manage lines in text files — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
