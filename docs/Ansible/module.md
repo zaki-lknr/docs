@@ -381,6 +381,24 @@ deb [arch=arm64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https:
     when: result.state == "absent"
 ```
 
+#### stat
+
+<https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/stat_module.html>  
+ファイルのステータスを取得する。ファイルが無い場合もエラーにはならない。
+
+```yaml
+  - name: exist check k3s.service
+    ansible.builtin.stat:
+      path: /etc/systemd/system/k3s.service
+    register: result
+
+  - name: print exist check result
+    debug:
+      msg: "{{ result.stat.exists }}"
+```
+
+ファイルが存在しない場合、`stat.exists`が`false`になるのでこれでもファイル有無の判定可能。
+
 ### モード
 
 ```yaml
