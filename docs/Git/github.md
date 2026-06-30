@@ -252,6 +252,10 @@ jobs:
 
 ワークフロー実行結果一覧から指定のワークフローを開き、画面右上の「Re-run all jobs」ボタンを押下
 
+### コンテキスト
+
+[コンテキスト リファレンス - GitHubドキュメント](https://docs.github.com/ja/actions/reference/workflows-and-actions/contexts)
+
 ### タスク(steps)
 
 #### 式の評価
