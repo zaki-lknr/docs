@@ -8,7 +8,9 @@
 
 ## upgrade
 
-[Upgrading - Ansible AWX Operator Documentation](https://docs.ansible.com/projects/awx-operator/en/latest/upgrade/upgrading.html)
+- [Upgrading - Ansible AWX Operator Documentation](https://docs.ansible.com/projects/awx-operator/en/latest/upgrade/upgrading.html)
+- [awx-operator/docs/upgrade/upgrading.md at devel · ansible/awx-operator](https://github.com/ansible/awx-operator/blob/devel/docs/upgrade/upgrading.md)
+- [Upgrades and Migrations — Ansible AWX community documentation](https://docs.ansible.com/projects/awx/en/24.6.1/upgrade_migration/)
 
 ## install
 
