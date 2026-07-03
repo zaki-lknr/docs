@@ -562,6 +562,16 @@ az aks nodepool upgrade \
   --kubernetes-version ${k8s_version}
 ```
 
+## ACR
+
+[az acr | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/acr?view=azure-cli-latest)
+
+### 他レジストリからのコピー
+
+```console
+az acr import --name ${acr_name} --source docker.io/library/####:tag --image image_name:tag
+```
+
 ## App Service
 
 [App Services | Microsoft Learn](https://learn.microsoft.com/ja-jp/cli/azure/service-page/app%20services?view=azure-cli-latest)
