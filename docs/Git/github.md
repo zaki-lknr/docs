@@ -332,6 +332,7 @@ steps:
 - 自前でランナーを用意する
     - [自己ホスト ランナーの概要 - GitHub Docs](https://docs.github.com/ja/actions/concepts/runners/about-self-hosted-runners)
     - [セルフホステッド ランナーの管理 - GitHub Docs](https://docs.github.com/ja/actions/how-tos/hosting-your-own-runners/managing-self-hosted-runners)
+    - [セルフホステッド ランナー リファレンス - GitHubドキュメント](https://docs.github.com/ja/actions/reference/runners/self-hosted-runners)
 
 ### Azure
 
