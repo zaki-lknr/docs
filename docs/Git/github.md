@@ -10,6 +10,15 @@
 
 [デフォルトブランチを変更する - GitHub Docs](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch)
 
+リモート(GitHub上)のブランチを変更したらローカルも変更する。
+
+```console
+git branch -m before after
+git fetch origin
+git branch -u origin/after after
+git remote set-head origin -a
+```
+
 ### ライセンスファイルの追加
 
 [リポジトリへのライセンスの追加 - GitHub Docs](https://docs.github.com/ja/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
