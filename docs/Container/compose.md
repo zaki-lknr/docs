@@ -103,6 +103,14 @@ docker compose exec <app名> bash
 docker compose cp app:/path/to/file ./file
 ```
 
+### composeファイル定義確認
+
+起動に使用されるCompose定義(override等全て含めて)を出力する
+
+```console
+docker compose config [opt]
+```
+
 ## Composeファイル
 
 - [Compose file reference | Docker Docs](https://docs.docker.com/reference/compose-file)
