@@ -426,6 +426,14 @@ console.log(sample_array.join());
 const new_array = current_array.map(item => item += ".");
 ```
 
+#### filter
+
+配列要素から条件に合った要素をフィルタリングする。
+
+```js
+const repo_links = links.filter(i => i.innerHTML.match(/Repository/));
+```
+
 #### Array.from()
 
 [Array.from() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
