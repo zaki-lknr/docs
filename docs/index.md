@@ -6,7 +6,7 @@
 
 - [zaki work log (テック系)](https://zaki-hmkc.hatenablog.com/)
 - [zaki-lknr - Qiita (旧テック系)](https://qiita.com/zaki-lknr)
-- [zaki - mochott (日常系ブログ)](https://mochott.site/jp-z.jp)
+- [zaki - mochott (お台場と沼津)](https://mochott.site/jp-z.jp)
 
 ## develop
 
@@ -17,4 +17,3 @@
 ## author
 
 - [🦋](https://bsky.app/profile/jp-z.jp)
-- [𝕏](https://twitter.com/zaki_hmkc)
