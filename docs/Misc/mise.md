@@ -58,6 +58,14 @@ mise ls-remote <command>
 
 ## パッケージセットアップ
 
+### mise.toml定義のパッケージインストール
+
+```console
+mise install
+```
+
+余所から持ってきて`mise trust`した`mise.toml`ファイルに定義されたパッケージを入れるなら上記。`pip install -r requirements.txt`のようなもの。
+
 ### (例) Python 3.12.8のインストール
 
 ```console
