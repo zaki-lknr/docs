@@ -149,6 +149,13 @@ Path                                         Tools
 mise trust /path/to/mise.toml
 ```
 
+### 環境変数
+
+```toml
+[env]
+ANSIBLE_COLLECTIONS_PATH = "{{ config_root }}/.ansible"
+```
+
 ### テンプレート
 
 [Templates | mise-en-place](https://mise.jdx.dev/templates.html)
