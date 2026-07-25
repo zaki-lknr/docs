@@ -261,6 +261,13 @@ jobs:
 
 ワークフロー実行結果一覧から指定のワークフローを開き、画面右上の「Re-run all jobs」ボタンを押下
 
+### ランナー
+
+- [GitHub サーバー上で実行されるランナーの使用 - GitHubドキュメント](https://docs.github.com/ja/actions/how-tos/manage-runners/github-hosted-runners)
+- [GitHub ホステッド ランナー - GitHubドキュメント](https://docs.github.com/ja/actions/concepts/runners/github-hosted-runners)
+- [セルフホステッド ランナー - GitHubドキュメント](https://docs.github.com/ja/actions/concepts/runners/self-hosted-runners)
+- [セルフホステッド ランナー リファレンス - GitHubドキュメント](https://docs.github.com/ja/actions/reference/runners/self-hosted-runners)
+
 ### コンテキスト
 
 [コンテキスト リファレンス - GitHubドキュメント](https://docs.github.com/ja/actions/reference/workflows-and-actions/contexts)
