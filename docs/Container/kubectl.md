@@ -277,6 +277,16 @@ kubectl patch storageclass zzz -p '{"metadata": {"annotations":{"storageclass.ku
 
 [デフォルトのStorageClassを変更する | Kubernetes](https://kubernetes.io/ja/docs/tasks/administer-cluster/change-default-storage-class/)
 
+## logs
+
+### 最後にクラッシュしたpodのログを出力
+
+現在はrunningだがrestart前のpodログを参照
+
+```console
+kubectl logs -n <namespace> <pod-name> --previous 
+```
+
 ## run
 
 ### ワーク用のpodをデプロイする
