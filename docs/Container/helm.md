@@ -278,6 +278,8 @@ HELM_REGISTRY_CONFIG="/var/tmp/registry.json"
 HELM_REPOSITORY_CONFIG="/var/tmp/repositories.yaml"
 ```
 
+KUBECONFIGファイルについては`kubectl`同様に`KUBECONFIG`を参照する。 (see `helm --help`)
+
 ## チャート作成
 
 ### テンプレート作成
