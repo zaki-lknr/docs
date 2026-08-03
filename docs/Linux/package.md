@@ -25,6 +25,12 @@ $ dpkg -S /foo/bar    # debian
 $ rpm -qf /foo/bar    # redhat
 ```
 
+## パッケージ削除
+
+```console
+$ dpkg -r <package-name>
+```
+
 ## 更新確認
 
 ### yum
