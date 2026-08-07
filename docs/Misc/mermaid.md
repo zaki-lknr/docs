@@ -223,3 +223,23 @@ sequenceDiagram
     end
     deactivate server
 ```
+
+## フローチャート
+
+コード
+
+````text
+```mermaid
+flowchart TB
+  User-->LB[Load Balancer]
+  LB--> Web1[Web Server] & Web2[Web Server]
+  Web1 & Web2 --> DB[(Database)]
+```
+````
+
+```mermaid
+flowchart TB
+  User-->LB[Load Balancer]
+  LB--> Web1[Web Server] & Web2[Web Server]
+  Web1 & Web2 --> DB[(Database)]
+```
