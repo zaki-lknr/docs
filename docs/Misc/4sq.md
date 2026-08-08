@@ -1,4 +1,4 @@
-# Forsquare API
+# Foursquare API
 
 ## サイト
 
