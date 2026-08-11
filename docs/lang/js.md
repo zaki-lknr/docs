@@ -509,6 +509,14 @@ const func = (arg) => {
 func('njgk');
 ```
 
+引数無し
+
+```js
+const func = () => {
+    ;
+}
+```
+
 ### 型の確認
 
 `typeof`を使う。
