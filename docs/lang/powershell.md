@@ -235,6 +235,20 @@ PSProvider    : Microsoft.PowerShell.Core\FileSystem
 
 ```
 
+### レジストリ操作
+
+#### 取得
+
+`$path`のレジストリキーにある、`Sample`の値を取得する。
+
+```ps1
+$path = "HKLM:\SYSTEM\SOFTWARE\TestRegistry"
+
+Get-ItemProperty `
+    -Path $path `
+    -Name "Sample"
+```
+
 ## Azure PowerShell
 
 ### Azure Az PowerShellインストール
