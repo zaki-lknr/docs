@@ -7,6 +7,10 @@
 OSのパッケージ管理で対応してなければ、バイナリを`/usr/local/bin/helm`に置けばOK.  
 インストール用スクリプトもある。
 
+```console
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4 | bash
+```
+
 Fedora35からはオフィシャルリポジトリから`dnf`でもインストール可
 
 ### apt
