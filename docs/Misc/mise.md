@@ -1,5 +1,7 @@
 # mise
 
+[mise-en-place](https://mise.jdx.dev/)
+
 ## インストール
 
 ### Fedora
