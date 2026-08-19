@@ -4,7 +4,20 @@
 
 ## インストール
 
-### Fedora
+OS用パッケージもあるがスクリプトで入れるのが推奨とのこと。
+
+```console
+curl https://mise.run | sh
+```
+
+`$HOME/.local/bin/mise`にインストールされる。  
+STDOUTに`.bashrc`への設定追加コマンドが表示されるので実行する。
+
+```console
+echo "eval \"\$(/home/zaki/.local/bin/mise activate bash)\"" >> ~/.bashrc
+```
+
+#### Fedora
 
 `dnf`で入れられる。
 
