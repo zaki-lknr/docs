@@ -51,6 +51,18 @@ mise usage@2.0.3 ✓ installed                                                  
 
 <https://github.com/jdx/mise/issues/1710>
 
+```
+_comp_initialize: command not found
+```
+
+これが出る場合は.bashrcのcompletion設定を下記に変更
+
+```
+eval "$(mise completion bash --include-bash-completion-lib)"
+```
+
+<https://zenn.dev/mirablue/scraps/11ff50613b3ea3>
+
 ## パッケージ検索
 
 ### パッケージ一覧
