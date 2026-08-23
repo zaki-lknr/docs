@@ -34,6 +34,7 @@ sudo dnf install -y mise
 
 ### completion
 
+<https://mise.jdx.dev/cli/completion.html>
 
 ```console
 Error: usage CLI not found. This is required for completions to work in mise.
