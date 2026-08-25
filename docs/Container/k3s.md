@@ -75,6 +75,8 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=latest sh -
 チャンネルはデフォルト`stable`で1個前のメジャーバージョンだったりする。  
 [チャンネル一覧](https://update.k3s.io/v1-release/channels)
 
+現在ブラウザで表示されなくなってるので、`curl https://update.k3s.io/v1-release/channels | jq`すると良い。
+
 ### 起動パラメタ
 
 - [server | K3s](https://docs.k3s.io/cli/server)
