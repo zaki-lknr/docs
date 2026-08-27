@@ -1129,7 +1129,7 @@ ip route delete default dev eth0
 ip -j a
 ```
 
-### 仮想IPアドレス追加
+### 仮想IPアドレス(VIP)追加
 
 ```console
 ip a add 192.168.0.30 dev eth0
