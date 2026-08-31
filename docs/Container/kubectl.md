@@ -725,10 +725,10 @@ kubectl label pod rsync-pod state-
 
 ## drain
 
-大抵はDaemonSetのpodが動いているので`--ignore-daemonsets`オプションを付ける。
+大抵はDaemonSetのpodが動いているので`--ignore-daemonsets`オプションを付ける。またemptyDirを使っててもエラーになるため`--delete-emptydir-data`を追加。
 
 ```console
-kubectl drain k3s-node2 --force --ignore-daemonsets
+kubectl drain k3s-node2 --force --ignore-daemonsets --delete-emptydir-data
 ```
 
 ノードを完全にクラスタから除外するにはさらに`kubectl delete node <node-name>`する。
