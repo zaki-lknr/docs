@@ -12,6 +12,18 @@
 
 [mattrobenolt/jinja2-cli: The CLI for Jinja2](https://github.com/mattrobenolt/jinja2-cli)
 
+### install
+
+公式は`uv`と`pip`が使われている。`pipx`でも入る。
+
+```console
+$ pipx install jinja2-cli
+  installed package jinja2-cli 1.0.1, installed using Python 3.14.7
+  These apps are now available
+    - jinja2
+done! ✨ 🌟 ✨
+```
+
 ## 変数
 
 ### 変数宣言
