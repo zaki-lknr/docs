@@ -24,6 +24,24 @@ $ pipx install jinja2-cli
 done! ✨ 🌟 ✨
 ```
 
+### usage
+
+`format`は自動認識する。
+
+```console
+jinja2 templates.j2 param.yaml [--format yaml]
+```
+
+`param.yaml`はこんな感じ
+
+```yaml
+resourcename: app
+namespace: example
+replica: 2
+```
+
+`templates.j2`内の`{{resourcename}}`や`{{namespace}}`が`param.yaml`に記載された値に置き換わる。
+
 ## 変数
 
 ### 変数宣言
