@@ -1866,6 +1866,17 @@ ansible [core 2.18.0]
   libyaml = True
 ```
 
+#### 依存パッケージの追加
+
+pipxでインストールしたコマンドが追加のPythonパッケージを必要とする場合。  
+`jinja2-cli`に`pyyaml`を追加するには以下。
+
+```console
+$ pipx inject jinja2-cli pyyaml
+  injected package pyyaml into venv jinja2-cli
+done! ✨ 🌟 ✨
+```
+
 ## RHEL / Ansible
 
 [Ansible が利用する Python 実行環境 - 赤帽エンジニアブログ](https://rheb.hatenablog.com/entry/ansible_python_environment)
