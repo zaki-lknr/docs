@@ -457,6 +457,18 @@ docker run --rm -d -v $PWD:/srv -p 443:443 --name web caddy caddy file-server --
 docker run --name cent-stream --rm -it quay.io/centos/centos:stream8 bash
 ```
 
+## デバッグ用
+
+### psが無い
+
+```console
+dnf install procps-ng
+```
+
+```console
+apt-get install procps
+```
+
 ## ビルド
 
 ### ヘルスチェック
