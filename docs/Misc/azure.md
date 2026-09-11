@@ -27,6 +27,12 @@ CLIであれば`az account show --query id`
 echo $ACC_STORAGE_PROFILE
 ```
 
+## Azure VM
+
+### 自動シャットダウン
+
+メニューの「操作」＞「自動シャットダウン」から設定可能。
+
 ## AKS
 
 ### 監視設定
