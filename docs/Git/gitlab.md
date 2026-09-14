@@ -16,6 +16,12 @@
 
 [Upgrade | GitLab Docs](https://docs.gitlab.com/install/docker/upgrade/)
 
+### Runnerバージョン
+
+GitLab本体のmajor.minorと合わせる。
+
+<https://docs.gitlab.com/ja-jp/runner/#gitlab-runner-versions>
+
 ## CI/CD
 
 ### キーワードリファレンス
