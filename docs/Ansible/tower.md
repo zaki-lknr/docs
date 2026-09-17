@@ -92,6 +92,9 @@ Gitとか使わずTowerのホストのファイルシステム上のplaybookを�
 
 ### 組織
 
+- AAPのオブジェクト階層の最上位のオブジェクト
+    - 組織配下にチーム・ユーザー・インベントリ等、他のリソースが属する
+- 組織をまたいだリソースのアクセスは原則不可 (RBAC設定で可能だが複雑になる)
 - [7. 組織 — Automation Controller User Guide v4.1.1](https://docs.ansible.com/automation-controller/4.1.1/html_ja/userguide/organizations.html)
 - [第5章 ロールベースのアクセス制御によるアクセス管理 | アクセス管理と認証 | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html/access_management_and_authentication/gw-managing-access)
 
