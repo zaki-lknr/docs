@@ -2,8 +2,18 @@
 
 ## いろいろメモ
 
+### ブートメディア
+
 - [Rufus - 起動可能なUSBドライブを簡単に作成できます](https://rufus.ie/ja/)
 - [[Windows] Rufusを使ってUSBブートできるメディアを作る - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2023/05/17/054856)
+
+### IPアドレス確認
+
+`ip`コマンドがない場合など
+
+```console
+cat /proc/net/fib_trie
+```
 
 ## sudo
 
