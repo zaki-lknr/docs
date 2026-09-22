@@ -211,6 +211,15 @@ $ man 5 crontab
 
 ## curl
 
+### POST
+
+`-X POST`を付与する。  
+が、現在はpostデータをセットしてあれば自動でPOSTメソッドになるため不要。付けていると下記メッセージが出力される。
+
+```console
+"Unnecessary use of -X or --request, POST is already inferred."
+```
+
 ### 名前解決オプション
 
 ```
