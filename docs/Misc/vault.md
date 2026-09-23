@@ -114,6 +114,50 @@ curl -H "X-Vault-Token: ${token}" http://server:port/v1/<secret-engine-name>/dat
 Success! Enabled the pki secrets engine at: pki_sample/
 ```
 
+#### issuer一覧
+
+```console
+/ $ vault list pki_lab_int/issuers
+Keys
+----
+1625dc5e-653d-8bc3-6a5f-164246fe7ab2
+1770468e-7743-43e3-35ef-255f5aca7753
+```
+
+#### 内容確認
+
+```console
+/ $ vault read pki_lab_int/issuer/1625dc5e-653d-8bc3-6a5f-164246fe7ab2
+Key                               Value
+---                               -----
+ca_chain                          [-----BEGIN CERTIFICATE-----
+MIIEfjCCA2agAwIBAgIUM4lyZwTrGN3K8ZJoix2D912FZU0wDQYJKoZIhvcNAQEL
+....
+-----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+MIIDGzCCAgOgAwIBAgIUdYawx0+vKEcx4k2xCeZ37JqO900wDQYJKoZIhvcNAQEL
+....
+-----END CERTIFICATE-----
+]
+certificate                       -----BEGIN CERTIFICATE-----
+MIIEfjCCA2agAwIBAgIUM4lyZwTrGN3K8ZJoix2D912FZU0wDQYJKoZIhvcNAQEL
+....
+-----END CERTIFICATE-----
+crl_distribution_points           []
+delta_crl_distribution_points     []
+enable_aia_url_templating         false
+issuer_id                         1625dc5e-653d-8bc3-6a5f-164246fe7ab2
+issuer_name                       n/a
+issuing_certificates              []
+key_id                            b53e1bd2-8965-527c-94c7-745207b42650
+leaf_not_after_behavior           err
+manual_chain                      <nil>
+ocsp_servers                      []
+revocation_signature_algorithm    n/a
+revoked                           false
+usage                             crl-signing,issuing-certificates,ocsp-signing,read-only
+```
+
 ## auth
 
 ### 一覧
