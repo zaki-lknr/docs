@@ -158,6 +158,12 @@ revoked                           false
 usage                             crl-signing,issuing-certificates,ocsp-signing,read-only
 ```
 
+#### デフォルトissuer更新
+
+```console
+/ $ vault write pki_lab_int/config/issuers default=<対象のIssuer ID>
+```
+
 ## auth
 
 ### 一覧
