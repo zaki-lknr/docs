@@ -9,6 +9,10 @@
 | Ctrl + r               | 最近開いたプロジェクト/ウィンドウ |
 | Alt + Shfit + f        | 選択部分を整形                    |
 
+## window reload
+
+コマンドパレットで `reload` を実行。
+
 ## Remote SSH
 
 `Ctrl + Alt + Shift + o`でopen remoteが起動。  
