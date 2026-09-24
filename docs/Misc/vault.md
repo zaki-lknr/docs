@@ -164,6 +164,20 @@ usage                             crl-signing,issuing-certificates,ocsp-signing,
 / $ vault write pki_lab_int/config/issuers default=<対象のIssuer ID>
 ```
 
+#### TTL等設定確認
+
+```console
+/ $ vault read sys/mounts/pki_lab_int/tune
+Key                            Value
+---                            -----
+allowed_response_headers       [Last-Modified Location Replay-Nonce Link]
+default_lease_ttl              768h
+description                    n/a
+force_no_cache                 false
+max_lease_ttl                  768h
+passthrough_request_headers    [If-Modified-Since]
+```
+
 ## auth
 
 ### 一覧
