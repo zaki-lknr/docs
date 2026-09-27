@@ -178,6 +178,13 @@ max_lease_ttl                  768h
 passthrough_request_headers    [If-Modified-Since]
 ```
 
+#### 最大TTL更新
+
+```console
+/ $ vault secrets tune -max-lease-ttl=87600h pki_lab_int
+Success! Tuned the secrets engine at: pki_lab_int/
+```
+
 ## auth
 
 ### 一覧
