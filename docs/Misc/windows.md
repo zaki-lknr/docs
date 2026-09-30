@@ -164,3 +164,7 @@ Ctrl + Alt + Home
 ```
 
 ただし再度リモートデスクトップをアクティブにしても接続バーにフォーカスがある状態なので、リモートのデスクトップはフォーカスされない
+
+## CLI
+
+[Windows commands | Microsoft Learn](https://learn.microsoft.com/ja-jp/windows-server/administration/windows-commands/windows-commands)
