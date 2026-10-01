@@ -1,5 +1,10 @@
 # Backlog
 
+## 書式
+
+- [テキスト整形のルール - よくあるご質問 | Backlog](https://help-center.backlog.com/%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E6%95%B4%E5%BD%A2%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB-6a18006f7909d3fe5e860e8e)
+- [テキスト整形のルール（Markdown記法） - よくあるご質問 | Backlog](https://help-center.backlog.com/--6a1d4d7f3abb3ada78c5658a)
+
 ## ID確認
 
 - プロジェクトID
