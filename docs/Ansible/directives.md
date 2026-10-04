@@ -402,3 +402,8 @@ include_tasksとは併用不可？
 ## async + poll
 
 [[Ansible] asyncとpollを使った非同期処理とループの並列実行 - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2021/04/06/214645)
+
+## delegate_to
+
+- [[Ansible] 処理の中でターゲットノードがコロコロ替わるときはdelegate_toを使ってみる - zaki work log](https://zaki-hmkc.hatenablog.com/entry/2020/05/24/122926)
+- [Controlling where tasks run: delegation and local actions — Ansible Community Documentation](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_delegation.html)
