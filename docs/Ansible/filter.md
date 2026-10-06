@@ -531,6 +531,18 @@ ok: [oci-g-a1-ubuntu] =>
   - ghcr.io/zaki-lknr/awx
 ```
 
+### ファイル名取得(basename)
+
+```yaml
+  - name: get filename
+    debug:
+      msg: "{{ iso_download_url | basename }}"
+    vars:
+      iso_download_url: https://cloud-images.ubuntu.com/resolute/current/resolute-server-cloudimg-amd64.img
+```
+
+出力は`resolute-server-cloudimg-amd64.img`になる。
+
 ## 暗号化パスワード
 
 - [How do I generate encrypted passwords for the user module?](https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
