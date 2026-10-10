@@ -31,6 +31,29 @@ $ ansible -i inventory.ini all -m setup
     _mode: "{{ _state_val | ternary(...) }}"
 ```
 
+## include_vars
+
+外部ファイルにた定義した変数を読み込む
+
+Playbookで以下
+
+```yaml
+  tasks:
+  - name: include vars
+    ansible.builtin.include_vars: vars.yaml
+```
+
+読み込む`vars.yaml`に普通に辞書定義
+
+```yaml
+---
+ansible_python_interpreter: /path/to/.venv/bin/python
+vm_id: 9021
+vm_cpu: x86-64-v3
+```
+
+これでinclude以降のタスクで上記変数定義が有効になる。
+
 ## assert
 
 [ansible.builtin.assert – Asserts given expressions are true — Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/assert_module.html)
