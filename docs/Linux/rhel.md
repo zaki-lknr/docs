@@ -53,7 +53,12 @@
 
 ## package
 
-### RHEL8にEPELリポジトリを追加
+### EPELリポジトリ追加
+
+- [RHEL および CentOS Stream に EPEL をインストールする方法](https://www.redhat.com/ja/blog/install-epel-linux)
+- [Getting started with EPEL :: Fedora Docs](https://docs.fedoraproject.org/en-US/epel/getting-started/)
+
+#### RHEL8にEPELリポジトリを追加
 
 - [EPEL8がリリースされました。使い始めましょう。 - 赤帽エンジニアブログ](https://rheb.hatenablog.com/entry/2019/08/16/EPEL8%E3%81%8C%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%81%BE%E3%81%97%E3%82%87%E3%81%86%E3%80%82)
 - [EPEL - Fedora Project Wiki](https://fedoraproject.org/wiki/EPEL#Quickstart)
