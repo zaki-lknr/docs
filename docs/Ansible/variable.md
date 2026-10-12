@@ -137,7 +137,7 @@ gather_facts: true
 `ansible all -m setup | wc -l`だと916行。  
 `ansible -i inventory all -m setup -a "gather_subset=network" | wc -l`だと365行。
 
-OS情報程度であれば`min`で取れる。  
+OS情報(`ansible_facts.os_family`)程度であれば`min`で取れる。  
 インタフェース毎のネットワーク設定は`network`も必要っぽい。
 
 ### 環境変数
