@@ -164,6 +164,23 @@ usage                             crl-signing,issuing-certificates,ocsp-signing,
 / $ vault write pki_lab_int/config/issuers default=<対象のIssuer ID>
 ```
 
+#### 設定確認
+
+```console
+/ $ vault read pki_lab_int/config/acme
+Key                         Value
+---                         -----
+allow_role_ext_key_usage    false
+allowed_issuers             [*]
+allowed_roles               [*]
+default_directory_policy    sign-verbatim
+dns_resolver                n/a
+eab_policy                  not-required
+enabled                     true
+max_ttl                     2160h
+/ $
+```
+
 #### TTL等設定確認
 
 ```console
