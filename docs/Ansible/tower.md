@@ -1,5 +1,10 @@
 # Ansible Tower / AAP
 
+## 資料
+
+- [Get started | Red Hat Developer](https://developers.redhat.com/products/ansible/getting-started)
+- [Getting started with Red Hat Ansible Automation Platform | Red Hat Documentation](https://docs.redhat.com/en/learn/learning-paths/getting-started-red-hat-ansible-automation-platform/installation-and-key-functionalities)
+
 ## インストーラー
 
 たぶんこの辺  
