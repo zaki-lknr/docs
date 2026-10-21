@@ -425,6 +425,18 @@ awk '{ print substr($0, index($0, $3)) }'
 - `substr(s, p)`: 文字列j`s`内における`p`以降の部分文字列
 - `index(s, p)`: 文字列`s`内における`p`の位置
 
+### systemでコマンド実行
+
+```console
+kubectl get pod -A | awk '{if ($1 ~ /kube-system/) system("echo " $2) }'
+```
+
+あまり意味のないコマンドだけど、以下と同等
+
+```console
+kubectl get pod -A | awk '{if ($1 ~ /kube-system/) print $2 }'
+```
+
 ## tr
 
 ### CR削除
