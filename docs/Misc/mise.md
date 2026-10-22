@@ -184,6 +184,13 @@ mise trust /path/to/mise.toml
 ANSIBLE_COLLECTIONS_PATH = "{{ config_root }}/.ansible"
 ```
 
+#### 外部ファイル定義(.env)
+
+```toml
+[env]
+_.file = ".env"
+```
+
 ### テンプレート
 
 [Templates | mise-en-place](https://mise.jdx.dev/templates.html)
