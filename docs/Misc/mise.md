@@ -84,6 +84,26 @@ mise plugins ls-remote
 mise ls-remote <command>
 ```
 
+### リリースされたばかりのパッケージ
+
+緊急セキュリティアップデートなどが行われた場合。デフォルトではリリース後24hの間はminimum_release_ageの設定によってリストされない。  
+<https://mise.jdx.dev/security.html#minimum-release-age>  
+
+```console
+$ mise ls-remote python
+:
+3.14.7
+3.14.8
+3.15.0
+3.15-dev
+3.16.0a1
+3.16-dev
+mise WARN  3 newer python releases hidden by minimum_release_age
+```
+
+上記は3パッケージが非表示になっているが、リストするには`mise ls-remote python --minimum-release-age=0s`を実行する。  
+<https://mise.jdx.dev/troubleshooting.html#new-version-of-a-tool-is-not-available>
+
 ## パッケージセットアップ
 
 ### mise.toml定義のパッケージインストール
