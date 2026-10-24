@@ -31,6 +31,13 @@ $ rpm -qf /foo/bar    # redhat
 $ dpkg -r <package-name>
 ```
 
+## EPEL
+
+- [EPEL/ja - Fedora Project Wiki](https://fedoraproject.org/wiki/EPEL/ja)
+- [Available packages in EPEL :: Fedora Docs](https://docs.fedoraproject.org/en-US/epel/available-packages/)
+- [Extra Packages for Enterprise Linux (EPEL) の使用方法 - Red Hat Customer Portal](https://access.redhat.com/ja/solutions/152883)
+- [EPEL8がリリースされました。使い始めましょう。 - 赤帽エンジニアブログ](https://rheb.hatenablog.com/entry/2019/08/16/EPEL8%E3%81%8C%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%81%BE%E3%81%97%E3%82%87%E3%81%86%E3%80%82)
+
 ## 更新確認
 
 ### yum
