@@ -140,6 +140,18 @@ gather_facts: true
 OS情報(`ansible_facts.os_family`)程度であれば`min`で取れる。  
 インタフェース毎のネットワーク設定は`network`も必要っぽい。
 
+### ファクト変数を取得するタスク
+
+`gather_facts`モジュールで取れる。
+
+```yaml
+  tasks:
+  - ansible.builtin.gather_facts:
+      gather_subset:
+        # - min
+        - network
+```
+
 ### 環境変数
 
 `gather_subset: min`で確認。  
