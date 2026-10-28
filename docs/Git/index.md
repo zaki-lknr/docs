@@ -582,6 +582,8 @@ $ git switch --detach <tag-name>
 git switch -d <tag-name>
 ```
 
+※ tag名だけでなくコミットのハッシュ値も指定可
+
 ## 移動
 
 ### ディレクトリを新規作成しそこへ既存ファイルを移動
@@ -721,6 +723,14 @@ git log --date=short --pretty=format:"%ad %h %s"
 
 ```console
 git log -p
+```
+
+### 特定のコミットに戻る
+
+HEADを特定のコミットにする
+
+```console
+git switch -d <コミットID>
 ```
 
 ## 差分
