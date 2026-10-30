@@ -46,6 +46,14 @@
 
 ## バックアップとリストア
 
+### Container版
+
+[Red Hat Ansible Automation Platform | 2.7 | Back up and restore your containerized deployment | Red Hat Documentation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.7/administer-back_up_and_restore_your_containerized_deployment#backing-up-containerized-ansible-automation-platform)
+
+インストール資材にあるバックアップ用playbook(コレクション)を実行する。
+
+### RPM版
+
 バックアップするには以下。  
 Towerは実行中で良い。  
 バックアップに成功すると、カレントに `tower-backup-YYYY-mm-dd-HH:MM:SS.tar.gz` が作成される。(symlinkの`tower-backup-latest.tar.gz`も作成される)
