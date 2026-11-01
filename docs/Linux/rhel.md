@@ -1,5 +1,11 @@
 # RHEL
 
+## ISOダウンロード
+
+開発者ライセンスの場合はカスタマーポータルでなく以下から。
+
+[Download Red Hat Enterprise Linux (RHEL) | Red Hat Developer](https://developers.redhat.com/products/rhel/download)
+
 ## サブスクリプション更新
 
 期限が切れた場合は、[Red Hat Developer](https://developers.redhat.com/)にアクセスすれば更新される。ログイン時に利用許諾の確認がある。  
