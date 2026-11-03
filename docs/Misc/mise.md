@@ -178,6 +178,16 @@ mise ls
 mise up
 ```
 
+### パッケージ使用の解除
+
+使用中の`python`を解除する。
+
+```console
+mise unuse python
+```
+
+実行すると`remove core:python@#.##.# ?`と聞かれ、Yesにするとダウンロード済みパッケージが削除される。Noであれば設定解除のみでパッケージは残る。
+
 ## mise.toml
 
 ### 使用中設定ファイルの確認
