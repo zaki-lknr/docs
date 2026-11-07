@@ -8,6 +8,13 @@
 psql --version
 ```
 
+### 起動(listen)確認
+
+```console
+bash-5.1$ pg_isready -h 127.0.0.1 -p 5432
+127.0.0.1:5432 - accepting connections
+```
+
 ### DBに接続
 
 ```console
