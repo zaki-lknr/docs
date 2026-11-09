@@ -181,6 +181,12 @@ max_ttl                     2160h
 / $
 ```
 
+#### 設定変更(eab_policy)
+
+```console
+/ $ vault write pki_lab_int/config/acme eab_policy=always-required
+```
+
 #### TTL等設定確認
 
 ```console
