@@ -148,6 +148,20 @@ dnf config-manager addrepo --from-repofile=https://rpm.example.org/rpm.repo
 
 以前は `dnf config-manager --add-repo https://rpm.example.org/rpm.repo` だったがオプションが変更された。
 
+### パッケージインストール履歴
+
+トランザクション一覧
+
+```console
+dnf history list
+```
+
+一覧でトランザクションIDが取れるので、下記でインストールされたパッケージ一覧を確認できる
+
+```console
+dnf history info <ID>
+```
+
 ## yum
 
 ### リポジトリ一覧
