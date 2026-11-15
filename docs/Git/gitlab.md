@@ -5,6 +5,10 @@
 - [Linuxパッケージを使用してGitLabをインストールします | GitLab Docs](https://docs.gitlab.com/ja-jp/install/package/)
 - [メモリ制約のある環境でGitLabを実行する | GitLab Docs](https://docs.gitlab.com/ja-jp/omnibus/settings/memory_constrained_envs/)
 
+## 監視
+
+- [Prometheusを使用したGitLabのモニタリング | GitLab Docs](https://docs.gitlab.com/ja-jp/administration/monitoring/prometheus/)
+
 ## アップグレード情報
 
 [Upgrading GitLab | GitLab](https://docs.gitlab.com/ee/update/)
