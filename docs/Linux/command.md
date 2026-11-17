@@ -1737,6 +1737,12 @@ python - auto mode
 /usr/bin/python3 - priority 10
 ```
 
+## コア数確認
+
+```console
+nproc
+```
+
 ## lscpu
 
 CPU情報の出力
