@@ -25,7 +25,17 @@
 win11でデフォルトSnippingToolが起動するのを抑止するには、設定->アクセシビリティ->キーボード->「PrintScreenキーを使用して画面キャプチャを開く」をオフ  
 (Win+Shift+Sでは引き続き起動する)
 
-## 評価版 Windows10
+## 評価版
+
+### Windows11
+
+ログオン時に企業用Microsoftアカウントが必要。  
+<https://www.microsoft.com/ja-jp/evalcenter/download-windows-11-enterprise>
+
+通常イメージは以下から入手。  
+[Windows 11 のダウンロード](https://www.microsoft.com/ja-jp/software-download/windows11)
+
+### Windows10
 
 必要事項を入力してダウンロードしたISOは、ライセンスキー入力がなく90日検証に使用できる。
 
