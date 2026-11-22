@@ -100,6 +100,39 @@ foobar:
     key: value
 ```
 
+### children定義
+
+```yaml
+all:
+  vars:
+    # 以下、グループ変数
+  hosts:
+    # ホスト定義
+    web1:
+    web2:
+    db1:
+    db2:
+  children:
+    database:
+      # グループ名
+      hosts:
+        # hosts以下にホスト名
+        db1:
+        db2:
+      children:
+        # children以下に別グループ名
+        group1:
+        group2:
+group1:
+  ...
+group2:
+  ...
+other_group:
+  hosts:
+  children:
+    # こっちからall.childrenのグループ参照も可能
+```
+
 ## ダイナミックインベントリ
 
 ### EC2
