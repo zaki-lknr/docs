@@ -8,6 +8,7 @@
 | Ctrl + Alt + Shift + o | リモート接続                      |
 | Ctrl + r               | 最近開いたプロジェクト/ウィンドウ |
 | Alt + Shfit + f        | 選択部分を整形                    |
+| Shift + Esc            | フォーカスがある領域を最大化      |
 
 ## window reload
 
