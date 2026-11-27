@@ -216,6 +216,29 @@ UIのジョブ一覧からの削除の場合、ジョブは消えるがイベン
 
 [PG size keeps growing even after continuously deleting job history · Issue #14590 · ansible/awx](https://github.com/ansible/awx/issues/14590)
 
+## 予約変数
+
+ジョブテンプレート実行時に定義される。
+
+### awx_job_launch_type
+
+起動種別
+
+- manual: ジョブはユーザーによって手動で開始されました。
+- relaunch: ジョブは再起動によって開始されました。
+- callback: ジョブはホストコールバックによって開始されました。
+- scheduled: ジョブはスケジュールから開始されました。
+- dependency: ジョブは別のジョブの依存関係として開始されました。
+- workflow: ジョブはワークフロージョブから開始されました。
+- sync: ジョブはプロジェクト同期から開始されました。
+- scm: ジョブはインベントリー SCM 同期として作成されました。
+
+普通に `{{ awx_job_launch_type }}` で参照できる。
+
+- [Red Hat Ansible Automation Platform | 2.7 | Set extra variables in job templates | Red Hat Documentation](https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.7/develop-ref_controller_job_template_variables)
+- [6.10. ジョブテンプレートの起動 | 自動化実行の使用 | Red Hat Ansible Automation Platform | 2.5 | Red Hat Documentation](https://docs.redhat.com/ja/documentation/red_hat_ansible_automation_platform/2.5/html/using_automation_execution/controller-launch-job-template)
+- [20. Job Templates — Ansible AWX community documentation](https://docs.ansible.com/projects/awx/en/24.6.1/userguide/job_templates.html)
+
 ## API
 
 API一覧は以下。  
